@@ -1,0 +1,78 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    "colonyExpeditionChance":1.5,
+    "rebelFleetSuffix":"Anarchists",
+    "directoryUseShortName":true,
+    "logisticsFleetName":"Supply Convoy",
+    "diplomacyTraits":["anarchist"],
+    "colonyTargetValuator":"exerelin.campaign.colony.LuddicColonyTargetValuator",
+    
+    "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
+    "specialForcesFlagshipVariants":{ "pack_mastiff_Elite": 1, "pack_komondor_Standard": 0.5 },
+    
+    "marketSpawnWeight":0.5,
+    
+    "freeMarket":true,
+	
+    "startRelationships":{ "tritachyon": -0.5, "junk_pirates": 0.3 },
+
+    "diplomacyPositiveChance":{ "tritachyon":0.75 },
+    "diplomacyNegativeChance":{ "tritachyon":1.5 },
+    "morality":"good",
+
+    "alignments":{
+        "diplomatic":0.5,
+	"militarist":-1
+    },
+    
+    "startShipsSolo":[
+    ["pack_wirefox_Standard"],
+    ["pack_bedlington_canebianco_Standard"]
+    ],
+    "startShipsCombatSmall":[
+      ["pack_bedlington_Standard", "pack_BRT_Guard", "pack_schnauzer_rothund_Standard"],
+      ["pack_pitbull_Standard", "pack_schnauzer_caomarelo_PD", "pack_wirefox_caomarelo_Standard"]
+    ],
+    "startShipsTradeSmall":[["pack_labrador_Standard", "pack_samoyed_Standard", "pack_wirefox_sh_CS"]],
+    "startShipsCombatLarge":[
+      ["pack_mastiff_Standard", "pack_pitbull_Strike", "pack_ridgeback_Standard"],
+      ["pack_mastiff_Elite", "pack_komondor_Standard", "pack_BRT_Guard"]
+    ],
+    "startShipsTradeLarge":[["pack_ridgeback_Standard", "pack_ridgeback_x_Standard", "pack_labrador_Standard"]],
+    "startShipsCarrierSmall":[["pack_GFB_Standard", "pack_GFB_Elite", "pack_ridgeback_x_rothund_Standard"]],
+    "startShipsCarrierLarge":[["pack_spinone_Strike", "pack_sharpei_Standard", "pack_BRT_Support"]],
+    "startShipsExplorerSmall":[
+        ["pack_ridgeback_Standard", "pack_wirefox_Standard"],
+        ["pack_bedlington_Standard", "pack_samoyed_Standard", "pack_labrador_Standard"]
+    ],
+    "startShipsExplorerLarge":[
+        ["pack_ridgeback_Standard", "pack_bedlington_Standard", "pack_samoyed_Standard"],
+        ["pack_mastiff_Standard", "pack_labrador_Standard", "pack_wirefox_Standard"]
+    ],
+    "startShipsSuper":[
+        ["pack_komondor_Standard"],
+        ["pack_mastiff_Elite"]
+    ],
+    "startShipsGrandFleet":[
+        ["pack_komondor_Standard", "pack_mastiff_Standard", "pack_ridgeback_Standard", "pack_wirefox_Standard", "pack_BRT_Guard"]
+    ],
+    
+    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"], "weight":0.5},
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"]},
+        {"ids":["orbitalstation_high", "battlestation_high", "starfortress_high"], "weight":0.5}
+    ],
+    
+    "industrySeeds":[
+        {"id":"heavyindustry", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1}
+    ],
+    
+    "bonusSeeds":[
+        {"id":"aiCore_any", "mult":0.2}
+    ],
+    "startSpecialItems":[
+        [["junk_pirates_pack_bp", ""]]
+	]
+}

@@ -1,0 +1,50 @@
+{
+  "displayName": "Slugger",
+  "fluxCapacitors": 7,
+  "fluxVents": 14,
+  "goalVariant": true,
+  "hullId": "junk_pirates_boxenstein",
+  "hullMods": [
+    "missleracks",
+    "heavyarmor"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_boxenstein_Slugger",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "junk_pirates_scatterpd",
+        "WS 002": "junk_pirates_scatterpd",
+        "WS 003": "junk_pirates_scatterpd",
+        "WS 004": "junk_pirates_scatterpd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "junk_pirates_cutlass",
+        "WS 006": "junk_pirates_cutlass"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 009": "swarmer",
+        "WS 010": "swarmer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "junk_pirates_grapeshot_m",
+        "WS 008": "junk_pirates_grapeshot_m"
+      }
+    }
+  ]
+}

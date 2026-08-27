@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "../../*.jar",
+        "../LazyLib-3.0.0/jars/LazyLib.jar",
+        "../LazyLib-3.0.0/jars/LazyLib-Kotlin.jar",
+        "../MagicLib-1.5.6/jars/MagicLib.jar",
+        "../MagicLib-1.5.6/jars/MagicLib-Kotlin.jar",
+        "../zz GraphicsLib-1.12.1/jars/Graphics.jar",
+        "../Nexerelin-0.12.1e/jars/ExerelinCore.jar"
+    ],
+    "java.project.outputPath": "bin",
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

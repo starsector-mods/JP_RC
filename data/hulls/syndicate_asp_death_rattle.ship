@@ -1,0 +1,96 @@
+{
+  "bounds": [
+    11.5,
+    6,
+    -8.5,
+    13,
+    -8.5,
+    -13,
+    11.5,
+    -6
+  ],
+  "builtInWeapons": {
+    "WS 001": "flak"
+  },
+  "builtInWings": [],
+  "center": [
+    19,
+    18.5
+  ],
+  "collisionRadius": 19.200001,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -13,
+        6
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -13,
+        -6
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    }
+  ],
+  "height": 42,
+  "hullId": "syndicate_asp_death_rattle",
+  "hullName": "Death Rattle",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    -1.5,
+    0.5
+  ],
+  "shieldRadius": 26,
+  "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_death_rattle.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        18,
+        -0.5
+      ],
+      "mount": "HIDDEN",
+      "size": "MEDIUM",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        -2.5,
+        -14
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        -2.5,
+        14
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 39
+}

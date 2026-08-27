@@ -1,0 +1,45 @@
+{
+    "displayName": "Bullseye",
+    "fluxCapacitors": 6,
+    "fluxVents": 18,
+        "goalVariant": true,
+    "hullId": "pack_komondor_bullseye",
+    "hullMods": [],
+    "quality": 0.5,
+    "variantId": "pack_komondor_bullseye_Bullseye",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 011": "heavyac"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightag",
+                "WS 002": "lightag",
+                "WS 009": "lightag",
+                "WS 010": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "lightdualac",
+                "WS 008": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan"
+            }
+        }
+    ]
+}

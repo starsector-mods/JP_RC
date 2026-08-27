@@ -1,0 +1,51 @@
+{
+  "displayName": "Frightener",
+  "fluxCapacitors": 2,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "junk_pirates_satsuma",
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "junk_pirates_satsuma_Frightener",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "junk_pirates_junkjet_pod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "ioncannon",
+        "WS 002": "ioncannon",
+        "WS 009": "junk_pirates_lexcimer",
+        "WS 010": "junk_pirates_lexcimer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "junk_pirates_cutlass",
+        "WS 008": "junk_pirates_cutlass"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "wings": []
+}

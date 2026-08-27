@@ -1,0 +1,19 @@
+{
+	"baseHullId":"pack_pitbull",
+	"skinHullId":"pack_pitbull_rothund",
+	"hullName":"Pitbull (RH)",
+	"descriptionId":"pack_pitbull",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionPrefix":"A Pitbull class destroyer as modified by the Rothund machine shop - with protected weapon mounts and an enhanced shield.",
+	"fleetPoints":9,
+	"ordnancePoints":68,
+	"baseValueMult":1.3,
+	"spriteName":"graphics/pack/ships/pack_pitbull_rothund.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["armoredweapons","hardenedshieldemitter", "pack_overclocked_rh"],
+	"builtInWeapons":{
+    }
+}

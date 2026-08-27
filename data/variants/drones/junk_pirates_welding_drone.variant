@@ -1,0 +1,18 @@
+{
+	"displayName": "",
+	"hullId":"junk_pirates_welding_drone",
+	"variantId":"junk_pirates_welding_drone",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["pointdefenseai", "no_weapon_flux"],
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"lrpdlaser"
+		 		   }
+		}
+	]
+}

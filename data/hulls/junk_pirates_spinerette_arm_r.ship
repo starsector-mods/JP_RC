@@ -1,0 +1,97 @@
+{
+    "hullName":"Spinerette Arm",
+    "hullId":"junk_pirates_spinerette_arm_r",
+    "hullSize":"FRIGATE",
+    "style":"LOW_TECH",
+    "spriteName":"graphics/junk_pirates/ships/stations/junk_pirates_spinerette_arm_r.png",
+    "height":214,
+    "width":97,
+    "center":[
+        49, 14.5
+    ],
+    "collisionRadius":201,
+    "coversColor":"",
+    "shieldCenter":[
+        92.5, 0.5
+    ],
+    "shieldRadius":167.5,
+    "viewOffset":0,
+    "builtInMods":[
+        "shared_flux_sink",
+        "reduced_explosion",
+        "junk_pirates_wibble_wobble"
+    ],
+    "builtInWings":[],
+    "builtInModules":null,
+    "weaponSlots":[
+        {
+            "id":"WS 001",
+            "size":"MEDIUM",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "renderOrderMod":360,
+            "arc":360,
+            "angle":0,
+            "locations":[
+                    40.5,       36
+            ]
+        },
+        {
+            "id":"WS 002",
+            "size":"MEDIUM",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                    40.5,      -36
+            ]
+        },
+        {
+            "id":"WS 003",
+            "size":"SMALL",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                   137.5,       22
+            ]
+        },
+        {
+            "id":"WS 004",
+            "size":"SMALL",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     173,       16
+            ]
+        },
+        {
+            "id":"WS 005",
+            "size":"SMALL",
+            "type":"SYSTEM",
+            "mount":"TURRET",
+            "arc":35,
+            "angle":4,
+            "locations":[
+                     190,      0.5
+            ]
+        }
+    ],
+    "engineSlots":[],
+    "bounds":[
+            49.5,      -40,
+              -2,      -22,
+              -2,       23,
+              42,       38,
+            86.5,       19,
+        
+           117.5,       33,
+           160.5,     24.5,
+             191,     -0.5,
+           102.5,      -20
+    ]
+}

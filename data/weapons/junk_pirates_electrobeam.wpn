@@ -1,0 +1,58 @@
+{
+  "beamEffect": "data.scripts.weapons.JunkPiratesElectrostaticBeamOnHitEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "coreColor": [
+    185,
+    255,
+    200,
+    255
+  ],
+  "fireSoundTwo": "ion_beam_loop",
+  "fringeColor": [
+    135,
+    190,
+    150,
+    225
+  ],
+  "glowColor": [
+    185,
+    255,
+    200,
+    255
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "hardpointGlowSprite": "graphics/weapons/junk_pirates_electrobeam_hardpoint_glow.png",
+  "hardpointOffsets": [
+    29,
+    0
+  ],
+  "hardpointSprite": "graphics/weapons/junk_pirates_electrobeam_hardpoint_base.png",
+  "hitGlowRadius": 75,
+  "id": "junk_pirates_electrobeam",
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "pixelsPerTexel": 5,
+  "size": "MEDIUM",
+  "specClass": "beam",
+  "textureScrollSpeed": 260,
+  "textureType": WEAVE,
+  "turretAngleOffsets": [
+    0
+  ],
+  "turretGlowSprite": "graphics/weapons/junk_pirates_electrobeam_turret_glow.png",
+  "turretOffsets": [
+    26,
+    0
+  ],
+  "turretSprite": "graphics/weapons/junk_pirates_electrobeam_turret_base.png",
+  "type": "ENERGY",
+  "width": 9
+}

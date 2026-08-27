@@ -1,0 +1,258 @@
+{
+  "bounds": [
+    -11,
+    67,
+    -4,
+    52,
+    25,
+    48,
+    39,
+    19,
+    56,
+    15,
+    56,
+    -11,
+    43,
+    -14,
+    37,
+    -45,
+    -62,
+    -43,
+    -72,
+    39,
+    -36,
+    49,
+    -33,
+    67
+  ],
+  "builtInWeapons": {
+    "WS 009": "junk_pirates_boxer_deco2",
+    "WS 010": "junk_pirates_boxer_deco1",
+    "WS 011": "junk_pirates_boxer_deco5",
+    "WS 012": "junk_pirates_boxer_deco4",
+    "WS 013": "junk_pirates_boxer_deco7"
+  },
+  "builtInWings": [],
+  "center": [
+    69,
+    76
+  ],
+  "collisionRadius": 110,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 75,
+      "location": [
+        -75,
+        4.5
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 75,
+      "location": [
+        -75,
+        -4
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 75,
+      "location": [
+        -75,
+        -12
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    }
+  ],
+  "height": 144,
+  "hullId": "junk_pirates_boxer",
+  "hullName": "Boxer",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 100,
+  "spriteName": "graphics/junk_pirates/ships/boxer/junk_pirates_boxer.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 001",
+      "locations": [
+        66,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "renderOrderMod":0
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 002",
+      "locations": [
+        39,
+        26.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "renderOrderMod":0
+    },
+    {
+      "angle": 40,
+      "arc": 160,
+      "id": "WS 003",
+      "locations": [
+        23,
+        43
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "renderOrderMod":80
+    },
+    {
+      "angle": -40,
+      "arc": 160,
+      "id": "WS 004",
+      "locations": [
+        35,
+        -41
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 330,
+      "arc": 220,
+      "id": "WS 005",
+      "locations": [
+        19,
+        -21
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -30,
+      "arc": 5,
+      "id": "WS 006",
+      "locations": [
+        -47.5,
+        -52.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "renderOrderMod":0
+    },
+    {
+      "angle": -30,
+      "arc": 5,
+      "id": "WS 007",
+      "locations": [
+        -6,
+        -52.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "renderOrderMod":0
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 008",
+      "locations": [
+        -19,
+        60
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "renderOrderMod":0
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 009",
+      "locations": [
+        -63.5,
+        -46
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod":50
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 010",
+      "locations": [
+        -16.5,
+        -47.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod":50
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 011",
+      "locations": [
+        55,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod":50
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 012",
+      "locations": [
+        -31,
+        57
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod":50
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 013",
+      "locations": [
+        25,
+        27
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod":50
+    }
+  ],
+  "width": 140
+}

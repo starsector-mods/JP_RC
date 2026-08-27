@@ -1,0 +1,33 @@
+{
+	"quality":0.5,
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+        "goalVariant": true,
+    "hullId": "syndicate_asp_cerberus",
+    "hullMods": [
+        "insulatedengine",
+        "heavyarmor"
+    ],
+    "variantId": "syndicate_asp_cerberus_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "heavymauler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "railgun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 002": "vulcan"
+            }
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+  "quality":0.7,
+  "displayName": "Standard",
+  "hullId": "pack_ridgeback_x_rothund",
+  "variantId": "pack_ridgeback_x_rothund_Standard",
+  "fluxVents": 18,
+        "goalVariant": true,
+  "fluxCapacitors": 0,
+  "hullMods": [
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gravitonbeam",
+        "WS 002": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "atropos",
+        "WS 008": "atropos"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightneedler",
+        "WS 006": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser"
+      }
+    }
+  ]
+}

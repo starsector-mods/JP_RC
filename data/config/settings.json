@@ -1,0 +1,41 @@
+{
+	"graphics":{
+    		"hab_glows":{
+    		        "junk_pirates_glory":"graphics/planets/planet_brehinni_lights.png"
+    		},
+		"illustrations":{
+			"karkov_academy":"graphics/illustrations/karkov_academy.png",
+			"glory_background":"graphics/illustrations/brehinni3.png",
+			"asp_paddington":"graphics/illustrations/asp_paddington.png",
+			"petra_port":"graphics/illustrations/petra_port.png",
+			"junk_pirates_warning_beacon":"graphics/illustrations/junk_pirates_warning_beacon.jpg"
+		},
+		"blueprint_packages":{
+			"junk_pirates_junk_bp":"graphics/icons/cargo/junk_pirates_junkbp.png",
+			"junk_pirates_junkprime_bp":"graphics/icons/cargo/junk_pirates_junkbp.png",
+			"junk_pirates_asp_bp":"graphics/icons/cargo/junk_pirates_aspbp.png",
+			"junk_pirates_pack_bp":"graphics/icons/cargo/junk_pirates_packbp.png",
+			"junk_pirates_packprime_bp":"graphics/icons/cargo/junk_pirates_packbp.png",
+			"junk_pirates_familia_bp":"graphics/icons/cargo/junk_pirates_familiabp.png"
+		},
+		"ui":{
+			"junk_pirates_metastable_drive_field":"graphics/icons/tactical/metaStableDriveField.png",
+			"pack_mesh":"graphics/icons/tactical/packMesh.png"
+		},
+		"intel":{
+			"junk_pirates_party":"graphics/icons/intel/junk_party.png"
+		}
+	},
+	"designTypeColors":{
+		"Junk Pirates":[43,130,116,255],
+		"ASP Syndicate":[150,150,225,255],
+		"P.A.C.K.":[255,175,190,255],
+		"ASP Syndicate (Familia)":[190,110,225,255]
+	},
+	"ruleCommandPackages":[
+		"data.scripts.campaign.rulecmd"
+	],
+	"plugins":{
+		"JunkPiratesElectroChaffAndJunkjetPlugin":"data.scripts.plugins.JunkPiratesElectroChaffAndJunkjetPlugin"
+	}
+}

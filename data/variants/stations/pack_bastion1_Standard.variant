@@ -1,0 +1,39 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "pack_bastion1",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "pack_bastion1_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "mark9"
+	}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+	"WS 001": "guardian",
+        "WS 003": "flak",
+        "WS 004": "flak"
+	}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightmortar",
+        "WS 006": "lightmortar",
+        "WS 007": "lightmortar"
+      }
+    }
+  ],
+  "wings": []
+}

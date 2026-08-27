@@ -1,0 +1,30 @@
+{
+	"id":"junk_pirates_damper",
+	"type":"STAT_MOD",
+	"aiType":"DAMPER_FIELD",
+	
+	"statsScript":"data.shipsystems.scripts.JunkPiratesDamperStats",
+	
+	"jitterUnderColor":[255,100,50,155],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":7,
+	"jitterUnderRangeRadiusMin":0,
+	"jitterUnderRangeRadiusMax":0,
+	
+	"jitterColor":[255,100,50,55],
+	"jitterCopies":3,
+	"jitterMinRange":0,
+	"jitterRange":0,
+	"jitterRangeRadiusMin":0,
+	"jitterRangeRadiusMax":0,
+	
+	"fadeActivationSoundOnDespawn":true,
+	"useSound":"system_damper",
+	"loopSound":"system_damper_loop",
+	"deactivateSound":"system_damper_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}

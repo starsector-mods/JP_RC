@@ -1,0 +1,88 @@
+{
+    "hullName":"Spinerette Cheek",
+    "hullId":"junk_pirates_spinerette_cheek_r",
+    "hullSize":"FRIGATE",
+    "style":"LOW_TECH",
+    "spriteName":"graphics/junk_pirates/ships/stations/junk_pirates_spinerette_cheek_r.png",
+    "height":190,
+    "width":181,
+    "center":[
+        94, 24.5
+    ],
+    "collisionRadius":174.5,
+    "coversColor":"",
+    "shieldCenter":[
+        70.5, 3.5
+    ],
+    "shieldRadius":118,
+    "viewOffset":0,
+    "builtInMods":[
+        "reduced_explosion",
+        "chassis_storage",
+        "shared_flux_sink",
+        "missile_reload",
+        "junk_pirates_wibble_wobble"
+    ],
+    "builtInWings":[
+        "junk_pirates_latrodectus_wing"
+    ],
+    "builtInModules":null,
+    "weaponSlots":[
+        {
+            "id":"WS 001",
+            "size":"LARGE",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     115,       54
+            ]
+        },
+        {
+            "id":"WS 002",
+            "size":"MEDIUM",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     123,       13
+            ]
+        },
+        {
+            "id":"WS 003",
+            "size":"MEDIUM",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     123,      -15
+            ]
+        },
+        {
+            "id":"WS 004",
+            "size":"SMALL",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     146,       -1
+            ]
+        }
+    ],
+    "engineSlots":[],
+    "bounds":[
+             -14,      7.5,
+            24.5,     39.5,
+              93,       69,
+           128.5,     47.5,
+           138.5,      -20,
+        
+           102.5,      -33,
+            72.5,    -72.5,
+              -5,      -50
+    ]
+}

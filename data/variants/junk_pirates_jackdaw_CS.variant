@@ -1,0 +1,45 @@
+{
+  "displayName": "Close Support",
+  "fluxCapacitors": 12,
+  "fluxVents": 11,
+  "goalVariant": true,
+  "hullId": "junk_pirates_jackdaw",
+  "hullMods": [
+    "turretgyros",
+    "targetingunit"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_jackdaw_CS",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "junk_pirates_grapeshot_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "hephag",
+        "WS 003": "hveldriver",
+        "WS 004": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "dualflak",
+        "WS 005": "vulcan",
+        "WS 006": "vulcan",
+        "WS 007": "vulcan",
+        "WS 008": "vulcan",
+        "WS 009": "vulcan",
+        "WS 010": "vulcan"
+      }
+    }
+  ]
+}

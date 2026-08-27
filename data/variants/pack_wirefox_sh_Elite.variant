@@ -1,0 +1,32 @@
+{
+  "displayName": "Elite",
+  "fluxCapacitors": 3,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "pack_wirefox_sh",
+  "hullMods": [
+    "magazines"
+  ],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "pack_wirefox_sh_Elite",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdburst",
+        "WS 002": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "lightdualmg",
+        "WS 004": "lightdualmg"
+      }
+    }
+  ],
+  "wings": []
+}

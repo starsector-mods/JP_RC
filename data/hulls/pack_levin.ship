@@ -1,0 +1,84 @@
+{
+  "bounds": [
+    13.5,
+    13.5,
+    -15,
+    11,
+    -15,
+    -11,
+    13.5,
+    -13.5
+  ],
+  "builtInMods": [
+    "pack_dummy_point_defense_ai"
+  ],
+  "builtInWings": [],
+  "center": [
+    25,
+    23
+  ],
+  "collisionRadius": 24,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -17,
+        10
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 8,
+      "length": 26.5,
+      "location": [
+        -18.5,
+        -13
+      ],
+      "style": "LOW_TECH",
+      "width": 8
+    }
+  ],
+  "height": 46,
+  "hullId": "pack_levin",
+  "hullName": "Levin",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 28,
+  "spriteName": "graphics/pack/ships/pack_shock_gunship.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 47.5,
+      "arc": 252,
+      "id": "WS 001",
+      "locations": [
+        11,
+        10.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -43,
+      "arc": 231,
+      "id": "WS 002",
+      "locations": [
+        -4.5,
+        2.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 50
+}

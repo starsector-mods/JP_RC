@@ -1,0 +1,132 @@
+{
+  "bounds": [
+    63.5,
+    -26,
+    56,
+    -65.5,
+    14,
+    -75,
+    -5.5,
+    -56,
+    -5.5,
+    56,
+    14,
+    75,
+    56,
+    65.5,
+    63.5,
+    26
+  ],
+  "builtInMods": [
+    "always_detaches",
+    "reduced_explosion",
+    "shared_flux_sink",
+    "supercomputer"
+  ],
+  "builtInWings": [],
+  "center": [
+    81.5,
+    30
+  ],
+  "collisionRadius": 99.5,
+  "engineSlots": [],
+  "height": 116,
+  "hullId": "pack_bastion1",
+  "hullName": "",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    -25.5,
+    1.5
+  ],
+  "shieldRadius": 159,
+  "spriteName": "graphics/pack/ships/stations/junk_pirates_module_bastion.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 22.5,
+      "arc": 180,
+      "id": "WS 001",
+      "locations": [
+        42.5,
+        22.5
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -23,
+      "arc": 180,
+      "id": "WS 002",
+      "locations": [
+        42.5,
+        -22
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 90,
+      "arc": 120,
+      "id": "WS 003",
+      "locations": [
+        12,
+        47.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -90,
+      "arc": 120,
+      "id": "WS 004",
+      "locations": [
+        12,
+        -47
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 45,
+      "arc": 100,
+      "id": "WS 005",
+      "locations": [
+        54.5,
+        56.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -45,
+      "arc": 100,
+      "id": "WS 006",
+      "locations": [
+        54,
+        -55.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 100,
+      "id": "WS 007",
+      "locations": [
+        68,
+        0.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 162
+}

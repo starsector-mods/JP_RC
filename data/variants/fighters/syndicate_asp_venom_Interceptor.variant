@@ -1,0 +1,28 @@
+{
+  "displayName": "",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "syndicate_asp_venom",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "syndicate_asp_venom_Interceptor",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "swarmer_fighter",
+        "WS 002": "mininglaser",
+        "WS 003": "mininglaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,64 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 26,
+  "fluxVents": 44,
+  "goalVariant": true,
+  "hullId": "pack_bulldog",
+  "hullMods": [
+    "targetingunit"
+  ],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "pack_bulldog_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 019": "hellbore",
+        "WS 020": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gravitonbeam",
+        "WS 002": "gravitonbeam",
+        "WS 003": "gravitonbeam",
+        "WS 004": "gravitonbeam",
+        "WS 024": "lightneedler",
+        "WS 025": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdlaser",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser",
+        "WS 012": "pdlaser",
+        "WS 013": "pdlaser",
+        "WS 014": "pdlaser",
+        "WS 015": "pdlaser",
+        "WS 016": "pdlaser",
+        "WS 017": "pdlaser",
+        "WS 018": "pdlaser",
+        "WS 022": "pdlaser",
+        "WS 023": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "heavyblaster",
+        "WS 006": "heavyblaster"
+      }
+    }
+  ],
+  "wings": []
+}

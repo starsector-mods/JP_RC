@@ -1,0 +1,157 @@
+{
+  "bounds": [
+    15,
+    48.5,
+    -3.5,
+    75,
+    -2.5,
+    139,
+    22.5,
+    150,
+    58.5,
+    108,
+    61.5,
+    62.5,
+    78.5,
+    56,
+    100,
+    -0.5,
+    83,
+    -30.5,
+    -9.5,
+    -12.5
+  ],
+  "builtInMods": [
+    "always_detaches",
+    "chassis_storage",
+    "reduced_explosion",
+    "shared_flux_sink",
+    "supercomputer"
+  ],
+  "builtInWings": [],
+  "center": [
+    155,
+    29.5
+  ],
+  "collisionRadius": 156,
+  "engineSlots": [],
+  "height": 140,
+  "hullId": "pack_partial_supportL",
+  "hullName": "",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    36.5,
+    46
+  ],
+  "shieldRadius": 144,
+  "spriteName": "graphics/pack/ships/stations/junk_pirates_module_partial_supportL.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 49.5,
+      "arc": 125,
+      "id": "WS 001",
+      "locations": [
+        14.5,
+        111
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 26.5,
+      "arc": 142,
+      "id": "WS 002",
+      "locations": [
+        40.5,
+        35
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 58,
+      "arc": 140,
+      "id": "WS 003",
+      "locations": [
+        19.5,
+        140
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 40,
+      "arc": 132,
+      "id": "WS 004",
+      "locations": [
+        44.5,
+        109
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 4.5,
+      "arc": 126,
+      "id": "WS 005",
+      "locations": [
+        73,
+        35.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 007",
+      "locations": [
+        38,
+        91.5,
+        26,
+        97.5,
+        26,
+        85.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 008",
+      "locations": [
+        37.5,
+        68,
+        25.5,
+        74,
+        25.5,
+        62
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 142,
+      "id": "WS 006",
+      "locations": [
+        76.5,
+        -0.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 199
+}

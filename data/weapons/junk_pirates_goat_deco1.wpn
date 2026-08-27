@@ -1,0 +1,21 @@
+{
+	"id":"junk_pirates_goat_deco1",  # this id must match what's in the spreadsheet
+	"specClass":"beam",
+	"type":"DECORATIVE",
+	"size":"SMALL",
+	"turretSprite":"graphics/junk_pirates/weapons/decorative/junk_pirates_goat_deco1.png",
+	"hardpointSprite":"graphics/junk_pirates/weapons/decorative/junk_pirates_goat_deco1.png",	
+	"turretOffsets":[0, 0],
+	"renderBelowAllWeapons":"false",
+	"showDamageWhenDecorative":true,
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"fringeColor":[255,255,255,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[255,255,255,255],
+	"width":1.0,
+	"textureType":ROUGH,
+	"textureScrollSpeed":1.0,
+	"pixelsPerTexel":5.0
+}

@@ -1,0 +1,80 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    "directoryUseShortName":true,
+    "colonyExpeditionChance":0.50,
+    "rebelFleetSuffix":"Splinter Group",
+    "diplomacyTraits":["monopolist", "neutralist"],
+    "vengeanceLevelNames":["Grudge", "Vendetta", "Revenge"],
+    "vengeanceFleetNames":["Enforcers", "Hit-Fleet", "Kill-Fleet"],
+    "vengeanceFleetNamesSingle":["an Enforcer fleet", "a Hit-Fleet", "a Kill-Fleet"],
+    
+    "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
+    "specialForcesFlagshipVariants":{ "syndicate_asp_copperhead_p_Brutaliser": 1, "syndicate_asp_kingcobra_Standard": 0.5 },
+    
+    "marketSpawnWeight":0.5,
+    
+    "freeMarket":true,
+	
+    "startRelationships":{ "tritachyon": 0.1, "persean": -0.1 },
+
+    "diplomacyPositiveChance":{ "persean":0.9 },
+    "diplomacyNegativeChance":{ "persean":1.1 },
+    "morality":"amoral",
+
+    "alignments":{
+	"corporate":1,
+        "militarist":-0.5
+    },
+    
+    "startShipsSolo":[
+    ["syndicate_asp_diamondback_Standard"],
+    ["syndicate_asp_cerberus_Standard"]
+    ],
+    "startShipsCombatSmall":[
+      ["syndicate_asp_cerberus_Standard", "syndicate_asp_hognose_Standard", "syndicate_asp_vigilance_Standard"],
+      ["syndicate_asp_diamondback_Standard", "syndicate_asp_hammerhead_Balanced", "syndicate_asp_diamondback_p_Standard"]
+    ],
+    "startShipsTradeSmall":[["syndicate_asp_hognose_Standard", "syndicate_asp_diamondback_Standard", "syndicate_asp_cerberus_Standard"]],
+    "startShipsCombatLarge":[
+      ["syndicate_asp_copperhead_Standard", "syndicate_asp_hammerhead_Balanced", "syndicate_asp_diamondback_Standard"],
+      ["syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_diamondback_p_Standard", "syndicate_asp_hognose_p_Standard"]
+    ],
+    "startShipsTradeLarge":[["syndicate_asp_gigantophis_Standard", "syndicate_asp_copperhead_Standard", "syndicate_asp_hognose_Standard"]],
+    "startShipsCarrierSmall":[["syndicate_asp_hognose_Standard", "syndicate_asp_hognose_Standard", "syndicate_asp_hammerhead_Balanced"]],
+    "startShipsCarrierLarge":[["syndicate_asp_kingcobra_Standard", "syndicate_asp_copperhead_Standard", "syndicate_asp_mercury_Standard"]],
+    "startShipsExplorerSmall":[
+        ["syndicate_asp_diamondback_Standard", "syndicate_asp_hognose_Standard"],
+        ["syndicate_asp_cerberus_Standard", "syndicate_asp_hognose_Standard"]
+    ],
+    "startShipsExplorerLarge":[
+        ["syndicate_asp_copperhead_Standard", "syndicate_asp_diamondback_Standard", "syndicate_asp_hognose_Standard"],
+        ["syndicate_asp_kingcobra_Standard", "syndicate_asp_hognose_Standard"]
+    ],
+    "startShipsSuper":[
+        ["syndicate_asp_kingcobra_Standard"],
+        ["syndicate_asp_copperhead_p_Brutaliser"]
+    ],
+    "startShipsGrandFleet":[
+        ["syndicate_asp_kingcobra_Standard", "syndicate_asp_copperhead_Standard", "syndicate_asp_diamondback_Standard", "syndicate_asp_hognose_Standard", "syndicate_asp_cerberus_Standard"]
+    ],
+    
+    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"], "weight":0.5},
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"], "weight":0.5},
+        {"ids":["orbitalstation_high", "battlestation_high", "starfortress_high"]}
+    ],
+    
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1}
+    ],
+    
+    "bonusSeeds":[
+        {"id":"nanoforge_pristine", "count":1},
+	{"id":"aiCore_any", "mult":0.2}
+    ],
+    "startSpecialItems":[
+        [["junk_pirates_asp_bp", ""]]
+	]
+}

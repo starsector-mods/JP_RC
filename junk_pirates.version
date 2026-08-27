@@ -1,0 +1,13 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/starsector-mods/JP_RC/master/junk_pirates.version",
+    "modName":"Junk Pirates / ASP / PACK (Release)",
+    "modThreadId":35651,
+    "directDownloadURL":"https://github.com/starsector-mods/JP_RC/releases/latest/download/JP_RC.zip",
+    "changelogURL":"https://raw.githubusercontent.com/starsector-mods/JP_RC/master/README.md",
+    "modVersion":
+    {
+        "major":3,
+        "minor":5,
+        "patch":5
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 10,
+    "fluxVents": 3,
+    "hullId": "syndicate_asp_mercury",
+    "hullMods": [],
+        "goalVariant": true,
+    "quality": 0.5,
+    "variantId": "syndicate_asp_mercury_Standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "pdlaser",
+            "WS 002": "pdlaser",
+            "WS 003": "pdlaser"
+        }
+    }]
+}

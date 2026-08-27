@@ -1,0 +1,47 @@
+{
+  "quality":0.5,
+  "displayName": "Standard",
+  "fluxCapacitors": 10,
+  "fluxVents": 16,
+        "goalVariant": true,
+  "hullId": "pack_komondor_canebianco",
+  "hullMods": [],
+  "variantId": "pack_komondor_canebianco_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "reaper",
+        "WS 002": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "lightneedler",
+        "WS 010": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "lightdualmg",
+        "WS 008": "lightdualmg",
+        "WS 003": "lightdualmg",
+        "WS 004": "lightdualmg",
+        "WS 005": "lightdualmg",
+        "WS 006": "lightdualmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "heavyblaster"
+      }
+    }
+  ]
+}

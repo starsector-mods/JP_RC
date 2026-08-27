@@ -1,0 +1,45 @@
+{
+  "displayName": "Standard",
+  "hullId": "pack_ridgeback",
+  "variantId": "pack_ridgeback_Standard",
+  "fluxVents": 19,
+        "goalVariant": true,
+  "fluxCapacitors": 0,
+  "hullMods": [
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gravitonbeam",
+        "WS 002": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "harpoonpod",
+        "WS 008": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "arbalest",
+        "WS 006": "arbalest"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser"
+      }
+    }
+  ]
+}

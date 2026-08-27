@@ -1,0 +1,38 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "junk_pirates_clam",
+  "hullMods": [
+    "eccm",
+    "blast_doors"
+  ],
+  "permaMods": [],
+  "quality": 1,
+  "variantId": "junk_pirates_clam_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightdualac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "harpoon",
+        "WS 004": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "vulcan"
+      }
+    }
+  ]
+}

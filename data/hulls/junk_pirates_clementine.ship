@@ -1,0 +1,206 @@
+{
+  "bounds": [
+    -34.5,
+    12,
+    -27.5,
+    34,
+    8.5,
+    41.5,
+    36.5,
+    25,
+    29.5,
+    15,
+    11.5,
+    8,
+    17,
+    -14,
+    39.5,
+    -17,
+    40.5,
+    -29,
+    24.5,
+    -39.5,
+    -30,
+    -35.5,
+    -31.5,
+    -12
+  ],
+  "builtInWeapons": {
+    "WS 008": "blinker_green",
+    "WS 010": "blinker_red"
+  },
+  "builtInWings": [],
+  "center": [
+    48.5,
+    50
+  ],
+  "collisionRadius": 54.811039,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 53,
+      "location": [
+        -45.5,
+        20
+      ],
+      "style": "MIDLINE",
+      "width": 5
+    },
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 53,
+      "location": [
+        -42,
+        -31
+      ],
+      "style": "MIDLINE",
+      "width": 5
+    },
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 29,
+      "location": [
+        -44.5,
+        13
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": 180,
+      "contrailSize": 8,
+      "length": 35.5,
+      "location": [
+        -39,
+        -16
+      ],
+      "style": "MIDLINE",
+      "width": 8
+    },
+    {
+      "angle": 180,
+      "contrailSize": 128,
+      "length": 41,
+      "location": [
+        -41.5,
+        26
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    }
+  ],
+  "height": 100,
+  "hullId": "junk_pirates_clementine",
+  "hullName": "Clementine",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    1.5,
+    2.5
+  ],
+  "shieldRadius": 67.537025,
+  "spriteName": "graphics/junk_pirates/ships/junk_pirates_clementine.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 34.135941,
+      "arc": 210.219147,
+      "id": "WS 001",
+      "locations": [
+        28,
+        22
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 151.975494,
+      "arc": 219.301849,
+      "id": "WS 002",
+      "locations": [
+        -20.5,
+        26.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 136.918045,
+      "id": "WS 003",
+      "locations": [
+        -9.5,
+        1
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 72.21611,
+      "arc": 215.779205,
+      "id": "WS 004",
+      "locations": [
+        5,
+        35.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -144.887985,
+      "arc": 220.67923,
+      "id": "WS 005",
+      "locations": [
+        -14.5,
+        -24.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 006",
+      "locations": [
+        19,
+        -0.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 151.975006,
+      "arc": 26.950012,
+      "id": "WS 008",
+      "locations": [
+        -31.5,
+        10
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -151.975006,
+      "arc": 27.049,
+      "id": "WS 010",
+      "locations": [
+        -29,
+        -10.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    }
+  ],
+  "width": 96
+}

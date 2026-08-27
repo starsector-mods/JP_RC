@@ -1,0 +1,38 @@
+{
+  "displayName": "Close Support",
+  "fluxCapacitors": 4,
+  "fluxVents": 4,
+  "goalVariant": true,
+  "hullId": "junk_pirates_clam",
+  "hullMods": [
+    "heavyarmor",
+    "eccm",
+    "unstable_injector"
+  ],
+  "permaMods": [],
+  "quality": 1,
+  "variantId": "junk_pirates_clam_CS",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "junk_pirates_grapeshot_s",
+        "WS 003": "vulcan",
+        "WS 004": "junk_pirates_grapeshot_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ]
+}

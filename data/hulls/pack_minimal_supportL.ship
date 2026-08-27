@@ -1,0 +1,141 @@
+{
+  "bounds": [
+    30,
+    -58,
+    -6,
+    -10,
+    -5,
+    54,
+    20,
+    65,
+    56,
+    23,
+    59,
+    -22.5,
+    76,
+    -29,
+    83,
+    -58
+  ],
+  "builtInMods": [
+    "always_detaches",
+    "chassis_storage",
+    "reduced_explosion",
+    "shared_flux_sink",
+    "supercomputer"
+  ],
+  "builtInWings": [],
+  "center": [
+    70,
+    32
+  ],
+  "collisionRadius": 113,
+  "engineSlots": [],
+  "height": 140,
+  "hullId": "pack_minimal_supportL",
+  "hullName": "",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    24,
+    1
+  ],
+  "shieldRadius": 117,
+  "spriteName": "graphics/pack/ships/stations/junk_pirates_module_minimal_supportL.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 49.5,
+      "arc": 125,
+      "id": "WS 001",
+      "locations": [
+        12,
+        26
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 26.5,
+      "arc": 142,
+      "id": "WS 002",
+      "locations": [
+        38,
+        -50
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 58,
+      "arc": 140,
+      "id": "WS 003",
+      "locations": [
+        17,
+        55
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 40,
+      "arc": 132,
+      "id": "WS 004",
+      "locations": [
+        42,
+        24
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 4.5,
+      "arc": 126,
+      "id": "WS 005",
+      "locations": [
+        70.5,
+        -49.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 006",
+      "locations": [
+        35.5,
+        6.5,
+        23.5,
+        12.5,
+        23.5,
+        0.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 007",
+      "locations": [
+        35,
+        -17,
+        23,
+        -11,
+        23,
+        -23
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    }
+  ],
+  "width": 147
+}

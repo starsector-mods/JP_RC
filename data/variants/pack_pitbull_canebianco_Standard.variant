@@ -1,0 +1,49 @@
+{
+  "quality": 0.5,
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 13,
+        "goalVariant": true,
+  "hullId": "pack_pitbull_canebianco",
+  "hullMods": [
+    "missleracks",
+    "eccm",
+    "auxiliarythrusters"
+  ],
+  "variantId": "pack_pitbull_canebianco_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "harpoon",
+        "WS 002": "harpoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "reaper",
+        "WS 004": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "pdburst",
+        "WS 006": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "irpulse",
+        "WS 008": "irpulse",
+        "WS 009": "pulselaser"
+      }
+    }
+  ]
+}

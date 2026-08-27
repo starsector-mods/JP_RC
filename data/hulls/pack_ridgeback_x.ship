@@ -1,0 +1,254 @@
+{
+  "bounds": [
+    64,
+    -8.5,
+    47,
+    -20.5,
+    15,
+    -27,
+    47.5,
+    -35,
+    47.5,
+    -42.5,
+    3.5,
+    -55.5,
+    -35.5,
+    -51,
+    -65,
+    -56,
+    -58,
+    -34.5,
+    -71.5,
+    -15,
+    -71.5,
+    15,
+    -58,
+    34.5,
+    -65,
+    56,
+    -35.5,
+    51,
+    3.5,
+    55.5,
+    47.5,
+    42.5,
+    47.5,
+    35,
+    15,
+    27,
+    47,
+    20.5,
+    64,
+    8.5
+  ],
+  "builtInMods": [
+    "pack_mesh"
+  ],
+  "builtInWings":["pack_felix_drone"],
+  "center": [
+    78,
+    83.5
+  ],
+  "collisionRadius": 93.134308,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 20,
+      "length": 27.5,
+      "location": [
+        -83.5,
+        8
+      ],
+      "style": "MIDLINE",
+      "width": 20
+    },
+    {
+      "angle": -180,
+      "contrailSize": 20,
+      "length": 27.5,
+      "location": [
+        -83.5,
+        -7
+      ],
+      "style": "MIDLINE",
+      "width": 20
+    },
+    {
+      "angle": -153.904572,
+      "contrailSize": 15.175422,
+      "length": 25.429836,
+      "location": [
+        -71,
+        -57
+      ],
+      "style": "MIDLINE",
+      "width": 15.175422
+    },
+    {
+      "angle": 153.904572,
+      "contrailSize": 15.175422,
+      "length": 25.429836,
+      "location": [
+        -70.5,
+        58
+      ],
+      "style": "MIDLINE",
+      "width": 15.175422
+    },
+    {
+      "angle": -154.316345,
+      "contrailSize": 7.873088,
+      "length": 43.814995,
+      "location": [
+        -69.5,
+        -48.5
+      ],
+      "style": "MIDLINE",
+      "width": 7.873088
+    },
+    {
+      "angle": 154.316345,
+      "contrailSize": 7.873088,
+      "length": 43.814995,
+      "location": [
+        -69.5,
+        49
+      ],
+      "style": "MIDLINE",
+      "width": 7.873088
+    },
+    {
+      "angle": 180,
+      "contrailSize": 10,
+      "length": 52.5,
+      "location": [
+        -73.5,
+        27.5
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 10,
+      "length": 52.5,
+      "location": [
+        -73.5,
+        -26.5
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    }
+  ],
+  "height": 160,
+  "hullId": "pack_ridgeback_x",
+  "hullName": "Ridgeback X",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 117.526596,
+  "spriteName": "graphics/pack/ships/pack_ridgeback_x.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 20,
+      "arc": 115,
+      "id": "WS 001",
+      "locations": [
+        -35.5,
+        47
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -20,
+      "arc": 115,
+      "id": "WS 002",
+      "locations": [
+        -35.5,
+        -46
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 40,
+      "arc": 150,
+      "id": "WS 003",
+      "locations": [
+        2.5,
+        47
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -40,
+      "arc": 150,
+      "id": "WS 004",
+      "locations": [
+        2.5,
+        -46
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 005",
+      "locations": [
+        21,
+        21
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -0,
+      "arc": 5,
+      "id": "WS 006",
+      "locations": [
+        21,
+        -20
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 007",
+      "locations": [
+        46.5,
+        39
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -0,
+      "arc": 5,
+      "id": "WS 008",
+      "locations": [
+        46.5,
+        -38
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 155
+}

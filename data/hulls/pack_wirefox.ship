@@ -1,0 +1,136 @@
+{
+  "bounds": [
+    28,
+    -23,
+    6,
+    -14.5,
+    -5.5,
+    -28,
+    -30,
+    -27,
+    -30.5,
+    21,
+    -8,
+    21,
+    4,
+    8.5,
+    28.5,
+    18
+  ],
+  "center": [
+    26.5,
+    40
+  ],
+  "builtInMods": [
+    "pack_mesh"
+  ],
+  "collisionRadius": 50.159744,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -40,
+        16.5
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -41,
+        -24.5
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 4,
+      "length": 22,
+      "location": [
+        -41,
+        -6.5
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    },
+    {
+      "angle": 180,
+      "contrailSize": 2,
+      "length": 31,
+      "location": [
+        -40,
+        -2.5
+      ],
+      "style": "MIDLINE",
+      "width": 2
+    },
+    {
+      "angle": 180,
+      "contrailSize": 2,
+      "length": 29.5,
+      "location": [
+        -40,
+        -11
+      ],
+      "style": "MIDLINE",
+      "width": 2
+    }
+  ],
+  "height": 82,
+  "hullId": "pack_wirefox",
+  "hullName": "Wirefox",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 63,
+  "spriteName": "graphics/pack/ships/pack_wirefox.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -90,
+      "arc": 205,
+      "id": "WS 001",
+      "locations": [
+        -15,
+        -10.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 002",
+      "locations": [
+        35.5,
+        10.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 003",
+      "locations": [
+        33.5,
+        -15.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 59
+}

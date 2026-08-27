@@ -1,0 +1,53 @@
+{
+  "animationType": "MUZZLE_FLASH",
+  "barrelMode": "ALTERNATING",
+  "fireSoundTwo": "autocannon_fire",
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointGunSprite": "graphics/weapons/junk_pirates_scrapcannon_hardpoint_recoil.png",
+  "hardpointOffsets": [
+    31,
+    -5,
+    31,
+    5
+  ],
+  "hardpointSprite": "graphics/weapons/junk_pirates_scrapcannon_hardpoint_base.png",
+  "id": "junk_pirates_scrapcannon",
+  "muzzleFlashSpec": {
+    "length": 25,
+    "particleColor": [
+      135,
+      190,
+      150,
+      200
+    ],
+    "particleCount": 20,
+    "particleDuration": 0.4,
+    "particleSizeMin": 16,
+    "particleSizeRange": 18,
+    "spread": 10
+  },
+  "projectileSpecId": "junk_pirates_scrapcannon_shot",
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "size": "MEDIUM",
+  "specClass": "projectile",
+  "textureType": ROUGH,
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "turretGunSprite": "graphics/weapons/junk_pirates_scrapcannon_turret_recoil.png",
+  "turretOffsets": [
+    31,
+    -5,
+    31,
+    5
+  ],
+  "turretSprite": "graphics/weapons/junk_pirates_scrapcannon_turret_base.png",
+  "type": "BALLISTIC",
+  "visualRecoil": 9
+}

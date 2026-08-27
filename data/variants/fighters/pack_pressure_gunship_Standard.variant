@@ -1,0 +1,22 @@
+{
+  "displayName": "",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "pack_pressure_gunship",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "pack_pressure_gunship_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pack_mini_ripsaw",
+        "WS 002": "pack_mini_ripsaw"
+      }
+    }
+  ],
+  "wings": []
+}

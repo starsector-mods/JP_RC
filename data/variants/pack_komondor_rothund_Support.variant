@@ -1,0 +1,45 @@
+{
+  "quality":0.5,
+  "displayName": "Support",
+  "fluxCapacitors": 9,
+  "fluxVents": 10,
+        "goalVariant": true,
+  "hullId": "pack_komondor_rothund",
+  "hullMods": [],
+  "variantId": "pack_komondor_rothund_Support",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "heatseeker",
+        "WS 002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "lightneedler",
+        "WS 010": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "vulcan",
+        "WS 008": "vulcan",
+        "WS 005": "vulcan",
+        "WS 006": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "heavymauler"
+      }
+    }
+  ]
+}

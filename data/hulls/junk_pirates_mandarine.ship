@@ -1,0 +1,180 @@
+{
+  "bounds": [
+    3.5,
+    -21.5,
+    -13.5,
+    -33.5,
+    -39.5,
+    -17,
+    -39,
+    24.5,
+    0.5,
+    30,
+    12.5,
+    18,
+    40.5,
+    16.5,
+    47.5,
+    1.5,
+    35.5,
+    -20.5
+  ],
+  "builtInWeapons": {
+    "WS 008": "junk_pirates_kraken_deco1"
+  },
+  "builtInWings": [],
+  "center": [
+    44.5,
+    56
+  ],
+  "collisionRadius": 55.013634,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -47.5,
+        17.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 8,
+      "length": 48.5,
+      "location": [
+        -48.5,
+        -12
+      ],
+      "style": "LOW_TECH",
+      "width": 8
+    },
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 20,
+      "location": [
+        -48,
+        8
+      ],
+      "style": "LOW_TECH",
+      "width": 6
+    }
+  ],
+  "height": 115,
+  "hullId": "junk_pirates_mandarine",
+  "hullName": "Mandarine",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    2,
+    -1
+  ],
+  "shieldRadius": 69.501801,
+  "spriteName": "graphics/junk_pirates/ships/junk_pirates_mandarine.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 90,
+      "arc": 218.666428,
+      "id": "WS 001",
+      "locations": [
+        3.5,
+        28
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -90,
+      "arc": 218.666428,
+      "id": "WS 002",
+      "locations": [
+        -12.5,
+        -28
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 003",
+      "locations": [
+        32.5,
+        11.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "renderOrderMod":50
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 004",
+      "locations": [
+        16,
+        -11.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 136.660278,
+      "arc": 12.117968,
+      "id": "WS 005",
+      "locations": [
+        -19,
+        24.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": -154.536652,
+      "arc": 15.243009,
+      "id": "WS 006",
+      "locations": [
+        -31,
+        -19.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 007",
+      "locations": [
+        17,
+        30
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "renderOrderMod":10
+    },
+    {
+      "angle": 0,
+      "arc": 15.243,
+      "id": "WS 008",
+      "locations": [
+        0,
+        -11.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod":100
+    }
+  ],
+  "width": 87
+}

@@ -1,0 +1,42 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 14,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "pack_sharpei_canebianco",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "pack_sharpei_canebianco_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "heavyblaster",
+        "WS 002": "heavyblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "flak",
+        "WS 004": "flak",
+        "WS 005": "pdlaser",
+        "WS 006": "pdlaser",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "irpulse",
+        "WS 010": "irpulse"
+      }
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,95 @@
+{
+    "hullName":"Spinerette Arm",
+    "hullId":"junk_pirates_spinerette_arm_l",
+    "hullSize":"FRIGATE",
+    "style":"LOW_TECH",
+    "spriteName":"graphics/junk_pirates/ships/stations/junk_pirates_spinerette_arm_l.png",
+    "height":214,
+    "width":97,
+    "center":[
+        48, 14.5
+    ],
+    "collisionRadius":199.5,
+    "coversColor":"",
+    "shieldCenter":[
+        92.5, -0.5
+    ],
+    "shieldRadius":167.5,
+    "viewOffset":0,
+    "builtInMods":[
+        "shared_flux_sink",
+        "reduced_explosion",
+        "junk_pirates_wobble_wibble"
+    ],
+    "builtInWings":[],
+    "builtInModules":null,
+    "weaponSlots":[
+        {
+            "id":"WS 001",
+            "size":"MEDIUM",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                      39,     35.5
+            ]
+        },
+        {
+            "id":"WS 002",
+            "size":"MEDIUM",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                      39,    -36.5
+            ]
+        },
+        {
+            "id":"WS 003",
+            "size":"SMALL",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     138,      -22
+            ]
+        },
+        {
+            "id":"WS 004",
+            "size":"SMALL",
+            "type":"UNIVERSAL",
+            "mount":"TURRET",
+            "arc":360,
+            "angle":0,
+            "locations":[
+                     174,      -16
+            ]
+        },
+        {
+            "id":"WS 005",
+            "size":"SMALL",
+            "type":"SYSTEM",
+            "mount":"TURRET",
+            "arc":14,
+            "angle":1.5,
+            "locations":[
+                     192,     -0.5
+            ]
+        }
+    ],
+    "engineSlots":[],
+    "bounds":[
+              75,    -19.5,
+              42,      -38,
+              -2,      -23,
+              -2,       22,
+              42,       37,
+        
+           124.5,       14,
+             190,     -0.5,
+           116.5,      -27
+    ]
+}

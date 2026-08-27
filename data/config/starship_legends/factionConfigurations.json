@@ -1,0 +1,131 @@
+{
+  "junk_pirates": {
+    "descriptionOverride": "The ships in this Junk Pirate fleet are known for the following improvised reputations:",
+    "allowFamousFlagshipsInFleets": true,
+    "allowFamousFlagshipBarEvent": true,
+    "allowFamousDerelictBarEvent": true,
+    "derelictFrequency": {
+      "junk_pirates_clementine": 1,
+      "junk_pirates_scythe": 1,
+      "junk_pirates_boxer": 0.75,
+      "junk_pirates_langoustine": 0.75,
+      "junk_pirates_satsuma": 0.75,
+      "junk_pirates_raven": 0.5,
+      "junk_pirates_goat": 0.5,
+      "junk_pirates_magpie": 0.35,
+      "junk_pirates_orca": 0.25,
+      "junk_pirates_tangerine": 0.15
+    },
+    "exclusiveDerelictFrequency": {
+      "junk_pirates_turbot": 0.25,
+      "junk_pirates_the_reaper": 0.1
+    },
+    "goodTraitFrequency": {
+      "salvage": 4,
+      "dmod_effect": 2,
+      "dmod_integrity": 2,
+      "engine_power": 2,
+      "maneuverability": 2,
+      "ballistics_rof": 2,
+      "missile_reload": 2,
+      "mount_durability": 2,
+      "armor_strength": 2,
+      "blockade_runner": 2
+    },
+    "badTraitFrequency": {
+      "malfunction": 3,
+      "crew_casualties": 2,
+      "engine_durability": 2,
+      "mount_durability": 2,
+      "sensor_profile": 2,
+      "cursed": 1
+    }
+  },
+  "pack": {
+    "descriptionOverride": "The ships in this P.A.C.K. fleet are known for the following mesh-born reputations:",
+    "allowFamousFlagshipsInFleets": true,
+    "allowFamousFlagshipBarEvent": true,
+    "allowFamousDerelictBarEvent": true,
+    "derelictFrequency": {
+      "pack_wirefox": 1,
+      "pack_bedlington": 1,
+      "pack_samoyed": 1,
+      "pack_schnauzer": 1,
+      "pack_ridgeback": 0.75,
+      "pack_pitbull": 0.75,
+      "pack_komondor": 0.5,
+      "pack_sharpei": 0.35,
+      "pack_mastiff": 0.25,
+      "pack_bulldog": 0.15
+    },
+    "goodTraitFrequency": {
+      "command_support": 4,
+      "nav_support": 3,
+      "ecm_support": 3,
+      "fighter_damage": 3,
+      "fighter_speed": 2,
+      "fighter_durability": 2,
+      "shield_raise_rate": 2,
+      "shield_stability": 2,
+      "maneuverability": 2,
+      "missile_guidance": 2
+    },
+    "badTraitFrequency": {
+      "hull_integrity": 2,
+      "armor_strength": 2,
+      "crew_casualties": 1,
+      "malfunction": 1,
+      "sensor_profile": 1
+    }
+  },
+  "syndicate_asp": {
+    "descriptionOverride": "The ships in this ASP Syndicate fleet are known for the following commercial-service reputations:",
+    "allowFamousFlagshipsInFleets": true,
+    "allowFamousFlagshipBarEvent": true,
+    "allowFamousDerelictBarEvent": true,
+    "derelictFrequency": {
+      "syndicate_asp_diamondback": 1,
+      "syndicate_asp_hognose": 1,
+      "syndicate_asp_copperhead": 0.75,
+      "syndicate_asp_gigantophis": 0.5,
+      "syndicate_asp_kingcobra": 0.25
+    },
+    "goodTraitFrequency": {
+      "cargo_capacity": 4,
+      "fuel_capacity": 3,
+      "fuel_efficiency": 3,
+      "blockade_runner": 3,
+      "sensor_profile": 2,
+      "fighter_damage": 2,
+      "fighter_durability": 2,
+      "shield_strength": 2,
+      "missile_guidance": 2
+    },
+    "badTraitFrequency": {
+      "damage": 2,
+      "weapon_stability": 1,
+      "engine_durability": 1,
+      "crew_casualties": 1,
+      "sensor_profile": 1
+    }
+  },
+  "syndicate_asp_familia": {
+    "descriptionOverride": "The ships in this Familia fleet are known for the following underworld reputations:",
+    "allowFamousFlagshipBarEvent": false,
+    "allowFamousDerelictBarEvent": false,
+    "goodTraitFrequency": {
+      "damage": 3,
+      "missile_reload": 2,
+      "weapon_stability": 2,
+      "engine_power": 2,
+      "maneuverability": 2,
+      "blockade_runner": 2,
+      "sensor_profile": 3
+    },
+    "badTraitFrequency": {
+      "crew_casualties": 2,
+      "malfunction": 1,
+      "cursed": 1
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"id":"junk_pirates_scrapcannon_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"onHitEffect":"data.scripts.weapons.JunkPiratesScrapOnHitEffect",
+	"length":56,
+	"width":9,
+	"fadeTime":0.3,
+	"fringeColor":[135,190,150,230],
+	"coreColor":[185,255,200,200],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/debris/debris_med2.png"
+}

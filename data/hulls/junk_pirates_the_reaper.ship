@@ -1,0 +1,341 @@
+{
+  "bounds": [
+    -86,
+    61,
+    -87,
+    102,
+    -121,
+    109,
+    -61.5,
+    120,
+    39.5,
+    95.5,
+    102,
+    101.5,
+    40,
+    129,
+    42,
+    154,
+    80,
+    159,
+    140,
+    155,
+    154,
+    131,
+    138,
+    27,
+    156,
+    19,
+    45.5,
+    14.5,
+    64,
+    -63,
+    130.5,
+    -50.5,
+    137,
+    -70,
+    112,
+    -73,
+    147,
+    -112,
+    134,
+    -121,
+    102,
+    -98,
+    79,
+    -99,
+    82,
+    -134.5,
+    27,
+    -126,
+    4,
+    -126,
+    9.5,
+    -157.5,
+    -126.5,
+    -151.5,
+    -83,
+    -132,
+    -96.5,
+    -105.5,
+    -124,
+    -96.5,
+    -125.5,
+    46.5
+  ],
+  "builtInMods": [
+    "repair_gantry",
+    "civgrade",
+    "junk_pirates_damper_hullmod"
+  ],
+  "builtInWeapons": {
+    "WS 005": "junk_pirates_welder",
+    "WS 008": "junk_pirates_blinking_bay",
+    "WS 009": "junk_pirates_blinking_bay",
+    "WS 010": "junk_pirates_blinking_bay"
+  },
+  "builtInWings": [
+    "junk_pirates_tnt_drone",
+    "junk_pirates_welding_drone",
+    "junk_pirates_tnt_ac_drone_wing"
+  ],
+  "center": [
+    167.5,
+    148
+  ],
+  "collisionRadius": 221.325546,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -139,
+        -149.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 12,
+      "length": 41,
+      "location": [
+        -121,
+        112.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -131,
+        -141.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -131,
+        -157.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 47,
+      "location": [
+        35,
+        153
+      ],
+      "style": "LOW_TECH",
+      "width": 6
+    },
+    {
+      "angle": 180,
+      "contrailSize": 16,
+      "length": 41,
+      "location": [
+        33,
+        133
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 154.133636,
+      "contrailSize": 12,
+      "length": 41,
+      "location": [
+        -95.5,
+        137
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": -141.340195,
+      "contrailSize": 13.743292,
+      "length": 10.619816,
+      "location": [
+        102,
+        -114
+      ],
+      "style": "LOW_TECH",
+      "width": 13.743292
+    },
+    {
+      "angle": -141.340195,
+      "contrailSize": 13.743292,
+      "length": 10.619816,
+      "location": [
+        121,
+        -125
+      ],
+      "style": "LOW_TECH",
+      "width": 13.743292
+    }
+  ],
+  "height": 320,
+  "hullId": "junk_pirates_the_reaper",
+  "hullName": "The Reaper",
+  "hullSize": "CAPITAL_SHIP",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 232.086197,
+  "spriteName": "graphics/junk_pirates/ships/junk_pirates_the_reaper.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 40,
+      "arc": 225,
+      "id": "WS 001",
+      "locations": [
+        139,
+        124.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 90,
+      "arc": 190,
+      "id": "WS 002",
+      "locations": [
+        -40,
+        34.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -135,
+      "arc": 260,
+      "id": "WS 003",
+      "locations": [
+        -112,
+        -78.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -90,
+      "arc": 260,
+      "id": "WS 004",
+      "locations": [
+        -65,
+        -159.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 005",
+      "locations": [
+        142,
+        -61
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 011",
+      "locations": [
+        -25,
+        28,
+        -25,
+        -62,
+        -5,
+        29,
+        -4,
+        -63
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 90.010002,
+      "id": "WS 006",
+      "locations": [
+        109,
+        24.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 90,
+      "id": "WS 007",
+      "locations": [
+        110.5,
+        73.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 008",
+      "locations": [
+        -19.5,
+        24
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 009",
+      "locations": [
+        -19.5,
+        6
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 010",
+      "locations": [
+        -19,
+        -51.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    }
+  ],
+  "width": 341
+}

@@ -1,0 +1,26 @@
+{
+	"id": "junk_pirates_release",
+	"name": "Junk pirates / ASP / PACK (Release)",
+	"author": "mendonca",
+	"version": {
+		"major": 3,
+		"minor": 5,
+		"patch": 5
+	},
+	"description": "Junk Pirates, PACK and ASP Syndicate come together, at long last (requires GraphicsLib).",
+	"gameVersion": "0.98a-RC8",
+	"modPlugin": "data.scripts.JunkPiratesModPlugin",
+	"jars": [
+		"jars/JunkPirates.jar"
+	],
+	"dependencies": [
+		{
+			"id": "shaderLib",
+			"name": "GraphicsLib"
+		},
+		{
+			"id": "lw_lazylib",
+			"name": "LazyLib"
+		}
+	]
+}

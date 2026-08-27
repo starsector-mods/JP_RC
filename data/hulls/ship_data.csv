@@ -1,0 +1,110 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,hints,tags,rarity,breakProb,minPieces,maxPieces,number
+Welding Support Drone,junk_pirates_welding_drone,,,,,60,20,600,,50,0,,200,250,250,180,360,5,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,0,,,321998
+TNT Drone,junk_pirates_tnt_drone,,,,,120,150,400,,50,0,,125,120,80,180,180,15,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,0,,,321997
+Phase Drone,junk_pirates_phase_drone,,,,,30,10,100,,50,0,,200,250,250,180,360,5,PHASE,phasecloak,,,,0.02,0.02,0,0,,,,,,,,,,,,,,,,0,,,321999
+Ion Attack Drone,pack_drone_ion,,,,,200,50,200,,100,0,,190,130,130,130,130,20,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,0,,,691004
+Insult Drone,junk_pirates_insult_drone,,,flarelauncher_fighter,,400,125,1500,,75,0,,120,200,200,180,360,20,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,0,,,321996
+FELIX Drone,pack_felix_drone,,,flarelauncher_fighter,,400,125,1000,,75,0,,150,200,200,180,360,15,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,0,,,321995
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Shard Heavy Fighter,junk_pirates_shard,,Junk Pirates,,,700,100,300,,70,0,,165,200,40,70,120,40,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,0,,,321611
+Cleat Bomber,junk_pirates_cleat,,Junk Pirates,,,100,20,400,,75,0,,175,180,40,80,80,20,FRONT,,90,0.4,1,,,2,2,,,,,,,,,,,,,,,,0,,,321605
+Spike Heavy Fighter,junk_pirates_spike,,Junk Pirates,,,450,50,400,,100,0,,225,300,30,100,180,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,321604
+Splinter Interceptor,junk_pirates_splinter,,Junk Pirates,,,600,75,300,,50,0,,175,200,145,145,100,150,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,321620
+Coil Fighter,syndicate_asp_constrictor,,ASP Syndicate,,,800,125,600,,100,0,,150,125,50,40,80,100,FRONT,,120,0.4,1,,,2,2,,,,,,,,,,,,,,,,0,,,991004
+Fang Interceptor,syndicate_asp_venom,,ASP Syndicate,,,400,40,400,,50,0,,245,300,75,100,150,50,FRONT,,45,0.4,1,,,1,1,,,,,,,,,,,,,,,,0,,,991005
+Hood Interceptor,syndicate_asp_bite,,ASP Syndicate,,,350,40,200,,30,0,,325,400,140,100,200,30,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,0,,,991006
+Rattle Support,syndicate_asp_death_rattle,,ASP Syndicate,,,500,100,800,,150,0,,175,150,75,60,100,100,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,
+Oblonsky Interceptor,pack_oblonsky,,P.A.C.K.,,,200,40,200,,30,0,,300,400,140,100,200,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,
+Ivan Interceptor,pack_gunship,,P.A.C.K.,,,600,200,600,,100,0,,145,300,30,100,180,30,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,
+Mitya Bomber,pack_bomber,,P.A.C.K.,,,100,125,600,,75,0,,115,180,40,80,80,20,FRONT,,145,0.4,1,,,2,2,,,,,,,,,,,,,,,,0,,,
+Alyosha Heavy Fighter,pack_pressure_gunship,,P.A.C.K.,flarelauncher_fighter,,550,170,600,,70,0,,135,200,40,70,120,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,
+Levin Heavy Fighter,pack_levin,,P.A.C.K.,,,800,180,1300,,140,0,,105,200,40,70,120,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Orb Weaver Heavy Fighter,junk_pirates_orbweaver,,,flarelauncher_fighter,,500,100,1200,,150,0,,180,150,75,60,100,100,FRONT,,360,0.2,0.4,,,0,0,,,,,,,,,,,,,,,,0,,,
+Latrodectus Fighter,junk_pirates_latrodectus,,,,,500,150,800,,150,0,,190,150,75,60,100,100,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,0,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sickle,junk_pirates_sickle,Frigate,Junk Pirates,junk_pirates_electrochafflauncher,6,1500,120,2250,2750,220,40,,190,100,80,120,120,200,OMNI,,90,0.2,0.8,,,15,25,30,20,1,40,10,10000,12,20,180,0.25,3,3,,"junk_pirates_junk_bp, revolutionary, junk_boys",,0.75,2,3,321601
+Hammer,junk_pirates_hammer,Frigate,Junk Pirates,fastmissileracks,5,1600,140,1500,1125,90,35,,140,160,140,260,160,180,FRONT,,120,0.2,0.8,,,15,20,25,20,1,45,9,12000,10,15,240,0.25,4,4,,"junk_pirates_junk_bp, revolutionary, junk_boys",,0.4,2,2,321603
+Clam,junk_pirates_clam,Frigate,Junk Pirates,junk_pirates_electrochafflauncher,7,1800,300,2750,3500,225,45,,90,100,60,80,120,220,FRONT,,360,0.2,0.6,,,10,20,50,30,1,40,9,18000,7,20,180,0.25,4,4,,junk_pirates_junkprime_bp,,0.4,2,2,321609
+Clementine,junk_pirates_clementine,Frigate,Junk Pirates,junk_pirates_burst_jets,7,1500,200,2450,3500,220,45,,140,120,100,100,140,220,FRONT,,180,0.2,0.8,,,20,35,40,40,1,40,10,11000,10,20,180,0.25,3,3,,junk_pirates_junk_bp,,0.5,2,2,321609
+Mandarine,junk_pirates_mandarine,Frigate,Junk Pirates,junk_pirates_electrochafflauncher,5,1900,250,2200,1125,140,45,,130,160,140,260,160,180,OMNI,,190,0.2,1,,,15,25,50,30,1,45,10,12500,10,20,240,0.25,3,3,,junk_pirates_junk_bp,,0.5,2,2,321603
+Stoat (B Variant),junk_pirates_stoatB,Light Freighter,Junk Pirates,burndrive,4,1900,50,100,1250,100,4,,80,5,5,25,15,300,NONE,,,,,,,4,12,80,30,1,60,9,5500,10,10,180,0.25,2,2,"CIVILIAN, FREIGHTER",junk_pirates_junk_bp,,0.75,2,3,321613
+Stoat (A Variant),junk_pirates_stoatA,Light Freighter,Junk Pirates,burndrive,4,1900,50,250,1250,100,5,,80,5,5,25,15,300,NONE,,,,,,,4,12,80,30,1,60,9,5500,10,10,180,0.25,2,2,"CIVILIAN, FREIGHTER",junk_pirates_junk_bp,,0.75,2,3,321612
+Wirefox,pack_wirefox,Frigate,P.A.C.K.,maneuveringjets,5,1350,280,2000,2375,180,45,,165,50,50,70,70,300,OMNI,,140,0.4,1,,,20,50,25,20,1,50,10,16000,10,20,180,0.25,3,3,,"junk_pirates_pack_bp, junk_hounds",,0.6,2,2,691003
+Wirefox (SH),pack_wirefox_sh,Shuttle,P.A.C.K.,flarelauncher,5,1200,155,1250,2375,90,40,,155,95,85,110,150,280,FRONT,,120,0.2,0.8,,,15,60,40,40,1,50,10,9000,10,10,180,0.25,3,3,,"junk_pirates_pack_bp, junk_boys",,0.5,2,2,691045
+Bedlington,pack_bedlington,Frigate,P.A.C.K.,flarelauncher_active,6,1200,250,1800,3250,240,30,1,180,110,110,110,140,300,OMNI,,120,0.4,1,,,20,45,25,20,1,50,10,18000,10,20,180,0.25,4,4,,"junk_pirates_pack_bp, junk_hounds",,0.6,2,2,691090
+Samoyed,pack_samoyed,Combat Freighter,P.A.C.K.,burndrive,5,1500,250,1700,2500,180,35,,140,45,35,35,45,400,OMNI,,120,0.4,1,,,15,55,85,40,1,40,10,13000,12,20,140,0.25,3,3,,"junk_pirates_pack_bp, junk_boys",,0.6,2,2,691007
+Samoyed (Base),pack_samoyed_decoupled,Combat Freighter,P.A.C.K.,burndrive,4,1450,240,1700,2500,180,35,,160,100,100,100,100,200,OMNI,,120,0.4,1,,,15,55,15,10,1,20,10,12000,12,20,140,0.25,3,3,,"junk_pirates_pack_bp, junk_hounds",,0.6,2,2,691009
+Schnauzer,pack_schnauzer,Frigate,P.A.C.K.,maneuveringjets,5,1250,220,1800,4250,310,50,,180,120,75,75,80,300,OMNI,,140,0.8,0.9,,,20,35,15,30,1,35,10,18000,10,20,240,0.25,3,3,,junk_pirates_packprime_bp,,0.6,2,2,691012
+Diamondback,syndicate_asp_diamondback,Combat Freighter,ASP Syndicate,flarelauncher_active,6,1500,145,2500,1563,125,35,,195,110,75,80,80,325,OMNI,,120,0.4,0.8,,,25,50,80,40,1,65,10,15000,10,15,180,0.25,3,3,,junk_pirates_asp_bp,,0.4,2,2,991001
+Diamondback (F),syndicate_asp_diamondback_p,Frigate,ASP Syndicate (Familia),maneuveringjets,7,1600,155,2750,,125,35,,195,110,75,80,80,325,OMNI,,120,0.4,0.8,,,25,50,20,30,1,65,10,18000,10,15,180,0.25,3,3,,junk_pirates_familia_bp,0.5,0.4,2,2,
+Tangerine,junk_pirates_tangerine,Frigate,Junk Pirates,junk_pirates_burst_jets,8,2000,450,3250,,275,55,,170,100,75,85,95,350,OMNI,,160,0.2,0.8,,,20,25,20,40,2,20,10,26000,10,25,160,0.25,8,8,,"rare_bp, junk_pirates_bp",0.5,0.4,2,2,991001
+Tangerine (Blue),junk_pirates_tangerine_blue,Frigate,Junk Pirates,junk_pirates_burst_jets,8,2000,450,3750,,325,55,,180,110,75,85,95,350,OMNI,,240,0.2,0.9,,,20,25,20,40,2,20,10,55000,10,30,120,0.25,8,8,,,,0.4,2,2,991001
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Octopus,junk_pirates_octopus,Carrier,Junk Pirates,junk_pirates_electrochafflauncher,12,3000,500,1200,4167,140,75,2,50,45,25,25,20,600,NONE,,,,,,,95,165,300,200,4,50,8,60000,5,15,420,0.25,14,14,"CARRIER, SHIP_WITH_MODULES","junk_pirates_junk_bp, junk_boys",,0.75,2,4,321602
+Boxenstein,junk_pirates_boxenstein,Destroyer,Junk Pirates,maneuveringjets,12,3800,1150,6000,5833,350,110,,50,20,15,35,25,500,FRONT,,210,0.5,1,,,75,85,55,70,3,55,8,50000,5,20,420,0.25,10,10,,junk_pirates_junkprime_bp,,0.3,2,3,321608
+Boxer,junk_pirates_boxer,Destroyer,Junk Pirates,maneuveringjets,11,3000,1000,4500,5417,325,85,,60,25,15,45,25,420,FRONT,,210,0.6,1,,,35,45,50,60,3,50,8,45000,5,20,420,0.25,9,9,,junk_pirates_junk_bp,,0.3,2,3,321607
+Langoustine,junk_pirates_langoustine,Destroyer,Junk Pirates,highenergyfocus,13,3500,400,4800,7500,450,90,1,120,65,40,85,65,580,FRONT,,120,0.4,0.8,,,45,65,40,60,2,50,9,60000,5,20,360,0.25,12,12,,junk_pirates_junkprime_bp,,0.5,2,4,321614
+Satsuma,junk_pirates_satsuma,Destroyer,Junk Pirates,junk_pirates_burst_jets,10,3500,400,4500,7500,420,85,,110,115,40,75,65,580,OMNI,,100,0.2,1,,,45,65,80,50,2,50,9,40000,5,20,360,0.25,8,8,,junk_pirates_junkprime_bp,,0.5,2,3,321614
+Scythe,junk_pirates_scythe,Destroyer,Junk Pirates,junk_pirates_electrochafflauncher,9,2400,250,3000,7500,450,65,,115,85,65,95,85,320,OMNI,,110,0.5,1.2,,,25,75,120,80,2,33,9,35000,4,20,240,0.25,8,8,,junk_pirates_junk_bp,,0.6,2,3,321615
+Turbot,junk_pirates_turbot,Destroyer,Junk Pirates,highenergyfocus,10,2500,400,5000,3333,200,75,1,90,50,50,65,65,450,PHASE,phasecloak,,,,0.05,0.05,75,85,50,90,2,60,9,60000,4,25,360,0.25,12,12,,"rare_bp, junk_technicians, junk_pirates_bp",,0.6,2,3,321618
+Ridgeback,pack_ridgeback,Combat Freighter,P.A.C.K.,flarelauncher_active,9,2300,650,4500,4333,240,85,1,80,70,70,120,140,600,OMNI,,140,0.4,1.1,,,75,160,160,80,2,50,9,38000,6,18,360,0.25,8,8,,"junk_pirates_pack_bp, junk_boys",,0.5,2,3,691001
+Ridgeback X,pack_ridgeback_x,Destroyer,P.A.C.K.,flarelauncher_active,9,2400,750,5000,4667,280,75,1,85,75,75,125,145,550,OMNI,,160,0.4,1,,,45,90,90,70,2,35,9,36000,6,18,360,0.25,8,8,,"rare_bp, junk_hounds, pack_bp",,0.5,2,3,691002
+Pitbull,pack_pitbull,Destroyer,P.A.C.K.,maneuveringjets,8,3200,850,4200,4833,280,75,,60,90,90,70,90,600,OMNI,,150,0.4,0.9,,,25,40,35,40,2,50,8,38000,6,15,360,0.25,8,8,,"junk_pirates_packprime_bp, junk_hounds",,0.4,2,3,691005
+BRT,pack_BRT,Destroyer,P.A.C.K.,maneuveringjets,8,3000,750,4200,4000,230,80,,80,60,80,55,60,600,OMNI,,140,0.4,1,,,60,120,80,60,2,40,9,38000,6,20,420,0.25,8,8,,"junk_pirates_pack_bp, junk_boys",,0.5,2,3,691006
+BRT (CB),pack_BRT_canebianco,Destroyer,P.A.C.K.,maneuveringjets,9,3000,650,6000,4000,280,80,1,80,60,80,55,60,600,OMNI,,140,0.4,1,,,60,120,80,60,2,40,9,50000,6,20,420,0.25,8,8,,"rare_bp, junk_technicians, pack_bp",0.5,0.5,2,3,
+Komondor,pack_komondor,Destroyer,P.A.C.K.,ammofeed,8,4200,650,5000,5667,320,80,,75,75,75,65,65,600,OMNI,,160,0.4,0.9,,,75,120,60,60,2,35,9,48000,6,20,360,0.25,9,9,,"junk_pirates_packprime_bp, junk_hounds",,0.6,2,3,691008
+Labrador,pack_labrador,Destroyer,P.A.C.K.,burndrive,7,4200,550,5000,5667,300,50,1,75,75,75,65,65,600,FRONT,,160,0.4,0.9,,,75,120,180,100,2,35,9,33000,6,15,240,0.25,7,7,"CIVILIAN, FREIGHTER",junk_pirates_pack_bp,,0.4,2,3,691011
+GFB,pack_GFB,Combat Carrier,P.A.C.K.,pack_keflusker,10,4200,650,5000,5667,260,70,2,70,75,75,65,65,600,OMNI,,140,0.4,1,,,75,120,80,100,2,35,9,45000,6,15,240,0.25,11,11,"CARRIER, COMBAT",junk_pirates_packprime_bp,,0.4,2,3,
+Shar Pei,pack_sharpei,Destroyer,P.A.C.K.,pack_skimmer,9,4800,750,4800,4667,280,90,,75,75,85,65,65,550,NONE,,,,,,,45,65,40,40,2,40,9,36000,5,20,240,0.25,8,8,,"junk_pirates_packprime_bp, junk_boys",,0.75,2,4,691010
+Shar Pei (CB),pack_sharpei_canebianco,Destroyer,P.A.C.K.,highenergyfocus,10,4800,750,6200,4667,280,90,,75,75,85,65,65,550,PHASE,phasecloak,,,,0.05,0.05,45,65,40,40,2,40,9,70000,5,25,240,0.25,12,12,,"junk_pirates_packprime_bp, junk_technicians",0.5,0.75,2,4,691019
+Copperhead,syndicate_asp_copperhead,Combat Carrier,ASP Syndicate,burndrive,10,4200,400,5000,3333,200,92,2,80,40,40,40,30,1000,OMNI,,120,0.4,0.8,,,50,150,350,150,3,50,8,80000,5,15,360,0.25,15,15,"CARRIER, COMBAT",junk_pirates_asp_bp,,0.5,2,3,991002
+Copperhead (F),syndicate_asp_copperhead_p,Light Cruiser,ASP Syndicate (Familia),plasmajets,10,5500,550,8000,3333,350,130,,90,40,40,40,40,1200,OMNI,,180,0.4,0.8,,,50,150,200,80,3,30,8,120000,5,15,360,0.25,16,16,,junk_pirates_familia_bp,0.5,0.5,2,3,
+Spinone,pack_spinone,Carrier,P.A.C.K.,pack_trilat_algorithms,14,7500,800,9000,4167,350,95,3,60,35,15,25,20,1350,FRONT,,300,0.2,1,,,180,350,180,80,3,40,8,110000,5,15,420,0.25,18,18,"CARRIER, COMBAT","junk_pirates_pack_bp, junk_boys, junk_hounds",,0.75,2,4,
+Hognose,syndicate_asp_hognose,Light Carrier,ASP Syndicate,flarelauncher_active,10,3800,265,3500,4167,250,55,1,60,40,15,30,20,600,OMNI,,180,0.2,0.8,,,40,120,180,80,2,40,9,32000,5,15,300,0.25,8,8,CARRIER,junk_pirates_asp_bp,,0.75,2,4,
+Hognose (F),syndicate_asp_hognose_p,Light Combat Carrier,ASP Syndicate (Familia),maneuveringjets,11,4000,450,3750,,275,65,1,85,50,40,30,45,600,FRONT,,240,0.4,0.8,,,45,65,180,80,2,40,9,48000,5,10,360,0.25,10,10,"CARRIER, COMBAT",junk_pirates_familia_bp,0.5,0.75,2,4,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Dugong,junk_pirates_dugong,Cruiser,Junk Pirates,ammofeed,15,7000,800,8500,9000,450,145,,60,40,15,25,25,1200,OMNI,,140,0.2,1,,,65,75,60,200,3,90,8,110000,4,10,420,0.25,18,18,,junk_pirates_junk_bp,,0.6,2,3,321606
+Orcenstein,junk_pirates_orcenstein,Cruiser,Junk Pirates,junk_pirates_cruiser_burst_jets,16,8500,1000,10000,10000,500,150,,35,45,25,20,20,2100,FRONT,,300,0.7,1,,,125,275,120,100,4,60,8,120000,3,20,480,0.25,20,20,,junk_pirates_junkprime_bp,,0.5,2,3,321616
+Jackdaw,junk_pirates_jackdaw,Cruiser,Junk Pirates,junk_pirates_cruiser_burst_jets,16,7000,800,8500,9000,450,135,,55,40,15,25,20,1200,OMNI,,120,0.2,1,,,55,65,40,100,3,90,8,105000,4,10,480,0.25,15,15,,junk_pirates_junkprime_bp,,0.5,2,3,321606
+Goat,junk_pirates_goat,Cruiser,Junk Pirates,highenergyfocus,14,8000,950,14000,10000,500,130,1,60,45,35,25,25,1800,FRONT,,300,0.5,0.8,,,125,275,300,150,3,60,8,130000,4,15,480,0.25,20,20,,junk_pirates_junkprime_bp,,0.4,2,3,321616
+Magpie,junk_pirates_magpie,Cruiser,Junk Pirates,junk_pirates_cruiser_burst_jets,18,6500,700,11000,16000,800,155,,55,40,25,25,20,1200,FRONT,,170,0.2,1,,,75,85,100,100,5,40,8,120000,5,25,480,0.25,20,20,,"rare_bp, junk_pirates_bp",,0.7,2,4,321622
+Mastiff,pack_mastiff,Cruiser,P.A.C.K.,maneuveringjets,15,8000,850,9000,8000,380,155,,60,50,35,30,35,1200,FRONT,,200,0.4,1.1,,,120,300,120,100,3,40,8,115000,6,20,420,0.25,20,20,,"junk_pirates_pack_bp, junk_boys, junk_hounds",,0.4,2,3,691011
+Bully Kutta,pack_bullykutta,Missile Cruiser,P.A.C.K.,flarelauncher,15,8500,1000,6000,9000,300,150,,35,40,15,25,25,2000,OMNI,,140,0.8,0.8,,,200,500,200,200,5,40,7,125000,4,15,480,0.25,18,18,,"junk_pirates_packprime_bp, junk_hounds",,0.4,2,4,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Gigantophis,syndicate_asp_gigantophis,Combat Carrier,ASP Syndicate,targetingfeed,18,10000,750,13000,,450,146,3,55,10,10,10,10,2500,FRONT,,300,0.2,0.8,,,250,800,800,250,4,100,8,200000,5,20,540,0.25,25,25,CARRIER,junk_pirates_asp_bp,,0.7,2,4,991003
+Gigantophis (F),syndicate_asp_gigantophis_p,Combat Carrier,ASP Syndicate (Familia),maneuveringjets,20,10000,750,13000,,550,146,2,60,20,20,20,10,2500,FRONT,,240,0.4,0.8,,,250,800,250,150,4,100,8,325000,5,20,540,0.25,25,25,"CARRIER, COMBAT",junk_pirates_familia_bp,0.5,0.7,2,4,991003
+Orca,junk_pirates_orca,Heavy Carrier,Junk Pirates,fastmissileracks,19,7000,700,11000,9375,425,200,4,30,30,25,20,20,2800,FRONT,,250,0.35,0.8,,,80,260,350,400,10,40,7,300000,2,12,600,0.25,35,35,"CARRIER, COMBAT","rare_bp, junk_pirates_bp",,0.5,2,4,321610
+Kraken,junk_pirates_kraken,Battleship,Junk Pirates,junk_pirates_kraken_retreat,25,14000,1250,15000,18750,750,300,1,45,15,15,10,5,3500,FRONT,,220,0.3,0.8,,,350,450,400,200,15,40,7,325000,3,15,660,0.25,45,45,,"rare_bp, junk_pirates_bp",,0.5,2,5,321617
+The Reaper,junk_pirates_the_reaper,Constructor,Junk Pirates,junk_pirates_damper,30,10500,1100,12000,11250,800,180,3,50,15,15,15,15,3000,NONE,,0,0,0,,,300,450,450,300,10,30,6,280000,5,30,600,0.25,30,30,"CARRIER, COMBAT","rare_bp, junk_pirates_bp",,0.6,2,5,312619
+Bulldog,pack_bulldog,Battleship,P.A.C.K.,entropyamplifier,25,10000,1050,15000,18750,820,245,2,55,40,40,20,10,3000,OMNI,,120,0.2,0.8,,,450,800,300,300,10,30,7,300000,3,12,660,0.25,35,35,,"junk_hounds, rare_bp, pack_bp",,0.5,2,4,321699
+Bulldog (BE),pack_bulldog_bullseye,Battleship,P.A.C.K.,ammofeed,25,10000,1150,17000,18750,900,300,,45,20,15,20,15,3000,OMNI,,120,0.2,0.8,,,450,800,300,300,10,30,7,520000,3,12,660,0.25,40,40,,no_autofit,0.5,0.75,2,5,321700
+King Cobra,syndicate_asp_kingcobra,Explorer,ASP Syndicate,highenergyfocus,25,13000,950,15000,18750,850,245,4,40,20,15,20,10,3000,OMNI,,300,0.2,0.8,,,450,1000,600,400,6,67,7,330000,3,12,660,0.25,30,30,"CARRIER, COMBAT",rare_bp,,0.5,2,4,
+King Cobra (F),syndicate_asp_kingcobra_p,Battleship,ASP Syndicate (Familia),maneuveringjets,25,15000,1025,19000,,875,245,3,50,25,20,25,20,3000,OMNI,,240,0.2,0.8,,,400,625,200,200,10,10,7,425000,3,15,720,0.25,45,45,"CARRIER, COMBAT, ALWAYS_PANIC",junk_pirates_familia_bp,0.5,0.5,2,4,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Orbital Station,pack_anarchist_station1,Orbital Station,,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,
+Orbital Station,pack_anarchist_station2,Orbital Station,,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,pack_bastion1,Support Bastion,,,1,7500,1000,7000,,500,1000,,0,0,0,10,10,300,FRONT,,120,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_minimal_supportL,Hangar Module,,,1,7500,750,7000,,400,1000,2,0,0,0,10,10,300,FRONT,,90,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_minimal_supportR,Hangar Module,,,1,7500,750,7000,,400,1000,2,0,0,0,10,10,300,FRONT,,90,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_partial_supportL,Light Support Module,,,1,10000,1000,9000,,600,1000,2,0,0,0,10,10,300,FRONT,,90,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_partial_supportR,Light Support Module,,,1,10000,1000,9000,,600,1000,2,0,0,0,10,10,300,FRONT,,90,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_semi_broadsideModuleL,Station Battery,,,1,15000,1100,12000,,800,1000,,0,0,0,10,10,300,FRONT,,120,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_small_missile1,Support Emplacement,,,1,7000,750,8000,,300,1000,,0,0,0,10,10,300,FRONT,,120,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,pack_small_ballistic1,Gun Emplacement,,,1,7000,750,8000,,400,1000,,0,0,0,10,10,300,FRONT,,120,0.6,1.2,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+Shield Module,junk_pirates_shield_module,Shield Module,Junk Pirates,,1,2000,600,6000,,400,1,,0,0,0,10,10,300,FRONT,,280,0.5,0.8,,,0,0,0,0,1,0,,10,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,0,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Spinerette,junk_pirates_spinerette_base,Megastructure,,,100,40000,1600,1000,2500,100,0,,30,30,30,15,10,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,"SHIP_WITH_MODULES, UNBOARDABLE, HIDE_IN_CODEX",junk_pirates_losttech,,0,,,
+,junk_pirates_spinerette_mandible_shield_r,Spinerette Mandible,,,1,2500,650,7000,,500,0,,0,0,0,10,10,300,FRONT,,140,1,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_mandible_shield_l,Spinerette Mandible,,,1,2500,650,7000,,500,0,,0,0,0,10,10,300,FRONT,,140,1,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_arm_l,Spinerette Arm,,junk_pirates_delay_emp,1,4000,450,7000,,400,90,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_arm_r,Spinerette Arm,,junk_pirates_delay_emp,1,4000,450,7000,,400,90,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_nodule,Spinerette Nodule,,,1,4000,650,7000,,500,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_extruder,Spinerette Extruder,,,1,4000,650,11000,,500,0,3,0,0,0,10,10,300,FRONT,,120,0.6,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_carapace,Spinerette Hat,,,1,4000,800,7000,,500,0,2,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,
+,junk_pirates_spinerette_flank_r,Spinerette Flank,,,1,4000,800,3500,,350,90,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_flank_l,Spinerette Flank,,,1,4000,800,3500,,350,90,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_cheek_r,Spinerette Cheek,,,1,4000,900,3500,,350,90,1,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+,junk_pirates_spinerette_cheek_l,Spinerette Cheek,,,1,4000,900,3500,,350,90,1,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,
+Raven,junk_pirates_raven,Light Cruiser,Custom Prototype,junk_pirates_burst_jets,14,6000,750,6000,,400,125,1,70,45,35,25,15,1500,FRONT,,120,0.4,1.0,,,80,150,150,80,4,50,8,80000,5,16,360,0.1,16,16,,junk_pirates_junkprime_bp,,0.5,1,3,321612

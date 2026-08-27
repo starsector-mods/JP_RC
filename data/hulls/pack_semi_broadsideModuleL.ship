@@ -1,0 +1,186 @@
+{
+  "bounds": [
+    -49,
+    174,
+    0,
+    194,
+    83,
+    1,
+    38,
+    -23,
+    -6,
+    -18
+  ],
+  "builtInMods": [
+    "supercomputer",
+    "shared_flux_sink",
+    "always_detaches",
+    "reduced_explosion"
+  ],
+  "builtInWings": [],
+  "center": [
+    209,
+    74
+  ],
+  "collisionRadius": 204,
+  "engineSlots": [],
+  "height": 180,
+  "hullId": "pack_semi_broadsideModuleL",
+  "hullName": "Module Broadside",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    6,
+    44
+  ],
+  "shieldRadius": 188,
+  "spriteName": "graphics/pack/ships/stations/junk_pirates_module_partial_broadsideL.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 50.5,
+      "arc": 117,
+      "id": "WS 004",
+      "locations": [
+        -24.5,
+        163.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 50.5,
+      "arc": 117,
+      "id": "WS 001",
+      "locations": [
+        5,
+        124
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 117,
+      "id": "WS 002",
+      "locations": [
+        16,
+        35
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 117,
+      "id": "WS 003",
+      "locations": [
+        45,
+        -2
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 22.5,
+      "arc": 117,
+      "id": "WS 005",
+      "locations": [
+        -6,
+        87
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 006",
+      "locations": [
+        14.5,
+        160
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 007",
+      "locations": [
+        35.5,
+        87.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 008",
+      "locations": [
+        60,
+        32
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 009",
+      "locations": [
+        44,
+        123.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 010",
+      "locations": [
+        58.5,
+        58
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 011",
+      "locations": [
+        85,
+        -1.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 29.5,
+      "arc": 117,
+      "id": "WS 012",
+      "locations": [
+        12,
+        185.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 297
+}

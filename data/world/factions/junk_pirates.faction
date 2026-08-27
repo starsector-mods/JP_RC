@@ -1,0 +1,233 @@
+{
+	"id":"junk_pirates",
+	"color":[43,130,116,255],
+	"displayName":"Junk Pirates",
+	"displayNameWithArticle":"the Junk Pirates",
+ 	"displayNameLong":"Junk Pirates",
+ 	"displayNameLongWithArticle":"the Junk Pirates",
+	"logo":"graphics/factions/junk_pirates_logo.png",
+	"crest":"graphics/factions/junk_pirates_crest.png",
+	"shipNamePrefix":"RNS",
+	"shipNameSources":{
+		"BEASTS":1,
+		"ROMAN":1,
+		"CELTIC":1,
+		"GLORIOUS_TRAINWRECKS":3},
+	"description":"No description yet.",
+	"names":{
+		"old english":1},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"buffalo2":0 # just say no
+		}},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["junk_pirates_junk_bp", "base_bp"],
+		"hulls":[
+		]},
+	"knownShips":{
+		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp", "base_bp"],
+		"hulls":[
+			"junk_pirates_turbot",
+			"junk_pirates_magpie",
+			"junk_pirates_orca",
+			"junk_pirates_kraken",
+			"junk_pirates_the_reaper",
+			"junk_pirates_boxenstein_blue",
+			"junk_pirates_raven"]},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"hulls":[
+			"junk_pirates_turbot",
+			"junk_pirates_magpie",
+			"junk_pirates_orca",
+			"junk_pirates_kraken",
+			"junk_pirates_the_reaper",
+			"junk_pirates_boxenstein_blue",
+			"junk_pirates_raven"]},
+	"knownFighters":{
+		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"fighters":[
+		]},
+	"priorityFighters":{
+		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"fighters":[
+		]},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"weapons":[
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"gauss",
+			"mjolnir",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"junk_pirates_grapeshot"]},
+	"priorityWeapons":{
+		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"weapons":[
+		]},
+	"knownHullMods":{
+		"tags":["base_bp", "hegemony"],
+		"hullMods":[
+			"advancedshieldemitter",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",
+			"heavyarmor",
+			"insulatedengine",
+			"targetingunit",
+			"nav_relay",
+			"operations_center",
+			"fluxbreakers",
+			"stabilizedshieldemitter",
+			"frontshield",  # makeshift
+			"surveying_equipment",
+			"hiressensors",
+			"efficiency_overhaul"]},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":3,
+		"shipQuality":2,
+		"numShips":4,
+		
+		"shipSize":3,
+		
+		"aggression":3,
+		
+		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.9, #these guys are wild
+		
+		"officerSkillsShuffleProbability":1,
+		"officerSkills":[
+			"ballistic_mastery",
+			"target_analysis",
+			"impact_mitigation",
+			"point_defense"
+		],
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+			"coordinated_maneuvers",
+			"support_doctrine"
+		]},
+	"illegalCommodities":[
+		"organs"],
+	"music":{
+		"theme":"music_pirates_market_neutral",
+		"market_neutral":"music_pirates_market_neutral",
+		"market_hostile":"music_pirates_market_hostile",
+		"market_friendly":"music_pirates_market_friendly",
+		"encounter_neutral":"music_pirates_encounter_neutral",
+		"encounter_hostile":"music_pirates_encounter_hostile",
+		"encounter_friendly":"music_pirates_encounter_friendly"},	
+	"internalComms":"junk_pirates_internal",
+	#"tariffFraction":0.4,
+	#"tollFraction":0.1,
+	#"fineFraction":0.25,
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/junk_pirates_portrait_m_1.png",
+			"graphics/portraits/junk_pirates_portrait_m_2.png",
+			"graphics/portraits/junk_pirates_portrait_m_3.png",
+			"graphics/portraits/junk_pirates_portrait_m_4.png",
+			"graphics/portraits/junk_pirates_portrait_m_5.png",
+			"graphics/portraits/junk_pirates_portrait_m_6.png",
+			"graphics/portraits/junk_pirates_portrait_m_7.png",
+			"graphics/portraits/junk_pirates_portrait_m_8.png",
+			"graphics/portraits/junk_pirates_portrait_m_9.png",
+			"graphics/portraits/junk_pirates_portrait_m_10.png",
+			"graphics/portraits/junk_pirates_tangoface_m.png",
+			"graphics/portraits/portrait_mercenary03.png"],
+		"standard_female":[
+			"graphics/portraits/junk_pirates_portrait_f_1.png",
+			"graphics/portraits/junk_pirates_portrait_f_2.png",
+			"graphics/portraits/junk_pirates_portrait_f_3.png",
+			"graphics/portraits/junk_pirates_portrait_f_4.png",
+			"graphics/portraits/junk_pirates_portrait_f_5.png",
+			"graphics/portraits/junk_pirates_portrait_f_6.png",
+			"graphics/portraits/junk_pirates_tangoface_f.png",
+			"graphics/portraits/portrait14.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait24.png",
+			"graphics/portraits/portrait_mercenary05.png"]},
+	"ranks":{
+		"ranks":{
+			"spaceCommander":{"name":"High Commander"}},
+		"posts":{
+			"patrolCommander":{"name":"Patrolman"},
+			"fleetCommander":{"name":"Fleet Chief"},
+			"baseCommander":{"name":"Low Commander"}}},
+	"fleetTypeNames":{
+		"trade":"Money Train",
+		"tradeLiner":"Liner Convoy",
+		"tradeSmuggler":"Bootlegger",
+		"smallTrader":"Trader",
+		
+		"patrolSmall":"Reeve",
+		"patrolMedium":"Seneschal",
+		"patrolLarge":"Marshal",
+		
+		"inspectionFleet":"Inspection Fleet",
+		"taskForce":"Task Force",
+		
+		"foodReliefFleet":"Soup Train"},
+	"custom":{
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"engageWhenEvenStrength":true,
+		"ignoreTradeWithEnemiesForReputation":true,
+		"willTradeWhenHostile":true,
+		"buysAICores":true,
+		"AICoreValueMult":2,
+		"AICoreRepMult":0.3,
+		"buysSurveyData":true,
+		"offerMissionsWhenHostile":true,
+		"allowsTransponderOffTrade":true,
+		"hostilityImpactOnGrowth":true,
+		"caresAboutAtrocities":true,
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":false,
+			"territorial":true}},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":5
+		},
+		"HIGH":{
+			"soldier":10,
+			"official":10
+		}
+	}
+}

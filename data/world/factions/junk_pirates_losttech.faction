@@ -1,0 +1,203 @@
+{
+	"id":"junk_pirates_losttech",
+	"displayName":"Arcane Tech",
+	"displayNameWithArticle":"the Arcane Tech",
+	"displayNameLong":"Arcane Technological Automata",
+	"displayNameLongWithArticle":"the Arcane Technological Automata",
+	"entityNamePrefix":"Arcane",
+	"personNamePrefix":"",
+	"personNamePrefixAOrAn":"an",
+	"displayNameIsOrAre":"are",
+	
+	"logo":"graphics/factions/nrk_logo.png",
+	"crest":"graphics/factions/nrk_crest.png",
+	"shipNamePrefix":"ATA",
+	
+	"color":[155,175,125,255],
+	"baseUIColor":[225,255,235,255],
+	#"color":[100,100,100,255],
+	#"baseUIColor":[155,155,155,255],
+	
+	#"darkUIColor":[31,112,92,175],
+	#"gridUIColor":[70,255,200,75],
+	
+	"showInIntelTab":false,
+	
+	"shipNameSources":{
+		"MERCANTILE":1,
+		"SPACE":1
+	},
+	"names":{
+		"old english":1,
+		"world":1},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		}},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["junk_pirates_losttech"],
+		"hulls":[
+		]},
+	"knownShips":{
+		"tags":["junk_pirates_losttech"],
+		"hulls":[
+		]},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		]},
+	"knownFighters":{
+		"tags":["junk_pirates_losttech"],
+		"fighters":[
+		]},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		]},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"weapons":[
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"gauss",
+			"mjolnir",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"junk_pirates_grapeshot"]},
+	"priorityWeapons":{
+		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
+		"weapons":[
+		]},
+	"knownHullMods":{
+		"tags":["base_bp"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment"]},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":3,
+		"shipQuality":3,
+		"numShips":2,
+		
+		"shipSize":2,
+		
+		"aggression":5,
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.25,
+
+		"officerSkillsShuffleProbability":1,
+		"officerSkills":[
+			"energy_weapon_mastery",
+			"target_analysis",
+			"field_modulation",
+			"flux_regulation"
+		],
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+			"electronic_warfare",
+			"flux_regulation"
+		]},
+	"illegalCommodities":[
+	],
+	#"music":{
+	#	"encounter_hostile":"music_tritach_encounter_hostile",
+	#},	
+	#"internalComms":"hegemony_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/junk_pirates_portrait_m_1.png",
+			"graphics/portraits/junk_pirates_portrait_m_2.png",
+			"graphics/portraits/junk_pirates_portrait_m_3.png",
+			"graphics/portraits/junk_pirates_portrait_m_4.png",
+			"graphics/portraits/junk_pirates_portrait_m_5.png",
+			"graphics/portraits/junk_pirates_portrait_m_6.png",
+			"graphics/portraits/junk_pirates_portrait_m_7.png",
+			"graphics/portraits/junk_pirates_portrait_m_9.png",
+			"graphics/portraits/junk_pirates_portrait_m_10.png",
+			"graphics/portraits/portrait_mercenary03.png"],
+		"standard_female":[
+			"graphics/portraits/junk_pirates_portrait_f_1.png",
+			"graphics/portraits/junk_pirates_portrait_f_2.png",
+			"graphics/portraits/junk_pirates_portrait_f_4.png",
+			"graphics/portraits/junk_pirates_portrait_f_6.png",
+			"graphics/portraits/portrait14.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait24.png",
+			"graphics/portraits/portrait_mercenary05.png"]},
+	"ranks":{
+		"ranks":{
+		},
+		"posts":{
+		}
+	},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"allowsTransponderOffTrade":true,
+		"postsNoBounties":true,
+		"fightToTheLast":true
+	},	
+	"fleetTypeNames":{
+		"patrolSmall":"Thug",
+		"patrolMedium":"Rabble",
+		"patrolLarge":"Mob",
+		"battlestation":"Camp"
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":5
+		},
+		"HIGH":{
+			"soldier":10,
+			"official":10
+		}
+	}
+}

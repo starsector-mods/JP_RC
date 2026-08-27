@@ -1,0 +1,32 @@
+{
+  "displayName": "Point Defense",
+  "fluxCapacitors": 5,
+  "fluxVents": 6,
+        "goalVariant": true,
+  "hullId": "junk_pirates_sickle",
+  "hullMods": [
+    "advancedoptics",
+    "turretgyros",
+    "hardened_subsystems"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_sickle_Pointdefense",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdlaser",
+        "WS 002": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+              "WS 004": "junk_pirates_electrobeam"
+	      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "displayName": "Elite",
+  "fluxCapacitors": 10,
+  "fluxVents": 28,
+  "goalVariant": true,
+  "hullId": "junk_pirates_kraken",
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics",
+    "turretgyros",
+    "armoredweapons"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_kraken_Elite",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 013": "typhoon",
+        "WS 014": "typhoon",
+        "WS 015": "flak",
+        "WS 016": "typhoon",
+        "WS 020": "dualflak",
+        "WS 004": "gravitonbeam",
+        "WS 005": "heavyburst",
+        "WS 006": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "dualflak",
+        "WS 010": "vulcan",
+        "WS 011": "pdlaser",
+        "WS 017": "pdlaser",
+        "WS 018": "pdlaser",
+        "WS 008": "vulcan",
+        "WS 009": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 012": "railgun",
+        "WS 002": "hveldriver",
+        "WS 003": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 019": "mjolnir",
+        "WS 007": "hil"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+	"baseHullId":"pack_schnauzer",
+	"skinHullId":"pack_schnauzer_canebianco",
+	"hullName":"Schnauzer (CB)",
+	"descriptionId":"pack_schnauzer",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionPrefix":"A highly specialized Schnauzer-class frigate mobilised with a temporal shell.",
+	"fleetPoints":7,
+	"ordnancePoints":55,
+	"baseValueMult":1.8,
+	"systemId":"temporalshell",
+	"spriteName":"graphics/pack/ships/pack_schnauzer_canebianco.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 001":{
+			"angle": 0,
+            "arc": 120,
+            "mount": "TURRET"
+            #"size": "SMALL"
+            #"type": "ENERGY"
+		},
+		"WS 002":{
+			"angle": 0,
+            "arc": 120,
+            "mount": "TURRET"
+            #"size": "SMALL"
+            #"type": "ENERGY"
+		}
+	},
+	"builtInMods":["hardenedshieldemitter", "pack_overclocked_cb"],
+	"builtInWeapons":{
+    }
+}

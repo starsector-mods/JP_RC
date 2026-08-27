@@ -1,0 +1,40 @@
+{
+  "bounds": [
+    41,
+    9,
+    -13.5,
+    33,
+    -40,
+    8,
+    -40,
+    -8,
+    -13.5,
+    -33,
+    41,
+    -9
+  ],
+  "builtInWings": [],
+  "builtInMods": [
+    "reduced_explosion"
+  ],
+  "center": [
+    45,
+    52
+  ],
+  "collisionRadius": 59,
+  "engineSlots": [],
+  "height": 104,
+  "hullId": "junk_pirates_spinerette_nodule",
+  "hullName": "Spinerette Nodule",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 65.5,
+  "spriteName": "graphics/junk_pirates/ships/stations/junk_pirates_spinerette_nodule.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [],
+  "width": 90
+}

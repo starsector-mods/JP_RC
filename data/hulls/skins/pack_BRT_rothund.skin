@@ -1,0 +1,35 @@
+{
+	"baseHullId":"pack_BRT",
+	"skinHullId":"pack_BRT_rothund",
+	"hullName":"BRT (RH)",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionId":"pack_BRT",
+	"descriptionPrefix":"A BRT class destroyer as modified by the Rothund machine shop - with added protective measures in armour plating and an improved shield.",
+	"fleetPoints":9,
+	"ordnancePoints":72,
+	"baseValueMult":1.2,
+	"spriteName":"graphics/pack/ships/pack_BRT_rothund.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["armoredweapons","heavyarmor", "frontemitter", "hardenedshieldemitter", "pack_overclocked_rh"],
+	"builtInWeapons":{
+    },
+	"weaponSlotChanges":{
+		"WS 007":{
+			#"angle": 0,
+            #"arc": 10,
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+		},
+		"WS 008":{
+			#"angle": 0,
+            #"arc": 10,
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+		}
+	}
+}

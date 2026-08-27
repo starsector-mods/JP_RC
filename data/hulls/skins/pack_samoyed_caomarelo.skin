@@ -1,0 +1,42 @@
+{
+	"baseHullId":"pack_samoyed",
+	"skinHullId":"pack_samoyed_caomarelo",
+	"hullName":"Samoyed (CA)",
+	"descriptionId":"pack_samoyed",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionPrefix":"A Samoyed class light freighter, as modified by Caomarelo Arms and armour - with increased engine performance and a re-tooled strike package.",
+	"fleetPoints":5,
+	"ordnancePoints":31,
+	"baseValueMult":1.3,
+	"spriteName":"graphics/pack/ships/pack_samoyed_caomarelo.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 003":{
+			#"angle": 90,
+            "arc": 230,
+            #"mount": "HARDPOINT",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},
+		"WS 004":{
+			#"angle": 90,
+            "arc": 230,
+            #"mount": "HARDPOINT",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},
+		"WS 005":{
+			#"angle": 90,
+            "arc": 10,
+            "mount": "HARDPOINT",
+            #"size": "SMALL",
+            "type": "MISSILE"
+		}
+	},
+	"builtInMods":["auxiliarythrusters", "pack_overclocked_ca"],
+	"builtInWeapons":{
+    }
+}

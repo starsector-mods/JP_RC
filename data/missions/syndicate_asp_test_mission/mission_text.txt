@@ -1,0 +1,4 @@
+Location: Simulation Space
+Date: 206.05.21
+
+A combat test mission designed to evaluate all ships from ASP Syndicate. Protect the ASP Flagship at all costs.

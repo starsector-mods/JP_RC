@@ -1,0 +1,35 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+        "goalVariant": true,
+  "hullId": "junk_pirates_sickle",
+  "hullMods": [
+    "frontemitter"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_sickle_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "junk_pirates_scatterpd",
+        "WS 002": "junk_pirates_scatterpd"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 004": "junk_pirates_cutlass"
+      }
+    }
+  ]
+}

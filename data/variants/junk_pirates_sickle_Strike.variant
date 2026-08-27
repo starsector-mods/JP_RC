@@ -1,0 +1,36 @@
+{
+  "displayName": "Strike",
+  "fluxCapacitors": 7,
+  "fluxVents": 4,
+        "goalVariant": true,
+  "hullId": "junk_pirates_sickle",
+  "hullMods": [
+    "magazines"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_sickle_Strike",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "heavyburst"
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "bounds": [
+    -39,
+    12,
+    -42,
+    -12.5,
+    -8.5,
+    -23,
+    31,
+    -23,
+    33,
+    -9,
+    51,
+    -5.5,
+    51.5,
+    4,
+    29,
+    11.5,
+    29,
+    26,
+    -2.5,
+    26
+  ],
+  "builtInWings": [
+    "pack_drone_ion"
+  ],
+  "builtInMods": [
+    "pack_mesh"
+  ],
+  "center": [
+    30.5,
+    52.5
+  ],
+  "collisionRadius": 57.21888,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -45.5,
+        9.5
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 13,
+      "length": 48.5,
+      "location": [
+        -50.5,
+        -7.5
+      ],
+      "style": "MIDLINE",
+      "width": 13
+    }
+  ],
+  "height": 108,
+  "hullId": "pack_bedlington",
+  "hullName": "Bedlington",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 74.928299,
+  "spriteName": "graphics/pack/ships/pack_bedlington.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -145,
+      "arc": 295,
+      "id": "WS 001",
+      "locations": [
+        -20.5,
+        7.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -135,
+      "arc": 325,
+      "id": "WS 002",
+      "locations": [
+        -20.5,
+        -11.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 003",
+      "locations": [
+        52,
+        -1
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 58
+}

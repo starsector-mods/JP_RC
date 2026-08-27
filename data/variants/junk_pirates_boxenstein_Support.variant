@@ -1,0 +1,50 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 13,
+  "fluxVents": 19,
+  "goalVariant": true,
+  "hullId": "junk_pirates_boxenstein",
+  "hullMods": [
+    "missleracks",
+    "advancedoptics"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_boxenstein_Support",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdlaser",
+        "WS 002": "pdlaser",
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "gravitonbeam",
+        "WS 006": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 009": "harpoon",
+        "WS 010": "harpoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "pilum",
+        "WS 008": "pilum"
+      }
+    }
+  ]
+}

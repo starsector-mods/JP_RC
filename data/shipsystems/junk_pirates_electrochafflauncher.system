@@ -1,0 +1,8 @@
+{
+	"id":"junk_pirates_electrochafflauncher",
+	"type":"WEAPON",
+	"aiType":"FLARE",
+	
+	"weaponDataId":"junk_pirates_electrochafflauncher",
+	"outOfUsesSound":"gun_out_of_ammo"
+}

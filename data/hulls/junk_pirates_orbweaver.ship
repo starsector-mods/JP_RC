@@ -1,0 +1,114 @@
+{
+  "bounds": [
+    16,
+    -8,
+    3,
+    -15.5,
+    -16,
+    -7.5,
+    -16,
+    7.5,
+    3,
+    15.5,
+    16,
+    8
+  ],
+  "builtInMods": [
+    "junk_pirates_tangerine"
+  ],
+  "builtInWeapons": {
+    "WS 003": "blinker_red"
+  },
+  "builtInWings": [],
+  "center": [
+    19,
+    24.5
+  ],
+  "collisionRadius": 29,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 25.5,
+      "location": [
+        -19,
+        11
+      ],
+      "style": "HIGH_TECH",
+      "width": 5
+    },
+    {
+      "angle": -180,
+      "contrailSize": 5,
+      "length": 25.5,
+      "location": [
+        -19,
+        -11
+      ],
+      "style": "HIGH_TECH",
+      "width": 5
+    },
+    {
+      "angle": -180,
+      "contrailSize": 9,
+      "length": 13.5,
+      "location": [
+        -22.5,
+        -0.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 9
+    }
+  ],
+  "height": 49,
+  "hullId": "junk_pirates_orbweaver",
+  "hullName": "Orb Weaver",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 37,
+  "spriteName": "graphics/junk_pirates/ships/junk_pirates_orbweaver.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        14,
+        10
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        14,
+        -10
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        -3.5,
+        -5.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    }
+  ],
+  "width": 38
+}

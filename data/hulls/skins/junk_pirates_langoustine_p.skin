@@ -1,0 +1,29 @@
+{
+	"baseHullId":"junk_pirates_langoustine",
+	"skinHullId":"junk_pirates_langoustine_p",
+	"hullName":"Langoustine (P)",
+	"tags":["rare_bp"],
+	"tech":"Pirate",
+	"systemId":"ammofeed",
+	"descriptionId":"junk_pirates_langoustine",  # optional
+	"descriptionPrefix":"This is a modified Langoustine, likely sourced via Junk Pirates breakers, and set into operation with some compromises but no questions asked.",
+	"spriteName":"graphics/junk_pirates/ships/langoustine/junk_pirates_langoustine_bulge.png",
+	"baseValueMult":0.8,
+	"ordnancePoints":81,
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":["WS 001"], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 002":{
+			"type": "BALLISTIC"
+		},
+		"WS 003":{
+			"type": "MISSILE"
+		}
+	},
+	"builtInMods":[],
+	"builtInWeapons":{
+			"WS 001":"junk_pirates_electrobeam"
+		}
+}

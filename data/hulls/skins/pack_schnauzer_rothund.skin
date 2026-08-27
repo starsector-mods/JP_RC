@@ -1,0 +1,35 @@
+{
+	"baseHullId":"pack_schnauzer",
+	"skinHullId":"pack_schnauzer_rothund",
+	"hullName":"Schnauzer (RH)",
+	"descriptionId":"pack_schnauzer",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionPrefix":"A Schnauzer class frigate as modified by the Rothund machine shop - with improved armour, enhanced bulkheads and a modernised shield.",
+	"fleetPoints":6,
+	"ordnancePoints":45,
+	"baseValueMult":1.3,
+	"spriteName":"graphics/pack/ships/pack_schnauzer_rothund.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 001":{
+			"angle": 0,
+            "arc": 10,
+            "mount": "HARDPOINT"
+            #"size": "SMALL"
+            #"type": "ENERGY"
+		},
+		"WS 002":{
+			"angle": 0,
+            "arc": 10,
+            "mount": "HARDPOINT"
+            #"size": "SMALL"
+            #"type": "ENERGY"
+		}
+	},
+	"builtInMods":["heavyarmor","blast_doors","hardenedshieldemitter", "pack_overclocked_rh"],
+	"builtInWeapons":{
+    }
+}

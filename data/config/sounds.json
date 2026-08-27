@@ -1,0 +1,107 @@
+{
+	"music":{
+		"music_asp_market_neutral":[
+			{"file":"Versus The Ghost - Versus The Ghost - 05 The Great Ascend.ogg","source":"data/sounds/music","volume":0.43}
+		],
+		"music_asp_market_friendly":[
+			{"file":"Versus The Ghost - Versus The Ghost - 05 The Great Ascend.ogg","source":"data/sounds/music","volume":0.43}
+		]
+			},
+
+
+#		"music_campaign":[
+#			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.6}, 
+#			{"file":"campaign_music_part_2_v28.ogg","source":"sounds/music/music.bin","volume":0.6},
+#			{"file":"Versus The Ghost - Versus The Ghost - 05 The Great Ascend.ogg","source":"data/sounds/music","volume":0.52},		
+#		],
+#
+#		"music_campaign_hyperspace":[
+#			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.5},
+#			{"file":"Versus The Ghost - Versus The Ghost - 05 The Great Ascend.ogg","source":"data/sounds/music","volume":0.43},
+#		],
+#			},
+
+	"junk_pirates_shocking_behavour":[
+		{"file":"sounds/sfx_systems/emp_emitter_impact_01.ogg","pitch":0.8,"volume":0.12},
+		{"file":"sounds/sfx_systems/emp_emitter_impact_02.ogg","pitch":0.8,"volume":0.12},
+		{"file":"sounds/sfx_systems/emp_emitter_impact_03.ogg","pitch":0.8,"volume":0.12}
+		],
+
+        "junk_pirates_cutlass_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_cutlass_fire.ogg","pitch":0.95,"volume":0.90},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_cutlass_fire.ogg","pitch":1.00,"volume":0.88},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_cutlass_fire.ogg","pitch":0.90,"volume":0.92}                    
+        ],
+
+        "junk_pirates_plan_d_launch":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_plan_d.ogg","pitch":0.95,"volume":0.90},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_plan_d.ogg","pitch":1.00,"volume":0.88},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_plan_d.ogg","pitch":0.90,"volume":0.92}                    
+        ],
+       
+        "junk_pirates_lexcimer_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_lexcimer_fire.ogg","pitch":1.00,"volume":0.86},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_lexcimer_fire.ogg","pitch":1.05,"volume":0.82},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_lexcimer_fire.ogg","pitch":0.95,"volume":0.80}                    
+        ],
+
+        "junk_pirates_scatterpd_fire":[
+                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.6,"volume":0.6},
+                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.6,"volume":0.6},
+                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_2.ogg","pitch":0.6,"volume":0.6},
+                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_2.ogg","pitch":0.6,"volume":0.6},
+                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.6,"volume":0.6},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.95,"volume":0.86},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_2.ogg","pitch":1.00,"volume":0.90},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_3.ogg","pitch":1.05,"volume":0.88},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_4.ogg","pitch":0.95,"volume":0.86}
+        ],
+
+	"junk_pirates_grapeshot_launch":[
+		{"file":"data/sounds/weapon_sounds/junk_pirates_grapeshot_fire.ogg","pitch":0.95,"volume":1.00},
+		{"file":"data/sounds/weapon_sounds/junk_pirates_grapeshot_fire.ogg","pitch":1.00,"volume":0.95}
+	],
+
+        "junk_pirates_scorpion_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scorpion.ogg","pitch":1.00,"volume":0.98},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scorpion.ogg","pitch":1.05,"volume":1.02},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scorpion.ogg","pitch":0.98,"volume":1.00},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_scorpion.ogg","pitch":0.95,"volume":1.00}                    
+        ],
+
+        "junk_pirates_haymaker_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_haymaker_fire.ogg","pitch":1.00,"volume":0.98},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_haymaker_fire.ogg","pitch":1.02,"volume":1.02},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_haymaker_fire.ogg","pitch":0.98,"volume":1.00}                    
+        ],
+
+        "junk_pirates_pica_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_pica_fire.ogg","pitch":1.00,"volume":0.98},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_pica_fire.ogg","pitch":1.05,"volume":1.02},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_pica_fire.ogg","pitch":0.95,"volume":1.00}                    
+        ],
+
+        "junk_pirates_welder_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_welder.ogg","pitch":1.00,"volume":0.98},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_welder.ogg","pitch":1.05,"volume":1.02},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_welder.ogg","pitch":0.95,"volume":1.00}                    
+        ],
+
+        "junk_pirates_welder_chargeup":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_welder_spin.ogg","pitch":1.00,"volume":0.98},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_welder_spin.ogg","pitch":1.05,"volume":1.02},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_welder_spin.ogg","pitch":0.95,"volume":1.00}                    
+        ],
+
+        "pack_affenpinscher_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_affenpinscher_fire.ogg","pitch":1.00,"volume":0.78},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_affenpinscher_fire.ogg","pitch":1.05,"volume":0.80},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_affenpinscher_fire.ogg","pitch":0.95,"volume":0.82}                    
+        ],
+
+        "pack_ripsaw_fire":[
+                {"file":"data/sounds/weapon_sounds/junk_pirates_ripsaw_fire.ogg","pitch":1.00,"volume":0.65},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_ripsaw_fire.ogg","pitch":1.05,"volume":0.62},
+                {"file":"data/sounds/weapon_sounds/junk_pirates_ripsaw_fire.ogg","pitch":0.95,"volume":0.68}                    
+        ]
+}

@@ -1,0 +1,67 @@
+{
+  "displayName": "Violently Cathartic",
+  "fluxCapacitors": 13,
+  "fluxVents": 50,
+  "goalVariant": true,
+  "hullId": "junk_pirates_kraken",
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_kraken_Violent",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "railgun",
+        "WS 015": "hveldriver",
+        "WS 003": "hveldriver",
+        "WS 004": "gravitonbeam",
+        "WS 005": "junk_pirates_cutlass",
+        "WS 006": "gravitonbeam",
+        "WS 008": "railgun",
+        "WS 009": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "flak",
+        "WS 011": "pdlaser",
+        "WS 012": "lightmg",
+        "WS 017": "pdlaser",
+        "WS 018": "pdlaser",
+        "WS 002": "flak",
+        "WS 007": "guardian"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 013": "harpoonpod",
+        "WS 014": "harpoonpod",
+        "WS 016": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 019": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 020": "mark9"
+      }
+    }
+  ],
+  "wings": []
+}

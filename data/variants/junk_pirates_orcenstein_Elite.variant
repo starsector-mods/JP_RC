@@ -1,0 +1,46 @@
+{
+  "displayName": "Elite",
+  "fluxCapacitors": 6,
+  "fluxVents": 21,
+        "goalVariant": true,
+  "hullId": "junk_pirates_orcenstein",
+  "hullMods": [],
+  "variantId": "junk_pirates_orcenstein_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "plasma",
+                "WS 006": "plasma"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 007": "junk_pirates_grapeshot"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "gravitonbeam",
+                "WS 004": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymauler",
+                "WS 002": "heavymauler",
+		"WS 008": "lightag"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {}
+        }
+    ]
+}

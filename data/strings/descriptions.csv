@@ -1,0 +1,381 @@
+id,type,text1,text2,text3,text4,text5,notes
+junk_pirates_cutlass,WEAPON,"The cases of two separate tactical lasers have seemingly been pulled apart and put back together again.
+
+A capacitive circuit from a pulse laser and the controls from a Talon interceptor flight computer have turned these two previously innocuous light defense lasers in to a deadly spitting cobra. Relatively short range and energy hungry, but deadly in a brawl.",Assault,,,,
+junk_pirates_scatterpd,WEAPON,"What appears at first sight to be a normal point defense laser, the laser delivery chamber has been heavily modified.
+
+Several rotating refractive industrial emeralds have been mounted inside a gas-filled magnetic containment field.
+
+Upon operation, a salvo of plasma and high energy laser pulses leave this chamber in approximately the direction of the chosen target.",Point Defense,,,,
+junk_pirates_lexcimer,WEAPON,"A high frequency excimer laser, used by the Junk Pirates to etch travel directions, shopping lists and floral patterns on to layabout space debris.",Assault,,,,
+junk_pirates_grapeshot,WEAPON,"Hot shrapnel is released from a guided canister at high speeds, designed to give a warm welcome to overzealous fighter fleets.
+
+The cannon fires a pair of canisters at once before reloading.",Assault,,,,
+junk_pirates_grapeshot_m,WEAPON,"Hot shrapnel is released from a guided canister at high speeds, designed to give a warm welcome to overzealous fighter fleets.
+
+The launcher fires a single canister at once before reloading.",Assault,,,,
+junk_pirates_grapeshot_s,WEAPON,"Hot shrapnel is released from a guided canister at high speeds, designed to give a warm welcome to overzealous fighter fleets.
+
+This small mount carries a single guided canister – which is reloaded slowly over time.",Assault,,,,
+junk_pirates_bangpod,WEAPON,"The only difference between this and a typical dumb-fire gas-release escape pod is the substitution of real people for several carefully sculpted highly volatile lifesize statues, made out of suitably explosive chemical pastes and compounds.
+
+Competitions are regularly held at Karkov Academy, and those individuals who produce the most aesthetically pleasing figures are held in high regard indeed.",Strike,,,,50.67 cm
+syndicate_asp_typewriter,WEAPON,"Anchored directly to the hull of the variant Copperhead hull; with rapid tracking and motion possible due to the advanced super-cooled electromagnetic gimbal driven by a high-spec targeting system.
+
+Range is subsequently high relative to standard ballistic point defense weaponry benchmarks; and tracking is arguably best-in-class. Punishing to shields.",Point Defense,,,,
+junk_pirates_sickle,SHIP,"A fast frigate designed for getting in and out of trouble quickly, delivering some decent firepower with the medium energy turret mounted high above the bridge.
+
+Decent flux reserves complement the main weapon and the omnidirectional shield, but it is relatively light and difficult to control, so can stand up poorly in a dogfight against a more nimble ship.",,,,,
+junk_pirates_hammer,SHIP,"A mobile heavy ordnance platform. Slow for a small frigate, but highly manoeuvrable.
+
+Due to its simple construction it is cheap yet reasonably robust, with front facing shields further improving its survivability.
+
+Dangerous when encountered as part of a group due to its potentially lethal payload, but otherwise not particularly extraordinary.",,,,,
+junk_pirates_dugong,SHIP,"The battle ready command platform for the Junk Pirate nobility.
+
+With a high capacity for fuel and energy reserves supplementing the large omnidirectional shield and generous armour plating, the ship is deceptively tough to kill.
+
+If the captain can swing this ship round in time to deliver his devastating ballistics-heavy broadside onto your direction, you need to think carefully  about whether you want to stick around to watch the fireworks. Four missile hardpoints to the rear allow the ship to operate as a fire support platform.",,,,,
+junk_pirates_octopus,SHIP,"A civilian freighter used by the Junk Pirates to transport goods, materials and people throughout the sector.
+
+Whilst the ship itself is technically incapable of mounting shields; it carries a separate independent shield module for protection. One wing of the craft is complete with a fully functional, combat ready flight deck.",,,,,
+junk_pirates_spike,SHIP,"Hardy, fast and heavy hitting. A shortage of a shield makes it easier to kill than it looks, but it's cheap to produce, and not to be underestimated in the depths of a melee.",,,,,
+junk_pirates_jackdaw,SHIP,"A light cruiser with a heavy hitting left hook, lightweight right jab and a decent enough jaw.
+
+Similar in design, but different in tactical profile to the Dugong, delivered by engineers through a marginally successful programme trying to manufacture a cheaper, easier to field version.
+
+The VIE plug-jets installed in this vessel make it hit quicker, but not as hard as the ammo-feeder equipped Dugong.",,,,,
+junk_pirates_orcenstein,SHIP,"A front loaded energy-based Artillery platform, capable of bringing the main armament of two large energy weapons quickly to bear with her manoeuvring jets.
+
+When infamous tinkerer Cerys Clattenberg presented this Cruiser to the King and declared it The Clattenberg Catapult, most people ignored both the creators chosen moniker and her subsequent execution. Dangerous as an artillery piece, but an expensive toy that needs constant protection from flanking when under duress.",,,,,
+junk_pirates_cleat,SHIP,"Plan A: Win, Plan B: Escape, Plan C: Die, Plan D: Cleat.
+
+Used to be regarded as a vital part of the safety protocols on Junk Pirates' ships - and for years the King felt comfortable in the knowledge that thousands of his loyal subjects would be living full and happy lives after escaping via the pods contained on the Cleat, which would be launched simply from the cargo bays of a defeated vessel - point towards the safest planetary body and launch the escape pod in to the gravity well where on board systems would allow the occupant to be delivered safely to the surface.
+
+Unfortunately the systems were found wanting, and fatally decelerated bodies still appear to this day around the sector inside found pods.
+
+The Cleat and the escape pod system have been happily repurposed in to an effective bomber by the ever resourceful Junk Pirate engineers.",,,,,
+junk_pirates_boxer,SHIP,"The Boxer is characterised by thick armour plates around an inefficient but effective engine and controls system.
+
+A powerful, fixed shield and some capable ballistic weaponry looking straight forward means it is a ship that you don't want to get caught in front of, but its sheer weight makes it unwieldy and slow.
+
+Three mixed missile hardpoints and an additional ballistic turret with good coverage make the boxer capable of diverse roles.",,,,,
+junk_pirates_boxenstein,SHIP,"An unholy fusion of the best parts of two Boxer class destroyers cut and welded together to create this hulk of a superdestroyer.
+
+Controls and flux systems have been upgraded heavily, and this ship now relies largely on energy weaponry.",,,,,
+junk_pirates_clam,SHIP,"A defensive heavy frigate blessed with a useful, full coverage efficient shield system and some reasonable armour.
+
+All this high technology has added cost and placed an unfortunate limit on the offensive capabilities of the craft, with the main capabilities coming from its missile payload.
+
+Created in response to protestations from the Kingdom that all the other frigates are too exposed - leading to too many premature deaths. The King is looking forward to the time when the same people are complaining about this frigates lack of teeth.",,,,,
+junk_pirates_satsuma,SHIP,"Highly versatile and inexplicably symmetrical attack destroyer. Plug jets give great mobility, and the weapon loadout allows both good coverage and focus.",,,,,
+junk_pirates_clementine,SHIP,"The darling of the Junk Pirate fleet, a versatile frigate with a medium energy turret and good mobility, augmented by Plug jets.",,,,,
+junk_pirates_mandarine,SHIP,"A flexible and robust support frigate. Relatively low mobility, but can bring great support with a medium ballistic mount and an acceptable shield system.
+
+Fitted with a flare system providing good rear coverage, brave captains can forego point defense weaponry and hope for the best.",,,,,
+junk_pirates_tangerine,SHIP,"A ship fitted with great armour, great flux-handling, good mobility and an advanced drive field which allows the ship to increase in mobility with increased hard flux levels. It also has a built-in best-in-class strike weapon (the Haymaker energy blaster).
+
+Almost the perfect hunter-killer frigate until you read the small print on the back page of the brochure and realise that the ship is guaranteed to enter a catastrophic overload when the Metastable Drive field is pushed too far. If you are lucky; this event will buy you enough time to turn the engines back on.",,,,,
+junk_pirates_tangerine_blue,SHIP,"An experimental version of an experimental ship. The original Tangerine is fitted with great armour, great flux-handling, good mobility and an advanced drive field which allows the ship to increase in mobility with increased hard flux levels. It also has a built-in best-in-class strike weapon (the Haymaker energy blaster).
+
+But it is guaranteed to enter a catastrophic overload when the Metastable Drive field is pushed too far. This ‘blue’ version is as piloted by the Circumstances, a brother and sister pair of outlaws, and appears to be tricked out with some fairly kooky time-bending tech layered on top of the already frightening loadout of the Tangerine.",,,,,
+junk_pirates_orca,SHIP,"Heavily armed, slow and modestly armoured carrier with an advanced shield and systems, the Orca represents (to some) the pinnacle of the Junk Pirates' bizarre breed of technology.
+
+Versatile ballistic and energy mounts all around the perimeter of the craft allow for effective assault or defensive variants. It is unwise to engage this craft in a frontal assault, but if outnumbered or flanked by surprise, the relatively weak rear can be taken advantage of.",,,,,
+junk_pirates_shard,SHIP,"The preferred escort fighter for the Junk Pirates' fleet, produced largely within the region of Backspin, the second planet of the Breh'Inni system.
+
+This is the spiritual home of the fighter pilots of the Junk Pirates' fleet, and as such the planet's orbit is thick with scarred, spinning hulls of the staple death-bucket, the Spike. Most of these are as a result of the training exercises, but some are returned hulls brought back by sentimental types.
+
+For the fighter pilots lucky, or skilful enough, to show a degree of survivability in this oft-maligned entry model, they will be promoted to a far more expensive, but less easily aerated craft, the Shard.
+
+More armour and better armaments in a slightly bulkier frame means more hot dinners at the post-sortie ho-down, and more business for opposition funeral directors.",,,,,
+junk_pirates_stoatA,SHIP,"A light freighter, ostensibly a couple of small engines attached to a frame, with the means to carry any of a number of cargo canisters or crates.
+
+Very weak offensively and defensively, but it suits the Junk Pirates for inter-system logistics.
+
+This model carries a small energy turret.",,,,,
+junk_pirates_stoatB,SHIP,"A light freighter, ostensibly a couple of small engines attached to a frame, with the means to carry any of a number of cargo canisters or crates.
+
+Very weak offensively and defensively, but it suits the Junk Pirates for inter-system logistics.
+
+This model has a small fixed missile point to the front.",,,,,
+junk_pirates_langoustine,SHIP,"A quick destroyer with a front-facing shield and some strong forward weaponry.
+
+Dreamt up by ship-building prodigy, Graj Krell, as she sat in the bridge of her Boxer following a hard-fought battle, watching a Valkyrie loaded with precious goods limp away from her near-immobile fleet.
+
+A brief meeting with the catering staff and a couple of afternoons later, she had come up with the basis of the Langoustine, a genuine attack destroyer.",,,,,
+junk_pirates_scythe,SHIP,"A modestly armed, quick freighter, often used for intra-system cargo runs near to the Breh'Inni system.
+
+The front-concentrated ballistic and missile mounts can allow for an effective combat vessel as part of a fleet, but a lightweight frame can make it vulnerable if caught alone.",,,,,
+junk_pirates_goat,SHIP,"A hardy and versatile explorer, designed for those times when the Junk Pirates need to go a bit further from home.
+
+Not designed primarily as a combat vessel, however thick armour and the capability to mount a large energy weapon has meant that the Goat has been used in battle often enough.",,,,,
+junk_pirates_kraken,SHIP,"The Junk Pirates' battleship, created only for warfare. With a fearsome ballistic broadside and versatile energy emplacements, this is not to be trifled with.
+
+Heavy armour and a good shield allows it great staying power while the armaments deliver the pain.",,,,,
+junk_pirates_turbot,SHIP,"Phase technology is taken to the next step by the increasingly insane Junk Pirate philosopher, 'Angry' Jake Maddra.
+
+Phase capable drones are held by the craft ready for deployment to supplement the strike weaponry. Only 'Angry' Jake knows how this works, but his paranoia won't allow him to explain.",,,,,
+junk_pirates_haymaker,WEAPON,"The devastating right hook of the Junk Pirates' Tangerine.
+
+This weapon fires a modified thermal pulse, causing high damage and scrambling systems.
+
+This built in weapon is capable of significant initial burst damage making it a highly potent strike weapon on the swift and mobile frigate. The reactors on the Tangerine recharge the Haymaker relatively slowly, so the weapon loses utility in extended battles against superior sustained firepower.",Assault,,,,
+junk_pirates_haymaker_blue,WEAPON,"The devastating right hook of the Junk Pirates' Tangerine, this version is that fitted to the Blue Tangerine, having a higher energy payload but reduced firing frequency.
+
+This weapon fires a modified thermal pulse, causing high damage and scrambling systems.
+
+This built in weapon is capable of significant initial burst damage making it a highly potent strike weapon on the swift and mobile frigate. The reactors on the Tangerine recharge the Haymaker relatively slowly, so the weapon loses utility in extended battles against superior sustained firepower.",Assault,,,,
+junk_pirates_scorpion,WEAPON,"The sting in the tail of the Junk Pirates' Langoustine.
+
+Based on the Haymaker of the Tangerine, this weapon has a reduced damage but a much increased rate of fire.",Assault,,,,
+junk_pirates_welder,WEAPON,"the Drill of Styx (or Stygian Drill) is an inefficient and immensely powerful stream of heavy particles, designed to cut ship hulls or asteroids alike in half.
+
+Named after classical musicians from the mythical land of Chicago, the only other problem is that the accelerators and reactors necessary to create such power is housed in something about the same size as a Hammerhead destroyer bolted on to the bottom of 'The Reaper', the Junk Pirates' gargantuan construction and mining vessel.
+
+Limited options for the thinking Commander, but if chance should put the enemy in front of one of these things then they had better start saying prayers to their Gods.",Close Support,,,,
+junk_pirates_pica,WEAPON,"The PICA – Particle Inverter / Charge Amplifier – claims to use a hitherto unknown (and subsequently unproven) process to weaponise the generous flux chambers of the Magpie.
+
+By sinusoidally varying the charge ratings of particles held in the pre-firing chamber from plus 2 to negative 2 times base values, this generates a soup of plasma and antimatter which react to angrily discharge from the metalo-ceramic barrel via the reflective and resonant 'bassoon'. Huge positive and negative recoil cancel each other out in totality, and so the frame of the weapon can shift focus and maintain accuracy frighteningly well.
+
+(at least, that's what it says in the user manual).
+
+Whatever the truth of the physical processes – the weapon delivers an impressive volley of quickly moving and powerful energy charges in a straight line towards would-be aggressors, but the esoteric technology and large ordnance footprint make it fundamentally impractical for incorporation as a standalone weapon outside the frame of the Magpie.",Assault,,,,
+junk_pirates_splinter,SHIP,"Quick, durable, and heavy hitting. This represents the best effort yet the Junk Pirates have made in achieving an effective fighter technology.",,,,,
+junk_pirates_the_reaper,SHIP,"A massive, lumbering Frankenstein monster of a capital ship. The Reaper is a highly asymmetrical amalgamation of at least three distinct salvaged hulls—a boxy beige freighter block, heavy grey industrial gantries, and bizarre reddish-pink curved plating—all crudely welded together. Despite its chaotic, junk-heap appearance, it boasts tremendous raw bulk and serves as a terrifying platform for the Junk Pirates devastating accelerated particle drill.",,,,,
+junk_pirates_magpie,SHIP,"Ostensibly a platform for experimental twinned PICA energy blasters. With a couple of makeshift engines attached, and the added punch of a large missile mount – the Magpie carries a dangerous assault package.
+
+As far as it can be stated as such (given the inference of foresight not necessarily present in the original creation processes) the vessel is designed to burst in to the fray of lighter craft and demolish smaller hulls with the quick-moving and acccurate bursts of fire from the two main weapons, supplemented by an all-round array of protective small energy weapons.
+
+Energy transformation processes and flux handling is dealt with by a web of post-crystalline hyper-chained phase-polymers intertwined amongst the hulls, bulkheads and armour plating to give excellent performance in terms of capacities and dissipation.
+
+The frontal shield protecting the relatively fragile armour gives survivability ratings above benchmarks for operational experimental space-laboratories in combat environments.",,,,,
+junk_pirates_insult_drone,SHIP,"The final insult to many a marauding frigate hoping to find the gaps in the defenses of the lumbering hulk of The Kraken. Phase-beam wielding, displacer-capable and seemingly endless flux-handling capabilities - limited only by the tech that leashes the systems close to the Parent.",Drone (high tech),,,,
+pack_felix_drone,SHIP,P.A.C.K. support drone implemented variously through the fleet to supplement the combat capabilities of the parent vessel.,Drone (support),,,,
+junk_pirates_phase_drone,SHIP,"The Turbot carries around a number of small high tech drones capable of entering p-space via the Turbot's main phase device, independently of the main craft.
+
+Armed with a single point defense laser each, the drones provide invaluable support against missile and fighter threats.",Drone (high tech),,,,
+junk_pirates_tnt_drone,SHIP,"The on-board workshops and manufacturing facilities located within the sweaty depths of The Reaper mining vessel are used for any number of things.
+
+High stakes poker games and Chilli competitions entertain the crowds, the crushing and packing of ore feeds the growth of the Kingdom, and the constant replenishment of assault gun wielding drones allows the mothership to effectively break apart asteroids at dangerously close ranges, without worrying too much about asset losses.
+
+The TNT drones provide a reasonable threat to attacking craft should The Reaper find itself without further support.",Drone (mining),,,,
+junk_pirates_welding_drone,SHIP,"The partner drone to the assault gun wielding TNT drone. A point defense laser is used to interrogate cracks and fissures in the faces of ore-rich asteroids, where its bigger sister will follow with some explosive ordnance.
+
+Provides useful point defense support in a combat situation.",Drone (mining),,,,
+planet_brehinniI,CUSTOM,"A rocky-metallic husk-world. The endless fractured loop of chasms around this world are littered to an unknown depth with rejected metallic material. Several interlinked surface artificial habitats allow a small population of artists, deviants and miscreants to call this place home.",,,,,
+planet_brehinniII,CUSTOM,"Primarily composed of hydrogen and helium gases. The temperature and pressure at the core are extreme, but not enough to sustain the deuterium fusion that would turn the planet into a brown dwarf star. The upper atmosphere of this planet carries in orbit many empty husks of useless fighter craft.",,,,,
+planet_brehinniIII,CUSTOM,"A frozen world of methane and ammonia, water-ice is like rock and may be found in mountainous outcroppings and boulders. This planet has a low orbit and sub-atmospheric network of metalo-ceramic habitat tubes formed long ago, presumably by the Domain, and now occupied by the folk who call themselves the Junk Pirates.",,,,,
+planet_brehinniIV,CUSTOM,"A gas giant composed mostly of water, ammonia and methane. Within the depths, gravity generates enough pressure to form a core of metallic hydrogen.",,,,,
+planet_brehinniV,CUSTOM,"A frozen world of methane and ammonia, water-ice is like rock and may be found in mountainous outcroppings and boulders. A thin atmosphere of volatiles is formed on the starward side of the planet only to freeze again on the dark side. Most craters are filled in over time as this ""snow"" is deposited.",,,,,
+planet_brehinniVI,CUSTOM,The surface of this small rocky-metallic world glows eerily under the red light of Breh'Inni due to huge volumes of synthetic material and junked hardware scattered across her surface.,,,,,
+,,,,,,,
+pack_ripsaw,WEAPON,"A light autocannon, built in to the frame of the Pitbull with increased cooling, ammunition feed and fire rate.",Close Support,,,,
+pack_torp,WEAPON,Electromagnetically ejected from turreted rails on the paired sponsons of the Mitya-class heavy bomber. Limited-scale plasma-fusion warhead can pierce all but the thickest armour – if it hits.,,,,,
+pack_affenpinscher,WEAPON,The turreted point-defense burst laser mounted at the top of the BRT – giving an excellent baseline protecting the ship from missile and fighter threats.,Point Defense,,,,
+pack_bedlington,SHIP,"A lightweight mobile frigate outfitted with a small drone bay, carrying an ion-drone.
+
+Limited offensive capabilities, but an excellent harasser in support of heavier ships.",,,,,
+pack_wirefox,SHIP,"The Wirefox is capable of meeting foes head-on, biting with some dangerous front-facing weaponry, and not letting go.
+
+Needs support when outgunned due to its typical P.A.C.K. flimsy hull, but mobile enough to choose her battles.",,,,,
+pack_pitbull,SHIP,"Fierce, hardy and unrepetant. The Pitbull has been designed around the overclocked and brutal front-facing Ripsaw, a kinetic bombardment weapon based on the light autocannon.
+
+All-round light ballistic protection and four wing-mounted missile mounts complete the payload of this dangerous and heavily armoured light destroyer.",,,,,
+pack_ridgeback,SHIP,"The lifeblood of the P.A.C.K. fleet, the Ridgeback is capable of many roles, and an expert in none. 
+
+Flexible weapon mountings allow this craft to perform adequately in a combat environment, although in catering for so many diverse supporting roles, with large cargo bays and complicated life-support systems, the hull is extraordinarily fragile for a ship of its size.",,,,,
+pack_ridgeback_x,SHIP,"A variant of the Ridgeback, the Ridgeback X is smaller, and being designed for operation in more extreme environments - with better flux management and heavier armour - is generally more suitable for a direct combat role.",,,,,
+pack_BRT,SHIP,"The Black Russian Terrier, more commonly known as the BRT seems to be designed around primarily an escort or point defense role.
+
+The versatile mounts and reasonable flux management allow it to prosper in other more offensive roles. The large bridge structure allows for a relatively high personnel capacity.",,,,,
+pack_labrador,SHIP,"A utility ship with a keen sensor system and a reasonable capacity for cargo, provides a good complement to a P.A.C.K. fleet.
+
+Limited combat capabilities and a poor choice for offensive operations, but reasonable in a defensive role with her burn drive and dual medium ballistic turrets.",,,,,
+pack_skimmer,SHIP_SYSTEM,"An early precursor to Phase technology, the P.A.C.K. phase skimmer achieves an effect very similar to that seen on the Wolf-class and the Medusa-class craft.
+
+This prototypical system is large, cumbersome, flux-hungry but generally very stable. This P.A.C.K. technology utilises a large phase coil to bring the body of the ship in to p-space via the singular discharge of a liquid copper 1.2 teraCoulomb capacitor. This metamotion causes a huge inductive load to spike back through the coil, which in turn fires through a secondary super-cooled electromagnet, pulling space in to small local wrinkles and snapping the craft back to n-space, at a slightly different location.",,"An early precursor to Phase technology, the P.A.C.K. phase skimmer achieves an effect very similar to that seen on the Wolf-class and the Medusa-class craft.",,,
+pack_drone_ion,SHIP,The Ion Drone of the Bedlington allows the ship to act as a very effective harasser,Drone (support),,,,
+pack_gunship,SHIP,"Vulcans and Swarmers make the Ivan-class great for screening against opposition fighter wings.
+
+The LPC has proc-gen code built in which provides a martially-useless but unique external decal-covering and finishing package to each unit - with common themes including neon under-carriage lighting; chromed front grilles and flame-effect fractal decals. These will often be supplemented by the Pilots own handiwork - although the mission-count of any individual unit will rarely hit double figures.",,,,,
+pack_pressure_gunship,SHIP,"With a miniaturised Ripsaw mounted on each wing; The Alyosha-class is capable of punching above its weight and putting pressure on shielded vessels. Flares allow the gunships to provide additional interference.
+
+The reliance on kinetic weaponry make the unit a specialised one; but when deployed correctly it can shift the tides of a close battle.",,,,,
+pack_bomber,SHIP,"The Mitya-class has a couple of turret-mounted mag-rail delivered HE torpedoes; plus a shield and a PD laser to make sure it has a good chance of getting close enough to deliver.
+
+The central command globe of this powerful bomber is particularly arcane in its construction and this unit is difficult for an autofac to efficiently field.",,,,,
+pack_levin,SHIP,"The Levin-class gunship is characterised by a huge frame for an LPC deliverable battle-platform - with a corresponding level of resilience under fire and lack of mobility.
+
+Designed to deliver a heavy burst of fire from range with her onboard Thumper and LAG turrets; it suffers under prolonged individual engagements due to the heavy flux load of the very large ordnance it carries.
+
+Onboard IPDAI assists in clearing away incoming missile threats but can distract from the primary role of the unit.",,,,,
+pack_oblonsky,SHIP,"The Oblonsky-class is an entirely self-sufficient Carrier-driven, CPU-operated, vulcan-armed drone with one drawback - the units are pre-programmed to require pilots to even clear the deck-mounted autofac.
+
+Once manned, the Oblonsky-class is capable of very-high mobility. A foam-metal-matrix filler subsumes the space between the pilot and the cockpit shell to protect from excessive forces at high speed; and a neural-spike allows the pilot to interface with the navigational and targeting computer - but the extremely high speeds of a typical space battle means the pilot rarely provides much in the way of meaningful input - the benefit being mostly to the pilot - with a brain quickly flooded with adrenaline, dopamine and any-other-mine the pituitary can squeeze out whilst the tiny craft corkscrews through open space.
+
+Oblonsky pilots are variously revered and ridiculed as the age-old and culturally-independent debate on the issue of 'Bravery vs. Foolishness' merrily goes on throughout the many booze-halls and cat-houses of P.A.C.K. space.",,,,,
+pack_spinone,SHIP,"A P.A.C.K. Cruiser with one notable strength - it is capable of maintaining 3 fighter wings on the battlefield.
+
+Otherwise would only ever be described as 'adequate' - but with a moderately efficient shield and a reasonable logistical footprint, it provides a useful means for the P.A.C.K. fleet to bring any one of a number of Gunships to the field.
+
+The craft is complete with an integrated, complex comms and control array capable of instigating 'Trilateral Augmentation Algorithms' via her gunships or fighters - using quantum computing to create a short term possibilities-forecast through interlinking carrier & fighter intel to greatly improve the fighters navigational processors over a brief period.",,,,,
+pack_GFB,SHIP,"The Griffon Fauve de Bretagne - or more often referred to as GFB - is a destroyer-level combat carrier with an in-built Ivan Gunship wing, plus capability to mount one more of any other sector-wide modular fighter or gunship LPC.
+
+Relatively heavily armoured, and highly mobile - this is a real front-line carrier with potentially devastating combat potential.",,,,,
+pack_BRT_canebianco,SHIP,"This Black Russian Terrier (BRT) is a heavily modified version with an operating flight deck substituted in place of the normally forward-facing smaller weaponry of her cousin.
+
+Canebianco technicians have baked-in advanced optics to supplement the retained Affenpinscher and any other beam weaponry the commander may wish to outfit within the two medium modular energy mounts.
+
+Still kitted out with versatile mounts and reasonable flux management - it can be outfitted with a defensive or offensive standpoint. The large bridge structure allows for a relatively high personnel capacity.",,,,,
+pack_bullykutta,SHIP,"The Bully Kutta is a cumbersome but effective missile cruiser, which was originally designed to operate as an atmospheric landing vessel in politically and naturally hostile environments.
+
+Due to the generous complement of missiles and unusually thick armour plating (allowing it to enter atmospheres and also to remain intact against the self-generated engine thrusts necessary to do so safely) this finds great use as a real heavy hitter – but due to the low mobility can find it difficult to engage threats without coordinated fleet manoeuvres generating sufficient interference elsewhere.",,,,,
+pack_dogbox,SHIP,"This is a frightening side-grade to the P.A.C.K. missile cruiser (the Bully Kutta), put in to use by pirate groups with a marked change of focus – the Dog Box concentrates more on the provision of ballistic weaponry and ditches most safety protocols.
+
+The Bully Kutta itself is a cumbersome cruiser, which was originally designed to operate as an atmospheric landing vessel in politically and naturally hostile environments. The Dog Box is an attempt to move the Bully Kutta frame in to a proper assault role – using the heavy armour alongside safety overrides to theoretically combine in allowing it to engage at short range – where the lumbering Bully Kutta could not.",,,,,
+pack_engine_divert,SHIP_SYSTEM,Crew divert their attention from major ship systems to augment the engines whilst this system is active.,,,,,
+pack_keflusker,SHIP_SYSTEM,"The engine is temporarily increased in thrust and controls locked. Allows limited increase in battlefield mobility, as long as you want to go in a straight line.
+
+Borrowing a lot of technology from the commonly applied Expansion-tech 'Burn Drive', this particular system is ostensibly a reverse engineered; modified version of the same which allows the shield to remain active whilst limiting total active power. On activation the crew are - every time - met by the holo-signature of revered Canebianco technician 'Tricot Raye' dramatically explaining the relevant safety-protocols. Such was the techincal skill (and ego) of Raye in the implementation, ongoing P.A.C.K.-wide efforts to unlock and circumvent this repetitive, overdone and badly delivered soliloquy are failing.",Movement,"The engine is temporarily increased in thrust and controls locked. Allows limited increase in battlefield mobility, as long as you want to go in a straight line.",,,
+pack_flux_divert,SHIP_SYSTEM,"The crew divert their attention from engine related issues towards the shield, allowing the shield flux management systems to operate more efficiently.",,,,,
+pack_trilat_algorithms,SHIP_SYSTEM,"A trilateral comms link is engaged between the carrier and each wing using an on-board single-threaded quantum CPU. The automated feedback-loops alternate between three craft at a time; creating a 'possibilities-forecast' matrix - predicting optimal courses of navigation and collision avoidance for all forseeable courses of action over a brief period.
+
+This enhanced intel-map allows each fighter to push their speed and manoeuvrability envelope well over the norm whilst still maintaining collision events within tolerance.",Fighter,This enhanced intel-map allows each fighter to push their speed and manoeuvrability envelope well over the norm whilst still maintaining collision events within tolerance.,,,
+junk_pirates_burst_jets,SHIP_SYSTEM,"Pre-charged cylinders of various cryo-gases are discharged into the various engine mechanisms aboard the ship – allowing the engines to run hot, boosting ship mobility temporarily. The discarded cylinders or ‘plugs’ carry a significant electrostatic charge and have been known to provide a suitable level of interference against minor missile threats on the battlefield.",Movement,Increases mobility and provides for flare-like discharge of cryo-liquid ‘plugs’.,,,
+junk_pirates_kraken_retreat,SHIP_SYSTEM,"The Mass Ejection Retreat MechANism or MERMAN allows the hulking, lumbering, virtually immobile bulk of an overcommitted and inevitably overfluxed Kraken to go backwards relatively quickly.
+
+There is no specific recipe for what gets chucked out of the front, but it is widely believed that using plugged-in CRT display screens (coupled to small but appropriately sized lead-acid UPS battery systems) brings good luck on the battlefield. It also allows for the fairly easy disposal of obsolete technology.",Defensive,The ship is forced backwards by the forward discharge of large quantities of mass. Locks out controls and drops shield.,,,
+planet_canisIII,CUSTOM,"This gas giant gives off an iridescent green glow, atypical of the mainly hydrogen and helium gases that make up the planet. The atmosphere has been filled with teratonnes of radioactive heavy metals due to P.A.C.K. activity, and is now becoming dangerously toxic to the hidden arcologies floating amongst her gaseous shroud.",,,,,
+,,,,,,,
+pack_samoyed,SHIP,"A light freighter, capable of running loads at decent speeds and good fuel economy. Reasonably well armed but with poor manoeuvrability, is of limited value in combat scenarios.",,,,,
+pack_samoyed_decoupled,SHIP,"The Samoyed freighter has been detached from the primary cargo vessel, increasing combat viability markedly.",,,,,
+pack_komondor,SHIP,"The Komondor guard destroyer appears to be of a higher technological level than the bulk of the P.A.C.K. fleet, and carries a very versatile set of generally forward facing weapon mounts.
+
+Blessed with a thick suit of armour, lower crew levels and an uncharacteristically thick hull, it has decent staying power at the cost of some agility in combat.",,,,,
+pack_sharpei,SHIP,"Large, shieldless and well armoured with an oversized, rudimentary phase coil that enables the ship to take small stutters across wrinkles of p-space.
+
+The Shar Pei represents a snapshot in P.A.C.K. technology at a time pre-expansion when phase space was being experimented with, rather than mastered - by the engineers of the time.
+
+A cautious captain uses the craft from range, with missile and ballistic support and avoiding fire with the P.A.C.K. phase skimmer. An aggressive captain hops in to close range through p-space and uses an impressive outfit of weaponry to quickly disable the target before the comparatively thick layer of armour can be breached.",,,,,
+pack_sharpei_canebianco,SHIP,"This Shar-Pei class vessel has been modified heavily by Canebianco technicians to amplify the power core output by a couple of orders of magnitude. The impact, as was theorised, is that the skimmer system will now hold the ship stable in p-space.
+
+With the strategic boon of being a capable phase ship, it is broadly similar to the Shar-Pei. The modifications do however include a necessary increase to the flux capacity, swapping out the front mounted missile hardpoints for energy, and some bright spark added a handy energy-bypass to allow the ship to operate as if it has a High Energy Focus system.",,,,,
+pack_mastiff,SHIP,"An unusually large P.A.C.K. spacefaring vessel with good speed and agility and potential to deliver massive damage with a big bite from the forward facing missile and energy weaponry. Once she has got a grip, she can be difficult to shake off in a one-on-one battle due to her manoeuvring jets.",,,,,
+pack_bulldog,SHIP,"Big, ugly, and powerful - but a history of introspective and destructive design iteration means it is no longer the ultimate fighting dog that it once was.
+
+The original designs were, at one point, best in class and this vessel was a key tactical piece in the Kollective achieving the segregation that they so desired. As the Bulldog saw fewer and fewer engagements, and the relevant technical minds rotted through generations of isolation, without enough self-awareness or foresight, the systems were (at best) never suitably upgraded (or at worst) inadvertently down-specified against a comparable machine in another part of the sector.
+
+Whilst it does not compare favourably in terms of ordnance load or flux handling to the other key players in its weight-class - two front facing closely focused large ballistic mounts and exceptional all round coverage make it a very dangerous foe in shorter evenly-matched engagements against most ships.",,,,,
+pack_bulldog_bullseye,SHIP,"This Bulldog is a heavily modified version of the P.A.C.K. Capital ship - with a much improved ordnance package and a more specialised focus on the front-mounted ballistic weaponry.
+
+The original designs were, at one point, best in class and this vessel was a key tactical piece in the Kollective achieving the segregation that they so desired. As the Bulldog saw fewer and fewer engagements, and the relevant technical minds rotted through generations of isolation, without enough self-awareness or foresight, the systems were (at best) never suitably upgraded (or at worst) inadvertently down-specified against a comparable machine in another part of the sector. This particular version has had a lot of these design errors corrected, and is significantly more dangerous than the base-spec Bulldog.
+
+This particular Bulldog does compare favourably to the other key players in its weight-class - and with three front facing closely focused large ballistic mounts, an ammo-feed system and exceptional all round coverage - don't get caught in front of this monster.",,,,,
+pack_schnauzer,SHIP,"An agile frigate with an unusual capacity for handling flux dissipation, unfortunately the agility and dissipation are possible largely by foregoing protective armour measures.
+
+Excels as a point defense escort craft due to four light energy turrets providing coverage in all directions, coupled with the exceptional flux dissipation rate. A brave captain can utilise the Schnauzer in many roles, including strike and assault, but the lightweight frame and poor dissipation with the shield up makes it unsuitable generally for direct engagements with larger craft.",,,,,
+pack_wirefox_sh,SHIP,"The modified Shuttle-variant of the Wirefox-class frigate, often referred to as 'Smooth-Haired' due to the SH suffix printed on the hull - and an ironic dig at the down-on-their-luck pilots who - sooner or later - are destined to lose their hair.
+
+Cheap to operate and field, and highly manoeuvrable - but lacking in genuine defensive capabilities.",,,,,
+,,,,,,,
+syndicate_asp_copperhead_p,SHIP,A rarely seen adaptation of the ubiquitous ASP freighter / carrier. This version is significantly better armed including the in-built pair of ‘Typewriter’ point defense machine guns.,,,,,
+syndicate_asp_copperhead,SHIP,"Cruiser-sized freighter, built around the speedy delivery of cargo.
+
+Flight deck and hangar space allows for a versatile fighter escort, but low ordnance capability (especially compared to the hull size) means the on-board armaments can be limited.",,,,,
+syndicate_asp_gigantophis,SHIP,"Large and relatively fast cargo craft, with a reasonable combat capability.
+
+Still needs heavy support when operating outside the more civilized sectors, but a shrewd captain can move a lot of cargo, and get very rich, very fast. The on-board flight deck means that these are quite often escorted by a significant fighter force, which are additionally supplemented by the ships ‘Targeting Feed’ system.",,,,,
+syndicate_asp_gigantophis_p,SHIP,"Frighteningly modified version of the large ASP freighter – where the parent hull was efficiently constructed and a favourite of the keen merchant; this is not much more than an excuse to fly around with a large TPC bolted to your underside.
+
+Foregoes the fighter-boosting system of the sister-vessel, replacing it with Plasma Jets. Very rare, and very dangerous.",,,,,
+syndicate_asp_diamondback,SHIP,"Quick and lightly armed courier craft.
+
+Good speed and fair manoeuvrability still make it a capable combat craft, but low ordnance potential means the captain needs to be selective in the choice of weaponry.",,,,,
+syndicate_asp_diamondback_p,SHIP,A modified version of the common Diamondback – this is significantly less common and a lot more dangerous.,,,,,
+syndicate_asp_hognose,SHIP,"This is a run of the mill combat freighter – with no particular outstanding strengths or weaknesses – and a single refittable flight deck.
+
+Holds its own in medium-sized fleets when a smaller dedicated freighter just doesn’t have enough teeth.",,,,,
+syndicate_asp_hognose_p,SHIP,An upgunned (and rare) version of the base Hognose; a medium sized ballistic hardpoint allows this light destroyer to become a serious threat on the battlefield.,,,,,
+syndicate_asp_kingcobra,SHIP,"A capital-grade vessel built explicitly for the purposes of exploration. Capable of operating for a reasonable length of time with minimal logistic support, and offering class-leading fuel economy.
+
+The internals of the craft are punctuated with multiple snaking corridors bridging large open fab-decks with smaller sub-voids providing container space, sleeping accommodation and control suites. The fab-decks provide in-flight synthesis of various goods (allowing for a reduced supply footprint) as well as feeding the 4 bays up front of the craft. These 4 bays allow for the deployment of (variously) probes, surface drones and half-tracks, sens-nets and up to 3 refittable LPC fighter craft.
+
+An in-built ‘Death Rattle’ support wing alongside some modest weaponry round out the offensive capability of the craft – which in line with the rest of the ASP Doctrine tends towards providing a deterrent rather than a true capital-grade offensive capability.",,,,,
+syndicate_asp_kingcobra_p,SHIP,"A modified, and rarely seen, version of the ASP fleet’s explorer, the King Cobra. Where the parent ship concentrates on fuel economy and survey capabilities; this particular craft concentrates on the provision of terrible firepower in the form of 3 large missile mounts.",,,,,
+syndicate_asp_death_rattle,SHIP,Heavy support fighter with an extremely useful flak cannon. Limited offensive capability but provides exceptional defensive support for the parent carrier.,,,,,
+syndicate_asp_constrictor,SHIP,"A large and powerful fighter craft widely used in escorting ASP fleets outside of the safer courier routes.
+
+A major deterrent for frigates and opposition fighters, and difficult to take down for everybody. Much like the other ASP fighter craft, will struggle to bring a true offensive capability to the battlefield outside of small-scale skirmishes - but by the time this thing has done its job causing interference throughout the battlefield - the mission payload can often be ready to engage a sustained burn in hyperspace.",,,,,
+syndicate_asp_venom,SHIP,"Capable and versatile fighter craft, designed to combat other fighter and bomber threats.
+
+Sporting a couple of mining lasers and a pack of swarmers, the Venom struggles against anything of real size.",,,,,
+syndicate_asp_bite,SHIP,"Lightweight drone that carries a low support profile, and is cheap.
+
+Often deployed to escort the ASP syndicate fleet in civilized space, where a deterrent is more important than a genuine combat threat.",,,,,
+,,,,,,,
+planet_yorkIII,CUSTOM,The wholesomeness of Lincoln can almost be seen from space. The planet is often used by the Hegemony to demonstrate the success of their policies in bringing order and stability back to the sector.,,,,,
+planet_yorkIVa,CUSTOM,"The frozen wastes of Dartmouth contain a small network of Domain-era metallo-ceramic hab-tubes. The hab-tubes on this planet are dormant, mostly non-functional and effectively unpopulated.",,,,,
+planet_yorkIVb,CUSTOM,"Orbiting opposite from her Sister - Dartmouth - Christchurch contains a similar network of hab-tubes, which are mostly functional and would serve to aid habitation in this otherwise uninhabitable planet.",,,,,
+,,,,,,,
+station_lincoln_cathedral,CUSTOM,It is not clear how the orbital station at Lincoln originally became known as 'the Cathedral' - however Hegemony propaganda places it highly as a point of pilgrimage for space travellers. Particularly those in the import / export business.,,,,,
+karkov_academy,CUSTOM,The orbit of this station appears dangerously low and the frame shimmers red in the field of debris - partly due to the reflecting light from Breh'Inni and partly due to the glow from regularly impacting material.,,,,,
+planet_ursuloIII,CUSTOM,"A rhythmic and frighteningly variable seasonal weather front system tightens a grip around the equatorial regions of Paddington, allowing very limited development in the swiftly changing seas of sand. Dense urban pockets of population cling to the temperate and stable lines of the tropics, where violent crime and profitable trade flourish under the watch of the ASP Syndicate.",,,,,
+paddington_station,CUSTOM,The pride and joy of the ASP Syndicate - the station provides low cost access to interstellar markets and lots of discreet places to cut a deal.,,,,,
+planet_ursuloV,CUSTOM,"The earth-like appearance of Yogi is only partially accurate. MegaHectare-scale clusters of land (which were previously lush and biodiverse, and still appear to be so) are in reality the green painted roofs of chemical processing facilities. Unusually efficient filtration processes allow most native land and sea-based flora and fauna to generally cling-on to an existence and the atmosphere remains non-toxic to human life.",,,,,
+station_port_revive,CUSTOM,A limited-scale tech-mining research project by the Tri-Tachyon.,,,,,
+jameson_orbital,CUSTOM,Jameson Orbital is known throughout the sector for being home to a semi-organised pirate military presence.,,,,,
+junk_pirates_spinerette,CUSTOM,A large man-made inoperable piece of machinery thought to be part of the infrastructure that originally placed the hab-tubes throughout the system,,,,,
+junk_pirates_hypercube,CUSTOM,A medium sized adamantine framework sharing numerous key features with the inactive gates of the domain. Inoperable and of an unknown purpose.,,,,,
+junk_pirates_abandoned_hulk,CUSTOM,A huge decaying framework of metal slowly sheds splinters of material in to nearby space - occasional flares pop brightly in the atmosphere of the orbiting planet as the particulates burn up on entry.,,,,,
+nomde_plume,CUSTOM,The Nearly There Orbital Mass Driver Experiment (N.O.M.D.E.) was designed to harvest volatiles from the surface of the planet to fuel a (redundant) experimental weapon system which - through extensive testing - has been found to be impractical in use and a major environmental nuisance at Too Far.,,,,,
+fireworks_factory,CUSTOM,Drifting through the fireworks belt harvesting raw material for the syndicate via the hundreds of independent mining operations on board. Where Paddington gives everything to the visitor - the Factory offers no such creature comforts - with an atmosphere of violence and corruption seeping out of every face and wall.,,,,,
+finnigans,CUSTOM,Staging post for ore collection and processing throughout the major asteroid belt of the Canis system.,,,,,
+bear_pit,CUSTOM,Often voted as the least welcoming place in the sector - this station is constantly shadowed from Ursulo by Aloysius.,,,,,
+junk_pirates_spinerette_active,CUSTOM,"A large and nebulous collection of matter fixed in orbit around the planet. Vibrant, ephemereal tendrils cut through the upper reaches of the atmosphere and seem to link whatever this is with the surface.",,,,,
+,,,,,,,
+junk_pirates,FACTION,"The Junk Pirates are a motley collection of individuals, cults and sub-factions based in the Breh'Inni system - living throughout the arcane domain-tech hab-tubes knitted through the mantle and lower atmosphere of the freezing world of Glory.
+
+Whilst these groups are disparate and many-faceted as individuals, they are bound together by a cultural affinity and appreciation of technology.
+
+The other almost universally shared attribute is a belief in a lack of formal establishment (beyond the pseudo-monarchic ranking on Breh'Inni under the King), and a subsequent dislike of the larger factions.",,,,,
+syndicate_asp,FACTION,"The Associated Starline Parcels Syndicate were once a simple corporate courier – grown large through financially and socially aggressive mergers, acquisitions and backroom deals
+
+Their home planet (Paddington in the system of Ursulo) is haunted by a pervasive criminal underworld, but the services and commercial dealings of the syndicate leave them in a positive standing to most of the major factions.",,,,,
+pack,FACTION,"The Post Anarchist Canis Kollective have recently emerged from under a thick and increasingly toxic atmosphere of Petra, a shield for centuries which kept them hidden from outsiders.
+
+In recent times it has become a smothering blanket, as the technology which has kept them in food, supplies and energy by resynthesising the atmospheric material has rejected non-ideal isotopes and compounds back to the planet to the point where the existence of the colony is threatened.
+
+In their emergence they are socially and technologically unprepared for the current state of the sector.",,,,,
+,,,,,,,
+junk_pirates_anarchist_researchbase,CUSTOM,This research station bears the markings of Pre-P.A.C.K. Anarchist Groups and appears to be functionally abandoned. This facility houses extensive networks of apparently outdated analysis tools and equipment for purposes no longer obvious and perhaps no longer relevant. Closer inspection may yield salvage.,,,,,
+junk_pirates_anarchist_mining,CUSTOM,"This mining station bears the markings of Pre-P.A.C.K. Anarchist Groups and appears to be functionally abandoned. Deliberately or accidentally decommissioned mining rigs and equipment are evident throughout the local space alongside several ambiguous sensor readings, which may signify stocks of valuable goods. Closer inspection may yield salvage.",,,,,
+junk_pirates_anarchist_habitat,CUSTOM,This habitat bears the markings of Pre-P.A.C.K. Anarchist Groups and appears to be functionally abandoned. Emergency power supplies operate; evidenced by the occasional flickering light of a docking bay – pointing towards recent abandonment or highly resilient systems. Closer inspection may yield salvage.,,,,,
+,,,,,,,
+pack_anarchist_station1,SHIP,"An orbital station bearing the markings of Pre-P.A.C.K. Anarchist Groups. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",,,,,
+pack_anarchist_station2,SHIP,"An orbital station bearing the markings of Pre-P.A.C.K. Anarchist Groups. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",,,,,
+,,,,,,,
+junk_pirates_electrochafflauncher,SHIP_SYSTEM,"Launches chaff particles carrying a heavy electrostatic charge to interfere with the targeting systems of hostile PD weapons and incoming missiles. After a short charging period, chaff will release an EMP arc targeting a nearby hostile missile within a small radius.",Defensive,Launches electrostatically charged chaff particles to defend against nearby enemy missiles.,,,
+,,,,,,,
+junk_pirates_electrobeam,WEAPON,"A long-ranged energy support weapon, firing an unstable stream of ionized particles with the notable side effect of converting whatever it strikes into a 'lightning rod' for nearby electrostatically charged debris. Relatively undemanding in terms of engineering and support profile, though its efficacy leaves something to be desired.
+
+A junk-built knockoff of the sector-standard Bhilai Exospace Ion Beam, the Electrostatic Shock Beam is claimed by Junk Pirate oral history to be reverse-engineered from a prototype stolen - usually, by incredible coincidence, by whoever happens to be telling the story - from the Chernobog Proving Grounds. The veracity of this information is somewhat in doubt, not least due to the claimed date of this event being significantly before the Collapse.",Close Support,,,,
+junk_pirates_scrapcannon,WEAPON,"A robust and inexpensive autocannon with generous engineering specifications, easily mounted even to light vessels or those lacking in flux infrastructure. Nonstandard 'scrap' rounds produce unpredictable, though generally disappointing, effect on target.
+
+The GA-X Industries Mk. I 'Scrapper' Autocannon, long out of production even before the Collapse, was once widely boasted to be capable of firing anything that would fit into the breech. Of course, when the blueprint was rediscovered in a remote Domain derelict outpost by Junk Pirate scavengers along with a filing cabinet full of incredibly preserved period advertising material,  they took this as a challenge. Now back in steady use after uncounted centuries, the Junk Pirate 'standard' loadings for the Scrapper consist of grapeshot, heavy packing grease, non-Newtonian fluids, stale pizza crusts, stolen silverware, and everything in between.",Assault,,,,
+junk_pirates_scrapnailer,WEAPON,"A piece of standard industrial equipment turned starship armament, the affectionately christened 'Scrap Nailer' has been retooled to fire meter-long jagged spikes cut from scrap steel, damaged armour plating, or really just about any conductive metal that happens to be laying about.",Close Support,,,,
+junk_pirates_junkjet_rack,WEAPON,"More of a broad identification category than a discrete 'class' of weapons, the only traits universally shared by 'Scrapjet' missiles are their powerful engines, mid-weight payloads, and frankly deficient targeting systems. This particular weapon mount consists of four Scrapjets crudely affixed to a jury-rigged missile rack by a series of suspiciously oversized explosive bolts.",Close Support,,,,
+junk_pirates_junkjet_pod,WEAPON,"More of a broad identification category than a discrete 'class' of weapons, the only traits universally shared by 'Scrapjet' missiles are their powerful engines, mid-weight payloads, and frankly deficient targeting systems. This particular weapon mount consists of a standard double-arm missile rack fed by internal magazines which are routinely loaded far beyond their stated maximum capacity.",Close Support,,,,
+junk_pirates_mlrs,WEAPON,"The Micro Scrapjet MLRS system fires a smaller version of her big sister the Scrapjet in the Micro Scrapjet. Similar behaviour is to be expected; with the various warhead types and including no particular guarantees that adjacent barn doors will be hit.
+
+This MLRS fires micro scrapjets in extended ‘lucky dip’ salvoes of 8 and can be found on the right arm of the Orca pleasure craft.",,,,,
+junk_pirates_cruiser_burst_jets,SHIP_SYSTEM,"Dumping cryo-liquids from half-tonne Vacuum Insulated Evaporator tanks straight in to and around the cooling jackets of the ships engines allows for large ships to perform minor miracles in manoeuvrability – at least for a short while. The used vessels when ejected break up to form electrostatically charged debris which functionally act as flares.
+
+In theory this will massively shorten the economic life of the particular vessels engine train and in order to mollify the engineering teams is often applied with a simple modification to allow for the efficient production and packaging of frozen dairy products.",Movement,Increases mobility and provides for flare-like discharge of cryo-liquid ‘plugs’.,,,
+junk_pirates_spinerette_base,SHIP,"This is a huge, slithering mass of incoherent and unidentifiable modules, vaguely arranged in an Arachnoid manner. Strong energy signatures emanate from the central pod arrangement and a full-spectrum scan of this … thing … reveals no organic life.",,,,,
+,,,,,,,
+syndicate_asp_credit_chip,RESOURCE,"Even though the majority of financial transactions can be carried out remotely and reliably from just about any point in the sector, sometimes this hyper-connectedness can lead to a level of scrutiny that certain individuals do not always appreciate.
+
+In that case, physically moving money by decrypted credit chips is an archaic (but widely accepted) way to ensure a certain level of opacity can be maintained, which works great assuming you can trust whoever is carrying your chips for you.",,,,,
+junk_pirates_raven,SHIP,"Originally conceived as a joint venture between corporate interests and high-tech arms dealers, the Raven was intended to be a next-generation raider. The project collapsed amid infighting, leaving the Junk Pirates to salvage the surviving prototypes. While boasting advanced systems and an integrated targeting core, its rushed structural integration makes it a dangerous anomaly.",,,,,
+junk_pirates_damper,SHIP_SYSTEM,"Temporarily overcharges the localized structural fields, significantly increasing damage resistance.",,,,,

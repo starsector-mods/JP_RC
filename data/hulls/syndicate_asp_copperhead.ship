@@ -1,0 +1,206 @@
+{
+  "bounds": [
+    -78,
+    9,
+    -43,
+    11,
+    -51,
+    78,
+    75,
+    86,
+    76,
+    14,
+    56,
+    4,
+    64,
+    -6,
+    63,
+    -68,
+    34,
+    -78,
+    15,
+    -71,
+    -51,
+    -80,
+    -43,
+    -9,
+    -78,
+    -7
+  ],
+  "builtInWings": [],
+  "center": [
+    94.5,
+    85
+  ],
+  "collisionRadius": 119,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 16,
+      "length": 31,
+      "location": [
+        -60,
+        -75
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 16,
+      "length": 31,
+      "location": [
+        -60,
+        75
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 16,
+      "length": 31,
+      "location": [
+        -85,
+        0
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 8,
+      "length": 51.5,
+      "location": [
+        -52,
+        -60
+      ],
+      "style": "LOW_TECH",
+      "width": 8
+    },
+    {
+      "angle": 180,
+      "contrailSize": 8,
+      "length": 51.5,
+      "location": [
+        -52,
+        60
+      ],
+      "style": "LOW_TECH",
+      "width": 8
+    }
+  ],
+  "height": 170,
+  "hullId": "syndicate_asp_copperhead",
+  "hullName": "Copperhead",
+  "hullSize": "CRUISER",
+  "shieldCenter": [
+    10,
+    2
+  ],
+  "shieldRadius": 118.800003,
+  "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_copperhead.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 45,
+      "arc": 160,
+      "id": "WS 001",
+      "locations": [
+        30.5,
+        45.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -45,
+      "arc": 160,
+      "id": "WS 002",
+      "locations": [
+        30.5,
+        -45.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -115,
+      "arc": 185,
+      "id": "WS 003",
+      "locations": [
+        -21,
+        -45.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 130,
+      "arc": 135,
+      "id": "WS 004",
+      "locations": [
+        -21,
+        45.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 90,
+      "arc": 160,
+      "id": "WS 005",
+      "locations": [
+        -1,
+        78.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 006",
+      "locations": [
+        65,
+        -61.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 007",
+      "locations": [
+        45.5,
+        -82.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0.8,
+      "arc": 158.300003,
+      "id": "WS 008",
+      "locations":[
+        38.5, 14.5,
+        38.5, 14.5,
+        26.5, 20.5,
+        26.5, 8.5
+    ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "LAUNCH_BAY"
+    }
+  ],
+  "width": 189
+}

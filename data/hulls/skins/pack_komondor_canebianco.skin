@@ -1,0 +1,19 @@
+{
+	"baseHullId":"pack_komondor",
+	"skinHullId":"pack_komondor_canebianco",
+	"hullName":"Komondor (CB)",
+	"descriptionId":"pack_komondor",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionPrefix":"A Komondor class destroyer as modified by Canebianco technicians - with an enhanced shield emitter and advanced ordnance systems.",
+	"fleetPoints":9,
+	"ordnancePoints":90,
+	"baseValueMult":1.4,
+	"spriteName":"graphics/pack/ships/pack_komondor_canebianco.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["frontemitter","hardenedshieldemitter","extendedshieldemitter", "pack_overclocked_cb"],
+	"builtInWeapons":{
+    }
+}

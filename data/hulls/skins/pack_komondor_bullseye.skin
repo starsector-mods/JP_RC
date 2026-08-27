@@ -1,0 +1,19 @@
+{
+	"baseHullId":"pack_komondor",
+	"skinHullId":"pack_komondor_bullseye",
+	"hullName":"Komondor (BE)",
+	"descriptionId":"pack_komondor",
+	"tags":[],
+	"descriptionPrefix":"A Komondor class destroyer kitted out to fight alongside Bullseye.",
+	"fleetPoints":9,
+	"ordnancePoints":80,
+	"baseValueMult":1.3,
+	"spriteName":"graphics/pack/ships/pack_komondor_bullseye.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["targetingunit","pack_bullseye_suite", "insulatedengine"],
+	"builtInWeapons":{
+    }
+}

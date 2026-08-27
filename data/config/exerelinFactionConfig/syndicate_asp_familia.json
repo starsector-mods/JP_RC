@@ -1,0 +1,43 @@
+{
+    "playableFaction":false,
+    "corvusCompatible":true,
+    "spawnAsFactionId":"syndicate_asp",
+    "ngcTooltip":"ASP Familia start, with purple nasty ships",
+    "rebelFleetSuffix":"Deserters",
+    "startRelationships":{ "syndicate_asp":1 },
+    
+    "responseFleetName":"Hit Fleet",
+    
+    "morality":"amoral",
+
+    "startShipsSolo":[
+      ["syndicate_asp_diamondback_p_Standard"]
+    ],
+    "startShipsCombatSmall":[
+      ["syndicate_asp_diamondback_p_Strike", "syndicate_asp_vigilance_Standard", "syndicate_asp_cerberus_Standard"]
+    ],
+    "startShipsTradeSmall":[["syndicate_asp_hognose_p_Standard", "syndicate_asp_diamondback_p_Standard", "syndicate_asp_cerberus_Standard"]],
+    "startShipsCombatLarge":[
+      ["syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_diamondback_p_Strike", "syndicate_asp_hammerhead_Balanced"],
+      ["syndicate_asp_kingcobra_p_Macerator", "syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_hognose_Standard"]
+    ],
+    "startShipsTradeLarge":[["syndicate_asp_gigantophis_p_Standard", "syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_hognose_p_Standard"]],
+    "startShipsCarrierSmall":[["syndicate_asp_hognose_p_Standard", "syndicate_asp_diamondback_p_Standard", "syndicate_asp_diamondback_p_Strike"]],
+    "startShipsCarrierLarge":[["syndicate_asp_gigantophis_p_Standard", "syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_hognose_p_Standard"]],
+    "startShipsExplorerSmall":[
+        ["syndicate_asp_diamondback_p_Standard", "syndicate_asp_hognose_p_Standard"]
+    ],
+    "startShipsExplorerLarge":[
+        ["syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_diamondback_p_Strike", "syndicate_asp_hognose_p_Standard"]
+    ],
+    "startShipsSuper":[
+        ["syndicate_asp_kingcobra_p_Macerator"]
+    ],
+    "startShipsGrandFleet":[
+        ["syndicate_asp_kingcobra_p_Macerator", "syndicate_asp_copperhead_p_Brutaliser", "syndicate_asp_diamondback_p_Strike", "syndicate_asp_hognose_p_Standard", "syndicate_asp_cerberus_Standard"]
+    ],
+    
+    "startSpecialItems":[
+        [["junk_pirates_familia_bp", ""]]
+    ]
+}

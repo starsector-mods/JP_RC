@@ -1,0 +1,201 @@
+{
+  "bounds": [
+    19.5,
+    -26,
+    63,
+    -27,
+    52,
+    -41.5,
+    8.5,
+    -37.5,
+    -3.5,
+    -45.5,
+    -30,
+    -35,
+    -30,
+    35,
+    -3.5,
+    45.5,
+    8.5,
+    37.5,
+    52,
+    41.5,
+    63,
+    27,
+    19.5,
+    26
+  ],
+  "builtInMods": [
+    "pack_mesh"
+  ],
+  "center": [
+    51,
+    39
+  ],
+  "collisionRadius": 76.105194,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -40,
+        31
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -40,
+        -31
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 35.5,
+      "location": [
+        -39.5,
+        22
+      ],
+      "style": "MIDLINE",
+      "width": 5
+    },
+    {
+      "angle": 160,
+      "contrailSize": 128,
+      "length": 16.5,
+      "location": [
+        -13,
+        47
+      ],
+      "style": "MIDLINE",
+      "width": 5
+    },
+    {
+      "angle": -160,
+      "contrailSize": 128,
+      "length": 16.5,
+      "location": [
+        -13,
+        -47
+      ],
+      "style": "MIDLINE",
+      "width": 5
+    },
+    {
+      "angle": -180,
+      "contrailSize": 5,
+      "length": 35.5,
+      "location": [
+        -39.5,
+        -23
+      ],
+      "style": "MIDLINE",
+      "width": 5
+    },
+    {
+      "angle": 180,
+      "contrailSize": 4,
+      "length": 56.5,
+      "location": [
+        -39,
+        13.5
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    },
+    {
+      "angle": -180,
+      "contrailSize": 4,
+      "length": 56.5,
+      "location": [
+        -39,
+        -14
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    }
+  ],
+  "height": 105,
+  "hullId": "pack_schnauzer",
+  "hullName": "Schnauzer",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    14,
+    -0.5
+  ],
+  "shieldRadius": 81.038574,
+  "spriteName": "graphics/pack/ships/pack_schnauzer.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 30,
+      "arc": 230,
+      "id": "WS 001",
+      "locations": [
+        49,
+        33
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -30,
+      "arc": 230,
+      "id": "WS 002",
+      "locations": [
+        49,
+        -33
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 125,
+      "arc": 210,
+      "id": "WS 003",
+      "locations": [
+        -13,
+        35
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -125,
+      "arc": 210,
+      "id": "WS 004",
+      "locations": [
+        -13,
+        -34
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 005",
+      "locations": [
+        22,
+        14
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "UNIVERSAL"
+    }
+  ],
+  "width": 102
+}

@@ -1,0 +1,29 @@
+# Starsector Mod Git Ignore
+# Java / IDE
+*.class
+.idea/
+*.iml
+bin/
+out/
+sources.txt
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Starsector / Backups
+*.bak
+*.tmp
+*.old
+*.sav
+starsector.log*
+
+
+# Maven
+target/
+pom.xml.versionsBackup
+
+# SpotBugs
+spotbugs-result.xml
+spotbugs-security-include.xml
+spotbugs-security-exclude.xml

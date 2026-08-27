@@ -1,0 +1,21 @@
+{
+  "displayName": "",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": false,
+  "hullId": "pack_felix_drone",
+  "hullMods": [
+ ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "pack_felix_drone",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "irpulse_fighter"
+      }
+    }
+  ]
+}

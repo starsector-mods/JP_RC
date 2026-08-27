@@ -1,0 +1,269 @@
+{
+  "bounds": [
+    41,
+    -31.5,
+    82,
+    -23,
+    90.5,
+    -33.5,
+    74,
+    -57.5,
+    66,
+    -54,
+    48.5,
+    -61.5,
+    -46.5,
+    -44,
+    -73.5,
+    -16,
+    -73.5,
+    16,
+    -46.5,
+    44,
+    48.5,
+    61.5,
+    66,
+    54,
+    74,
+    57.5,
+    90.5,
+    33.5,
+    82,
+    23,
+    41,
+    31.5
+  ],
+  "center": [
+    64.5,
+    81
+  ],
+    "builtInMods": [
+	"pack_mesh"
+    ],
+  "collisionRadius": 100.031242,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -62,
+        30
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -62,
+        -29
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -62,
+        18
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -62,
+        -17
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -73,
+        3
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -73,
+        -3
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -52,
+        42
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -52,
+        -41
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    }
+  ],
+  "height": 177,
+  "hullId": "pack_sharpei",
+  "hullName": "Shar Pei",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    8,
+    -0
+  ],
+  "shieldRadius": 123.509109,
+  "spriteName": "graphics/pack/ships/pack_sharpei.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 001",
+      "locations": [
+        84,
+        49.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -0,
+      "arc": 5,
+      "id": "WS 002",
+      "locations": [
+        84,
+        -48.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 30,
+      "arc": 125,
+      "id": "WS 003",
+      "locations": [
+        15.5,
+        21.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -30,
+      "arc": 125,
+      "id": "WS 004",
+      "locations": [
+        15.5,
+        -20.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 145,
+      "arc": 135,
+      "id": "WS 005",
+      "locations": [
+        -17.5,
+        26.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -145,
+      "arc": 135,
+      "id": "WS 006",
+      "locations": [
+        -17.5,
+        -25.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 90,
+      "arc": 135,
+      "id": "WS 007",
+      "locations": [
+        -1.5,
+        51.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -90,
+      "arc": 135,
+      "id": "WS 008",
+      "locations": [
+        -1.5,
+        -50.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 40,
+      "arc": 135,
+      "id": "WS 009",
+      "locations": [
+        43.5,
+        49.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -40,
+      "arc": 135,
+      "id": "WS 010",
+      "locations": [
+        43.5,
+        -48.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 128
+}

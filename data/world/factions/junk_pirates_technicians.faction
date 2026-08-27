@@ -1,0 +1,219 @@
+{
+	"id":"junk_pirates_technicians",
+	"displayName":"Anarchists",
+	"displayNameWithArticle":"the Anarchists",
+	"displayNameLong":"Pre-PACK Anarchist Groups",
+	"displayNameLongWithArticle":"the Pre-PACK Anarchist Groups",
+	"entityNamePrefix":"Anarchist",
+	"personNamePrefix":"",
+	"personNamePrefixAOrAn":"an",
+	"displayNameIsOrAre":"are",
+	
+	"logo":"graphics/factions/nrk_logo.png",
+	"crest":"graphics/factions/nrk_crest.png",
+	"shipNamePrefix":"NRK",
+	
+	"color":[155,55,125,255],
+	"baseUIColor":[225,255,235,255],
+	#"color":[100,100,100,255],
+	#"baseUIColor":[155,155,155,255],
+	
+	#"darkUIColor":[31,94,112,175],
+	#"gridUIColor":[70,200,255,75],
+	
+	"showInIntelTab":false,
+	
+	"shipNameSources":{
+		"MERCANTILE":1,
+		"SPACE":1,
+		"CANINE":1},
+	"names":{
+		"old english":1,
+		"world":1},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		}},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["junk_hounds", "junk_technicians"],
+		"hulls":[
+		]},
+	"knownShips":{
+		"tags":["junk_hounds", "junk_technicians"],
+		"hulls":[
+		]},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":["junk_hounds", "junk_technicians"],
+		"hulls":[
+		]},
+	"knownFighters":{
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"fighters":[
+		]},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		]},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp"],
+		"weapons":[
+			"lightneedler",
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"heavyneedler",
+			"gauss",
+			"mjolnir",
+			"multineedler",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian",
+			"tachyonlance"]},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		]},
+	"knownHullMods":{
+		"tags":["base_bp"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment"]},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":3,
+		"shipQuality":3,
+		"numShips":2,
+		
+		"shipSize":3,
+		
+		"aggression":4,
+		
+		"combatFreighterProbability":0.2,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0.5,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0.8,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.25,
+
+		"officerSkillsShuffleProbability":1,
+		"officerSkills":[
+			"energy_weapon_mastery",
+			"field_modulation",
+			"gunnery_implants",
+			"point_defense"
+		],
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+			"electronic_warfare",
+			"coordinated_maneuvers"
+		]},
+	"shipRoles":{
+		"packAnarchistStation1":{
+			"pack_anarchist_station1_Den":10,
+			"pack_anarchist_station2_Camp":10}},
+	"illegalCommodities":[
+	],
+	#"music":{
+	#	"encounter_hostile":"music_tritach_encounter_hostile",
+	#},	
+	#"internalComms":"hegemony_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/junk_pirates_portrait_m_1.png",
+			"graphics/portraits/junk_pirates_portrait_m_2.png",
+			"graphics/portraits/junk_pirates_portrait_m_3.png",
+			"graphics/portraits/junk_pirates_portrait_m_4.png",
+			"graphics/portraits/junk_pirates_portrait_m_5.png",
+			"graphics/portraits/junk_pirates_portrait_m_6.png",
+			"graphics/portraits/junk_pirates_portrait_m_7.png",
+			"graphics/portraits/junk_pirates_portrait_m_9.png",
+			"graphics/portraits/junk_pirates_portrait_m_10.png",
+			"graphics/portraits/portrait_mercenary03.png"],
+		"standard_female":[
+			"graphics/portraits/junk_pirates_portrait_f_1.png",
+			"graphics/portraits/junk_pirates_portrait_f_2.png",
+			"graphics/portraits/junk_pirates_portrait_f_4.png",
+			"graphics/portraits/junk_pirates_portrait_f_6.png",
+			"graphics/portraits/portrait14.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait24.png",
+			"graphics/portraits/portrait_mercenary05.png"]},
+	"ranks":{
+		"ranks":{
+		},
+		"posts":{
+		}},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
+		"postsNoBounties":true,
+		"fightToTheLast":true # order a full assault instead of retreating, in most cases
+	},	
+	"fleetTypeNames":{
+		"patrolSmall":"Thug",
+		"patrolMedium":"Rabble",
+		"patrolLarge":"Mob",
+		"battlestation":"Camp"},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":5
+		},
+		"HIGH":{
+			"soldier":10,
+			"official":10
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 0,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "junk_pirates_langoustine",
+  "hullMods": [
+        "advancedoptics",
+        "extendedshieldemitter"
+    ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_langoustine_CS",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "junk_pirates_scorpion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser",
+        "WS 006": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "gravitonbeam"
+      }
+    }
+  ],
+  "wings": [
+    "junk_pirates_splinter_wing"
+  ]
+}

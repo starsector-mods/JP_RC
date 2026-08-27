@@ -1,0 +1,44 @@
+{
+  "displayName": "Strike",
+  "fluxCapacitors": 4,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "pack_spinone",
+  "hullMods": [
+    "recovery_shuttles"
+  ],
+  "permaMods": [],
+  "quality": 0.8,
+  "variantId": "pack_spinone_Strike",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "harpoon",
+        "WS 005": "harpoon",
+        "WS 007": "harpoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "shredder",
+        "WS 003": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "pack_affenpinscher"
+      }
+    }
+  ],
+  "wings": [
+    "pack_bomber_wing",
+    "pack_pressure_gunship_wing",
+    "pack_shock_gunship_wing"
+  ]
+}

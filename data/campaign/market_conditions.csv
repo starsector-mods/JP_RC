@@ -1,0 +1,3 @@
+name,id,planetary,decivRemove,script,desc,icon,order
+Hab Tubes,JUNK_habTubes,TRUE,,data.campaign.econ.conditions.JUNK_habTubes,"$market contains a partially constructed network of seemingly domain-tech habitation tubes knitted in and around the surface and sub-surface, making this planet less hostile to habitation.",graphics/junk_pirates/icons/markets/junk_pirates_habtubes.png,10
+Hab Tubes,JUNK_habTubes_active,TRUE,,data.campaign.econ.conditions.JUNK_habTubes_active,"$market contains a partially constructed network of seemingly domain-tech habitation tubes knitted in and around the surface and sub-surface. The automata cloud in orbit still works, making this planetary-wide construction quite hazardous.",graphics/junk_pirates/icons/markets/junk_pirates_habtubes.png,10

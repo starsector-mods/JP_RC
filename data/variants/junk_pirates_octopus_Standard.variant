@@ -1,0 +1,51 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "goalVariant": true,
+  "hullId": "junk_pirates_octopus",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_octopus_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "flak",
+        "WS 002": "vulcan",
+        "WS 003": "vulcan",
+        "WS 007": "junk_pirates_grapeshot_m",
+        "WS 004": "junk_pirates_scatterpd",
+        "WS 008": "junk_pirates_scatterpd"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "junk_pirates_scatterpd",
+        "WS 006": "junk_pirates_scatterpd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+   "modules": [
+  #station modules
+        {"WS 010": "junk_pirates_shield_module_Standard"}
+  ],
+  "wings": [
+    "junk_pirates_shard_wing",
+    "junk_pirates_spike_wing"
+  ]
+}

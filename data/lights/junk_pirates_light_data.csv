@@ -1,0 +1,10 @@
+id,type,size,intensity,fadeout,color,offset,hit size,hit intensity,hit fadeout,hit color,flash size,flash intensity,flash fadeout,flash color,flash offset,chance,fighter dim
+junk_pirates_pica_shot,projectile,125,0.4,0.25,"[55,25,205]",,175,0.6,0.75,"[55,25,205]",125,0.2,0.3,"[55,25,205]",,1,TRUE
+junk_pirates_cutlass_shot,projectile,100,0.15,0.25,"[10,200,10]",,125,0.2,0.6,"[10,200,10]",75,0.1,0.5,"[100,255,100]",,1,TRUE
+junk_pirates_lexcimer,beam,35,0.75,,"[130,130,205]",,,,,,,,,,,1,TRUE
+junk_pirates_haymaker_shot,projectile,125,0.4,0.3,"[225,125,25]",,175,0.6,0.75,"[225,125,25]",150,0.2,0.3,"[225,125,25]",,1,TRUE
+junk_pirates_scorpion_shot,projectile,100,0.35,0.3,"[205,75,225]",,175,0.6,0.75,"[205,75,225]",125,0.2,0.3,"[205,75,225]",,1,TRUE
+junk_pirates_welder,beam,95,1.35,,"[205,150,120]",,285,0.65,,"[155,75,25]",145,0.65,,"[155,75,25]",,1,TRUE
+junk_pirates_scatterpd_shot,projectile,50,0.1,0.25,"[20,125,50]",,50,0.15,0.6,"[20,125,50]",,,,,,0.75,TRUE
+pack_ripsaw_shot,projectile,50,0.15,0.15,"[230,255,210]",,,,,,50,0.15,0.2,"[165,225,185]",,0.8,TRUE
+pack_affenpinscher,beam,45,0.95,,"[160,140,140]",,140,0.45,,"[255,75,75]",70,0.45,,"[255,75,75]",,1,TRUE

@@ -1,0 +1,25 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "pack_bullykutta_dogbox":0.75,
+	    "junk_pirates_langoustine_p":0.75
+        }
+    },
+    "knownShips":{
+        "hulls":[
+            "pack_bullykutta_dogbox",
+	    "junk_pirates_langoustine_p"
+        ]
+    },
+    "portraits":{
+        "standard_male":[],
+        "standard_female":[]
+    },
+    "voices":{
+        "vocabularies":[]
+    }
+}
+
+
+
+

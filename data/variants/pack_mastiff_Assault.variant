@@ -1,0 +1,60 @@
+{
+  "displayName": "Assault",
+  "fluxCapacitors": 10,
+  "fluxVents": 19,
+  "goalVariant": true,
+  "hullId": "pack_mastiff",
+  "hullMods": [
+    "missleracks",
+    "extendedshieldemitter"
+  ],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "pack_mastiff_Assault",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "typhoon",
+        "WS 002": "typhoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "irpulse",
+        "WS 008": "irpulse",
+        "WS 009": "irpulse",
+        "WS 010": "irpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "guardian",
+        "WS 004": "pdlaser",
+        "WS 013": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "heavyac",
+        "WS 006": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "annihilator",
+        "WS 012": "annihilator"
+      }
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,48 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 9,
+  "goalVariant": true,
+  "hullId": "junk_pirates_boxer",
+  "hullMods": [
+    "heavyarmor",
+    "auxiliarythrusters"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_boxer_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "flak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "junk_pirates_scrapcannon",
+        "WS 002": "junk_pirates_scrapcannon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 006": "junk_pirates_junkjet_rack",
+        "WS 008": "junk_pirates_junkjet_rack"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "atropos"
+      }
+    }
+  ]
+}

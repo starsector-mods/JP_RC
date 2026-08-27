@@ -1,0 +1,65 @@
+{
+  "animationType": "SMOKE",
+  "barrelMode": "ALTERNATING",
+  "fireSoundTwo": "sabot_srm_fire",
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    11,
+    -8,
+    11,
+    8,
+    11,
+    -3,
+    11,
+    3
+  ],
+  "hardpointSprite": "graphics/weapons/missile_rack_open_m_4x_hardpoint_base.png",
+  "id": "junk_pirates_micro_junkjet_copy_explosive",
+  "projectileSpecId": "junk_pirates_micro_junkjet_missile_explosive",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "size": "SMALL",
+  "smokeSpec": {
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackParticleCount": 3,
+    "blowbackSpread": 10,
+    "cloudDuration": 1,
+    "cloudParticleCount": 3,
+    "cloudRadius": 10,
+    "particleColor": [
+      100,
+      100,
+      100,
+      200
+    ],
+    "particleSizeMin": 20,
+    "particleSizeRange": 20
+  },
+  "specClass": "projectile",
+  "textureType": ROUGH,
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "turretOffsets": [
+    8,
+    -8,
+    8,
+    8,
+    8,
+    -3,
+    8,
+    3
+  ],
+  "turretSprite": "graphics/weapons/missile_rack_open_m_4x_turret_base.png",
+  "type": "MISSILE"
+}

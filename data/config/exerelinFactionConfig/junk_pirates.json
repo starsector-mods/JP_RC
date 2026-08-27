@@ -1,0 +1,89 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    "pirateFaction":true,
+    "noHomeworld":true,
+    "colonyExpeditionChance":0.75,
+    "rebelFleetSuffix":"Lunatics",
+    "diplomacyTraits":["anarchist", "temperamental"],
+    "vengeanceLevelNames":["Grudge", "Vendetta"],
+    "vengeanceFleetNames":["Enforcers", "Hit-Fleet"],
+    "vengeanceFleetNamesSingle":["an Enforcer fleet", "a Hit-Fleet"],
+    "miningVariantsOrWings":["junk_pirates_the_reaper_Standard"],
+    
+    "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
+    "specialForcesFlagshipVariants":{ "junk_pirates_the_reaper_Standard": 1 },
+    
+    "marketSpawnWeight":0.6,
+    
+    "freeMarket":true,
+	
+    "startRelationships":{ "hegemony": -0.5, "pack": 0.3 },
+
+    "diplomacyPositiveChance":{ "hegemony":0.75 },
+    "diplomacyNegativeChance":{ "hegemony":1.5 },
+    "morality":"amoral",
+
+    "alignments":{
+        "diplomatic":-0.5,
+	"militarist":0.5,
+	"technocratic":0.5,
+	"corporate":-1
+    },
+    
+    "startShipsSolo":[
+    ["junk_pirates_mandarine_Elite"],
+    ["junk_pirates_clementine_Carver"]
+    ],
+    "startShipsCombatSmall":[
+      ["junk_pirates_sickle_Strike", "junk_pirates_langoustine_CS", "junk_pirates_hammer_Assault"],
+      ["junk_pirates_clementine_Wingclipper", "junk_pirates_mandarine_Thrasher", "junk_pirates_satsuma_Softener"]
+    ],
+    "startShipsTradeSmall":[["junk_pirates_scythe_Assault", "junk_pirates_stoatA_Standard", "junk_pirates_clementine_Carver"]],
+    "startShipsCombatLarge":[
+      ["junk_pirates_magpie_Standard", "junk_pirates_jackdaw_Standard", "junk_pirates_scythe_Standard"],
+      ["junk_pirates_boxer_Fighter", "junk_pirates_orcenstein_Elite", "junk_pirates_satsuma_Frightener"]
+    ],
+    "startShipsTradeLarge":[["junk_pirates_goat_CS", "junk_pirates_octopus_Standard", "junk_pirates_scythe_Assault"]],
+    "startShipsCarrierSmall":[["junk_pirates_octopus_Standard", "junk_pirates_clementine_Wingclipper", "junk_pirates_sickle_Standard"]],
+    "startShipsCarrierLarge":[
+	["junk_pirates_orca_Assault", "junk_pirates_langoustine_Strike", "junk_pirates_mandarine_Elite"],
+	["junk_pirates_the_reaper_Standard", "junk_pirates_octopus_Standard", "junk_pirates_clam_CS"]
+    ],
+    "startShipsExplorerSmall":[
+        ["junk_pirates_scythe_Assault", "junk_pirates_magpie_Standard"],
+        ["junk_pirates_sickle_Strike", "junk_pirates_magpie_Standard", "junk_pirates_octopus_Standard"]
+    ],
+    "startShipsExplorerLarge":[
+        ["junk_pirates_magpie_Standard", "junk_pirates_orca_Assault", "junk_pirates_octopus_Standard"],
+        ["junk_pirates_jackdaw_Standard", "junk_pirates_scythe_Standard", "junk_pirates_goat_CS"]
+    ],
+    "startShipsSuper":[
+        ["junk_pirates_the_reaper_Standard"],
+        ["junk_pirates_kraken_Standard"]
+    ],
+    "startShipsGrandFleet":[
+        ["junk_pirates_the_reaper_Standard", "junk_pirates_magpie_Standard", "junk_pirates_sickle_Strike", "junk_pirates_octopus_Standard", "junk_pirates_scythe_Standard"]
+    ],
+    
+    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"]},
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"], "weight":0.5},
+        {"ids":["orbitalstation_high", "battlestation_high", "starfortress_high"], "weight":0.5}
+    ],
+    
+    "industrySeeds":[
+        {"id":"heavyindustry", "mult":0.2},
+        {"id":"mining", "mult":0.1}
+    ],
+    
+    "bonusSeeds":[
+        {"id":"aiCore_any", "mult":0.2},
+	{"id":"nanoforge_corrupted", "count":1}
+	
+    ],
+    
+    "startSpecialItems":[
+        [["junk_pirates_junk_bp", ""]]
+	]
+}

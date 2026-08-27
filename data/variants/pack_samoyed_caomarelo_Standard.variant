@@ -1,0 +1,36 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 3,
+        "goalVariant": true,
+  "hullId": "pack_samoyed_caomarelo",
+  "hullMods": [
+        "missleracks"
+    ],
+  "variantId": "pack_samoyed_caomarelo_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "harpoon",
+        "WS 002": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "lightdualmg",
+        "WS 004": "lightdualmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "reaper"
+      }
+    }
+  ]
+}

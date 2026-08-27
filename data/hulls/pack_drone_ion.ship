@@ -1,0 +1,55 @@
+{
+  "bounds": [
+    -1,
+    -7,
+    15,
+    -0,
+    -1,
+    7
+  ],
+  "center": [
+    10,
+    6
+  ],
+  "collisionRadius": 15,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 12,
+      "location": [
+        -5,
+        -0
+      ],
+      "style": "HIGH_TECH",
+      "width": 6
+    }
+  ],
+  "height": 24,
+  "hullId": "pack_drone_ion",
+  "hullName": "Ion Drone",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 15,
+  "spriteName": "graphics/pack/ships/drones/pack_drone_ion.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 30,
+      "id": "WS 001",
+      "locations": [
+        12,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 20
+}

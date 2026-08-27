@@ -1,0 +1,146 @@
+{
+  "bounds": [
+    22,
+    -9,
+    38,
+    -6,
+    35,
+    -16.5,
+    16,
+    -26,
+    -4,
+    -19,
+    -38,
+    -23,
+    -32.5,
+    -6,
+    -32.5,
+    6,
+    -38,
+    23,
+    -4,
+    19,
+    16,
+    26,
+    35,
+    16.5,
+    38,
+    6,
+    22,
+    9
+  ],
+  "center": [
+    29,
+    41.5
+  ],
+  "collisionRadius": 50.009998,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -41.5,
+        20.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -41.5,
+        -20.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 4,
+      "length": 60.5,
+      "location": [
+        -39.5,
+        4
+      ],
+      "style": "LOW_TECH",
+      "width": 4
+    },
+    {
+      "angle": -180,
+      "contrailSize": 4,
+      "length": 60.5,
+      "location": [
+        -39.5,
+        -4
+      ],
+      "style": "LOW_TECH",
+      "width": 4
+    }
+  ],
+  "height": 82,
+  "hullId": "pack_wirefox_sh",
+  "hullName": "Wirefox (SH)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 65.069191,
+  "spriteName": "graphics/pack/ships/pack_wirefox_sh.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 90,
+      "arc": 220.865662,
+      "id": "WS 001",
+      "locations": [
+        -14.5,
+        15.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -90,
+      "arc": 220.865662,
+      "id": "WS 002",
+      "locations": [
+        -14.5,
+        -15.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 003",
+      "locations": [
+        27,
+        14.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -0,
+      "arc": 10,
+      "id": "WS 004",
+      "locations": [
+        27,
+        -14.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 59
+}

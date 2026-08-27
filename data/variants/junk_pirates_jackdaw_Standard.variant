@@ -1,0 +1,44 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 31,
+  "fluxVents": 30,
+  "goalVariant": true,
+  "hullId": "junk_pirates_jackdaw",
+  "hullMods": [
+    "pointdefenseai"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_jackdaw_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "salamanderpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "hellbore",
+        "WS 003": "junk_pirates_scrapcannon",
+        "WS 004": "junk_pirates_scrapcannon",
+        "WS 005": "junk_pirates_scrapnailer",
+        "WS 006": "junk_pirates_scrapnailer",
+        "WS 007": "junk_pirates_scrapnailer",
+        "WS 008": "junk_pirates_scrapnailer",
+        "WS 009": "junk_pirates_scrapnailer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "flak",
+        "WS 010": "vulcan"
+      }
+    }
+  ]
+}

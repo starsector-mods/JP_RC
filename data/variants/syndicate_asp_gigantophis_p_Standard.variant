@@ -1,0 +1,58 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 3,
+  "goalVariant": true,
+  "hullId": "syndicate_asp_gigantophis_p",
+  "hullMods": [
+    "targetingunit",
+    "recovery_shuttles"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "syndicate_asp_gigantophis_p_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 016": "tpc"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdburst",
+        "WS 010": "heavyburst",
+        "WS 002": "pdburst",
+        "WS 007": "pdburst",
+        "WS 008": "pdburst",
+        "WS 012": "pdburst",
+        "WS 013": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "ionbeam",
+        "WS 004": "ioncannon",
+        "WS 005": "ioncannon",
+        "WS 006": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 014": "salamanderpod",
+        "WS 015": "salamanderpod"
+      }
+    }
+  ],
+  "wings": [
+    "syndicate_asp_venom_wing",
+    "syndicate_asp_venom_wing"
+  ]
+}

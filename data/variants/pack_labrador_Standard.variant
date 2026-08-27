@@ -1,0 +1,30 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 16,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "pack_labrador",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "pack_labrador_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "vulcan",
+        "WS 002": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "flak",
+        "WS 004": "flak"
+      }
+    }
+  ],
+  "wings": []
+}

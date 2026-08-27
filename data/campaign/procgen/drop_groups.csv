@@ -1,0 +1,29 @@
+commodity,group,freq
+nothing,junk_anarchy1,370
+"wpn_:{tags:[low, !no_drop], weaponSize:SMALL, weaponType:BALLISTIC}",junk_anarchy1,100
+"wpn_:{tags:[mid, !no_drop], weaponSize:SMALL, weaponType:MISSILE}",junk_anarchy1,100
+"wpn_:{tags:[high, !no_drop], weaponSize:SMALL, weaponType:ENERGY}",junk_anarchy1,100
+ftr_:{tags:[]},junk_anarchy1,50
+"ftr_:{tags:[junk_pirates_bp, !no_drop]}",junk_anarchy1,5
+"ftr_:{tags:[pack_bp, !no_drop]}",junk_anarchy1,25
+"item_ship_bp:{tags:[rare_bp, !no_drop]}",junk_anarchy1,20
+"item_ship_bp:{tags:[junk_pirates_bp, !no_drop]}",junk_anarchy1,10
+"item_ship_bp:{tags:[pack_bp, !no_drop]}",junk_anarchy1,10
+,,
+nothing,junk_anarchy2,350
+"item_ship_bp:{tags:[pack_bp, !no_drop]}",junk_anarchy2,65
+"item_fighter_bp:{tags:[pack_bp, !no_drop]}",junk_anarchy2,100
+"ftr_:{tags:[pack_bp, !no_drop]}",junk_anarchy2,100
+"ftr_:{tags:[junk_pirates_bp, !no_drop]}",junk_anarchy2,50
+"item_ship_bp:{tags:[rare_bp, !no_drop]}",junk_anarchy2,35
+item_modspec:{tags:[!no_drop_salvage]},junk_anarchy2,25
+,,
+hand_weapons,junk_scrap1,50
+heavy_machinery,junk_scrap1,50
+rare_metals,junk_scrap1,20
+,,
+nothing,junk_scrap2,60
+"ftr_:{tags:[junk_pirates_bp, !no_drop]}",junk_scrap2,1
+"ftr_:{tags:[pack_bp, !no_drop]}",junk_scrap2,4
+"item_ship_bp:{tags:[pack_bp, !no_drop]}",junk_scrap2,2
+"item_ship_bp:{tags:[rare_bp, !no_drop]}",junk_scrap2,1

@@ -1,0 +1,51 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 4,
+  "fluxVents": 15,
+  "goalVariant": true,
+  "hullId": "syndicate_asp_gigantophis",
+  "hullMods": [
+    "extendedshieldemitter",
+    "recovery_shuttles",
+    "stabilizedshieldemitter"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "syndicate_asp_gigantophis_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdlaser",
+        "WS 002": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser",
+        "WS 006": "pdlaser",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "heavyburst",
+        "WS 011": "heavyburst"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 012": "pilum",
+        "WS 013": "pilum"
+      }
+    }
+  ],
+  "wings": [
+    "syndicate_asp_venom_wing",
+    "syndicate_asp_bite_wing",
+    "syndicate_asp_constrictor_wing"
+  ]
+}

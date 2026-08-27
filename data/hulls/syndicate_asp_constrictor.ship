@@ -1,0 +1,109 @@
+{
+  "bounds": [
+    17,
+    -5,
+    -13,
+    -21,
+    -20,
+    -8,
+    -20,
+    8,
+    -13,
+    21,
+    17,
+    5
+  ],
+  "builtInWings": [],
+  "center": [
+    21.5,
+    22
+  ],
+  "collisionRadius": 26.1,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -23,
+        6
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -23,
+        -6
+      ],
+      "style": "MIDLINE",
+      "width": 10
+    }
+  ],
+  "height": 44,
+  "hullId": "syndicate_asp_constrictor",
+  "hullName": "Constrictor",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    -2,
+    -0
+  ],
+  "shieldRadius": 30.1,
+  "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_constrictor.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        -4,
+        -13
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        -4,
+        13
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        18,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 180,
+      "arc": 118,
+      "id": "WS 004",
+      "locations": [
+        -11,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 43
+}

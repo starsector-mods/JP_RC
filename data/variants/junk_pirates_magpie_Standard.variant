@@ -1,0 +1,52 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 10,
+        "goalVariant": true,
+    "hullId": "junk_pirates_magpie",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "turretgyros"
+    ],
+    "quality": 0.5,
+    "variantId": "junk_pirates_magpie_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 003": "hurricane"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "junk_pirates_pica",
+                "WS 002": "junk_pirates_pica"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "pdlaser",
+                "WS 006": "pdlaser",
+                "WS 010": "pdlaser",
+                "WS 014": "dualflak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "taclaser",
+                "WS 012": "taclaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {}
+        }
+    ]
+}

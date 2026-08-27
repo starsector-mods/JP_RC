@@ -1,0 +1,56 @@
+{
+  "displayName": "Spartacus",
+  "fluxCapacitors": 1,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "junk_pirates_langoustine",
+  "hullMods": [
+    "extendedshieldemitter",
+    "hardenedshieldemitter"
+  ],
+  "modules": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_langoustine_Spartacus",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "dualflak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "junk_pirates_scorpion"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser"
+      }
+    }
+  ],
+  "wings": [
+    "junk_pirates_splinter_wing"
+  ]
+}

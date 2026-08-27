@@ -1,0 +1,67 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 22,
+  "fluxVents": 33,
+  "goalVariant": true,
+  "hullId": "junk_pirates_kraken",
+  "hullMods": [
+    "fluxbreakers",
+    "targetingunit",
+    "magazines"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_kraken_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 013": "junk_pirates_junkjet_pod",
+        "WS 014": "junk_pirates_junkjet_pod",
+        "WS 016": "junk_pirates_junkjet_pod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "dualflak",
+        "WS 010": "vulcan",
+        "WS 011": "pdburst",
+        "WS 012": "vulcan",
+        "WS 015": "dualflak",
+        "WS 017": "pdburst",
+        "WS 004": "heavyburst",
+        "WS 005": "heavyburst",
+        "WS 008": "vulcan",
+        "WS 009": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 018": "junk_pirates_lexcimer",
+        "WS 002": "junk_pirates_scrapcannon",
+        "WS 003": "junk_pirates_scrapcannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 019": "mark9",
+        "WS 020": "mark9",
+        "WS 006": "junk_pirates_electrobeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "plasma"
+      }
+    }
+  ]
+}

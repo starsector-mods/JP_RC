@@ -1,0 +1,12 @@
+{
+	"vayraElectroChaffSparkle":{
+		"engineColor":[185,255,200,255],
+		"contrailParticleSizeMult":1,
+		"contrailParticleDuration":0.2,
+		"contrailParticleFinalSizeMult":10,
+		"contrailMaxSpeedMult":0.2,
+		"contrailAngularVelocityMult":0,
+		"contrailColor":[185,255,200,100],
+		"type":"GLOW" # GLOW or SMOKE
+	}
+}

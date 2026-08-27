@@ -1,0 +1,89 @@
+{
+  "bounds": [
+    96,
+    -39,
+    54,
+    -54,
+    -7,
+    -31,
+    -7,
+    31,
+    54,
+    54,
+    96,
+    39
+  ],
+  "builtInMods": [
+    "chassis_storage",
+    "shared_flux_sink",
+    "reduced_explosion"
+  ],
+  "builtInWings": [
+    "junk_pirates_orbweaver_wing",
+    "junk_pirates_orbweaver_wing",
+    "junk_pirates_orbweaver_wing"
+  ],
+  "center": [
+    64,
+    37
+  ],
+  "collisionRadius": 121,
+  "engineSlots": [],
+  "height": 160,
+  "hullId": "junk_pirates_spinerette_extruder",
+  "hullName": "Spinerette Extruder",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    -0.5,
+    0.5
+  ],
+  "shieldRadius": 176.5,
+  "spriteName": "graphics/junk_pirates/ships/stations/junk_pirates_spinerette_extruder.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 001",
+      "locations": [
+        82,
+        26,
+        101,
+        15.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 002",
+      "locations": [
+        79,
+        0,
+        101,
+        0.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 003",
+      "locations": [
+        83,
+        -27,
+        98.5,
+        -13.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    }
+  ],
+  "width": 128
+}

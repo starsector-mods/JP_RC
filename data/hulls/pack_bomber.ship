@@ -1,0 +1,93 @@
+{
+  "bounds": [
+    12,
+    9,
+    -15,
+    11,
+    -15,
+    -11,
+    12,
+    -9
+  ],
+  "builtInWings": [],
+  "center": [
+    24.5,
+    23.5
+  ],
+  "collisionRadius": 19.5,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 50,
+      "length": 30,
+      "location": [
+        -23,
+        11
+      ],
+      "style": "HIGH_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 50,
+      "length": 30,
+      "location": [
+        -23,
+        -11
+      ],
+      "style": "HIGH_TECH",
+      "width": 10
+    }
+  ],
+  "height": 47,
+  "hullId": "pack_bomber",
+  "hullName": "Maw",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 29.5,
+  "spriteName": "graphics/pack/ships/pack_bomber.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -30,
+      "arc": 116,
+      "id": "WS 001",
+      "locations": [
+        -0.5,
+        -16.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 30,
+      "arc": 116,
+      "id": "WS 002",
+      "locations": [
+        0.5,
+        16.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 221,
+      "id": "WS 003",
+      "locations": [
+        15.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 49
+}

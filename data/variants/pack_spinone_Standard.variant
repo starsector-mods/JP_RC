@@ -1,0 +1,44 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 6,
+  "goalVariant": true,
+  "hullId": "pack_spinone",
+  "hullMods": [
+    "expanded_deck_crew"
+  ],
+  "permaMods": [],
+  "quality": 0.8,
+  "variantId": "pack_spinone_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "swarmer",
+        "WS 005": "swarmer",
+        "WS 007": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "heavymg",
+        "WS 006": "pack_affenpinscher"
+      }
+    }
+  ],
+  "wings": [
+    "pack_bomber_wing",
+    "pack_gunship_wing",
+    "pack_pressure_gunship_wing"
+  ]
+}

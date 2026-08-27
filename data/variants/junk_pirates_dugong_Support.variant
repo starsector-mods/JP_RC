@@ -1,0 +1,54 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 16,
+  "fluxVents": 20,
+  "goalVariant": true,
+  "hullId": "junk_pirates_dugong",
+  "hullMods": [
+    "targetingunit"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_dugong_Support",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 014": "locust"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "vulcan",
+        "WS 002": "vulcan",
+        "WS 003": "vulcan",
+        "WS 004": "vulcan",
+        "WS 005": "vulcan",
+        "WS 006": "vulcan",
+        "WS 010": "flak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "hveldriver",
+        "WS 008": "junk_pirates_scrapcannon",
+        "WS 009": "junk_pirates_scrapcannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "junk_pirates_grapeshot_s",
+        "WS 012": "junk_pirates_grapeshot_s",
+        "WS 013": "junk_pirates_grapeshot_s"
+      }
+    }
+  ],
+  "wings": []
+}

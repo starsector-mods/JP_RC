@@ -1,0 +1,326 @@
+{
+  "bounds": [
+    -86,
+    14.5,
+    -117.5,
+    -54,
+    -59,
+    -57,
+    -8.5,
+    -62.5,
+    42,
+    -57.5,
+    59,
+    -31.5,
+    91.5,
+    -36,
+    77.5,
+    2.5,
+    111.5,
+    14,
+    98,
+    37.5,
+    47,
+    34,
+    46,
+    69,
+    -61.5,
+    61.5,
+    -60,
+    30.5
+  ],
+  "builtInWeapons": {
+    "WS 008": "vulcan",
+    "WS 010": "blinker_green",
+    "WS 011": "junk_pirates_blinking_bay",
+    "WS 012": "blinker_red",
+    "WS 013": "blinker_green",
+    "WS 014": "junk_pirates_goat_deco2",
+    "WS 015": "junk_pirates_goat_deco1",
+    "WS 016": "junk_pirates_goat_deco1"
+  },
+  "builtInWings": [
+    "junk_pirates_shard_wing"
+  ],
+  "center": [
+    78.5,
+    125
+  ],
+  "collisionRadius": 136,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 19,
+      "length": 45.5,
+      "location": [
+        -74.5,
+        56
+      ],
+      "style": "HIGH_TECH",
+      "width": 19
+    },
+    {
+      "angle": 180,
+      "contrailSize": 20,
+      "length": 37,
+      "location": [
+        -124.5,
+        -45
+      ],
+      "style": "HIGH_TECH",
+      "width": 20
+    },
+    {
+      "angle": 135.199997,
+      "contrailSize": 8.6,
+      "length": 17,
+      "location": [
+        -96,
+        13
+      ],
+      "style": "HIGH_TECH",
+      "width": 8.6
+    },
+    {
+      "angle": 180,
+      "contrailSize": 20,
+      "length": 51,
+      "location": [
+        -120.5,
+        -23.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 20
+    },
+    {
+      "angle": 176,
+      "contrailSize": 11.357099,
+      "length": 33.477665,
+      "location": [
+        -117,
+        -10.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 11.357099
+    }
+  ],
+  "height": 255,
+  "hullId": "junk_pirates_goat",
+  "hullName": "Goat",
+  "hullSize": "CRUISER",
+  "shieldCenter": [
+    -1,
+    1
+  ],
+  "shieldRadius": 180.5,
+  "spriteName": "graphics/junk_pirates/ships/goat/junk_pirates_goat.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 45,
+      "arc": 115,
+      "id": "WS 001",
+      "locations": [
+        65.5,
+        36.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -82.5,
+      "arc": 170,
+      "id": "WS 002",
+      "locations": [
+        38,
+        -50.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -40,
+      "arc": 85,
+      "id": "WS 003",
+      "locations": [
+        -20,
+        -34.5
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "renderOrderMod": 20
+    },
+    {
+      "angle": 65,
+      "arc": 165,
+      "id": "WS 004",
+      "locations": [
+        99.5,
+        45.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "renderOrderMod": 0
+    },
+    {
+      "angle": 20,
+      "arc": 205,
+      "id": "WS 005",
+      "locations": [
+        119.5,
+        31.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "renderOrderMod": 0
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 006",
+      "locations": [
+        113.5,
+        2.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "renderOrderMod": 0
+    },
+    {
+      "angle": 0,
+      "arc": 5.01,
+      "id": "WS 007",
+      "locations": [
+        106,
+        -29
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "renderOrderMod": 0
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 009",
+      "locations": [
+        35.5,
+        -7.5,
+        68.5,
+        6.5,
+        64.5,
+        -22.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": -179,
+      "arc": 165,
+      "id": "WS 008",
+      "locations": [
+        -99,
+        -32.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": -82.5,
+      "arc": 170,
+      "id": "WS 010",
+      "locations": [
+        36,
+        -16
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 170,
+      "id": "WS 011",
+      "locations": [
+        67,
+        0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -82.5,
+      "arc": 170,
+      "id": "WS 012",
+      "locations": [
+        48.5,
+        -16
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -82.5,
+      "arc": 170,
+      "id": "WS 013",
+      "locations": [
+        56,
+        -16
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 014",
+      "locations": [
+        -42,
+        -27
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 50
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 015",
+      "locations": [
+        100,
+        8
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 50
+    },
+    {
+      "angle": 180,
+      "arc": 5,
+      "id": "WS 016",
+      "locations": [
+        100,
+        -33
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 50
+    }
+  ],
+  "width": 156
+}

@@ -1,0 +1,92 @@
+{
+  "bounds": [
+    11,
+    6,
+    -6,
+    14,
+    -6,
+    -14,
+    11,
+    -6
+  ],
+  "center": [
+    19,
+    11
+  ],
+  "collisionRadius": 19.200001,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 4,
+      "length": 25,
+      "location": [
+        -12,
+        3.5
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    },
+    {
+      "angle": -180,
+      "contrailSize": 4,
+      "length": 25,
+      "location": [
+        -12,
+        -3.5
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    }
+  ],
+  "height": 28,
+  "hullId": "syndicate_asp_venom",
+  "hullName": "Venom",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 20,
+  "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_venom.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        14,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        3,
+        16
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        3,
+        -16
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 38
+}

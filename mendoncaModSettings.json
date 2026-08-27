@@ -1,0 +1,57 @@
+{
+	"enableASP": true,
+	"_comment_enableASP": "Boolean. Set to false to turn off Ursulo system. Doesn't affect procgen.",
+	
+	"enableASPCourierFleets": true,
+	"_comment_enableASPCourierFleets": "Boolean. Set to false to turn off ASP Syndicate Courier Fleets.",
+	
+	"enableASPHitSquads": true,
+	"_comment_enableASPHitSquads": "Boolean. Set to false to turn off ASP Syndicate Hit Squads. Needs courier fleets to trigger, won't enable without above being true.",
+	
+	"enablePACK": true,
+	"_comment_enablePACK": "Boolean. Set to false to turn off Canis system. Doesn't affect procgen. Does affect Christchurch in Breh'inni, whether that is PACK colony or just empty planet.",
+	
+	"enablePACKDiplomats": true,
+	"_comment_enablePACKDiplomats": "nothing implemented",
+	
+	"enableJunkPirates": true,
+	"_comment_enableJunkPirates": "Boolean. Set to false to turn off Breh'inni system. Doesn't affect procgen.",
+	"_comment_enableJunkPirates2": "Note regarding above: Other aspects unaffected (game still, technically, contains all BPs, ships etc. but presence will be severely impacted without home systems)",
+	"_comment_enableJunkPirates3": "These aren't very clever switches but they do cut out the main systems. They have no impact on e.g. Exerelin Random Mode.",
+	
+	"enableJunkExplorers": true,
+	"_comment_enableJunkExplorers": "Switches off the junk explorers which occasionally spawn from JP worlds.",
+	
+	"enableJunkPiratesIntel": true,
+	"_comment_enableJunkPiratesIntel": "Turned on by default. Intel serialization crash fixed.",
+	"_comment_enableJunkPiratesIntel2": "Intel objects are breaking across save / load cycles. Need to be fixed.",
+	
+	"junkPiratesFleetFrequencyModifier": 1,
+	"_comment_junkPiratesFleetFrequencyModifier": "float; bigger for more often spawning of fleets, ratio default 1. Works. Probably no need to change.",
+	
+	"junkPiratesMaxFleetModifier": 1,
+	"_comment_junkPiratesMaxFleetModifier": "float; normally approximately 15-25 of the (maximum) fleet types; capping out depending on frequency. Depending on certain things, normally. Put higher for more.",
+	"_comment_junkPiratesMaxFleetModifier2": "affects all ASP, JP fleets. Tweak if you want, but also useful for debugging.",
+	
+	"enableProcGen": true,
+	"_comment_enableProcGen": "Boolean. Set to false to turn off all procgen elements inc. Anarchists, Spinerettes, Anarchist research stations, (wild) derelict tangerines, Junk Pirate ship graveyards etc.",
+	
+	"enableSpinerettes": true,
+	"_comment_enableSpinerettes": "Boolean. These are the Automata Swarms that occasionally generate in orbit of Cryovolcanic worlds with rich rare ore resources.",
+	"_comment_enableSpinerettes2": "Note if procgen is disabled, this will be also disabled regardless of this particular setting.",
+	
+	"skipProbability": 0.9,
+	"_comment_skipProbability": "Float. Chance (0-1) that a constellation will be skipped over during world gen, once minimum constellations have been dealt with. Good way to shift chances about, low skip prob means higher chance of hitting max constellations.",
+
+	"minAnarchistConstellations": 3,
+	"_comment_minAnarchistConstellations": "Int default 3. Whether you get (many) more systems than this depends on max plus skipProbability ...",
+	
+	"maxAnarchistConstellations": 6,
+	"_comment_maxAnarchistConstellations": "Int default 6. Should stop generating systems after this point.",
+	"_comment_maxAnarchistConstellations2": "Note min and max will always be subject to other factors including what the world gen looks like, how many candidates available, whether systems are suitable etc.",
+	"_comment_maxAnarchistConstellations3": "3-6 seems to give around about 15 planets, probably a couple of 'Hard' Anarchist Stations, 3-5 derelict Tangerines, then a few random systems full of (JP-centric) debris, mining stations whatever.",
+	"_comment_maxAnarchistConstellations4": "Adjust appropriately if you are using Adjusted Sector.",
+	
+	"softMaxSpinerettes": 3,
+	"_comment_softMaxSpinerettes": "Int beyond this number it becomes hard to generate more, default 3. It rarely hits much above 3 anyway as it's unlikely to generate more than about 7 suitable candidate planets in a typical Normal gen."
+}

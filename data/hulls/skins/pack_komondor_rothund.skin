@@ -1,0 +1,19 @@
+{
+	"baseHullId":"pack_komondor",
+	"skinHullId":"pack_komondor_rothund",
+	"hullName":"Komondor (RH)",
+	"descriptionId":"pack_komondor",
+	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"descriptionPrefix":"A Komondor class destroyer as modified by the Rothund machine shop - with added armour plating and covered in lurid graffiti.",
+	"fleetPoints":9,
+	"ordnancePoints":72,
+	"baseValueMult":1.3,
+	"spriteName":"graphics/pack/ships/pack_komondor_rothund.png",
+	"removeWeaponSlots":["WS 003", "WS 004"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["heavyarmor","insulatedengine", "pack_overclocked_rh"],
+	"builtInWeapons":{
+    }
+}

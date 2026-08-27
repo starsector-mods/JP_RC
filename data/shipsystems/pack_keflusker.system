@@ -1,0 +1,30 @@
+{
+	"id":"pack_keflusker",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE",
+	
+	"statsScript":"data.shipsystems.scripts.PackKefluskerStats",
+	
+	#"engineGlowColor":[175,225,125,255],
+	#"engineGlowContrailColor":[100,225,175,25],
+	"engineGlowLengthMult":3,
+	"engineGlowWidthMult":2,
+	"engineGlowGlowMult":1.8,
+	
+	"flameoutOnImpactChance":0.3,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	"useSound":"system_burn_drive_activate",
+	"loopSound":"system_burn_drive_loop",
+	"deactivateSound":"system_burn_drive_deactivate",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":70,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":70
+	}
+}

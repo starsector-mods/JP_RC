@@ -1,0 +1,26 @@
+{
+  "displayName": "Standard",
+        "goalVariant": true,
+  "hullId": "pack_bedlington_canebianco",
+  "variantId": "pack_bedlington_canebianco_Standard",
+  "fluxVents": 10,
+  "fluxCapacitors": 0,
+  "hullMods": ["advancedshieldemitter"],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "irpulse",
+        "WS 002": "irpulse"
+      }
+    },
+	{
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "heavyblaster"
+      }
+    }
+  ]
+}

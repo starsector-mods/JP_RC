@@ -1,0 +1,69 @@
+{
+  "bounds": [
+    8,
+    -10.5,
+    -8,
+    -9.5,
+    -8,
+    9.5,
+    8,
+    10.5
+  ],
+  "builtInWings": [],
+  "center": [
+    16,
+    13.5
+  ],
+  "collisionRadius": 15,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -15,
+        8.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 8,
+      "length": 35,
+      "location": [
+        -15,
+        -8.5
+      ],
+      "style": "LOW_TECH",
+      "width": 8
+    }
+  ],
+  "height": 27,
+  "hullId": "junk_pirates_insult_drone",
+  "hullName": "Insult",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 0,
+  "spriteName": "graphics/junk_pirates/ships/drones/junk_pirates_insult_drone.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        2,
+        6.5
+      ],
+      "mount": "HIDDEN",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 32
+}

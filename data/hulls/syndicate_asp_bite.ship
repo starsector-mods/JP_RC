@@ -1,0 +1,68 @@
+{
+  "bounds": [
+    7,
+    4,
+    -4,
+    2,
+    -4,
+    -2,
+    7,
+    -4
+  ],
+  "center": [
+    13,
+    11
+  ],
+  "collisionRadius": 12.9,
+  "engineSlots": [
+    {
+      "angle": -180,
+      "contrailSize": 4,
+      "length": 22,
+      "location": [
+        -12,
+        3.5
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    },
+    {
+      "angle": 180,
+      "contrailSize": 4,
+      "length": 22,
+      "location": [
+        -12,
+        -3.5
+      ],
+      "style": "MIDLINE",
+      "width": 4
+    }
+  ],
+  "height": 23,
+  "hullId": "syndicate_asp_bite",
+  "hullName": "Bite",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 13,
+  "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_bite.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        5,
+        7
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 26
+}

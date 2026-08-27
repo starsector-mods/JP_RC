@@ -1,0 +1,122 @@
+{
+  "bounds": [
+    -24,
+    -23.5,
+    -29,
+    1.5,
+    -23,
+    29,
+    22.5,
+    27.5,
+    37.5,
+    2.5,
+    14.5,
+    -26
+  ],
+  "builtInMods": [
+    "hardenedshieldemitter"
+  ],
+  "center": [
+    46,
+    42
+  ],
+  "collisionRadius": 52.5,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 20,
+      "length": 50,
+      "location": [
+        -42,
+        11
+      ],
+      "style": "HIGH_TECH",
+      "width": 20
+    },
+    {
+      "angle": 180,
+      "contrailSize": 7,
+      "length": 38,
+      "location": [
+        -43,
+        -12.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 7
+    },
+    {
+      "angle": 180,
+      "contrailSize": 50,
+      "length": 30,
+      "location": [
+        -43,
+        -5
+      ],
+      "style": "HIGH_TECH",
+      "width": 10
+    }
+  ],
+  "height": 88,
+  "hullId": "junk_pirates_clam",
+  "hullName": "Clam",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    -1.5,
+    0.5
+  ],
+  "shieldRadius": 67.5,
+  "spriteName": "graphics/junk_pirates/ships/clam/junk_pirates_clam.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 001",
+      "locations": [
+        28,
+        21
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 002",
+      "locations": [
+        -1,
+        -36
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 180,
+      "arc": 200,
+      "id": "WS 003",
+      "locations": [
+        -19,
+        1
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 004",
+      "locations": [
+        -1,
+        38
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 90
+}

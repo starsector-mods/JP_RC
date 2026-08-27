@@ -1,0 +1,122 @@
+{
+  "bounds": [
+    55.5,
+    -6,
+    65.5,
+    -24,
+    53.5,
+    -37,
+    14.5,
+    -27.5,
+    -3.5,
+    -41,
+    -72.5,
+    -28.5,
+    -72.5,
+    28.5,
+    -3.5,
+    41,
+    14.5,
+    27.5,
+    53.5,
+    37,
+    65.5,
+    24,
+    55.5,
+    6
+  ],
+  "builtInWings":["pack_felix_drone"],
+  "builtInMods": ["hiressensors", "pack_mesh"],
+  "center": [
+    55,
+    77
+  ],
+  "collisionRadius": 81.501533,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 104,
+      "location": [
+        -31.5,
+        -38.5
+      ],
+      "style": "LOW_TECH",
+      "width": 6
+    },
+    {
+      "angle": -180,
+      "contrailSize": 6,
+      "length": 104,
+      "location": [
+        -31.5,
+        38.5
+      ],
+      "style": "LOW_TECH",
+      "width": 6
+    }
+  ],
+  "height": 164,
+  "hullId": "pack_labrador",
+  "hullName": "Labrador",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    4,
+    -0
+  ],
+  "shieldRadius": 99.489952,
+  "spriteName": "graphics/pack/ships/pack_labrador.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 125.083473,
+      "arc": 222.094452,
+      "id": "WS 001",
+      "locations": [
+        -4,
+        16.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -125.083473,
+      "arc": 222.094452,
+      "id": "WS 002",
+      "locations": [
+        -4,
+        -16.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 51.340191,
+      "arc": 222.094452,
+      "id": "WS 003",
+      "locations": [
+        31,
+        16.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -51.340191,
+      "arc": 222.094452,
+      "id": "WS 004",
+      "locations": [
+        31,
+        -16.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 110
+}

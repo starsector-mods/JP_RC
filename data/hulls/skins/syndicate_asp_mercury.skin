@@ -1,0 +1,20 @@
+{
+	"baseHullId":"mercury",
+	"skinHullId":"syndicate_asp_mercury",
+	"hullName":"Mercury (ASP)",
+	"descriptionId":"mercury",
+	"tags":["junk_pirates_asp_bp"],
+	"tech":"ASP Syndicate",
+	"descriptionPrefix":"This Mercury bears the ASP Syndicate insignia.",
+	"fleetPoints":3,
+	"ordnancePoints":25,
+	"baseValueMult":1.1,
+	"spriteName":"graphics/syndicate_asp/ships/syndicate_asp_mercury.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["syndicate_asp_mod", "shielded_holds"],
+	"builtInWeapons":{
+    }
+}

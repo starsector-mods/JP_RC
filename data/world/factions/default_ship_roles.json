@@ -1,0 +1,329 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+		"syndicate_asp_vigilance_Standard":7,
+	        "pack_bedlington_Standard":10,
+
+	        "junk_pirates_sickle_Strike":10,
+	        "junk_pirates_clementine_Standard":3,
+	        "junk_pirates_clementine_Strike":5,
+	        "junk_pirates_mandarine_Standard":7,
+	        "junk_pirates_mandarine_CS":5,
+	        "junk_pirates_mandarine_Balanced":3,
+	        "junk_pirates_mandarine_Thrasher":7,
+	        "junk_pirates_hammer_Strike":10,
+	        "junk_pirates_hammer_Assault":10
+	},
+	"combatSmall":{
+		"syndicate_asp_diamondback_Standard":10,
+		"syndicate_asp_diamondback_p_Standard":2,
+		"syndicate_asp_vigilance_Standard":7,
+
+	        "pack_bedlington_Standard":10,
+	        "pack_bedlington_canebianco_Standard":5,
+	        "pack_schnauzer_Standard":10,
+		"pack_schnauzer_CS":10,
+		"pack_schnauzer_PD":10,
+		"pack_schnauzer_caomarelo_Standard":5,
+	        "pack_wirefox_Assault":10,
+	        "pack_schnauzer_rothund_Standard":5,
+		"pack_schnauzer_canebianco_Standard":1,
+	        "pack_wirefox_Standard":10,
+	        "pack_wirefox_caomarelo_Standard":5,
+	        "pack_samoyed_decoupled_caomarelo_Standard":5,
+	        "pack_samoyed_decoupled_Standard":5,
+		"pack_schnauzer_bullseye_Bullseye":2,
+
+	        "junk_pirates_sickle_Standard":10,
+	        "junk_pirates_sickle_Pointdefense":10,
+	        "junk_pirates_sickle_Strike":10,
+	        "junk_pirates_clementine_Standard":3,
+	        "junk_pirates_clementine_Strike":5,
+	        "junk_pirates_clementine_Standoff":5,
+	        "junk_pirates_clementine_Carver":5,
+	        "junk_pirates_clementine_Wingclipper":7,
+	        "junk_pirates_mandarine_Standard":7,
+	        "junk_pirates_mandarine_Elite":3,
+	        "junk_pirates_mandarine_CS":5,
+	        "junk_pirates_mandarine_Balanced":3,
+	        "junk_pirates_mandarine_Thrasher":7,
+	        "junk_pirates_clam_Standard":1,
+	        "junk_pirates_clam_CS":1,
+	        "junk_pirates_hammer_Strike":10,
+	        "junk_pirates_hammer_Assault":10,
+		"junk_pirates_tangerine_Standard":4,
+		"junk_pirates_tangerine_blue_CS":2,
+		"junk_pirates_tangerine_blue_Assault":2
+	},
+	"combatMedium":{
+		"syndicate_asp_copperhead_Standard":10,
+		"syndicate_asp_copperhead_p_Brutaliser":2,
+		"syndicate_asp_copperhead_p_Assault":2,
+		"syndicate_asp_hammerhead_Balanced":10,
+		"syndicate_asp_hognose_p_Standard":10,
+		"syndicate_asp_hognose_p_Overdriven":10,
+		"syndicate_asp_hognose_p_Strike":10,
+		"syndicate_asp_hognose_p_Support":10,
+
+	        "pack_BRT_Strike":10,
+	        "pack_BRT_Support":10,
+	        "pack_komondor_Standard":10,
+	        "pack_komondor_Strike":10,
+	        "pack_pitbull_Standard":10,
+	        "pack_pitbull_Strike":10,
+	        "pack_sharpei_Standard":10,
+	        "pack_sharpei_Strike":10,
+	        "pack_sharpei_Assault":10,
+	        "pack_komondor_rothund_Support":5,
+	        "pack_komondor_canebianco_Standard":5,
+	        "pack_BRT_rothund_Guard":5,
+	        "pack_pitbull_rothund_Standard":4,
+	        "pack_pitbull_canebianco_Standard":3,
+	        "pack_ridgeback_x_rothund_Standard":6,
+		"pack_pitbull_bullseye_Bullseye":2,
+		"pack_komondor_bullseye_Bullseye":2,
+
+	        "junk_pirates_langoustine_CS":10,
+	        "junk_pirates_langoustine_Standard":10,
+	        "junk_pirates_langoustine_Spartacus":10,
+	        "junk_pirates_langoustine_Strike":10,
+	        "junk_pirates_langoustine_p_Standard":10,
+	        "junk_pirates_scythe_Assault":10,
+	        "junk_pirates_boxer_Fighter":10,
+	        "junk_pirates_boxer_Standard":8,
+	        "junk_pirates_satsuma_Standard":10,
+	        "junk_pirates_satsuma_Softener":5,
+	        "junk_pirates_satsuma_CS":5,
+	        "junk_pirates_satsuma_Frightener":5,
+	        "junk_pirates_boxenstein_Slugger":10,
+	        "junk_pirates_boxenstein_Support":10,
+		"junk_pirates_boxenstein_blue_Support":3,
+		"junk_pirates_tangerine_Filthbag":4
+	},
+	"combatLarge":{
+		"syndicate_asp_gigantophis_p_Standard":2,
+		"syndicate_asp_gigantophis_p_CS":2,
+		"syndicate_asp_gigantophis_p_Strike":2,
+		"syndicate_asp_gigantophis_Standard":10,
+
+	        "pack_mastiff_Assault":10,
+	        "pack_mastiff_Standard":10,
+	        "pack_mastiff_Elite":10,
+		"pack_bullykutta_Support":15,
+		"pack_bullykutta_Standard":15,
+		"pack_bullykutta_Strike":15,
+		"pack_bullykutta_dogbox_Standard":5,
+
+	        "junk_pirates_goat_CS":10,
+	        "junk_pirates_goat_Standard":10,
+	        "junk_pirates_dugong_Standard":10,
+	        "junk_pirates_dugong_Support":10,
+		"junk_pirates_dugong_Overdriven":4,
+	        "junk_pirates_orcenstein_Standard":5,
+	        "junk_pirates_orcenstein_Elite":2,
+	        "junk_pirates_jackdaw_Standard":5,
+	        "junk_pirates_jackdaw_CS":5,
+	        "junk_pirates_magpie_Standard":10,
+	        "junk_pirates_magpie_Assault":10,
+	        "junk_pirates_raven_Standard":5
+	},
+	"combatCapital":{
+		"syndicate_asp_kingcobra_Standard":10,
+		"syndicate_asp_kingcobra_p_Macerator":2,
+		"syndicate_asp_kingcobra_p_PD":2,
+		"syndicate_asp_kingcobra_p_CS":2,
+
+	        "pack_bulldog_Standard":10,
+		"pack_bulldog_bullseye_Bullseye":1,
+
+	        "junk_pirates_kraken_Standard":10,
+	        "junk_pirates_kraken_Elite":5,
+	        "junk_pirates_kraken_CS":10,
+	        "junk_pirates_kraken_Violent":10,
+		
+		"junk_pirates_spinerette_base_Standard":10
+
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+		"syndicate_asp_cerberus_Standard":10,
+		"syndicate_asp_diamondback_Standard":10,
+
+	        "pack_samoyed_Standard":10,
+	        "pack_samoyed_Support":10,
+	        "pack_samoyed_caomarelo_Standard":10,
+		"pack_wirefox_sh_Elite":5,
+		"pack_wirefox_sh_CS":5
+
+	},
+	"combatFreighterMedium":{
+		"syndicate_asp_copperhead_Standard":10,
+		"syndicate_asp_hognose_Standard":10,
+
+	        "pack_ridgeback_x_Standard":10,
+	        "pack_ridgeback_x_rothund_Standard":4,
+		"pack_labrador_Standard":10,
+
+	        "junk_pirates_scythe_Assault":10
+
+	},
+	"combatFreighterLarge":{
+		"syndicate_asp_gigantophis_Standard":10,
+		"syndicate_asp_kingcobra_Standard":10,
+
+	        "junk_pirates_orca_Standard":10,
+	        "junk_pirates_the_reaper_Standard":10
+
+	},
+	
+	"civilianRandom":{
+	        "pack_samoyed_decoupled_Standard":10
+	},
+
+	# carriers
+	"carrierSmall":{
+		"syndicate_asp_hognose_Standard":10,
+
+		"pack_BRT_canebianco_Standard":1,
+		"pack_BRT_canebianco_Strike":1,
+		"pack_BRT_canebianco_CS":1,
+		"pack_GFB_Standard":50,
+		"pack_GFB_Elite":15,
+
+	        "junk_pirates_octopus_Standard":10
+
+	},
+	"carrierMedium":{
+		"syndicate_asp_copperhead_Standard":10,
+
+		"pack_spinone_Standard":10,
+		"pack_spinone_Strike":6,
+		"pack_spinone_Support":10
+
+	},
+	"carrierLarge":{
+		"syndicate_asp_gigantophis_Standard":10,
+		"syndicate_asp_kingcobra_Standard":10,
+
+	        "junk_pirates_orca_Standard":10
+
+	},
+
+	# phase ships
+	#"phaseSmall":{
+	#
+	#	"fallback":{"phaseMedium":0.5},
+	#	"fallback2":{"phaseLarge":0.25},
+	#},
+	"phaseMedium":{
+		"junk_pirates_turbot_Assault":5,
+		"junk_pirates_turbot_Strike":5,
+	        "pack_sharpei_canebianco_Standard":5
+
+	},
+	#"phaseLarge":{
+#
+#		"fallback":{"phaseMedium":1},
+#		"fallback2":{"phaseSmall":1},
+#	},
+#	"phaseCapital":{
+#	},
+
+	# freighters and such
+	"freighterSmall":{
+		"syndicate_asp_mercury_Standard":10,
+		"syndicate_asp_diamondback_Standard":10,
+
+	        "pack_samoyed_Standard":10,
+		"pack_wirefox_sh_Standard":10,
+
+	        "junk_pirates_stoatA_Standard":10,
+		"junk_pirates_stoatB_Standard":10
+
+	},
+	"freighterMedium":{
+		"syndicate_asp_copperhead_Standard":10,
+
+		"pack_ridgeback_Standard":10,
+		"pack_labrador_Standard":10,
+
+		"junk_pirates_octopus_Standard":10
+
+	},
+	"freighterLarge":{
+		"syndicate_asp_gigantophis_Standard":10
+
+	},
+	
+#	"tankerSmall":{
+#
+#		"fallback":{"tankerMedium":0.5},
+#		"fallback2":{"tankerLarge":0.25},
+#	},
+#	"tankerMedium":{
+#
+#		"fallback":{"tankerSmall":1},
+#		"fallback2":{"tankerLarge":0.5},
+#	},
+#	"tankerLarge":{
+#
+#		"fallback":{"tankerMedium":1},
+#		"fallback2":{"tankerSmall":1},
+#	},
+	
+	"personnelSmall":{
+		"pack_wirefox_sh_Standard":10,
+
+		"fallback":{"personnelMedium":0.5},
+		"fallback2":{"personnelLarge":0.25}
+	},
+	"personnelMedium":{
+		"pack_ridgeback_Standard":10,
+
+		"fallback":{"personnelSmall":1},
+		"fallback2":{"personnelLarge":0.5}
+	},
+	"personnelLarge":{
+
+		"junk_pirates_orca_Standard":10
+
+	},
+	
+#	"linerSmall":{
+#
+#		"fallback":{"linerMedium":0.5},
+#		"fallback2":{"linerLarge":0.25},
+#	},
+#	"linerMedium":{
+#
+#		"fallback":{"linerSmall":1},
+#		"fallback2":{"linerLarge":0.5},
+#	},
+#	"linerLarge":{
+#
+#		"fallback":{"linerMedium":1},
+#		"fallback2":{"linerSmall":1},
+#	},
+	
+#	# utility ships
+#	"tug":{
+#		"fallback":{"utility":1},
+#	},
+	"crig":{
+		"junk_pirates_the_reaper_Standard":10
+
+	},
+	"utility":{
+		"junk_pirates_the_reaper_Standard":1
+	}
+	
+#	"orbitalStationLowTech":{
+#	}
+	
+#	"battlestationLowTech":{
+#	}
+	
+}

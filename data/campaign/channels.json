@@ -1,0 +1,67 @@
+{
+	"defaultChannels":[
+		"syndicate_asp_public",
+		"junk_pirates_public",
+		"pack_public"
+	],	
+	"junk_pirates_internal":{
+		"name":"Junk Pirates Intelligence",
+		"logo":"graphics/junk_pirates/icons/intel/junk_pirates_internal.png",
+		"icon":"graphics/junk_pirates/icons/intel/junk_pirates_internal.png",
+		"image":"graphics/factions/junk_pirates_crest.png",
+		"sound":"ui_channel_comm_secure",
+		"faction":"junk_pirates",
+		"type":"Intelligence Report",
+		"shortType":"Intel"
+	},
+	"junk_pirates_public":{
+		"name":"Junk Pirates Broadcast",
+		"logo":"graphics/junk_pirates/icons/intel/junk_pirates_internal.png",
+		"icon":"graphics/junk_pirates/icons/intel/junk_pirates_internal.png",
+		"image":"graphics/factions/junk_pirates_crest.png",
+		"sound":"ui_channel_news",
+		"faction":"junk_pirates",
+		"type":"News Report",
+		"shortType":"News"
+	},
+	"syndicate_asp_internal":{
+		"name":"ASP Syndicate Intelligence",
+		"logo":"graphics/syndicate_asp/icons/intel/syndicate_asp_internal.png",
+		"icon":"graphics/syndicate_asp/icons/intel/syndicate_asp_internal.png",
+		"image":"graphics/factions/syndicate_asp_crest.png",
+		"sound":"ui_channel_comm_secure",
+		"faction":"syndicate_asp",
+		"type":"Intelligence Report",
+		"shortType":"Intel"
+	},
+	"syndicate_asp_public":{
+		"name":"ASP Broadcast",
+		"logo":"graphics/syndicate_asp/icons/intel/syndicate_asp_public.png",
+		"icon":"graphics/syndicate_asp/icons/intel/syndicate_asp_public.png",
+		"image":"graphics/factions/syndicate_asp_crest.png",
+		"sound":"ui_channel_news",
+		"faction":"syndicate_asp",
+		"type":"News Report",
+		"shortType":"News"
+	},
+	"pack_public":{
+		"name":"P.A.C.K. Chat",
+		"logo":"graphics/pack/icons/intel/pack_internal.png",
+		"icon":"graphics/pack/icons/intel/pack_internal.png",
+		"image":"graphics/factions/pack_crest.png",
+		"sound":"ui_channel_news",
+		"faction":"pack",
+		"type":"News Report",
+		"shortType":"News"
+	},
+	"pack_internal":{
+		"name":"P.A.C.K. Confidential",
+		"logo":"graphics/pack/icons/intel/pack_internal.png",
+		"icon":"graphics/pack/icons/intel/pack_internal.png",
+		"image":"graphics/factions/pack_crest.png",
+		"sound":"ui_channel_comm_secure",
+		"faction":"pack",
+		"type":"Intelligence Report",
+		"shortType":"Intel"
+	}
+}

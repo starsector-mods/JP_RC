@@ -1,0 +1,38 @@
+{
+	"id":"junk_pirates_micro_junkjet_missile_energy",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/junk_pirates_micro_junkjet_missile_energy.png",
+	"size":[8,19],	
+	"center":[4,9.5],
+	"collisionRadius":11,
+	"collisionClass":"MISSILE_NO_FF",
+	"onHitEffect":"data.scripts.weapons.JunkPiratesJunkjetOnHitEffect",
+	"explosionColor":[220,0,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":75, # purely visual
+	"engineSpec":{"turnAcc":300,
+				  "turnRate":120,
+				  "acc":2000,
+				  "dec":100},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-11, 0],
+				    "style":"CUSTOM",
+                    "styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[185,255,200,215],
+						#"engineColor":[220,0,255,215],
+						"contrailDuration":1.5,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult": 0.0,
+						"contrailAngularVelocityMult":0.5,
+						"contrailSpawnDistMult": 0.5, # how far away from engine it starts
+						"contrailColor":[90,0,120,100],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":4.0,
+				    "length":18.0,
+				    "angle":180.0}
+				    ]
+}

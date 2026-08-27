@@ -1,0 +1,349 @@
+{
+  "bounds": [
+    210,
+    -27,
+    195,
+    -35,
+    45,
+    -56,
+    25,
+    -170,
+    -34,
+    -169,
+    -113,
+    -130,
+    -188,
+    -23,
+    -188,
+    23,
+    -113,
+    130,
+    -34,
+    169,
+    25,
+    170,
+    45,
+    56,
+    195,
+    35,
+    210,
+    27
+  ],
+  "builtInMods": [
+    "shared_flux_sink",
+    "supercomputer",
+    "vastbulk",
+    "reduced_explosion",
+    "missile_reload",
+    "junk_pirates_spinerette_base_fix"
+  ],
+  "builtInWeapons": {
+    "WS 013": "blinker_green",
+    "WS 014": "blinker_red",
+    "WS 015": "junk_pirates_mlrs",
+    "WS 016": "junk_pirates_mlrs"
+  },
+  "builtInWings": [],
+  "center": [
+    213,
+    263.5
+  ],
+  "collisionRadius": 277,
+  "engineSlots": [
+    {
+      "angle": 75.5,
+      "contrailSize": 13.575884,
+      "length": 9.65266,
+      "location": [
+        112,
+        73.5
+      ],
+      "style": "LOW_TECH",
+      "width": 13.575884
+    },
+    {
+      "angle": -75.5,
+      "contrailSize": 13.575884,
+      "length": 9.65266,
+      "location": [
+        112,
+        -73.5
+      ],
+      "style": "LOW_TECH",
+      "width": 13.575884
+    },
+    {
+      "angle": -139.5,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -145,
+        -106
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 139.5,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -145,
+        106
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 163.5,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -153,
+        92
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -163.5,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -153,
+        -92
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 66.5,
+      "contrailSize": 13.575884,
+      "length": 9.65266,
+      "location": [
+        83,
+        85.5
+      ],
+      "style": "LOW_TECH",
+      "width": 13.575884
+    },
+    {
+      "angle": -66.5,
+      "contrailSize": 13.575884,
+      "length": 9.65266,
+      "location": [
+        83,
+        -85.5
+      ],
+      "style": "LOW_TECH",
+      "width": 13.575884
+    }
+  ],
+  "height": 527,
+  "hullId": "junk_pirates_spinerette_base",
+  "hullName": "Spinerette",
+  "hullSize": "CAPITAL_SHIP",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 292.5,
+  "spriteName": "graphics/junk_pirates/ships/stations/junk_pirates_spinerette_station_base.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -120.5,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        -90.5,
+        -141
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 120.5,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        -90.5,
+        141
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 79.5,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        -73.5,
+        62.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": -79.5,
+      "arc": 0,
+      "id": "WS 004",
+      "locations": [
+        -73.5,
+        -62.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": -63.5,
+      "arc": 0,
+      "id": "WS 005",
+      "locations": [
+        161.5,
+        -43.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 63.5,
+      "arc": 0,
+      "id": "WS 006",
+      "locations": [
+        161.5,
+        43.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 80.5,
+      "arc": 0,
+      "id": "WS 007",
+      "locations": [
+        -10.5,
+        162
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": -80.5,
+      "arc": 0,
+      "id": "WS 008",
+      "locations": [
+        -10.5,
+        -162
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 71.5,
+      "arc": 0,
+      "id": "WS 009",
+      "locations": [
+        73,
+        52
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": -71.5,
+      "arc": 0,
+      "id": "WS 010",
+      "locations": [
+        73,
+        -52
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 180,
+      "arc": 0,
+      "id": "WS 011",
+      "locations": [
+        -212,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 012",
+      "locations": [
+        222,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 90,
+      "arc": 0,
+      "id": "WS 013",
+      "locations": [
+        -0.5,
+        10
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -90,
+      "arc": 0,
+      "id": "WS 014",
+      "locations": [
+        -0.5,
+        -10
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -14.5,
+      "arc": 0,
+      "id": "WS 015",
+      "locations": [
+        -47,
+        -11
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 14.5,
+      "arc": 0,
+      "id": "WS 016",
+      "locations": [
+        -47,
+        11
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 426
+}

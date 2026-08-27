@@ -1,0 +1,96 @@
+{
+  "bounds": [
+    75.5,
+    -18,
+    50,
+    -36.5,
+    13.5,
+    -36,
+    -19,
+    -14.5,
+    -19,
+    14.5,
+    13.5,
+    36,
+    50,
+    36.5,
+    75.5,
+    18
+  ],
+  "builtInMods": [
+    "always_detaches",
+    #"missile_reload",
+    "shared_flux_sink",
+    "supercomputer"
+  ],
+  "builtInWings": [],
+  "center": [
+    43,
+    28
+  ],
+  "collisionRadius": 84.5,
+  "engineSlots": [],
+  "height": 110,
+  "hullId": "pack_small_missile1",
+  "hullName": "Missile Emplacement",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    -27.5,
+    1
+  ],
+  "shieldRadius": 141.5,
+  "spriteName": "graphics/pack/ships/stations/junk_pirates_module_small_gunnery1.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 44,
+      "arc": 153,
+      "id": "WS 001",
+      "locations": [
+        44,
+        30.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -44,
+      "arc": 153,
+      "id": "WS 002",
+      "locations": [
+        44,
+        -30.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 153,
+      "id": "WS 003",
+      "locations": [
+        74,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 203,
+      "id": "WS 004",
+      "locations": [
+        34,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 86
+}

@@ -1,0 +1,81 @@
+{
+  "bounds": [
+    14.5,
+    -10.5,
+    -10.5,
+    -16.5,
+    -10.5,
+    16.5,
+    14.5,
+    10.5
+  ],
+  "builtInWings": [],
+  "center": [
+    25,
+    20
+  ],
+  "collisionRadius": 25,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -15.5,
+        19
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -15.5,
+        -19
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    }
+  ],
+  "height": 46,
+  "hullId": "pack_pressure_gunship",
+  "hullName": "Speeck",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    3,
+    0
+  ],
+  "shieldRadius": 31,
+  "spriteName": "graphics/pack/ships/pack_pressure_gunship.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 65,
+      "id": "WS 001",
+      "locations": [
+        -4.5,
+        15
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -0,
+      "arc": 65,
+      "id": "WS 002",
+      "locations": [
+        -4.5,
+        -15
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 50
+}

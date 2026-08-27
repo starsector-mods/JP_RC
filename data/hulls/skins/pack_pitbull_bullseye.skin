@@ -1,0 +1,21 @@
+{
+	"baseHullId":"pack_pitbull",
+	"skinHullId":"pack_pitbull_bullseye",
+	"hullName":"Pitbull (BE)",
+	"descriptionId":"pack_pitbull",
+	"tags":[],
+	"descriptionPrefix":"A Pitbull class destroyer kitted out to fight alongside Bullseye.",
+	"fleetPoints":9,
+	"ordnancePoints":75,
+	"baseValueMult":1.3,
+	"spriteName":"graphics/pack/ships/pack_pitbull_bullseye.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["targetingunit","pack_bullseye_suite", "insulatedengine"],
+	"weaponSlotChanges":{    
+        },
+	"builtInWeapons":{
+	}
+}

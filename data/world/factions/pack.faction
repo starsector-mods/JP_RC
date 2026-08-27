@@ -1,0 +1,239 @@
+{
+	"id":"pack",
+	"color":[255,175,190,255],
+	"displayName":"P.A.C.K.",
+	"displayNameWithArticle":"the P.A.C.K.",
+ 	"displayNameLong":"Post-Anarchist Canis Kollective",
+ 	"displayNameLongWithArticle":"the Post-Anarchist Canis Kollective",
+	"logo":"graphics/factions/pack_logo.png",
+	"crest":"graphics/factions/pack_crest.png",
+	"shipNamePrefix":"PSS",
+	"shipNameSources":{
+		"CANINE":1},
+	"description":"No description yet.",
+	"names":{
+		"old english":1,
+		"world":1},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"buffalo2":0 #just say no
+		}},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["junk_pirates_pack_bp", "base_bp"],
+		"hulls":[
+			"pack_ridgeback_x"]},
+	"knownShips":{
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"hulls":[
+			"pack_ridgeback_x",
+			"pack_ridgeback_x_rothund",
+			"pack_sharpei_canebianco",
+			"pack_wirefox_caomarelo",
+			"pack_schnauzer_rothund",
+			"pack_schnauzer_caomarelo",
+			"pack_schnauzer_canebianco",
+			"pack_samoyed_caomarelo",
+			"pack_samoyed_decoupled_caomarelo",
+			"pack_BRT_canebianco",
+			"pack_BRT_rothund",
+			"pack_komondor_rothund",
+			"pack_komondor_canebianco",
+			"pack_pitbull_rothund",
+			"pack_pitbull_canebianco",
+			"pack_bedlington_canebianco"]},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"hulls":[
+			"pack_ridgeback_x",
+			"pack_ridgeback_x_rothund",
+			"pack_sharpei_canebianco",
+			"pack_wirefox_caomarelo",
+			"pack_schnauzer_rothund",
+			"pack_schnauzer_caomarelo",
+			"pack_schnauzer_canebianco",
+			"pack_samoyed_caomarelo",
+			"pack_samoyed_decoupled_caomarelo",
+			"pack_BRT_canebianco",
+			"pack_BRT_rothund",
+			"pack_komondor_rothund",
+			"pack_komondor_canebianco",
+			"pack_pitbull_rothund",
+			"pack_pitbull_canebianco",
+			"pack_bedlington_canebianco"]},
+	"knownFighters":{
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"fighters":[
+		]},
+	"priorityFighters":{
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"fighters":[
+		]},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"weapons":[
+			"railgun",
+			"heavymauler",
+			"hveldriver",
+			"gauss",
+			"mjolnir",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian"]},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		]},
+	"knownHullMods":{
+		"tags":["base_bp"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+			"hiressensors",
+			"efficiency_overhaul"]},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":3,
+		"shipQuality":2,
+		"numShips":3,
+		
+		"shipSize":3,
+		
+		"aggression":2,
+		
+		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0.5,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.6,
+
+		"officerSkillsShuffleProbability":1,
+		"officerSkills":[
+			"ballistic_mastery",
+			"gunnery_implants",
+			"field_modulation",
+			"damage_control"
+		],
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"wolfpack_tactics",
+			"coordinated_maneuvers",
+			"tactical_drills",
+			"officer_training",
+			"crew_training"
+		]},
+	"illegalCommodities":[
+		"drugs",
+		"organs",
+		"hand_weapons"],
+	"internalComms":"pack_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/pack_portrait_f_1.png",
+			"graphics/portraits/pack_portrait_f_2.png",
+			"graphics/portraits/pack_portrait_m_1.png",
+			"graphics/portraits/pack_portrait_m_2.png",
+			"graphics/portraits/portrait_corporate06.png",
+			"graphics/portraits/portrait_hegemony02.png",
+			"graphics/portraits/portrait_hegemony06.png"],
+		"standard_female":[
+			"graphics/portraits/pack_portrait_f_1.png",
+			"graphics/portraits/pack_portrait_f_2.png",
+			"graphics/portraits/pack_portrait_m_1.png",
+			"graphics/portraits/portrait_corporate06.png",
+			"graphics/portraits/portrait_hegemony02.png",
+			"graphics/portraits/portrait_hegemony06.png"]},
+	"custom":{
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"buysAICores":true,
+		"AICoreValueMult":1,
+		"AICoreRepMult":2,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		"allowsTransponderOffTrade":true,
+		"caresAboutAtrocities":true,
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":false,
+			"territorial":true}},
+	"ranks":{
+		"ranks":{
+			"spaceCommander":{"name":"Commander"}},
+		"posts":{
+			"patrolCommander":{"name":"Sergeant"},
+			"fleetCommander":{"name":"Commander"},
+			"baseCommander":{"name":"Keeper"}}},
+	"fleetTypeNames":{
+		"trade":"Mercantile Convoy",
+		"tradeLiner":"Liner Convoy",
+		"tradeSmuggler":"Smuggler",
+		"smallTrader":"Trader",
+		
+		"patrolSmall":"Nose",
+		"patrolMedium":"Flank",
+		"patrolLarge":"Maw",
+		
+		"inspectionFleet":"Inspection Fleet",
+		"taskForce":"Task Force",
+		
+		"foodReliefFleet":"Relief Convoy"},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":5
+		},
+		"HIGH":{
+			"soldier":10,
+			"official":10
+		}
+	}
+}

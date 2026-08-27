@@ -1,0 +1,18 @@
+{
+   "junk_pirates":[
+		"junk_pirates_tangerine",
+		"junk_pirates_tangerine_blue",
+		"junk_pirates_the_reaper"
+	],
+   "pack":[
+                "pack_bulldog_bullseye",
+                "pack_sharpei_canebianco"
+        ],
+   "syndicate_asp":[
+		"syndicate_asp_hognose_p",
+		"syndicate_asp_diamondback_p",
+		"syndicate_asp_copperhead_p",
+		"syndicate_asp_kingcobra_p",
+		"syndicate_asp_gigantophis_p"
+	]
+}

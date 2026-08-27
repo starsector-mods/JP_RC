@@ -1,0 +1,238 @@
+{
+	"station_karkov_academy":{
+		"defaultName":"Karkov Academy", # used if name=null in addCustomEntity()
+		"defaultRadius":40, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"orbital_station_default",
+		"interactionImage":"graphics/illustrations/pirate_station.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/junk_pirates_station_hulk.png",
+		"spriteWidth":45,
+		"spriteHeight":45,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station", "neutrino"],
+		"layers":["STATIONS"] # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	"station_nomde_plume":{
+		"defaultName":"NOMDE Plume", # used if name=null in addCustomEntity()
+		"defaultRadius":40, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"orbital_station_default",
+		"interactionImage":"graphics/illustrations/pirate_station.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/junk_pirates_station_glory.png",
+		"spriteWidth":45,
+		"spriteHeight":45,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station", "neutrino_high"],
+		"layers":["STATIONS"] # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	"junk_pirates_spinerette":{
+		"defaultName":"Spinerette", # used if name=null in addCustomEntity()
+		"defaultRadius":36, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"junk_pirates_spinerette",
+		"interactionImage":"graphics/illustrations/abandoned_station3.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":12,
+		"iconHeight":12,
+		"sprite":"graphics/stations/junk_pirates_spinerette.png",
+		"spriteWidth":80,
+		"spriteHeight":80,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station", "neutrino"],
+		"layers":["STATIONS"], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":true
+	},
+
+	"junk_pirates_spinerette_active":{
+		"defaultName":"Automata Cloud", # used if name=null in addCustomEntity()
+		"nameInText":"Automata Cloud",
+		"shortName":"Automata Cloud",
+		"aOrAn":"an",
+		"isOrAre":"is",
+		"defaultRadius":54, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"junk_pirates_spinerette_active",
+		"interactionImage":"graphics/illustrations/junk_pirates_spinerette.png",
+		"icon":"graphics/icons/cryosleeper.png",
+		"iconWidth":12,
+		"iconHeight":12,
+		"sprite":"graphics/stations/junk_pirates_spinerette.png",
+		"spriteWidth":50,
+		"spriteHeight":50,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "junk_pirates_spinerette_active"],
+		"layers":["STATIONS"], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true
+		#"pluginClass":"com.fs.starfarer.api.impl.campaign.CryosleeperEntityPlugin"
+	},
+
+	"junk_pirates_abandoned_hulk":{
+		"defaultName":"Decaying Hulk", # used if name=null in addCustomEntity()
+		"defaultRadius":42, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"junk_pirates_abandoned_hulk",
+		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":12,
+		"iconHeight":12,
+		"sprite":"graphics/stations/junk_pirates_station_hulk_slanty.png",
+		"spriteWidth":88,
+		"spriteHeight":128,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station", "neutrino"],
+		"layers":["STATIONS"], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":true
+	},
+
+	"junk_pirates_hypercube":{
+		"defaultName":"Hypercube", # used if name=null in addCustomEntity()
+		"defaultRadius":36, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"junk_pirates_hypercube",
+		"interactionImage":"graphics/illustrations/abandoned_station3.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":12,
+		"iconHeight":12,
+		"sprite":"graphics/stations/junk_pirates_hypercube.png",
+		"spriteWidth":36,
+		"spriteHeight":36,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station", "neutrino"],
+		"layers":["STATIONS"], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":true
+	},
+	
+	"junk_pirates_anarchist_mining":{
+		"defaultName":"Mining Base", # used if name=null in addCustomEntity()
+		"defaultRadius":64, # used if radius<0 in addCustomEntity()
+		"shortName":"mining base",
+		"customDescriptionId":"junk_pirates_anarchist_mining",
+		"interactionImage":"graphics/illustrations/comm_relay.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/junk_pirates_station_hulk.png",
+		"spriteWidth":60,
+		"spriteHeight":60,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino"],
+		"layers":["STATIONS"] # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	"junk_pirates_anarchist_research":{
+		"defaultName":"Research Base", # used if name=null in addCustomEntity()
+		"defaultRadius":64, # used if radius<0 in addCustomEntity()
+		"shortName":"research base",
+		"customDescriptionId":"junk_pirates_anarchist_researchbase",
+		"interactionImage":"graphics/illustrations/comm_relay.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/junk_pirates_station_hulk.png",
+		"spriteWidth":60,
+		"spriteHeight":60,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino"],
+		"layers":["STATIONS"] # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	"junk_pirates_anarchist_habitat":{
+		"defaultName":"Habitat", # used if name=null in addCustomEntity()
+		"defaultRadius":64, # used if radius<0 in addCustomEntity()
+		"shortName":"habitat",
+		"customDescriptionId":"junk_pirates_anarchist_habitat",
+		"interactionImage":"graphics/illustrations/comm_relay.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/junk_pirates_station_hulk.png",
+		"spriteWidth":60,
+		"spriteHeight":60,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino"],
+		"layers":["STATIONS"] # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	
+"junk_pirates_warning_beacon":{
+		"defaultName":"Warning Beacon", # used if name=null in addCustomEntity()
+		"defaultRadius":40, # used if radius<0 in addCustomEntity()
+		"detectionRange":3000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,
+		"icon":"graphics/icons/warning_beacon.png",
+		"iconColor":[255,100,0,255],
+		"iconWidth":24,
+		"iconHeight":24,
+		"spriteWidth":64,
+		"spriteHeight":64,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"scaleIconWithZoom":true,
+		"customDescriptionId":"warning_beacon",
+		"interactionImage":"graphics/illustrations/junk_pirates_warning_beacon.jpg",
+		"tags":["has_interaction_dialog", "warning_beacon", "neutrino_high"],
+		"layers":["STATIONS"], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.WarningBeaconEntityPlugin"
+	},
+
+	"junk_pirates_anarchist_weapons_cache":{
+		"baseId":"weapons_cache"
+	},
+	
+	"junk_pirates_anarchist_weapons_cache_small":{
+		"baseId":"weapons_cache_small"
+	}	
+}

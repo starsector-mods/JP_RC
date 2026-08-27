@@ -1,0 +1,112 @@
+{
+  "bounds": [
+    -181,
+    21,
+    -26,
+    188,
+    55,
+    185,
+    107,
+    91,
+    144,
+    5,
+    120,
+    -121,
+    32,
+    -175,
+    -27,
+    -178,
+    -68,
+    -108,
+    -185,
+    -61
+  ],
+  "builtInMods": [
+    "axialrotation",
+    "supercomputer",
+    "vastbulk",
+    "shared_flux_sink"
+  ],
+  "builtInWings": [],
+  "center": [
+    198.5,
+    197
+  ],
+  "collisionRadius": 198.5,
+  "engineSlots": [],
+  "height": 400,
+  "hullId": "pack_anarchist_station1",
+  "hullName": "Anarchist Den",
+  "hullSize": "CAPITAL_SHIP",
+  "shieldCenter": [
+    -3,
+    3
+  ],
+  "shieldRadius": 224.5,
+  "spriteName": "graphics/pack/ships/stations/junk_pirates_anarchist_station1.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -90,
+      "arc": 0,
+      "id": "WS 005",
+      "locations": [
+        -67,
+        -60
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": -90,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        3,
+        -154
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        62,
+        158
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 133.5,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        -24,
+        159
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "STATION_MODULE"
+    },
+    {
+      "angle": 132,
+      "arc": 0,
+      "id": "WS 004",
+      "locations": [
+        -156,
+        26
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "STATION_MODULE"
+    }
+  ],
+  "width": 400
+}

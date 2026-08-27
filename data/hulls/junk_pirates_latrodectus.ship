@@ -1,0 +1,109 @@
+{
+  "bounds": [
+    14.5,
+    -8.5,
+    -20.5,
+    -13,
+    -20.5,
+    13,
+    14.5,
+    8.5
+  ],
+  "builtInWeapons": {
+    "WS 003": "blinker_green",
+    "WS 004": "blinker_red"
+  },
+  "builtInWings": [],
+  "center": [
+    15,
+    24
+  ],
+  "collisionRadius": 30,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -21.5,
+        3
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -21.5,
+        -3
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    }
+  ],
+  "height": 48,
+  "hullId": "junk_pirates_latrodectus",
+  "hullName": "Latrodectus",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 36,
+  "spriteName": "graphics/junk_pirates/ships/junk_pirates_latrodectus.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS 001",
+      "locations": [
+        9,
+        5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": -0,
+      "arc": 0,
+      "id": "WS 002",
+      "locations": [
+        9,
+        -5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 91,
+      "arc": 0,
+      "id": "WS 003",
+      "locations": [
+        -8,
+        7
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -91,
+      "arc": 0,
+      "id": "WS 004",
+      "locations": [
+        -8,
+        -7
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    }
+  ],
+  "width": 30
+}

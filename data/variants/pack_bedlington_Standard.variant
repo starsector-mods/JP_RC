@@ -1,0 +1,30 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 2,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "pack_bedlington",
+  "hullMods": [
+    "advancedoptics"
+  ],
+  "permaMods": [],
+  "variantId": "pack_bedlington_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "taclaser",
+        "WS 002": "taclaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "pulselaser"
+      }
+    }
+  ],
+  "wings": []
+}

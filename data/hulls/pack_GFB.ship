@@ -1,0 +1,218 @@
+{
+  "bounds": [
+    52,
+    32,
+    -6,
+    41,
+    -67,
+    32,
+    -67,
+    -32,
+    -6,
+    -41,
+    52,
+    -32
+  ],
+  "builtInWings": [
+    "pack_gunship_wing"
+  ],
+  "builtInMods": [
+    "pack_mesh"
+  ],
+  "center": [
+    55,
+    82
+  ],
+  "collisionRadius": 88.5,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -75,
+        38.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -75,
+        -38.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 7,
+      "length": 38.5,
+      "location": [
+        -80.5,
+        18
+      ],
+      "style": "LOW_TECH",
+      "width": 7
+    },
+    {
+      "angle": -180,
+      "contrailSize": 7,
+      "length": 38.5,
+      "location": [
+        -80.5,
+        -18
+      ],
+      "style": "LOW_TECH",
+      "width": 7
+    },
+    {
+      "angle": -180,
+      "contrailSize": 13,
+      "length": 61,
+      "location": [
+        -80.5,
+        -7.5
+      ],
+      "style": "LOW_TECH",
+      "width": 13
+    },
+    {
+      "angle": 180,
+      "contrailSize": 13,
+      "length": 61,
+      "location": [
+        -80.5,
+        7.5
+      ],
+      "style": "LOW_TECH",
+      "width": 13
+    }
+  ],
+  "height": 164,
+  "hullId": "pack_GFB",
+  "hullName": "GFB",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 107.5,
+  "spriteName": "graphics/pack/ships/pack_GFB.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -21,
+      "arc": 105,
+      "id": "WS 001",
+      "locations": [
+        -11.5,
+        -25
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 21,
+      "arc": 105,
+      "id": "WS 002",
+      "locations": [
+        -11.5,
+        25
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 003",
+      "locations": [
+        19,
+        -16
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 004",
+      "locations": [
+        19,
+        16
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 180,
+      "arc": 126,
+      "id": "WS 005",
+      "locations": [
+        -43,
+        0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 006",
+      "locations": [
+        46.5,
+        0.5,
+        34.5,
+        6.5,
+        34.5,
+        -5.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 007",
+      "locations": [
+        43,
+        20.5,
+        31,
+        26.5,
+        31,
+        14.5
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 008",
+      "locations": [
+        43.5,
+        -22,
+        31.5,
+        -16,
+        31.5,
+        -28
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    }
+  ],
+  "width": 110
+}

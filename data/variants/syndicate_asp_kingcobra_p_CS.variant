@@ -1,0 +1,64 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 0,
+  "fluxVents": 21,
+  "goalVariant": true,
+  "hullId": "syndicate_asp_kingcobra_p",
+  "hullMods": [
+    "targetingunit",
+    "expanded_deck_crew"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "syndicate_asp_kingcobra_p_CS",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hil",
+        "WS 004": "gravitonbeam",
+        "WS 007": "taclaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdlaser",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser",
+        "WS 012": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 005": "squall",
+        "WS 013": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "pilum"
+      }
+    }
+  ],
+  "wings": [
+    "syndicate_asp_death_rattle_wing",
+    "syndicate_asp_constrictor_wing",
+    "syndicate_asp_constrictor_wing"
+  ]
+}

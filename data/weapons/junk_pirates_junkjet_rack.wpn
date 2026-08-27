@@ -1,0 +1,66 @@
+{
+  "animationType": "SMOKE",
+  "barrelMode": "ALTERNATING",
+  "fireSoundTwo": "sabot_srm_fire",
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    9.5,
+    -7,
+    9.5,
+    7,
+    11.5,
+    -2,
+    11.5,
+    2
+  ],
+  "hardpointSprite": "graphics/weapons/junk_pirates_junkjet_rack_hardpoint.png",
+  "id": "junk_pirates_junkjet_rack",
+  "everyFrameEffect":"data.scripts.weapons.ScrapjetAutofirePlugin",
+	"projectileSpecId": "junk_pirates_junkjet_missile",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "size": "SMALL",
+  "smokeSpec": {
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackParticleCount": 3,
+    "blowbackSpread": 10,
+    "cloudDuration": 1,
+    "cloudParticleCount": 3,
+    "cloudRadius": 10,
+    "particleColor": [
+      100,
+      100,
+      100,
+      200
+    ],
+    "particleSizeMin": 20,
+    "particleSizeRange": 20
+  },
+  "specClass": "projectile",
+  "textureType": ROUGH,
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "turretOffsets": [
+    6.5,
+    -10,
+    6.5,
+    10,
+    8.5,
+    -4,
+    8.5,
+    4
+  ],
+  "turretSprite": "graphics/weapons/junk_pirates_junkjet_rack_turret.png",
+  "type": "MISSILE"
+}

@@ -1,0 +1,44 @@
+{
+    "displayName": "Carver",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "hullId": "junk_pirates_clementine",
+    "hullMods": ["safetyoverrides"],
+    "quality": 0.7,
+        "goalVariant": true,
+  "variantId": "junk_pirates_clementine_Carver",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 006": "hammer"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "irpulse",
+                "WS 003": "junk_pirates_cutlass"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pdlaser",
+                "WS 004": "lightdualmg",
+                "WS 005": "vulcan"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {}
+        }
+    ]
+}

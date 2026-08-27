@@ -1,0 +1,55 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 11,
+  "fluxVents": 13,
+  "goalVariant": true,
+  "hullId": "pack_komondor",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0.5,
+  "variantId": "pack_komondor_Support",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "heatseeker",
+        "WS 002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightmg",
+        "WS 006": "lightmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "lightac",
+        "WS 008": "lightac",
+        "WS 009": "lightac",
+        "WS 010": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "chaingun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "railgun",
+        "WS 004": "railgun"
+      }
+    }
+  ],
+  "wings": []
+}

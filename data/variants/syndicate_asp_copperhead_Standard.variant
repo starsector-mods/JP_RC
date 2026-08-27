@@ -1,0 +1,50 @@
+{
+  "displayName": "Copperhead",
+  "fluxCapacitors": 4,
+  "fluxVents": 20,
+  "goalVariant": true,
+  "hullId": "syndicate_asp_copperhead",
+  "hullMods": [
+    "expanded_deck_crew"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "syndicate_asp_copperhead_Standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavyburst",
+        "WS 002": "heavyburst"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "pilum"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "swarmer"
+      }
+    }
+  ],
+  "wings": [
+    "syndicate_asp_bite_wing",
+    "syndicate_asp_constrictor_wing"
+  ]
+}

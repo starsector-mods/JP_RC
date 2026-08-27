@@ -1,0 +1,57 @@
+{
+  "displayName": "Brutaliser",
+  "fluxCapacitors": 0,
+  "fluxVents": 8,
+  "goalVariant": true,
+  "hullId": "syndicate_asp_copperhead_p",
+  "hullMods": [
+        "hardenedshieldemitter",
+        "missleracks"
+    ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "syndicate_asp_copperhead_p_Brutaliser",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavymauler",
+        "WS 002": "heavyneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "syndicate_asp_typewriter",
+        "WS 004": "syndicate_asp_typewriter",
+        "WS 008": "lightdualac",
+        "WS 009": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "pdburst",
+        "WS 007": "pdburst",
+        "WS 010": "vulcan",
+        "WS 011": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,29 @@
+{
+  "displayName": "Ballistic",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "junk_pirates_spinerette_arm_r",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_spinerette_arm_r_Ballistic",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "junk_pirates_scrapcannon",
+        "WS 002": "junk_pirates_scrapcannon",
+        "WS 003": "junk_pirates_scrapnailer",
+        "WS 004": "junk_pirates_scrapnailer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "wings": []
+}

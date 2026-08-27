@@ -1,0 +1,17 @@
+{
+  "displayName": "Tube",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "goalVariant": true,
+  "hullId": "junk_pirates_spinerette_extruder",
+  "hullMods": [],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "junk_pirates_spinerette_extruder_Standard",
+  "weaponGroups": [],
+  "wings": [
+    "junk_pirates_orbweaver_wing",
+    "junk_pirates_orbweaver_wing",
+    "junk_pirates_orbweaver_wing"
+  ]
+}

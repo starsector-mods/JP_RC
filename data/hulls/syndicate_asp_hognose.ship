@@ -1,0 +1,220 @@
+{
+  "bounds": [
+    -18,
+    -22.5,
+    -42,
+    -39,
+    -72,
+    -22.5,
+    -74,
+    20.5,
+    -55.5,
+    37.5,
+    18.5,
+    41.5,
+    80,
+    28,
+    25.5,
+    -35,
+    -3.5,
+    -36.5
+  ],
+  "builtInWings": [],
+  "center": [
+    50.5,
+    88.5
+  ],
+  "collisionRadius": 90,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -80,
+        22.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -80,
+        -22.5
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -85,
+        7
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 30,
+      "length": 30,
+      "location": [
+        -85,
+        -7
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 7,
+      "length": 62.5,
+      "location": [
+        -85,
+        0
+      ],
+      "style": "LOW_TECH",
+      "width": 7
+    },
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 56.5,
+      "location": [
+        -79,
+        15
+      ],
+      "style": "LOW_TECH",
+      "width": 5
+    },
+    {
+      "angle": -180,
+      "contrailSize": 5,
+      "length": 56.5,
+      "location": [
+        -79,
+        -15
+      ],
+      "style": "LOW_TECH",
+      "width": 5
+    }
+  ],
+  "height": 177,
+  "hullId": "syndicate_asp_hognose",
+  "hullName": "Hognose",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 109.5,
+  "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_hognose.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 84,
+      "arc": 206,
+      "id": "WS 001",
+      "locations": [
+        17,
+        32.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 40,
+      "arc": 250,
+      "id": "WS 002",
+      "locations": [
+        51,
+        21.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -115,
+      "arc": 230,
+      "id": "WS 003",
+      "locations": [
+        -42,
+        -32.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -56,
+      "arc": 101,
+      "id": "WS 004",
+      "locations": [
+        4.5,
+        -27.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 005",
+      "locations": [
+        41.5,
+        -33.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "SYNERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 008",
+      "locations":[
+        -37.0, -9.5,
+        -37.0, -9.5,
+        -49.0, -3.5,
+        -49.0, -15.5
+    ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": -2.5,
+      "arc": 16,
+      "id": "WS 006",
+      "locations": [
+        36,
+        1.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 179,
+      "arc": 16,
+      "id": "WS 007",
+      "locations": [
+        -47.5,
+        11
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    }
+  ],
+  "width": 101
+}

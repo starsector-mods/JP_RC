@@ -1,0 +1,40 @@
+{
+  "bounds": [
+    13,
+    -12,
+    -13,
+    -12,
+    -13,
+    15,
+    0,
+    86.5,
+    13,
+    15
+  ],
+  "builtInMods": [
+    "junk_pirates_shocking_behaviour",
+    "junk_pirates_wobble_wibble"
+    #"vastbulk"
+  ],
+  "builtInWings": [],
+  "center": [
+    94.5,
+    20
+  ],
+  "collisionRadius": 98,
+  "engineSlots": [],
+  "height": 40,
+  "hullId": "junk_pirates_spinerette_mandible_shield_r",
+  "hullName": "Spinerette Mandible",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    1,
+    -0.5
+  ],
+  "shieldRadius": 418.5,
+  "spriteName": "graphics/junk_pirates/ships/stations/junk_pirates_spinerette_mandible_shield_r.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [],
+  "width": 115
+}

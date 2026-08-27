@@ -1,0 +1,336 @@
+{
+  "bounds": [
+    -57,
+    57.5,
+    42.5,
+    54,
+    52.5,
+    27,
+    65,
+    16,
+    66.5,
+    -10,
+    50.5,
+    -25,
+    42.5,
+    -53.5,
+    -60.5,
+    -53.5
+  ],
+  "builtInMods": [
+    "junk_pirates_premil"
+  ],
+  "builtInWeapons": {
+    "WS 011": "blinker_green",
+    "WS 012": "blinker_green",
+    "WS 013": "blinker_green",
+    "WS 014": "junk_pirates_boxer_deco2",
+    "WS 016": "junk_pirates_boxer_deco6",
+    "WS 017": "junk_pirates_boxer_deco3",
+    "WS 015": "junk_pirates_boxer_deco1"
+  },
+  "builtInWings": [],
+  "center": [
+    89,
+    71.5
+  ],
+  "collisionRadius": 80,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 50,
+      "location": [
+        -71.5,
+        25.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 60,
+      "location": [
+        -71.5,
+        17.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 75,
+      "location": [
+        -70,
+        7.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 50,
+      "location": [
+        -71.5,
+        -26.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 60,
+      "location": [
+        -71,
+        -16.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 75,
+      "location": [
+        -70,
+        -7.5
+      ],
+      "style": "LOW_TECH",
+      "width": 12
+    }
+  ],
+  "height": 150,
+  "hullId": "junk_pirates_boxenstein",
+  "hullName": "Boxenstein",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 126,
+  "spriteName": "graphics/junk_pirates/ships/boxenstein/junk_pirates_boxenstein.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 25,
+      "arc": 140,
+      "id": "WS 001",
+      "locations": [
+        53.5,
+        22
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -25,
+      "arc": 140,
+      "id": "WS 002",
+      "locations": [
+        53.5,
+        -20.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 45,
+      "arc": 210,
+      "id": "WS 003",
+      "locations": [
+        39.5,
+        53.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -45,
+      "arc": 210,
+      "id": "WS 004",
+      "locations": [
+        39.5,
+        -53.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 20,
+      "arc": 210,
+      "id": "WS 005",
+      "locations": [
+        24.5,
+        34
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -20,
+      "arc": 210,
+      "id": "WS 006",
+      "locations": [
+        24.5,
+        -34.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -30,
+      "arc": 5,
+      "id": "WS 007",
+      "locations": [
+        -42.5,
+        -65.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "renderOrderMod": 1
+    },
+    {
+      "angle": 25.5,
+      "arc": 5,
+      "id": "WS 008",
+      "locations": [
+        -33.5,
+        67.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "renderOrderMod": 60
+    },
+    {
+      "angle": -30,
+      "arc": 5,
+      "id": "WS 009",
+      "locations": [
+        2,
+        -64.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "renderOrderMod": 1
+    },
+    {
+      "angle": 30,
+      "arc": 5,
+      "id": "WS 010",
+      "locations": [
+        1.5,
+        64
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "renderOrderMod": 0
+    },
+    {
+      "angle": 25.5,
+      "arc": 5,
+      "id": "WS 011",
+      "locations": [
+        -24,
+        19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 2
+    },
+    {
+      "angle": 25.5,
+      "arc": 5,
+      "id": "WS 012",
+      "locations": [
+        -12,
+        19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 2
+    },
+    {
+      "angle": 25.5,
+      "arc": 5,
+      "id": "WS 013",
+      "locations": [
+        0,
+        19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 2
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 014",
+      "locations": [
+        -56,
+        -59
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 2
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 015",
+      "locations": [
+        -11,
+        -60
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 2
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 016",
+      "locations": [
+        -45.5,
+        61
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 100
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 017",
+      "locations": [
+        -10,
+        59.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "renderOrderMod": 25
+    }
+  ],
+  "width": 173
+}
