@@ -1,6 +1,6 @@
 {
   "displayName": "Strike",
-  "fluxCapacitors": 14,
+  "fluxCapacitors": 4,
   "fluxVents": 20,
   "goalVariant": true,
   "hullId": "pack_sharpei",

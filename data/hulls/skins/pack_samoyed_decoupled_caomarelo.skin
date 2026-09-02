@@ -36,7 +36,6 @@
             "type": "MISSILE"
 		}
 	},
-	"builtInMods":["auxiliarythrusters", "pack_overclocked_ca"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["auxiliarythrusters", "pack_overclocked_ca"]
+	
 }

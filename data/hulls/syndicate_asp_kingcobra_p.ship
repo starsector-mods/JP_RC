@@ -3,7 +3,7 @@
     "hullId":"syndicate_asp_kingcobra_p",
     "hullSize":"CAPITAL_SHIP",
     "style":"HIGH_TECH",
-    "spriteName":"mods/JP_RC/graphics/syndicate_asp/ships/syndicate_asp_kingcobra_p.png",
+    "spriteName":"graphics/syndicate_asp/ships/syndicate_asp_kingcobra_p.png",
     "height":385,
     "width":280,
     "center":[
@@ -44,7 +44,7 @@
         {
             "id":"WS 003",
             "size":"LARGE",
-            "type":"MISSILE",
+            "type":"HYBRID",
             "mount":"HARDPOINT",
             "arc":5,
             "angle":0,

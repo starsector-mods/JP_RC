@@ -9,6 +9,6 @@ public class JP_NexIntegration {
      * This class should only be accessed if Nexerelin is enabled.
      */
     public static boolean isCorvusMode() {
-        return SectorManager.getManager().isCorvusMode();
+        return SectorManager.getManager() != null && SectorManager.getManager().isCorvusMode();
     }
 }

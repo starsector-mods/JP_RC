@@ -43,9 +43,10 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
         this.fromEntity = data.from.getPrimaryEntity();
         this.fromName = data.from.getName();
         this.toName = data.to.getName();
-        this.toSystemName = data.to.getStarSystem().getName();
-        this.fromFactionId = data.from.getFaction().getId();
-        this.toFactionId = data.to.getFaction().getId();
+        this.toSystemName = data.to.getStarSystem() != null ? data.to.getStarSystem().getName() : 
+                            (data.to.getContainingLocation() != null ? data.to.getContainingLocation().getName() : "Deep Space");
+        this.fromFactionId = data.from.getFactionId();
+        this.toFactionId = data.to.getFactionId();
         this.fleetPoints = data.fleet.getFleetPoints();
         
         if (data.fleet.getCommander() != null) {
@@ -61,6 +62,7 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
         initTransientData();
         
         boolean sameLoc = fromEntity != null && fromEntity.getContainingLocation() != null &&
+                          Global.getSector().getPlayerFleet() != null &&
                           fromEntity.getContainingLocation() == 
                               Global.getSector().getPlayerFleet().getContainingLocation() &&
                           !fromEntity.getContainingLocation().isHyperspace();
@@ -118,14 +120,9 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
         bullet(info);
         
         if (mode != IntelInfoPlugin.ListInfoMode.IN_DESC) {
-            info.addPara("Fleet size: " + ucFirst(fleetSizeDescriptor), initPad, tc);
-            info.addPara("Target: " + toName, initPad, tc);
-            initPad = 0f;
-        }
-        
-        if (mode != IntelInfoPlugin.ListInfoMode.IN_DESC) {
-            @SuppressWarnings("unused")
-                        LabelAPI label = info.addPara(toSystemName, tc, initPad);
+            info.addPara("Fleet size: %s", initPad, tc, Misc.getHighlightColor(), ucFirst(fleetSizeDescriptor));
+            info.addPara("Target: %s", 0f, tc, origFaction != null ? origFaction.getBaseUIColor() : Misc.getHighlightColor(), toName);
+            info.addPara("Destination system: %s", 0f, tc, Misc.getHighlightColor(), toSystemName);
             initPad = 0f;
         }
         
@@ -154,7 +151,7 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
         
         String heOrShe = "She";
         String hisOrHer = "her";
-        String whatWillSheDo = " has decided to cause as much trouble as possible within the ";
+        String whatWillSheDo = " has decided to stir up as much trouble as possible across the ";
         
         if (commanderIsMale) {
             heOrShe = "He";
@@ -164,41 +161,36 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
         String fleetDescriptor = "fleet";
         
         if (decision.equals("party")) {
-            whatWillSheDo = " has decided on a voyage of discovery; traveling to the ";
-            fleetDescriptor = "group of friends";
+            whatWillSheDo = " has launched an eccentric voyage of discovery; traveling to the ";
+            fleetDescriptor = "group of merrymakers";
         } else if (decision.equals("scavenge")) {
-            whatWillSheDo = " has decided to go on a salvage expedition; traveling to the ";
+            whatWillSheDo = " has organized a salvage expedition; traveling to the ";
             fleetDescriptor = "scavenger fleet";
         }
 
-        LabelAPI label = info.addPara("Friends at " + fromName + 
-                 " are excited to inform you that, having spent time in reflection, " + getWhat() +
+        LabelAPI label = info.addPara("Your contacts at " + fromName + 
+                 " are delighted to pass along word that, after lengthy contemplation, " + getWhat() +
                  ", the " + 
                  junkFaction.getPersonNamePrefix() + " " + commanderRank +
-                 " is leaving orbit having decided on " +
-                 hisOrHer + " preferred course of action.", opad, tc);
+                 ", has departed orbit having settled on " +
+                 hisOrHer + " course of action.", opad, tc);
         
-        label.setHighlight(fromName, junkFaction.getPersonNamePrefix());
-        if (origFaction != null) {
-            label.setHighlightColors(origFaction.getBaseUIColor(), junkFaction.getBaseUIColor());
-        } else {
-            label.setHighlightColors(junkFaction.getBaseUIColor(), junkFaction.getBaseUIColor());
-        }
+        label.setHighlight(fromName, getWhat(), junkFaction.getPersonNamePrefix());
+        label.setHighlightColors(origFaction != null ? origFaction.getBaseUIColor() : junkFaction.getBaseUIColor(), Misc.getHighlightColor(), junkFaction.getBaseUIColor());
         
         String fleetSizeDescriptorModified = fleetSizeDescriptor;
         if (fleetSizeDescriptorModified.equals("moderate")) {
             fleetSizeDescriptorModified = "moderately sized";
         }
-        @SuppressWarnings("unused")
-                LabelAPI label2 = info.addPara(heOrShe + whatWillSheDo + toSystemName + ". " + heOrShe + " travels with a " +
-                        fleetSizeDescriptorModified + " " + fleetDescriptor + ".", opad, tc);
+        LabelAPI label2 = info.addPara(heOrShe + whatWillSheDo + toSystemName + " system with a " +
+                fleetSizeDescriptorModified + " " + fleetDescriptor + ".", opad, tc);
+        label2.setHighlight(toSystemName, fleetSizeDescriptorModified + " " + fleetDescriptor);
+        label2.setHighlightColors(Misc.getHighlightColor(), Misc.getHighlightColor());
         
         if (fleetSizeDescriptor.equals("tiny")) {
-            @SuppressWarnings("unused")
-                        LabelAPI label3 = info.addPara(heOrShe + " should know better, really.", opad, tc);
+            info.addPara(heOrShe + " should probably know better, given the threadbare state of the detachment.", opad, Misc.getGrayColor());
         } else if (fleetSizeDescriptor.equals("huge")) {
-            @SuppressWarnings("unused")
-                        LabelAPI label3 = info.addPara(heOrShe + " has often been accused of overdoing it.", opad, tc);
+            info.addPara(heOrShe + " has a reputation for excess, commanding enough jury-rigged firepower to level an orbital station.", opad, Misc.getHighlightColor());
         }
         
         info.beginIconGroup();

@@ -3,9 +3,12 @@
 	"hullId":"junk_pirates_stoatA",
 	"variantId":"junk_pirates_stoatA_Standard",
         "goalVariant": true,
-	"fluxVents":0,
-	"fluxCapacitors":0,
-	"mods":[], # array of strings
+	"fluxVents": 8,
+	"fluxCapacitors": 5,
+	"hullMods": [
+    "auxiliarythrusters",
+    "insulatedengine"
+  ],
 	
 	# mode is either LINKED or ALTERNATING
 	# slot ids (WS ***) must match what's in the .ship file

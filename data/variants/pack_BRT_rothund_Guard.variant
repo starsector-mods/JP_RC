@@ -1,8 +1,8 @@
 {
   "quality":0.5,
   "displayName": "Guard",
-  "fluxCapacitors": 0,
-  "fluxVents": 1,
+  "fluxCapacitors": 2,
+  "fluxVents": 12,
         "goalVariant": true,
   "hullId": "pack_BRT_rothund",
   "hullMods": [

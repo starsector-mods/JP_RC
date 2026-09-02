@@ -39,8 +39,9 @@ import org.apache.log4j.Logger;
  */
 public class SyndicateAspFleetManager extends BaseCampaignEventListener implements EveryFrameScript {
 
-    private final List<SyndicateAspCourierRouteData> activeAspFleets = new LinkedList<>();
-    private final IntervalUtil tracker;
+    private List<SyndicateAspCourierRouteData> activeAspFleets = new LinkedList<>();
+    private IntervalUtil tracker;
+    transient private boolean hasRunSweep = false;
     
 //    public static final float minAspCourierSpawnInterval = 2.0f;
     
@@ -51,24 +52,56 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
     
     public SyndicateAspFleetManager() {
         super(true);
-        
-        float interval = Global.getSettings().getFloat("averagePatrolSpawnInterval");
-        tracker = new IntervalUtil(interval * 0.45f / junkPiratesFleetFrequencyModifier, interval * .75f / junkPiratesFleetFrequencyModifier);
-        
+    }
+    
+    public IntervalUtil getTracker() {
+        if (tracker == null) {
+            float interval = Global.getSettings().getFloat("averagePatrolSpawnInterval");
+            tracker = new IntervalUtil(interval * 0.45f / junkPiratesFleetFrequencyModifier, interval * .75f / junkPiratesFleetFrequencyModifier);
+        }
+        return tracker;
     }
     
     protected Object readResolve() {
         Global.getSector().addTransientListener(this);
+        getTracker();
+        
+        if (activeAspFleets == null) activeAspFleets = new java.util.LinkedList<>();
+        
         return this;
     }
     
     @Override
     public void advance(float amount) {
-        
+        if (!hasRunSweep) {
+            if (activeAspFleets == null) activeAspFleets = new java.util.LinkedList<>();
+            if (activeAspFleets.isEmpty()) {
+                for (com.fs.starfarer.api.campaign.LocationAPI loc : Global.getSector().getAllLocations()) {
+                    for (com.fs.starfarer.api.campaign.CampaignFleetAPI f : loc.getFleets()) {
+                        if (f != null && f.getMemoryWithoutUpdate() != null && 
+                            (f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetITEMS") ||
+                             f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetMONEY") ||
+                             f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetVIP") ||
+                             f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetPRISONER"))) {
+                            boolean found = false;
+                            for (SyndicateAspCourierRouteData rd : activeAspFleets) {
+                                if (rd.fleet == f) { found = true; break; }
+                            }
+                            if (!found) {
+                                activeAspFleets.add(new SyndicateAspCourierRouteData(f));
+                            }
+                        }
+                    }
+                }
+            }
+            hasRunSweep = true;
+        }
+
+        if (Global.getSector() == null || Global.getSector().getClock() == null) return;
         float days = Global.getSector().getClock().convertToDays(amount);
         
-        tracker.advance(days);
-        if (!tracker.intervalElapsed()) {
+        getTracker().advance(days);
+        if (!getTracker().intervalElapsed()) {
             return;
         }
 
@@ -102,7 +135,7 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
 //    }
     
     protected int getMaxFleets() {
-        int numMarkets = Global.getSector().getEconomy().getNumMarkets();
+        int numMarkets = 0; for(com.fs.starfarer.api.campaign.econ.MarketAPI m : Global.getSector().getEconomy().getMarketsCopy()) { if("syndicate_asp".equals(m.getFactionId())) numMarkets++; }
         int maxBasedOnMarket = (int) ( numMarkets * junkPiratesMaxFleetModifier/ 4 ); //numMarkets * 2 is vanilla equivalent for Economy fleets. We want to be well below this.
         return maxBasedOnMarket; // probably want to externalise this in mendoncaModSettings
     }
@@ -304,11 +337,13 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
         
         CampaignFleetAPI fleet = createAspCourierFleet(data);
         
-        if (fleet == null || data.from == null || data.to == null || data.cargotype == null) return null;
+        if (fleet == null || data.from == null || data.to == null || data.cargotype == null ||
+            data.from.getPrimaryEntity() == null || data.from.getPrimaryEntity().getContainingLocation() == null || 
+            data.from.getPrimaryEntity().getLocation() == null) return null;
         
         data.fleet = fleet;
         
-        if ("syndicate_asp_familia".equals(data.fleet.getFaction().getId())) {
+        if (data.fleet.getFaction() != null && "syndicate_asp_familia".equals(data.fleet.getFaction().getId())) {
             data.fleet.setFaction("syndicate_asp");
         } // do this before add to list otherwise change list and don't recognise it when despawning
         
@@ -340,7 +375,7 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
             if (market.isHidden()) continue;
             
             if (!market.hasSpaceport()) continue;
-            if (market.getFaction() != null && !"syndicate_asp".equals(market.getFaction().getId())) continue; // don't get non-syndicate markets
+            if (!"syndicate_asp".equals(market.getFactionId())) continue; // don't get non-syndicate markets
             
             float w = market.getSize(); // weight by market size
             
@@ -515,7 +550,22 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
     public void reportPlayerEngagement(EngagementResultAPI result) {
         boolean player_won = result.didPlayerWin();
         if (player_won) {
-            Global.getSector().getMemoryWithoutUpdate().set("$playerIsSyndicateAspWanted", true);
+            boolean foughtAsp = false;
+            if (result.getBattle() != null) {
+                for (CampaignFleetAPI f : result.getBattle().getNonPlayerSide()) {
+                    if (f.getFaction() != null && "syndicate_asp".equals(f.getFaction().getId()) && !f.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
+                        foughtAsp = true;
+                        break;
+                    }
+                }
+            } else if (result.getLoserResult() != null && result.getLoserResult().getFleet() != null) {
+                if (result.getLoserResult().getFleet().getFaction() != null && "syndicate_asp".equals(result.getLoserResult().getFleet().getFaction().getId()) && !result.getLoserResult().getFleet().getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
+                    foughtAsp = true;
+                }
+            }
+            if (foughtAsp) {
+                Global.getSector().getMemoryWithoutUpdate().set("$playerIsSyndicateAspWanted", true);
+            }
         }
 //        List<FleetMemberAPI> shipsDone = new ArrayList<>();
 //        shipsDone.addAll(engagementResult.getDestroyed());

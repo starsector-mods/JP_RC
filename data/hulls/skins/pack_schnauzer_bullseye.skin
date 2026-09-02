@@ -29,7 +29,6 @@
             #"type": "ENERGY"
 		}
 	},
-	"builtInMods":["targetingunit","pack_bullseye_suite", "insulatedengine"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["targetingunit","pack_bullseye_suite", "insulatedengine"]
+	
 }

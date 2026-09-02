@@ -1,7 +1,7 @@
 {
   "displayName": "Strike",
   "fluxCapacitors": 0,
-  "fluxVents": 2,
+  "fluxVents": 18,
   "goalVariant": true,
   "hullId": "pack_BRT_canebianco",
   "hullMods": [

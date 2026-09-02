@@ -1,7 +1,7 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 0,
-    "fluxVents": 1,
+    "fluxCapacitors": 21,
+    "fluxVents": 30,
         "goalVariant": true,
     "hullId": "junk_pirates_magpie",
     "hullMods": [

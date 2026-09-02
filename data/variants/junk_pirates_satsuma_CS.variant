@@ -1,7 +1,7 @@
 {
   "displayName": "Close Support",
   "fluxCapacitors": 13,
-  "fluxVents": 14,
+  "fluxVents": 16,
   "goalVariant": true,
   "hullId": "junk_pirates_satsuma",
   "hullMods": [

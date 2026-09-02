@@ -2,9 +2,9 @@
   "displayName": "Strike",
   "hullId": "junk_pirates_turbot",
   "variantId": "junk_pirates_turbot_Strike",
-  "fluxVents": 9,
-        "goalVariant": true,
-  "fluxCapacitors": 14,
+  "fluxVents": 14,
+  "goalVariant": true,
+  "fluxCapacitors": 4,
   "hullMods": [
     "augmentedengines",
     "missleracks"

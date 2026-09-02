@@ -34,47 +34,65 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
 
     @Override
     public void advance(float amount) {
-        //SectorEntityToken home = data.from.getPrimaryEntity();
+        if (fleet == null || data == null || data.from == null || data.to == null) return;
         
-        if (fleet.getAI().getCurrentAssignment() != null) { // there is a command to action
-            if (data.to.getPrimaryEntity() == null) { // nowhere to go
+        if (fleet.getAI() != null && fleet.getAI().getCurrentAssignment() != null) { // there is a command to action
+            if (data.to == null || data.to.getPrimaryEntity() == null) { // nowhere to go
                 fleet.clearAssignments();
                 orderedEscape = true;
             } else
             
-            if (fleet.getFleetPoints() < data.startingFP / 2 ) { // severely damaged
+            if (!orderedEscape && fleet.getFleetPoints() < data.startingFP / 2 ) { // severely damaged
                 fleet.clearAssignments();
                 orderedEscape = true;
             }
         } else {
             if (orderedEscape) { // review logic against behaviour!
-                fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000, "aborting mission");// go back whence they came and despawn
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000, "aborting mission");
+                } else {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000, "aborting mission");
+                }
             } else if ("mission_complete".equals(data.mission)) { // no assignments and not escaping - get on with it
-                fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), getOrbitDays(), getReturningActionText());
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), getOrbitDays(), getReturningActionText());
+                } else {
+                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, getOrbitDays(), getReturningActionText());
+                }
             } else if ("loiter".equals(data.mission)) {
-                fleet.addAssignment (FleetAssignment.ORBIT_AGGRESSIVE, data.to.getPrimaryEntity(), getOrbitDays(), getIntelActionText());
-                data.mission = "then_what";
-            } else if ("new_assignment".equals(data.mission)) {
-                data.from = data.to;
-                fleet.addAssignment (FleetAssignment.ORBIT_AGGRESSIVE, data.from.getPrimaryEntity(), getOrbitDays(), getStartingActionText());
-                data.mission = "find_somewhere_else";
-            } else if ("find_somewhere_else".equals(data.mission)) {
-                MarketAPI next = findNewTarget();
-                if (data.fleet != null && next != null) {
-                    data.to = next;
-                    if (enableJunkPiratesIntel) {
-                    new SyndicateAspHitSquadDepartureIntel(data);
-                    }
+                if (data.to != null && data.to.getPrimaryEntity() != null) {
+                    fleet.addAssignment (FleetAssignment.ORBIT_AGGRESSIVE, data.to.getPrimaryEntity(), getOrbitDays(), getIntelActionText());
+                    data.mission = "then_what";
                 } else {
                     data.mission = "mission_complete";
                 }
-                fleet.addAssignment (FleetAssignment.GO_TO_LOCATION, data.to.getPrimaryEntity(), 1000f, getTravelActionText());
-                fleet.addAssignment (FleetAssignment.ORBIT_AGGRESSIVE, data.to.getPrimaryEntity(), getOrbitDays(), getIntelActionText());
-                data.mission = "then_what";
+            } else if ("new_assignment".equals(data.mission)) {
+                data.from = data.to;
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment (FleetAssignment.ORBIT_AGGRESSIVE, data.from.getPrimaryEntity(), getOrbitDays(), getStartingActionText());
+                    data.mission = "find_somewhere_else";
+                } else {
+                    data.mission = "mission_complete";
+                }
+            } else if ("find_somewhere_else".equals(data.mission)) {
+                MarketAPI next = findNewTarget();
+                if (data.fleet != null && next != null && next.getPrimaryEntity() != null) {
+                    data.to = next;
+                    if (enableJunkPiratesIntel && !data.intelAdded) {
+                        new SyndicateAspHitSquadDepartureIntel(data);
+                        data.intelAdded = true;
+                    }
+                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION, data.to.getPrimaryEntity(), 1000f, getTravelActionText());
+                    fleet.addAssignment (FleetAssignment.ORBIT_AGGRESSIVE, data.to.getPrimaryEntity(), getOrbitDays(), getIntelActionText());
+                    data.mission = "then_what";
+                } else {
+                    data.mission = "mission_complete";
+                }
             } else if ("hunt_player".equals(data.mission)) {
                 if (data.fleet != null) {
-                    if (enableJunkPiratesIntel) {
+                    if (enableJunkPiratesIntel && !data.intelAdded) {
                         new SyndicateAspHitSquadDepartureIntel(data);
+                        data.intelAdded = true;
                     }
                 }
                 fleet.addAssignment(FleetAssignment.INTERCEPT, Global.getSector().getPlayerFleet(), 7.0f); // spend a week on it
@@ -150,6 +168,7 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
         public MarketAPI to;
                 
         public CampaignFleetAPI fleet;
+        public boolean intelAdded = false;
         
         public SyndicateAspHitSquadData(CampaignFleetAPI fleet) {
             this.fleet = fleet;
@@ -241,7 +260,7 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
 	}
 	
 	protected String getInSystemActionText(RouteSegment segment) {
-            return "WHAT";
+            return "patrolling the system";
 	}
         
         @Override
@@ -259,6 +278,10 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
 	protected SyndicateAspHitSquadData getData() {
                 
                 return data;
+	}
+
+	protected Object readResolve() {
+		return this;
 	}
 	
 }

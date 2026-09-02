@@ -118,6 +118,7 @@ public class JunkPiratesLostTechDefenderInteraction extends BaseCommandPlugin {
                                                     } else if (!her_market.hasCondition("JUNK_habTubes")) {
                                                         her_market.addCondition("JUNK_habTubes");
                                                     }
+                                                    her_market.reapplyConditions();
                                                 }
                                             }
                                             entity.removeScriptsOfClass(FleetAdvanceScript.class);
@@ -138,11 +139,13 @@ public class JunkPiratesLostTechDefenderInteraction extends BaseCommandPlugin {
                                                     if (!entity.hasScriptOfClass(FleetAdvanceScript.class)) {
                                                             defenders.setDoNotAdvanceAI(true);
                                                             defenders.setContainingLocation(entity.getContainingLocation());
-                                                            // somewhere far off where it's not going to be in terrain or whatever
-                                                            defenders.setLocation(1000000, 1000000);
+                                                            defenders.setLocation(entity.getLocation().x, entity.getLocation().y);
                                                             entity.addScript(new FleetAdvanceScript(defenders));
                                                     }
                                                     memory.expire("$defenderFleet", 10); // defenders may have gotten damaged; persist them for a bit
+                                            } else {
+                                                    defenders.despawn();
+                                                    memory.unset("$defenderFleet");
                                             }
                                             dialog.dismiss();
                                     }

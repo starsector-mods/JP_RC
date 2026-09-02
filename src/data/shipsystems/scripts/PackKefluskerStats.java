@@ -15,12 +15,15 @@ import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 
 public class PackKefluskerStats extends BaseShipSystemScript {
 
+	public static final float SPEED_BONUS = 260f;
+	public static final float ACCEL_BONUS = 320f;
+
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		if (state == ShipSystemStatsScript.State.OUT) {
 			stats.getMaxSpeed().unmodify(id); // to slow down ship to its regular top speed while powering drive down
 		} else {
-			stats.getMaxSpeed().modifyFlat(id, 260f * effectLevel);
-			stats.getAcceleration().modifyFlat(id, 320f * effectLevel);
+			stats.getMaxSpeed().modifyFlat(id, SPEED_BONUS * effectLevel);
+			stats.getAcceleration().modifyFlat(id, ACCEL_BONUS * effectLevel);
 			//stats.getAcceleration().modifyPercent(id, 200f * effectLevel);
 		}
 	}
@@ -34,7 +37,8 @@ public class PackKefluskerStats extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("increased engine power", false);
+			if (state == State.OUT) return null;
+			return new StatusData("keflusker boost: +" + (int)(SPEED_BONUS * effectLevel) + " top speed", false);
 		}
 		return null;
 	}

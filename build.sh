@@ -44,5 +44,6 @@ javac -Xlint:unchecked -Xlint:deprecation -Xlint:-options --release 17 -sourcepa
 cd bin
 jar cf ../jars/JunkPirates.jar .
 cd ..
+rm -rf bin sources.txt
 
 echo "JunkPirates.jar built successfully"

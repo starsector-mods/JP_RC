@@ -1,6 +1,6 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 14,
+  "fluxCapacitors": 9,
   "fluxVents": 12,
   "goalVariant": true,
   "hullId": "pack_GFB",

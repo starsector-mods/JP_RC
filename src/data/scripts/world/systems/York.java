@@ -41,12 +41,12 @@ public class York {
 		
 
 
-		system.addPlanet("marple", star, "Marple", "rocky_metallic", 270, 80, 1000, 120);
+		PlanetAPI york1 = system.addPlanet("marple", star, "Marple", "rocky_metallic", 270, 80, 1000, 120);
 		//york1.setFaction("independent");    		
-		//york1.setCustomDescriptionId("planet_yorkI");
+		york1.setCustomDescriptionId("planet_yorkI");
 
-		system.addPlanet("appley_bridge", star, "Appley Bridge", "rocky_ice", 120, 95, 1850, 90);
-		//york2.setCustomDescriptionId("planet_yorkII");
+		PlanetAPI york2 = system.addPlanet("appley_bridge", star, "Appley Bridge", "rocky_ice", 120, 95, 1850, 90);
+		york2.setCustomDescriptionId("planet_yorkII");
 
 
 
@@ -62,7 +62,7 @@ public class York {
 
 		PlanetAPI york4 = system.addPlanet("swanage", star, "Swanage", "gas_giant", 15, 280, 12500, 450);
 
-		//york4.setCustomDescriptionId("planet_yorkIV");
+		york4.setCustomDescriptionId("planet_yorkIV");
 
 		york4.getSpec().setPlanetColor(new Color(215,225,115,255));
 		york4.getSpec().setAtmosphereColor(new Color(160,185,45,140));

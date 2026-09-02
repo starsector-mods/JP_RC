@@ -1,10 +1,12 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 6,
     "fluxVents": 10,
         "goalVariant": true,
     "hullId": "junk_pirates_mandarine",
-    "hullMods": ["armoredweapons"],
+    "hullMods": [
+    "armoredweapons"
+  ],
     "quality": 0.5,
   "variantId": "junk_pirates_mandarine_CS",
   "weaponGroups": [

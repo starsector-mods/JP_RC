@@ -1,13 +1,15 @@
 {
   "displayName": "Macerator",
-  "fluxCapacitors": 4,
-  "fluxVents": 18,
+  "fluxCapacitors": 16,
+  "fluxVents": 50,
   "goalVariant": true,
   "hullId": "syndicate_asp_kingcobra_p",
   "hullMods": [
-    "turretgyros",
     "targetingunit",
-    "fluxbreakers"
+    "hardenedshieldemitter",
+    "magazines",
+    "turretgyros",
+    "armoredweapons"
   ],
   "permaMods": [],
   "quality": 0,
@@ -15,29 +17,10 @@
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS 003": "cyclone"
-      }
-    },
-    {
-      "autofire": true,
       "mode": "LINKED",
       "weapons": {
+        "WS 003": "hephag",
         "WS 001": "autopulse"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 002": "pdburst",
-        "WS 007": "pdburst",
-        "WS 008": "taclaser",
-        "WS 009": "lrpdlaser",
-        "WS 010": "pdburst",
-        "WS 011": "pdlaser",
-        "WS 012": "lrpdlaser"
       }
     },
     {
@@ -48,18 +31,37 @@
       }
     },
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 005": "locust",
-        "WS 006": "salamanderpod",
-        "WS 013": "locust"
+        "WS 005": "cyclone",
+        "WS 013": "cyclone",
+        "WS 006": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "heavyburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdlaser",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser",
+        "WS 012": "pdlaser"
       }
     }
   ],
   "wings": [
-    "syndicate_asp_bite_wing",
+    "syndicate_asp_death_rattle_wing",
     "syndicate_asp_venom_wing",
-    "syndicate_asp_venom_wing"
+    "syndicate_asp_bite_wing"
   ]
 }

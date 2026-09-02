@@ -36,13 +36,14 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
         this.fromEntity = data.from.getPrimaryEntity();
         this.toEntity = data.to.getPrimaryEntity();
         this.fromName = data.from.getName();
-        this.fromFactionId = data.from.getFaction().getId();
-        this.toFactionId = data.to.getFaction().getId();
+        this.fromFactionId = data.from.getFactionId();
+        this.toFactionId = data.to.getFactionId();
         this.fleetPoints = data.fleet.getFleetPoints();
 
         initTransientData();
         
         boolean sameLoc = fromEntity != null && fromEntity.getContainingLocation() != null &&
+                          Global.getSector().getPlayerFleet() != null &&
                           fromEntity.getContainingLocation() == 
                               Global.getSector().getPlayerFleet().getContainingLocation() &&
                           !fromEntity.getContainingLocation().isHyperspace();
@@ -53,13 +54,6 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
             prob += 0.5f; //  approx 100% chance if player in system
         }
         
-        float target = 5f; // we only want maybe 5 or 6 sector wide. If you are so heavily wanted it's fine to be diluted
-        float numAlready = Global.getSector().getIntelManager().getIntelCount(SyndicateAspHitSquadDepartureIntel.class, true);
-        
-        if (numAlready > target) {
-            prob -= 0.15f * (numAlready - target); // less chance more news, 15% per news item over
-        }
-        
         if (origFaction != null && origFaction.isHostileTo(Factions.PLAYER)) {
             prob -= 0.3f; // less likely to spill news at a hostile planet - 70% if in system, 20% if out system, 0% if lots of news & out of system
         }
@@ -68,13 +62,18 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
             return;
         }
         
-        float postingRange = 0f;
-        setPostingRangeLY(postingRange, true);
-        setPostingLocation(fromEntity);
-        
-        float postingTime = ((float) Math.random() * 6) + 4; 
-        
-        Global.getSector().getIntelManager().queueIntel(this, postingTime); // stick it there for about a week or so, fairly transient sort of news.
+        this.hitSquad = data.fleet;
+        Global.getSector().getIntelManager().addIntel(this);
+    }
+    
+    protected com.fs.starfarer.api.campaign.CampaignFleetAPI hitSquad;
+
+    @Override
+    public void advance(float amount) {
+        super.advance(amount);
+        if (hitSquad == null || !hitSquad.isAlive()) {
+            endAfterDelay();
+        }
     }
     
     protected final void initTransientData() {
@@ -104,16 +103,9 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
         bullet(info);
         
         if (mode != IntelInfoPlugin.ListInfoMode.IN_DESC) {
-            info.addPara("Faction: " + aspFaction.getDisplayName(), initPad, tc,
-                         aspFaction.getBaseUIColor(), aspFaction.getDisplayName());
-            info.addPara("Fleet size: " + ucFirst(fleetSizeDescriptor), initPad, tc);
-            initPad = 0f;
-        }
-        
-        if (mode != IntelInfoPlugin.ListInfoMode.IN_DESC) {
-            LabelAPI label = info.addPara("Hit Squad at " + fromName, tc, initPad);
-            label.setHighlight(fromName);
-            label.setHighlightColors(origFaction.getBaseUIColor());
+            info.addPara("Enforcing faction: %s", initPad, tc, aspFaction.getBaseUIColor(), aspFaction.getDisplayName());
+            info.addPara("Origin: %s", 0f, tc, origFaction != null ? origFaction.getBaseUIColor() : Misc.getHighlightColor(), fromName);
+            info.addPara("Fleet size: %s", 0f, tc, Misc.getHighlightColor(), ucFirst(fleetSizeDescriptor));
             initPad = 0f;
         }
         
@@ -140,17 +132,15 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
         
         info.addImage(aspFaction.getLogo(), width, 128, opad);
         
-        String fleetType = "Hit Fleet";
+        LabelAPI label = info.addPara("Urgent encrypted comms traffic intercepted from " + fromName + 
+                 " indicates that your fleet's transponder profile has been flagged by syndicate enforcers.", opad, tc);
+        label.setHighlight(fromName);
+        label.setHighlightColors(origFaction != null ? origFaction.getBaseUIColor() : Misc.getHighlightColor());
         
-        LabelAPI label = info.addPara("You are getting a lot of comms traffic from " + fromName + 
-                 " with your ident attached to it.", opad, tc);
-        @SuppressWarnings("unused")
-                LabelAPI label2 = info.addPara("It appears that " + aspFaction.getPersonNamePrefixAOrAn() + " " + 
-                 aspFaction.getPersonNamePrefix() + " " + fleetType +
-                 " was seen in orbit, seeking not much else but your whereabouts.", opad, tc);
-        
-        label.setHighlight(fromName, aspFaction.getPersonNamePrefix());
-        label.setHighlightColors(origFaction.getBaseUIColor(), aspFaction.getBaseUIColor());
+        LabelAPI label2 = info.addPara("A specialized " + aspFaction.getPersonNamePrefix() + " Hit Squad was sighted departing " +
+                 fromName + ", actively tracking your movements across the sector.", opad, tc);
+        label2.setHighlight(aspFaction.getPersonNamePrefix() + " Hit Squad", fromName);
+        label2.setHighlightColors(aspFaction.getBaseUIColor(), origFaction != null ? origFaction.getBaseUIColor() : Misc.getHighlightColor());
         
         String fleetSizeDescriptorModified = fleetSizeDescriptor;
         if (fleetSizeDescriptorModified.equals("moderate")) {
@@ -159,12 +149,12 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
         
         LabelAPI label3;
         if (fleetSizeDescriptor.equals("tiny") || fleetSizeDescriptor.equals("small")) {
-            label3 = info.addPara("However, rumours suggest the fleet is " + fleetSizeDescriptor + ".", opad);
+            label3 = info.addPara("Reconnaissance reports suggest the hunting group is relatively " + fleetSizeDescriptor + ", likely prioritizing speed and ambush tactics.", opad, tc);
         } else {
-            label3 = info.addPara("The information available points to the fleet being " + fleetSizeDescriptorModified + ".", opad);
+            label3 = info.addPara("Intelligence confirms the hunting detachment is " + fleetSizeDescriptorModified + ", heavily armed and prepared for heavy engagement.", opad, tc);
         }
-        label3.setHighlight(fleetSizeDescriptor);
-        label3.setHighlightColors(aspFaction.getBaseUIColor());
+        label3.setHighlight(fleetSizeDescriptorModified.equals("moderately sized") ? "moderately sized" : fleetSizeDescriptor);
+        label3.setHighlightColors(Misc.getNegativeHighlightColor());
         
         info.beginIconGroup();
         info.setIconSpacingMedium();
@@ -209,7 +199,22 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
 
     @Override
     public SectorEntityToken getMapLocation(SectorMapAPI map) {
+        if (hitSquad != null && hitSquad.isAlive()) return hitSquad;
         return fromEntity;
+    }
+    
+    @Override
+    public java.util.List<IntelInfoPlugin.ArrowData> getArrowData(SectorMapAPI map) {
+        java.util.List<IntelInfoPlugin.ArrowData> arrows = new java.util.ArrayList<IntelInfoPlugin.ArrowData>();
+        com.fs.starfarer.api.campaign.CampaignFleetAPI player = Global.getSector().getPlayerFleet();
+        if (hitSquad != null && hitSquad.isAlive() && player != null) {
+            IntelInfoPlugin.ArrowData arrow = new IntelInfoPlugin.ArrowData(hitSquad, player);
+            arrow.color = new java.awt.Color(240, 70, 50, 200);
+            arrow.width = 15f;
+            arrow.alphaMult = 0.85f;
+            arrows.add(arrow);
+        }
+        return arrows;
     }
 
     protected Object readResolve() {

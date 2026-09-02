@@ -5,8 +5,10 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
 public class PackEngineDivertStats extends BaseShipSystemScript {
 
+	public static final float MOBILITY_BONUS_PERCENT = 60f;
+
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
-		float mult = 1f + 0.6f * effectLevel;
+		float mult = 1f + (MOBILITY_BONUS_PERCENT * 0.01f) * effectLevel;
 		stats.getMaxSpeed().modifyMult(id, mult);
 		stats.getAcceleration().modifyMult(id, mult);
 		stats.getDeceleration().modifyMult(id, mult);
@@ -14,8 +16,6 @@ public class PackEngineDivertStats extends BaseShipSystemScript {
 		stats.getMaxTurnRate().modifyMult(id, mult);
 	}
 	public void unapply(MutableShipStatsAPI stats, String id) {
-		//stats.getShieldTurnRateMult().unmodify(id);
-		//stats.getShieldDamageTakenMult().unmodify(id);
 		stats.getMaxSpeed().unmodify(id);
 		stats.getAcceleration().unmodify(id);
 		stats.getDeceleration().unmodify(id);
@@ -25,15 +25,10 @@ public class PackEngineDivertStats extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("systems diverted to engines", false);
+			return new StatusData("divert to engines: +" + (int) Math.round(MOBILITY_BONUS_PERCENT * effectLevel) + "% speed & agility", false);
 		} else if (index == 1) {
-			return new StatusData("shield inoperative", false);
+			return new StatusData("shield inoperative", true);
 		}
-//		else if (index == 1) {
-//			return new StatusData("shield upkeep reduced to 0", false);
-//		} else if (index == 2) {
-//			return new StatusData("shield upkeep reduced to 0", false);
-//		}
 		return null;
 	}
 }

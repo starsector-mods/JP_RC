@@ -64,14 +64,14 @@ import org.lwjgl.util.vector.Vector2f;
  */
 public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 
-        private int minAnarchistConstellations;
-        private int maxAnarchistConstellations;
-        private float skipProbability;
+        private int minAnarchistConstellations = 3;
+        private int maxAnarchistConstellations = 6;
+        private float skipProbability = 0.9f;
 
-        private int softMaxSpinerettes;
+        private int softMaxSpinerettes = 3;
 
-        private boolean enableProcGen;
-        private boolean enableSpinerettes;
+        private boolean enableProcGen = true;
+        private boolean enableSpinerettes = true;
     
         
     
@@ -230,12 +230,12 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
                                     data.system.addTag("derelict_Tangerine");
                                     tangerine++ ;
                                 } else if (tangerine < 5) {
-                                    if (MathUtils.getRandomNumberInRange(1, 100) < 20) {
+                                    if ((random.nextInt(100) + 1) < 20) {
                                         data.system.addTag("derelict_Tangerine");
                                         tangerine++ ;
                                     }
                                 } else {
-                                        if (MathUtils.getRandomNumberInRange(1, 100) < 5) {
+                                        if ((random.nextInt(100) + 1) < 5) {
                                         data.system.addTag("derelict_Tangerine");
                                         tangerine++ ;
                                         }
@@ -285,7 +285,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 			for (StarSystemData data : systems) { // then for every system, do something with it
 				int index = mainCandidates.indexOf(data);
 				if (index >= 0 && index < numMain) continue; // step out if we're in a MAIN system.
-                                if (MathUtils.getRandomNumberInRange(1, 100) < 5) {
+                                if ((random.nextInt(100) + 1) < 5) {
                                     data.system.addTag("derelict_Tangerine");
                                     tangerine++ ;
                                 }
@@ -379,20 +379,26 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
                                     data.system.addTag("junk_pirates_Spinerette");
                                     spineret++ ;
                                     addSpinerette(data, planet);
-                                    planet.getMarket().addCondition("JUNK_habTubes_active");
-                                } else if (spineret < softMaxSpinerettes) {
-                                        if (MathUtils.getRandomNumberInRange(1, 100) < 50) {
-                                        data.system.addTag("junk_pirates_Spinerette");
-                                        spineret++ ;
-                                        addSpinerette(data, planet);
+                                    if (planet != null && planet.getMarket() != null) {
                                         planet.getMarket().addCondition("JUNK_habTubes_active");
                                     }
-                                } else {
-                                        if (MathUtils.getRandomNumberInRange(1, 100) < 5) {
+                                } else if (spineret < softMaxSpinerettes) {
+                                        if ((random.nextInt(100) + 1) < 50) {
                                         data.system.addTag("junk_pirates_Spinerette");
                                         spineret++ ;
                                         addSpinerette(data, planet);
-                                        planet.getMarket().addCondition("JUNK_habTubes_active");
+                                        if (planet != null && planet.getMarket() != null) {
+                                            planet.getMarket().addCondition("JUNK_habTubes_active");
+                                        }
+                                    }
+                                } else {
+                                        if ((random.nextInt(100) + 1) < 5) {
+                                        data.system.addTag("junk_pirates_Spinerette");
+                                        spineret++ ;
+                                        addSpinerette(data, planet);
+                                        if (planet != null && planet.getMarket() != null) {
+                                            planet.getMarket().addCondition("JUNK_habTubes_active");
+                                        }
                                         }
                                     }  
                                 }
@@ -593,6 +599,8 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
             EntityLocation loc = pickAnyLocation(random, data.system, 70f, null);
             
             AddedEntity ae = addDerelictShip(data, loc, "junk_pirates_tangerine_Hull");
+            
+            if (ae == null || ae.entity == null) return;
 
             SalvageSpecialAssigner.ShipRecoverySpecialCreator creator = new SalvageSpecialAssigner.ShipRecoverySpecialCreator(random, 0, 0, false, null, null);
             Object specialData = creator.createSpecial(ae.entity, new SalvageSpecialAssigner.SpecialCreationContext());
@@ -737,6 +745,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 	public static CustomCampaignEntityAPI addBeacon(StarSystemAPI system, AnarchistSystemType type) {
 		
 		SectorEntityToken anchor = system.getHyperspaceAnchor();
+		if (anchor == null) return null;
 		@SuppressWarnings("unchecked")
 		List<SectorEntityToken> points = Global.getSector().getHyperspace().getEntities(JumpPointAPI.class);
 		
@@ -830,30 +839,42 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 	 * @return
 	 */
 	protected List<Constellation> getSortedAvailableConstellations(ThemeGenContext context, boolean emptyOk, final Vector2f sortFrom, List<Constellation> exclude) {
-		//How does it sort?
 		List<Constellation> constellations = new ArrayList<Constellation>();
-		for (Constellation c : context.constellations) { // iterate over every constellation in the Sector ('context')
-			if (context.majorThemes.containsKey(c)) continue; //if there is a majorTheme set here, ignore it
-			if (!emptyOk && constellationIsEmpty(c)) continue; // if the constellation is 'Empty', ignore it
-			if (Misc.getDistance(c.getLocation(), sortFrom) < 22500) continue;
+		for (Constellation c : context.constellations) {
+			if (context.majorThemes.containsKey(c)) continue;
+			if (!emptyOk && constellationIsEmpty(c)) continue;
 			
-                        constellations.add(c); // if no majorTheme set, or not empty, add it to our list
+			boolean isCore = false;
+			for (StarSystemAPI s : c.getSystems()) {
+				if (s.hasTag(Tags.THEME_CORE)) {
+					isCore = true;
+					break;
+				}
+			}
+			if (isCore) continue;
+			
+			if (c.getLocation() != null && sortFrom != null) {
+				if (Misc.getDistance(c.getLocation(), sortFrom) < 22500) continue;
+			} else if (c.getLocation() == null) {
+				continue;
+			}
+			
+			constellations.add(c);
 		}
 		
-		if (exclude != null) { // ??
+		if (exclude != null) {
 			constellations.removeAll(exclude);
 		}
 		
 		Collections.sort(constellations, new Comparator<Constellation>() {
 			public int compare(Constellation o1, Constellation o2) {
-				float d1 = Misc.getDistance(o1.getLocation(), sortFrom); // get the distance from 'sortFrom' to o1
-				float d2 = Misc.getDistance(o2.getLocation(), sortFrom); // get the distance from 'sortFrom' to o2
-				return (int) Math.signum(d2 - d1); //returns 1 or -1; basically this must be sorting the constellations by distance. Nearest to core (0,0) first.		}
-		
-                        }
-                });
+				float d1 = Misc.getDistance(o1.getLocation(), sortFrom);
+				float d2 = Misc.getDistance(o2.getLocation(), sortFrom);
+				return (int) Math.signum(d2 - d1);
+			}
+		});
 		return constellations;
-        }
+	}
         
 	public static boolean constellationIsEmpty(Constellation c) {
 		for (StarSystemAPI s : c.getSystems()) {

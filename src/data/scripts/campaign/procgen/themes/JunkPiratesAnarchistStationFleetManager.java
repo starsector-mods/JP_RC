@@ -51,7 +51,7 @@ public class JunkPiratesAnarchistStationFleetManager extends SourceBasedFleetMan
 		combatPoints *= 8;
 
                 String anarchist_faction = "pack";
-                if (source.getFaction().getId() != null) anarchist_faction = source.getFaction().getId();                
+                if (source.getFaction() != null && source.getFaction().getId() != null) anarchist_faction = source.getFaction().getId();                
                 
 		FleetParamsV3 params = new FleetParamsV3(
 				null, //source.getMarket(),
@@ -92,6 +92,7 @@ public class JunkPiratesAnarchistStationFleetManager extends SourceBasedFleetMan
 		super.reportFleetDespawnedToListener(fleet, reason, param);
 		if (reason == CampaignEventListener.FleetDespawnReason.DESTROYED_BY_BATTLE) {
 			totalLost++;
+			totalLost = Math.min(totalLost, 10);
 		}
 	}
 

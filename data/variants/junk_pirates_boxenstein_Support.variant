@@ -1,7 +1,7 @@
 {
   "displayName": "Support",
-  "fluxCapacitors": 13,
-  "fluxVents": 19,
+  "fluxCapacitors": 6,
+  "fluxVents": 15,
   "goalVariant": true,
   "hullId": "junk_pirates_boxenstein",
   "hullMods": [

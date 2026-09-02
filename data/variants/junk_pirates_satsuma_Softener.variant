@@ -1,6 +1,6 @@
 {
   "displayName": "Softener",
-  "fluxCapacitors": 9,
+  "fluxCapacitors": 13,
   "fluxVents": 20,
   "goalVariant": true,
   "hullId": "junk_pirates_satsuma",

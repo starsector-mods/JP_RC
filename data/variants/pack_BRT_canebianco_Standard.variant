@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 0,
-  "fluxVents": 13,
+  "fluxCapacitors": 6,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "pack_BRT_canebianco",
   "hullMods": [

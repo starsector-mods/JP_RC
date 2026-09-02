@@ -1,0 +1,14 @@
+{
+	"id":"pack_alpha_call",
+	"type":"STAT_MOD",
+	"aiType":"TARGETING_FEED",
+	
+	"statsScript":"data.shipsystems.scripts.PackAlphaCallStats",
+	
+	"useSound":"pack_alpha_call_activate",
+	"loopSound":"pack_alpha_call_loop",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}

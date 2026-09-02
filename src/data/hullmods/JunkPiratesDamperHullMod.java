@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 
 public class JunkPiratesDamperHullMod extends BaseHullMod {
 
-    public static final float PASSIVE_REDUCTION = 0.1f; // 10% passive reduction
+    public static final float PASSIVE_REDUCTION = 0.15f; // 15% passive reduction
 
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -28,8 +28,8 @@ public class JunkPiratesDamperHullMod extends BaseHullMod {
         
         // Show the passive buff in the player's status bar only if the active system is not running
         if (ship == com.fs.starfarer.api.Global.getCombatEngine().getPlayerShip()) {
-            ShipSystemAPI system = ship.getSystem();
-            boolean systemActive = system != null && system.getId().equals("junk_pirates_damper") && system.isActive();
+            ShipSystemAPI system = (ship.getPhaseCloak() != null && "junk_pirates_damper".equals(ship.getPhaseCloak().getId())) ? ship.getPhaseCloak() : ship.getSystem();
+            boolean systemActive = system != null && "junk_pirates_damper".equals(system.getId()) && system.isActive();
             
             if (!systemActive) {
                 int percent = (int)(PASSIVE_REDUCTION * 100f);
@@ -47,7 +47,7 @@ public class JunkPiratesDamperHullMod extends BaseHullMod {
     @Override
     public String getDescriptionParam(int index, ShipAPI.HullSize hullSize) {
         if (index == 0) return "" + (int)(PASSIVE_REDUCTION * 100f) + "%";
-        if (index == 1) return "50%"; // Refers to the ship system's active state
+        if (index == 1) return "" + (int)(data.shipsystems.scripts.JunkPiratesDamperStats.DAMAGE_MULT * 100f) + "%"; // Refers to the ship system's active state
         return null;
     }
 }

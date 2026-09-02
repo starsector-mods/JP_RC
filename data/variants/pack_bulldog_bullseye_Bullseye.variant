@@ -39,8 +39,6 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "lrpdlaser",
-                "WS 010": "lrpdlaser",
                 "WS 011": "lrpdlaser",
                 "WS 012": "lrpdlaser",
                 "WS 015": "lrpdlaser",

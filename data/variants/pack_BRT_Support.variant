@@ -1,7 +1,7 @@
 {
   "displayName": "Support",
-  "fluxCapacitors": 0,
-  "fluxVents": 7,
+  "fluxCapacitors": 2,
+  "fluxVents": 18,
   "goalVariant": true,
   "hullId": "pack_BRT",
   "hullMods": [

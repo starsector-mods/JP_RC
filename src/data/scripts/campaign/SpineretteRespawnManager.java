@@ -16,7 +16,19 @@ import java.util.List;
  */
 public class SpineretteRespawnManager implements EveryFrameScript {
 
-    private final IntervalUtil tracker = new IntervalUtil(5f, 10f); // Check every 5 to 10 game days
+    private IntervalUtil tracker; // Check every 5 to 10 game days
+
+    public IntervalUtil getTracker() {
+        if (tracker == null) {
+            tracker = new IntervalUtil(5f, 10f);
+        }
+        return tracker;
+    }
+
+    protected Object readResolve() {
+        getTracker();
+        return this;
+    }
 
     @Override
     public boolean isDone() {
@@ -30,18 +42,24 @@ public class SpineretteRespawnManager implements EveryFrameScript {
 
     @Override
     public void advance(float amount) {
+        if (Global.getSector() == null || Global.getSector().getClock() == null) return;
         float days = Global.getSector().getClock().convertToDays(amount);
-        tracker.advance(days);
-        if (!tracker.intervalElapsed()) {
+        getTracker().advance(days);
+        if (!getTracker().intervalElapsed()) {
             return;
         }
 
         // Loop through all star systems to find spinerette entities
         List<StarSystemAPI> systems = Global.getSector().getStarSystems();
+        if (systems == null) return;
         for (StarSystemAPI system : systems) {
+            if (system == null) continue;
             List<SectorEntityToken> entities = system.getEntitiesWithTag("junk_pirates_spinerette_active");
+            if (entities == null) continue;
             for (SectorEntityToken entity : entities) {
+                if (entity == null) continue;
                 MemoryAPI mem = entity.getMemoryWithoutUpdate();
+                if (mem == null) continue;
                 if (mem.getBoolean("$defenderFleetDefeated")) {
                     mem.set("$spineretteWasDefeated", true);
                 } else if (mem.getBoolean("$spineretteWasDefeated")) {
@@ -60,10 +78,12 @@ public class SpineretteRespawnManager implements EveryFrameScript {
                     }
 
                     // Display a system message warning the player that automated structures have rebooted
-                    Global.getSector().getCampaignUI().addMessage(
-                        "Sensors indicate that the Automata Cloud surrounding the Spinerette structure in " + system.getNameWithLowercaseType() + " has completed its repair cycle.",
-                        Global.getSettings().getColor("yellowTextColor")
-                    );
+                    if (Global.getSector().getCampaignUI() != null) {
+                        Global.getSector().getCampaignUI().addMessage(
+                            "Sensors indicate that the Automata Cloud surrounding the Spinerette structure in " + system.getNameWithLowercaseType() + " has completed its repair cycle.",
+                            Global.getSettings().getColor("yellowTextColor")
+                        );
+                    }
                 }
             }
         }

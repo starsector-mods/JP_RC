@@ -1,9 +1,12 @@
 {
     "displayName": "Balanced",
-    "fluxCapacitors": 20,
+    "fluxCapacitors": 17,
     "fluxVents": 20,
     "hullId": "syndicate_asp_hammerhead",
-    "hullMods": ["missleracks"],
+    "hullMods": [
+    "missleracks",
+    "hardenedshieldemitter"
+  ],
     "quality": 0.5,
         "goalVariant": true,
     "variantId": "syndicate_asp_hammerhead_Balanced",

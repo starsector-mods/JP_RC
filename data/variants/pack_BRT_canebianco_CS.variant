@@ -1,7 +1,7 @@
 {
   "displayName": "Support",
-  "fluxCapacitors": 0,
-  "fluxVents": 11,
+  "fluxCapacitors": 7,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "pack_BRT_canebianco",
   "hullMods": [

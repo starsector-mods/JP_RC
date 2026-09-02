@@ -1,10 +1,13 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 8,
     "fluxVents": 10,
     "hullId": "syndicate_asp_vigilance",
         "goalVariant": true,
-    "hullMods": [],
+    "hullMods": [
+    "hardenedshieldemitter",
+    "turretgyros"
+  ],
     "quality": 0.5,
     "variantId": "syndicate_asp_vigilance_Standard",
     "weaponGroups": [

@@ -3,7 +3,7 @@
   "displayName": "Standard",
   "fluxCapacitors": 0,
   "fluxVents": 13,
-        "goalVariant": true,
+  "goalVariant": true,
   "hullId": "pack_pitbull_canebianco",
   "hullMods": [
     "missleracks",

@@ -83,11 +83,11 @@ public class Brehinni {
                     3,
                     new ArrayList<>(Arrays.asList(Conditions.VERY_HOT,
                                                   Conditions.NO_ATMOSPHERE,
-                                                  Conditions.FREE_PORT,
-                                                  Conditions.POPULATION_3)),
+                                                  Conditions.FREE_PORT)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.LIGHTINDUSTRY,
+                                          Industries.GROUNDDEFENSES,
                                           Industries.POPULATION)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                   Submarkets.SUBMARKET_BLACK,
@@ -112,9 +112,8 @@ public class Brehinni {
                 AddMarketPlace.addMarketplace("junk_pirates", milStation,
                     null,
                     "Karkov Academy",
-                    3,
-                    new ArrayList<>(Arrays.asList(Conditions.FREE_PORT,
-                                                  Conditions.POPULATION_3)),
+                    4,
+                    new ArrayList<>(Arrays.asList(Conditions.FREE_PORT)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.HIGHCOMMAND,
@@ -157,12 +156,12 @@ public class Brehinni {
                                                                                 Conditions.HIGH_GRAVITY,
                                                                                 Conditions.VOLATILES_DIFFUSE,
                                                                                 Conditions.FARMLAND_POOR,
-                                                                                "JUNK_habTubes",
-                                                                                Conditions.POPULATION_5)),
+                                                                                "JUNK_habTubes")),
                                                   new ArrayList<>(Arrays.asList(
                                                                         Industries.SPACEPORT,
                                                                         Industries.BATTLESTATION,
                                                                         Industries.MILITARYBASE,
+                                                                        Industries.GROUNDDEFENSES,
                                                                         Industries.POPULATION,
                                                                         Industries.FARMING,
                                                                         Industries.MINING,
@@ -237,17 +236,19 @@ public class Brehinni {
                 AddMarketPlace.addMarketplace("junk_pirates", volStation,
                     null,
                     "N.O.M.D.E.",
-                    3,
+                    4,
                     new ArrayList<>(Arrays.asList(Conditions.FREE_PORT,
-                                                  Conditions.VOLATILES_ABUNDANT,
-                                                  Conditions.POPULATION_3)),
+                                                  Conditions.VOLATILES_ABUNDANT)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.MINING,
+                                          Industries.ORBITALSTATION,
+                                          Industries.GROUNDDEFENSES,
+                                          Industries.PATROLHQ,
                                           Industries.POPULATION)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                   Submarkets.SUBMARKET_BLACK,
-                                                  //Submarkets.GENERIC_MILITARY,
+                                                  Submarkets.GENERIC_MILITARY,
                                                   Submarkets.SUBMARKET_OPEN)),
                     0.3f
                 );
@@ -263,7 +264,7 @@ public class Brehinni {
 
 		PlanetAPI york4 = system.addPlanet("swanage", star, "Swanage", "gas_giant", 15, 300, 15000, 450);
 
-		//york4.setCustomDescriptionId("planet_yorkIV");
+		york4.setCustomDescriptionId("planet_yorkIV");
 
 		york4.getSpec().setPlanetColor(new Color(215,225,115,255));
 		york4.getSpec().setAtmosphereColor(new Color(160,185,45,140));
@@ -285,12 +286,11 @@ public class Brehinni {
                     AddMarketPlace.addMarketplace("pack", york4b,
                                                   null,
                                                   "Christchurch",
-                                                  3,
+                                                  4,
                                                   new ArrayList<>(Arrays.asList(Conditions.COLD,
                                                                                 Conditions.POOR_LIGHT,
                                                                                 Conditions.LOW_GRAVITY,
-                                                                                "JUNK_habTubes",
-                                                                                Conditions.POPULATION_3)),
+                                                                                "JUNK_habTubes")),
                                                   new ArrayList<>(Arrays.asList(
                                                                         Industries.SPACEPORT,
                                                                         Industries.PATROLHQ,

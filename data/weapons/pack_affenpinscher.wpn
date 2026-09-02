@@ -1,6 +1,7 @@
 {
 	"id":"pack_affenpinscher",  # this id must match what's in the spreadsheet
 	"specClass":"beam",
+	"beamEffect":"data.scripts.weapons.PackAffenpinscherBeamEffect",
 	"type":"ENERGY",
 	"size":"MEDIUM",
 	"collisionClass":"RAY",

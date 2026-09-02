@@ -1,12 +1,13 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 1,
-  "fluxVents": 4,
+  "fluxCapacitors": 9,
+  "fluxVents": 10,
   "goalVariant": true,
   "hullId": "syndicate_asp_diamondback_p",
   "hullMods": [
     "turretgyros",
-    "magazines"
+    "magazines",
+    "hardenedshieldemitter"
   ],
   "permaMods": [],
   "quality": 0,

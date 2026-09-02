@@ -1,7 +1,7 @@
 {
     "displayName": "Wingclipper",
     "fluxCapacitors": 4,
-    "fluxVents": 9,
+    "fluxVents": 10,
     "hullId": "junk_pirates_clementine",
     "hullMods": [],
     "quality": 0.5,

@@ -1,7 +1,7 @@
 {
   "displayName": "Elite",
   "fluxCapacitors": 6,
-  "fluxVents": 21,
+  "fluxVents": 22,
         "goalVariant": true,
   "hullId": "junk_pirates_orcenstein",
   "hullMods": [],

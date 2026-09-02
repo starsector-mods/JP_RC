@@ -37,16 +37,23 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	
 	@Override
 	public boolean isHidden() {
-		return !market.getFactionId().equals("syndicate_asp");
+		return false;
 	}
 	
 	@Override
 	public boolean isFunctional() {
-		return super.isFunctional() && market.getFactionId().equals("syndicate_asp");
+		return super.isFunctional() && market != null && market.getFactionId() != null && "syndicate_asp".equals(market.getFactionId());
+	}
+
+	@Override
+	public boolean canShutDown() {
+		return super.canShutDown() || (market != null && (!"syndicate_asp".equals(market.getFactionId()) || market.isPlayerOwned()));
 	}
 
 	public void apply() {
 		super.apply(true);
+		
+		if (market == null) return;
 		
 		int size = market.getSize();
 		
@@ -64,9 +71,18 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 		
 		modifyStabilityWithBaseMod();
 		
+		// Register patrol fleet caps so getMaxPatrols() and skills/governors work correctly
+		if (market.getStats() != null && market.getStats().getDynamic() != null) {
+			market.getStats().getDynamic().getMod(Stats.PATROL_NUM_LIGHT_MOD).modifyFlat(getModId(), 3);
+			market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).modifyFlat(getModId(), 2);
+			market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).modifyFlat(getModId(), 1);
+		}
+		
 		MemoryAPI memory = market.getMemoryWithoutUpdate();
-		Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, getModId(), true, -1);
-		Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, getModId(), true, -1);
+		if (memory != null) {
+			Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, getModId(), true, -1);
+			Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, getModId(), true, -1);
+		}
 		
 		if (!isFunctional()) {
 			supply.clear();
@@ -79,9 +95,19 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	public void unapply() {
 		super.unapply();
 		
-		MemoryAPI memory = market.getMemoryWithoutUpdate();
-		Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, getModId(), false, -1);
-		Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, getModId(), false, -1);
+		if (market != null) {
+			if (market.getStats() != null && market.getStats().getDynamic() != null) {
+				market.getStats().getDynamic().getMod(Stats.PATROL_NUM_LIGHT_MOD).unmodify(getModId());
+				market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).unmodify(getModId());
+				market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).unmodify(getModId());
+			}
+			
+			MemoryAPI memory = market.getMemoryWithoutUpdate();
+			if (memory != null) {
+				Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, getModId(), false, -1);
+				Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, getModId(), false, -1);
+			}
+		}
 		
 		unmodifyStabilityWithBaseMod();
 	}
@@ -103,10 +129,13 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 	
 	public String getNameForModifier() {
-		if (getSpec().getName().contains("HQ")) {
-			return getSpec().getName();
+		if (getSpec() != null && getSpec().getName() != null) {
+			if (getSpec().getName().contains("HQ")) {
+				return getSpec().getName();
+			}
+			return Misc.ucFirst(getSpec().getName());
 		}
-		return Misc.ucFirst(getSpec().getName());
+		return "Familia HQ";
 	}
 	
 	@Override
@@ -128,62 +157,74 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 		return true;
 	}
 
-	protected IntervalUtil tracker = new IntervalUtil(Global.getSettings().getFloat("averagePatrolSpawnInterval") * 0.7f,
-													  Global.getSettings().getFloat("averagePatrolSpawnInterval") * 1.3f);
+	protected IntervalUtil tracker = null;
+
+	protected IntervalUtil getTracker() {
+		if (tracker == null) {
+			float base = Global.getSettings().getFloat("averagePatrolSpawnInterval");
+			tracker = new IntervalUtil(base * 0.7f, base * 1.3f);
+		}
+		return tracker;
+	}
 	
 	protected float returningPatrolValue = 0f;
+
+	@Override
+	protected Object readResolve() {
+		super.readResolve();
+		return this;
+	}
 	
 	@Override
 	protected void buildingFinished() {
 		super.buildingFinished();
 		
-		tracker.forceIntervalElapsed();
+		getTracker().forceIntervalElapsed();
 	}
 	
 	@Override
 	protected void upgradeFinished(Industry previous) {
 		super.upgradeFinished(previous);
 		
-		tracker.forceIntervalElapsed();
+		getTracker().forceIntervalElapsed();
 	}
 
 	@Override
 	public void advance(float amount) {
 		super.advance(amount);
 		
-		if (Global.getSector().getEconomy().isSimMode()) return;
+		if (Global.getSector() == null || Global.getSector().getEconomy() == null || Global.getSector().getEconomy().isSimMode()) return;
 
-		if (!isFunctional()) return;
+		if (!isFunctional() || market == null) return;
 		
 		float days = Global.getSector().getClock().convertToDays(amount);
 		
 		float spawnRate = 1f;
-		float rateMult = market.getStats().getDynamic().getStat(Stats.COMBAT_FLEET_SPAWN_RATE_MULT).getModifiedValue();
-		spawnRate *= rateMult;
-		
+		if (market.getStats() != null && market.getStats().getDynamic() != null) {
+			float rateMult = market.getStats().getDynamic().getStat(Stats.COMBAT_FLEET_SPAWN_RATE_MULT).getModifiedValue();
+			spawnRate *= rateMult;
+		}
 		
 		float extraTime = 0f;
 		if (returningPatrolValue > 0) {
 			// apply "returned patrols" to spawn rate, at a maximum rate of 1 interval per day
-			float interval = tracker.getIntervalDuration();
+			float interval = getTracker().getIntervalDuration();
 			extraTime = interval * days;
 			returningPatrolValue -= days;
 			if (returningPatrolValue < 0) returningPatrolValue = 0;
 		}
-		tracker.advance(days * spawnRate + extraTime);
+		getTracker().advance(days * spawnRate + extraTime);
 		
-		//tracker.advance(days * spawnRate * 100f);
-		
-		if (tracker.intervalElapsed()) {
+		if (getTracker().intervalElapsed()) {
 			String sid = getRouteSourceId();
 			
 			int light = getCount(PatrolType.FAST);
 			int medium = getCount(PatrolType.COMBAT);
 			int heavy = getCount(PatrolType.HEAVY);
 
-			int maxLight = 3;
-			int maxMedium = 2;
-			int maxHeavy = 1;
+			int maxLight  = getMaxPatrols(PatrolType.FAST);
+			int maxMedium = getMaxPatrols(PatrolType.COMBAT);
+			int maxHeavy  = getMaxPatrols(PatrolType.HEAVY);
 			
 			WeightedRandomPicker<PatrolType> picker = new WeightedRandomPicker<PatrolType>();
 			picker.add(PatrolType.HEAVY, maxHeavy - heavy); 
@@ -198,12 +239,17 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 			OptionalFleetData extra = new OptionalFleetData(market);
 			extra.fleetType = type.getFleetType();
 			
+			if (RouteManager.getInstance() == null) return;
 			RouteData route = RouteManager.getInstance().addRoute(sid, market, Misc.genRandomSeed(), extra, this, custom);
+			if (route == null) return;
 			float patrolDays = 35f + (float) Math.random() * 10f;
 			
-			route.addSegment(new RouteSegment(patrolDays, market.getPrimaryEntity()));
+			if (market.getPrimaryEntity() != null) {
+				route.addSegment(new RouteSegment(patrolDays, market.getPrimaryEntity()));
+			}
 		}
 	}
+
 	
 	public void reportAboutToBeDespawnedByRouteManager(RouteData route) {
 	}
@@ -213,10 +259,14 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 	
 	public int getCount(PatrolType ... types) {
+		if (types == null || types.length == 0 || market == null || RouteManager.getInstance() == null) return 0;
 		int count = 0;
-		for (RouteData data : RouteManager.getInstance().getRoutesForSource(getRouteSourceId())) {
-			if (data.getCustom() instanceof PatrolFleetData) {
+		java.util.List<RouteData> routes = RouteManager.getInstance().getRoutesForSource(getRouteSourceId());
+		if (routes == null) return 0;
+		for (RouteData data : routes) {
+			if (data != null && data.getCustom() instanceof PatrolFleetData) {
 				PatrolFleetData custom = (PatrolFleetData) data.getCustom();
+				if (custom == null) continue;
 				for (PatrolType type : types) {
 					if (type == custom.type) {
 						count++;
@@ -229,6 +279,7 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 
 	public int getMaxPatrols(PatrolType type) {
+		if (market == null || market.getStats() == null || market.getStats().getDynamic() == null) return 0;
 		if (type == PatrolType.FAST) {
 			return (int) market.getStats().getDynamic().getMod(Stats.PATROL_NUM_LIGHT_MOD).computeEffective(0);
 		}
@@ -250,14 +301,14 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 
 	public void reportFleetDespawnedToListener(CampaignFleetAPI fleet, FleetDespawnReason reason, Object param) {
-		if (!isFunctional()) return;
+		if (!isFunctional() || fleet == null || reason == null || market == null || RouteManager.getInstance() == null) return;
 		
 		if (reason == FleetDespawnReason.REACHED_DESTINATION) {
 			RouteData route = RouteManager.getInstance().getRoute(getRouteSourceId(), fleet);
-			if (route.getCustom() instanceof PatrolFleetData) {
+			if (route != null && route.getCustom() instanceof PatrolFleetData) {
 				PatrolFleetData custom = (PatrolFleetData) route.getCustom();
-				if (custom.spawnFP > 0) {
-					float fraction  = fleet.getFleetPoints() / custom.spawnFP;
+				if (custom != null && custom.spawnFP > 0) {
+					float fraction = fleet.getFleetPoints() / custom.spawnFP;
 					returningPatrolValue += fraction;
 				}
 			}
@@ -265,11 +316,15 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 	
 	public CampaignFleetAPI spawnFleet(RouteData route) {
+		if (route == null || !(route.getCustom() instanceof PatrolFleetData)) return null;
+		if (market == null || market.getContainingLocation() == null || market.getPrimaryEntity() == null) return null;
 		
 		PatrolFleetData custom = (PatrolFleetData) route.getCustom();
 		PatrolType type = custom.type;
+		if (type == null) return null;
 		
 		Random random = route.getRandom();
+		if (random == null) random = new Random();
 		
 		float combat = 0f;
 		float tanker = 0f;
@@ -316,9 +371,6 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 		
 		fleet.addEventListener(this);
 		
-//		PatrolAssignmentAIV2 ai = new PatrolAssignmentAIV2(fleet, custom);
-//		fleet.addScript(ai);
-		
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, true);
 
 		if (type == PatrolType.FAST || type == PatrolType.COMBAT) {
@@ -339,18 +391,19 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 			break;
 		}
 		
-		fleet.getCommander().setPostId(postId);
-		fleet.getCommander().setRankId(rankId);
+		if (fleet.getCommander() != null) {
+			fleet.getCommander().setPostId(postId);
+			fleet.getCommander().setRankId(rankId);
+		}
 		
 		market.getContainingLocation().addEntity(fleet);
 		fleet.setFacing((float) Math.random() * 360f);
 		// this will get overridden by the patrol assignment AI, depending on route-time elapsed etc
-		fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);
+		if (market.getPrimaryEntity().getLocation() != null) {
+			fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);
+		}
 		
 		fleet.addScript(new PatrolAssignmentAIV4(fleet, route));
-		
-		//market.getContainingLocation().addEntity(fleet);
-		//fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);
 		
 		if (custom.spawnFP <= 0) {
 			custom.spawnFP = fleet.getFleetPoints();
@@ -360,12 +413,13 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 	
 	public String getRouteSourceId() {
-		return getMarket().getId() + "_" + "familia";
+		return (getMarket() == null ? "null" : getMarket().getId()) + "_" + "familia";
 	}
 
 	@Override
 	public boolean isAvailableToBuild() {
-		return false;
+		if (market == null || market.getFactionId() == null) return false;
+		return "syndicate_asp".equals(market.getFactionId()) && market.getSize() >= 4;
 	}
 	
 	public boolean showWhenUnavailable() {
@@ -374,3 +428,4 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	
 	
 }
+

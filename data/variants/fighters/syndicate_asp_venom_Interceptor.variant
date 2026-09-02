@@ -14,8 +14,8 @@
       "mode": "LINKED",
       "weapons": {
         "WS 001": "swarmer_fighter",
-        "WS 002": "mininglaser",
-        "WS 003": "mininglaser"
+        "WS 002": "syndicate_asp_taclaser_f",
+        "WS 003": "syndicate_asp_taclaser_f"
       }
     },
     {

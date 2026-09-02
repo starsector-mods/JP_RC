@@ -31,19 +31,18 @@
 		"WS 003":{
 			"angle": 90,
             "arc": 210
-            #"mount": "HARDPOINT",
+            #"mount": "HARDPOINT"
             #"size": "SMALL"
             #"type": "MISSILE"
 		},
 		"WS 004":{
 			"angle": -90,
             "arc": 210
-            #"mount": "HARDPOINT",
+            #"mount": "HARDPOINT"
             #"size": "SMALL"
             #"type": "MISSILE"
 		}
 	},
-	"builtInMods":["auxiliarythrusters", "pack_overclocked_ca"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["auxiliarythrusters", "pack_overclocked_ca"]
+	
 }

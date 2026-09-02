@@ -41,10 +41,10 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
 
     @Override
     public void advance(float amount) {
-        //SectorEntityToken home = data.from.getPrimaryEntity();
+        if (fleet == null || data == null || data.from == null || data.to == null) return;
         
-        if (fleet.getAI().getCurrentAssignment() != null) { // there is a command to action
-            if (data.to.getPrimaryEntity() == null) { // nowhere to go
+        if (fleet.getAI() != null && fleet.getAI().getCurrentAssignment() != null) { // there is a command to action
+            if (data.to == null || data.to.getPrimaryEntity() == null) { // nowhere to go
                 fleet.clearAssignments();
                 orderedEscape = true;
             } else
@@ -55,16 +55,27 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
             }
         } else {
             if (orderedEscape) {
-                fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000, "aborting mission");// go back whence they came and despawn
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000, "aborting mission");
+                } else {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000, "aborting mission");
+                }
             } else if ("delivered".equals(data.mission)) { // no assignments and not esacping - get on with it
                 data.fleet.getCargo().clear();
-                fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), getOrbitDays(), getReturningActionText());
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), getOrbitDays(), getReturningActionText());
+                } else {
+                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, getOrbitDays(), getReturningActionText());
+                }
             } else {
-                fleet.addAssignment (FleetAssignment.ORBIT_PASSIVE, data.from.getPrimaryEntity(), getOrbitDays(), getStartingActionText());
-                fleet.addAssignment (FleetAssignment.GO_TO_LOCATION, data.to.getPrimaryEntity(), 1000, getTravelActionText());
-                fleet.addAssignment (FleetAssignment.ORBIT_PASSIVE, data.to.getPrimaryEntity(), getOrbitDays(), getEndingActionText());
-                data.mission = "delivered";
-                
+                if (data.from != null && data.from.getPrimaryEntity() != null && data.to != null && data.to.getPrimaryEntity() != null) {
+                    fleet.addAssignment (FleetAssignment.ORBIT_PASSIVE, data.from.getPrimaryEntity(), getOrbitDays(), getStartingActionText());
+                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION, data.to.getPrimaryEntity(), 1000, getTravelActionText());
+                    fleet.addAssignment (FleetAssignment.ORBIT_PASSIVE, data.to.getPrimaryEntity(), getOrbitDays(), getEndingActionText());
+                    data.mission = "delivered";
+                } else {
+                    orderedEscape = true;
+                }
             }
         }
 
@@ -146,10 +157,10 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
                     if (isExerelin) { // Nex is enabled and we can stick a prisoner in the cargo hold
                             data.addDeliver("prisoner", (int) tier);
                             float creds = (float) Math.random() * tier;
-                            data.addDeliver("syndicate_asp_credit_chip", (int) creds);
+                            data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
                     } else {
                         float creds = (float) Math.random() * 3 + tier;// not much to do I guess ... stick a few credits in the hold
-                        data.addDeliver("syndicate_asp_credit_chip", (int) creds);
+                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
                     }
                 }
                 
@@ -159,21 +170,21 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
                     if (isExerelin) { // Nex is enabled and we can stick a VIP in the cargo hold
                             data.addDeliver("agent", (int) tier);
                             float creds = (float) Math.random() * 3 + tier;
-                            data.addDeliver("syndicate_asp_credit_chip", (int) creds);
+                            data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
                     } else {
                         float creds = (float) Math.random() * 6 + tier;// not much to do I guess ... stick a few thousand credits in the hold
-                        data.addDeliver("syndicate_asp_credit_chip", (int) creds);
+                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
                     }
                 }
                 
                 if ("money".equals(data.mission)) {
                         float creds = (float) Math.random() + tier * 3;// not much to do I guess ... stick a few thousand credits in the hold
-                        data.addDeliver("syndicate_asp_credit_chip", (int) creds);
+                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
                 }
                 
                 if ("items".equals(data.mission)) {
                         float creds = (float) Math.random() * tier + 3;
-                        data.addDeliver("syndicate_asp_credit_chip", (int) creds);
+                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
                         
                         boolean isMilitary = data.to.hasIndustry("militarybase") || data.to.hasIndustry("highcommand");
                         boolean isHeavy = data.to.hasIndustry("heavyindustry") || data.to.hasIndustry("orbitalworks");
@@ -206,7 +217,7 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
                 
                 for (CargoQuantityData thing : data.cargoDeliver) { // then stick cargo in the fleet data
                     try {
-                        if (Global.getSettings().getCommoditySpec(thing.cargo) != null) {
+                        if (thing.units > 0 && Global.getSettings().getCommoditySpec(thing.cargo) != null) {
                             cargo.addCommodity(thing.cargo, thing.units);
                         }
                     } catch (Exception e) {
@@ -221,7 +232,7 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
 	protected String getStartingActionText() {
             String mission = data.mission;
             
-            String missionText = "INITIALISE";
+            String missionText = "preparing for departure";
 
             if ( "prisoner".equals(mission)) missionText = "Negotiating with " + factionDisplayName(data.customerFaction) + " officials";
             if ( "vip".equals(mission)) missionText = "Wining and dining with notable " + factionDisplayName(data.customerFaction) + " individuals";
@@ -252,7 +263,7 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
             
                 String mission = data.mission;
                 
-		String missionText = "INITIALISE";
+		String missionText = "preparing for departure";
                 
                 if ( "prisoner".equals(mission)) missionText = "Transporting a dangerous prisoner";
                 if ( "vip".equals(mission)) missionText = "Travelling with style";
@@ -268,7 +279,7 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
 	}
 	
 	protected String getInSystemActionText(RouteSegment segment) {
-            return "WHAT";
+            return "in transit";
 	}
         
         @Override
@@ -286,6 +297,10 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
 	protected SyndicateAspCourierRouteData getData() {
                 
                 return data;
+	}
+
+	protected Object readResolve() {
+		return this;
 	}
 	
 }

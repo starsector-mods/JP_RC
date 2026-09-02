@@ -13,7 +13,7 @@
 		"ROMAN":1,
 		"CELTIC":1,
 		"GLORIOUS_TRAINWRECKS":3},
-	"description":"No description yet.",
+	"description":"Born from the lawless asteroid belts and salvage fields of Breh'Inni, the Junk Pirates are a loose feudal confederation of scrappers, privateers, and eccentric outer-fringe nobility answering to the King on Glory. Their fleets are welded together from civilian hulls, industrial machinery, and experimental scavenged technology, relying on heavy armor, high-energy salvos, and volatile Plug-Jet engine overclocks to overwhelm their foes in brutal close-range brawls.",
 	"names":{
 		"old english":1},
 	# variantOverrides restricts hulls to listed variants and adjusts their probability
@@ -41,7 +41,8 @@
 			"junk_pirates_kraken",
 			"junk_pirates_the_reaper",
 			"junk_pirates_boxenstein_blue",
-			"junk_pirates_raven"]},
+			"junk_pirates_raven",
+			"junk_pirates_tangerine"]},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
@@ -52,7 +53,8 @@
 			"junk_pirates_kraken",
 			"junk_pirates_the_reaper",
 			"junk_pirates_boxenstein_blue",
-			"junk_pirates_raven"]},
+			"junk_pirates_raven",
+			"junk_pirates_tangerine"]},
 	"knownFighters":{
 		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
 		"fighters":[

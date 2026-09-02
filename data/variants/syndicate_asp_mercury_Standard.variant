@@ -1,10 +1,12 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 10,
-    "fluxVents": 3,
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
     "hullId": "syndicate_asp_mercury",
-    "hullMods": [],
-        "goalVariant": true,
+    "hullMods": [
+    "hardenedshieldemitter"
+  ],
+    "goalVariant": true,
     "quality": 0.5,
     "variantId": "syndicate_asp_mercury_Standard",
     "weaponGroups": [{

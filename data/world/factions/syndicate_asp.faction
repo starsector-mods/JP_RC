@@ -12,7 +12,7 @@
 	"shipNameSources":{
 		"GREEK":3,
 		"CELTIC":1},
-	"description":"No description yet.",
+	"description":"Operating under the veneer of an interstellar express logistics and parcel delivery corporation from Ursulo, the Associated Starline Parcels (ASP) Syndicate is one of the Persean Sector's most pervasive underworld networks. Beneath their reliable courier shipping fleets lies a ruthless privateer cartel and debt-enforcement hierarchy capable of deploying high-speed carrier taskforces and specialized assault vessels to defend their market monopolies.",
 	"names":{
 		"old english":1},
 	"variantOverrides":{
@@ -45,7 +45,7 @@
 		]},
 	"priorityFighters":{
 		"tags":["junk_pirates_asp_bp"],
-		"hulls":[
+		"fighters":[
 			"syndicate_asp_death_rattle_wing"
 		]},
 	"knownWeapons":{

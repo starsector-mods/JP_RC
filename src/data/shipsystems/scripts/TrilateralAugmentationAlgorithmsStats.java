@@ -21,6 +21,7 @@ public class TrilateralAugmentationAlgorithmsStats extends BaseShipSystemScript 
 	public static final Object KEY_JITTER = new Object();
 	
 	public static final float DAMAGE_INCREASE_PERCENT = 50;
+	public static final float MISSILE_DAMAGE_INCREASE_PERCENT = 25;
         
         public static final float SPEED_INCREASE = 70;
         public static final float ACCEL_INCREASE = 50;
@@ -46,12 +47,12 @@ public class TrilateralAugmentationAlgorithmsStats extends BaseShipSystemScript 
 			for (ShipAPI fighter : getFighters(ship)) {
 				if (fighter.isHulk()) continue;
 				MutableShipStatsAPI fStats = fighter.getMutableStats();
-				fStats.getMaxSpeed().modifyFlat(id, SPEED_INCREASE);
-				fStats.getAcceleration().modifyFlat(id, ACCEL_INCREASE);
-				fStats.getDeceleration().modifyFlat(id, DECEL_INCREASE);
+				//fStats.getMaxSpeed().modifyFlat(id, SPEED_INCREASE);
+				//fStats.getAcceleration().modifyFlat(id, ACCEL_INCREASE);
+				//fStats.getDeceleration().modifyFlat(id, DECEL_INCREASE);
 				fStats.getBallisticWeaponDamageMult().modifyPercent(id, DAMAGE_INCREASE_PERCENT * effectLevel);
 				fStats.getEnergyWeaponDamageMult().modifyPercent(id, DAMAGE_INCREASE_PERCENT * effectLevel);
-				fStats.getMissileWeaponDamageMult().modifyPercent(id, DAMAGE_INCREASE_PERCENT * effectLevel);
+				fStats.getMissileWeaponDamageMult().modifyPercent(id, MISSILE_DAMAGE_INCREASE_PERCENT * effectLevel);
                                 
 				if (jitterLevel > 0) {
 					//fighter.setWeaponGlow(effectLevel, new Color(255,50,0,125), EnumSet.allOf(WeaponType.class));
@@ -88,9 +89,9 @@ public class TrilateralAugmentationAlgorithmsStats extends BaseShipSystemScript 
 			if (fighter.isHulk()) continue;
 			MutableShipStatsAPI fStats = fighter.getMutableStats();
                         
-			fStats.getMaxSpeed().unmodify(id);
-			fStats.getAcceleration().unmodify(id);
-			fStats.getDeceleration().unmodify(id);
+			//fStats.getMaxSpeed().unmodify(id);
+			//fStats.getAcceleration().unmodify(id);
+			//fStats.getDeceleration().unmodify(id);
 			fStats.getBallisticWeaponDamageMult().unmodify(id);
 			fStats.getEnergyWeaponDamageMult().unmodify(id);
 			fStats.getMissileWeaponDamageMult().unmodify(id);
@@ -100,7 +101,11 @@ public class TrilateralAugmentationAlgorithmsStats extends BaseShipSystemScript 
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("" + Misc.getRoundedValueMaxOneAfterDecimal(1f + DAMAGE_INCREASE_PERCENT * effectLevel * 0.01f) + "x fighter damage", false);
+			float mult = 1f + DAMAGE_INCREASE_PERCENT * effectLevel * 0.01f;
+			return new StatusData("fighter guns: " + Misc.getRoundedValueMaxOneAfterDecimal(mult) + "x damage", false);
+		} else if (index == 1) {
+			float missileMult = 1f + MISSILE_DAMAGE_INCREASE_PERCENT * effectLevel * 0.01f;
+			return new StatusData("fighter missiles: " + Misc.getRoundedValueMaxOneAfterDecimal(missileMult) + "x damage", false);
 		}
 		return null;
 	}

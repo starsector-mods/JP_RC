@@ -2,10 +2,10 @@
 	"displayName":"Standard",
 	"hullId":"junk_pirates_stoatB",
 	"variantId":"junk_pirates_stoatB_Standard",
-	"fluxVents":0,
+	"fluxVents":5,
         "goalVariant": true,
-	"fluxCapacitors":0,
-	"mods":[], # array of strings
+	"fluxCapacitors":10,
+	"hullMods":["auxiliarythrusters", "insulatedengine"],
 	
 	# mode is either LINKED or ALTERNATING
 	# slot ids (WS ***) must match what's in the .ship file

@@ -45,8 +45,8 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
         this.toEntity = data.to.getPrimaryEntity();
         this.fromName = data.from.getName();
         this.toName = data.to.getName();
-        this.fromFactionId = data.from.getFaction().getId();
-        this.toFactionId = data.to.getFaction().getId();
+        this.fromFactionId = data.from.getFactionId();
+        this.toFactionId = data.to.getFactionId();
         this.fromOnOrAt = data.from.getOnOrAt();
         this.cargoType = data.cargotype;
         this.fleetSize = data.size;
@@ -61,6 +61,7 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
         if (money) prob += 0.1f;
         
         boolean sameLoc = fromEntity != null && fromEntity.getContainingLocation() != null &&
+                          Global.getSector().getPlayerFleet() != null &&
                           fromEntity.getContainingLocation() == 
                               Global.getSector().getPlayerFleet().getContainingLocation() &&
                           !fromEntity.getContainingLocation().isHyperspace();
@@ -118,16 +119,16 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
         
         bullet(info);
         
-        if (mode != IntelInfoPlugin.ListInfoMode.IN_DESC) {
-            info.addPara("Working for: " + customerFaction.getDisplayName(), initPad, tc,
-                         customerFaction.getBaseUIColor(), customerFaction.getDisplayName());
-            initPad = 0f;
-        }
+        Color custColor = customerFaction != null ? customerFaction.getBaseUIColor() : Misc.getTextColor();
+        String custName = customerFaction != null ? customerFaction.getDisplayName() : "Contractor";
+        Color origColor = origFaction != null ? origFaction.getBaseUIColor() : Misc.getTextColor();
         
         if (mode != IntelInfoPlugin.ListInfoMode.IN_DESC) {
-            LabelAPI label = info.addPara("From " + fromName + " to " + toName, tc, initPad);
+            info.addPara("Client: %s", initPad, tc, custColor, custName);
+            LabelAPI label = info.addPara("Route: " + fromName + " to " + toName, tc, 0f);
             label.setHighlight(fromName, toName);
-            label.setHighlightColors(origFaction.getBaseUIColor(), customerFaction.getBaseUIColor());
+            label.setHighlightColors(origColor, custColor);
+            info.addPara("Cargo manifest: %s", 0f, tc, Misc.getHighlightColor(), Misc.ucFirst(getWhat()));
             initPad = 0f;
         }
         
@@ -137,15 +138,13 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     protected String getWhat() {
         String what = "high-value smuggled goods and black market technology";
         if (cargoType.equals("prisoner")) {
-            what = "dangerous prisoners";
+            what = "dangerous high-profile prisoners";
         } else if (cargoType.equals("money")) {
-            what = "valuable items";
+            what = "encrypted bearer credit chips";
         } else if (cargoType.equals("vip")) {
-            what = "important people";
+            what = "corporate and underworld VIPs";
         } else if (cargoType.equals("items")) {
-            if (cargoListString != null && !cargoListString.isEmpty() && !cargoListString.equals("nothing")) {
-                what = cargoListString;
-            }
+            what = "specialized equipment and heavy machinery";
         }
         return what;
     }
@@ -164,29 +163,44 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
         Color tc = Misc.getTextColor();
         float opad = 10f;
         
-        info.addImage(aspFaction.getLogo(), width, 128, opad);
+        String logo = (aspFaction != null) ? aspFaction.getLogo() : null;
+        if (logo != null) {
+            info.addImage(logo, width, 128, opad);
+        }
         
         String fleetType = "Courier Fleet";
+        if (prisoner) {
+            fleetType = "Prisoner Transport Escort";
+        } else if (vip) {
+            fleetType = "Executive VIP Escort";
+        } else if (money) {
+            fleetType = "High-Security Specie Convoy";
+        }
         
-        LabelAPI label = info.addPara("Your contacts " + fromOnOrAt + " " + fromName + 
-                 " let you know that " + 
-                 aspFaction.getPersonNamePrefixAOrAn() + " " + 
-                 aspFaction.getPersonNamePrefix() + " " + fleetType + " was seen in orbit around " + 
+        String prefixAOrAn = (aspFaction != null) ? aspFaction.getPersonNamePrefixAOrAn() : "a";
+        String prefix = (aspFaction != null) ? aspFaction.getPersonNamePrefix() : "Syndicate";
+        Color aspColor = (aspFaction != null) ? aspFaction.getBaseUIColor() : Misc.getBasePlayerColor();
+        Color origColor = (origFaction != null) ? origFaction.getBaseUIColor() : Misc.getTextColor();
+        Color custColor = (customerFaction != null) ? customerFaction.getBaseUIColor() : Misc.getTextColor();
+        String custName = (customerFaction != null) ? customerFaction.getDisplayName() : "Unknown clients";
+        
+        LabelAPI label = info.addPara("Underworld contacts " + fromOnOrAt + " " + fromName + 
+                 " report that " + 
+                 prefixAOrAn + " " + 
+                 prefix + " " + fleetType + " has departed orbit around " + 
                  fromName + ".",
-                 opad, tc, 
-                 aspFaction.getBaseUIColor(),
-                 aspFaction.getPersonNamePrefix());
+                 opad, tc);
         
-        label.setHighlight(fromName, aspFaction.getPersonNamePrefix(), toName);
-        label.setHighlightColors(origFaction.getBaseUIColor(), aspFaction.getBaseUIColor(), customerFaction.getBaseUIColor());
+        label.setHighlight(fromName, prefix + " " + fleetType);
+        label.setHighlightColors(origColor, aspColor);
         
         String what = getWhat();
         
-        LabelAPI label2 = info.addPara("Information is limited, but the courier group were seen in negotiations with " + customerFaction.getDisplayName() + 
-                " officials and were rumoured to be discussing the shipping of " + what + " to " + toName + ".", opad);
+        LabelAPI label2 = info.addPara("The syndicate group was contracted by " + custName + 
+                " officials to discreetly transport " + what + " to " + toName + ".", opad, tc);
         
-        label2.setHighlight(customerFaction.getDisplayName(), toName);
-        label2.setHighlightColors(customerFaction.getBaseUIColor(), customerFaction.getBaseUIColor());
+        label2.setHighlight(custName, what, toName);
+        label2.setHighlightColors(custColor, Misc.getHighlightColor(), custColor);
         
         info.beginIconGroup();
         info.setIconSpacingMedium();
@@ -196,17 +210,14 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     @Override
     public String getIcon() {
         initTransientData();
-        return Global.getSettings().getSpriteName("intel", "tradeFleet_other");
+        return (aspFaction != null) ? aspFaction.getCrest() : "graphics/icons/intel/courier.png";
     }
     
     @Override
     public Set<String> getIntelTags(SectorMapAPI map) {
         Set<String> tags = super.getIntelTags(map);
-        tags.add(Tags.INTEL_FLEET_DEPARTURES);
-        tags.add("syndicate_asp");
-        if (toFactionId != null) {
-            tags.add(toFactionId);
-        }
+        tags.add(Tags.INTEL_ACCEPTED);
+        tags.add(Tags.INTEL_FLEET_LOG);
         return tags;
     }
     
@@ -247,9 +258,7 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     }
     
     public List<IntelInfoPlugin.ArrowData> getArrowData(SectorMapAPI map) {
-        List<IntelInfoPlugin.ArrowData> result = new ArrayList<IntelInfoPlugin.ArrowData>();
-        
-        if (sameLocation) {
+        if (sameLocation || toEntity == null || fromEntity == null) {
             return null;
         }
         
@@ -261,6 +270,11 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
             }
         }
         
+        if (entityFrom == null) {
+            return null;
+        }
+        
+        List<IntelInfoPlugin.ArrowData> result = new ArrayList<IntelInfoPlugin.ArrowData>();
         IntelInfoPlugin.ArrowData arrow = new IntelInfoPlugin.ArrowData(entityFrom, toEntity);
         arrow.color = getFactionForUIColors().getBaseUIColor();
         result.add(arrow);

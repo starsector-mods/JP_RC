@@ -24,7 +24,7 @@ import org.lazywizard.lazylib.combat.CombatUtils;
  */
 public class JunkPiratesTangerineBlue extends BaseHullMod {
 
-        public static final float ZAP_FREQUENCY = 0.9f; // in seconds - controls lag and ultimately power of hullmod
+        public static final float ZAP_FREQUENCY = 2.5f; // in seconds - controls lag and ultimately power of hullmod
 	
         private float timestamp = 0f;
         

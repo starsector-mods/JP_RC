@@ -26,8 +26,8 @@ public class JunkPiratesDamperStats extends BaseShipSystemScript {
 		float mult = 1f - (1f - DAMAGE_MULT) * effectLevel;
 		float percent = (1f - mult) * 100f;
 		
-		if (index == 0 && percent > 0) {
-			return new StatusData("reducing incoming damage by " + (int) percent + "%", false);
+		if (index == 0) {
+			return new StatusData("reducing incoming damage by " + (int) Math.round(percent) + "%", false);
 		}
 		return null;
 	}

@@ -1,19 +1,19 @@
 # Junk Pirates
 
-Junk Pirates is not the work of a single individual. The following people are the ones I can think of to directly credit, notwithstanding the years of valued non-specific contributions from the wider modding community.
+Junk Pirates is a massive collaborative effort spanning many years of Starsector history. Huge thanks to the original creator and the wider modding community for their invaluable contributions:
 
 ## Credits
 
-- **MesoTronik:** Custom Sounds, Quality Control, Flare code
-- **HELMUT; Dark.Revenant; Avanitia:** Major balance feedback
-- **Xenoargh:** Significant contributor to Pitbull Sprite
-- **Versus The Ghost:** Musical Accompaniments
-- **mendonca:** Most of the rest of the stuff, I think
-- **NetworkPesci:** Just for being there
-- **Histidine:** For providing an off-the-cuff comment to unlock 4 months of idle nurdling around an obscure issue with the procgen
-- **King Alfonzo:** 0.5-2% of the new Ridgeback sprite
-- **Vayra:** For the zany electrochaff and scrapjet missiles. For Kadur.
-- **MShadowy:** Arcane mutterings that lead to the vector code appearing to work
+- **mendonca:** The original creator and visionary behind the mod. Built the vast majority of the original ships, code, and content.
+- **MesoTronik:** Custom Sounds, Quality Control, and original Flare code.
+- **HELMUT, Dark.Revenant, & Avanitia:** Major historical balance feedback and testing.
+- **Xenoargh:** Significant contributions to the Pitbull Sprite.
+- **Versus The Ghost:** Provided the custom musical accompaniments.
+- **NetworkPesci:** Valued community support and presence.
+- **Histidine:** Critical insights that solved early procedural generation issues.
+- **King Alfonzo:** Contributions to the Ridgeback sprite.
+- **Vayra:** The mastermind behind the zany electrochaff mechanics and scrapjet missiles. For Kadur!
+- **MShadowy:** Provided the complex vector mathematics that made the custom weapon code work.
 
 ## Notes
 
@@ -22,6 +22,34 @@ Junk Pirates is not the work of a single individual. The following people are th
 - ASP Syndicate fleet activity in systems.
 
 ## Changelog
+
+### 3.6.0 Changelog
+
+**Major Overhaul & Engine Modernization**
+- **Java 17 Migration:** Completely recompiled the entire codebase for Java 17 compatibility.
+- **100% Save-Game Safety:** Injected `readResolve()` methods into every transient `EveryFrameScript`, fleet assignment AI, and intel plugin. The mod can now be installed or updated mid-playthrough without silently corrupting save files.
+- **Crash Prevention:** Re-configured weapon specs and `.proj` files to eliminate fatal `ClassCastException` and `NullPointerException` crashes during the `WeaponSpecLoader` and `CombatMain` loops.
+- **Rules Engine Sanitization:** Scrubbed `rules.csv` of all dangling commas, malformed options, and missing trigger columns that previously caused `IndexOutOfBoundsException` failures.
+
+**Economy & Campaign Balance Sweep**
+- **Familia HQ Money Exploit:** Increased base upkeep in `industries.csv` from a bugged `6` credits to `6,000` credits, shutting down the infinite passive income glitch.
+- **ASP Courier Loot:** Fixed the courier drop logic and lowered the base value of `syndicate_asp_credit_chip` to 1,000 credits to stop massive loot piñata exploits, while carefully avoiding 0-stack engine crashes.
+- **Late-Game Fleet Spam:** Custom fleet managers now scale their spawn limits correctly based strictly on their own faction markets, rather than calculating the entire Sector market count.
+- **ASP Hit Squad Scaling:** Hard-capped ASP Hit Squad deployment point scaling to 250 FP to prevent them from spawning mathematically unbeatable armadas against late-game player fleets.
+- **Deprecated Population Fix:** Junk Pirate Explorer AI now correctly uses `market.getSize()` instead of deprecated `Conditions.POPULATION_X` flags, allowing them to successfully dock and throw parties at underworld markets.
+
+**Ship & Weapon Balance Sweep**
+- **DP Re-Scaling:** The ASP King Cobra (40 DP), The Reaper (38 DP), Boxenstein (14 DP), and Boxer (12 DP) were appropriately re-costed to match their extreme armor and fighter capacities.
+- **Fighter OP Balancing:** The Cleat Strike Bomber (8 OP), Spike Heavy Fighter (10 OP), and Levin Strike Fighter (10 OP) were brought strictly into line with vanilla 0.97a paradigms.
+- **Zero-Cooldown Exploits Removed:** Injected a 3-second hard cooldown into `ship_systems.csv` for Phase Drones, TNT Drones, Ion Drones, and the P.A.C.K. `pack_flux_divert` shield toggle to prevent macro-flicker exploits.
+- **Bomber Speed Hack Fixed:** Removed the flat +70 max speed and +50 acceleration buffs from the Trilateral Augmentation script that was breaking standard bomber engagement logic.
+- **Light Excimer:** Nerfed energy DPS from 250 down to 100 to fit its 4 OP small-slot footprint.
+
+**Lore & Visual Polish**
+- **Complete Lore Overhaul:** Every single piece of equipment, ship hull, faction, and industry now has rich, immersive lore descriptions that perfectly capture the chaotic underworld vibe.
+- **Explicit Fighter Roles:** Fighter wings now feature explicitly named roles (e.g. "Constrictor Support Fighter") for absolute clarity in the refit screen.
+- **Cinematic Engine Systems:** The *Plug Jets* and *Kraken Retreat* ship systems have been completely refactored. They now lock ships into forward-only movement, eject massive cinematic cones of Electrostatic Chaff, and utilize gorgeous green Cryoflamer particle effects.
+
 
 ### 3.5.6 Changelog
 

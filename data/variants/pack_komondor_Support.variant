@@ -1,7 +1,7 @@
 {
   "displayName": "Support",
   "fluxCapacitors": 11,
-  "fluxVents": 13,
+  "fluxVents": 17,
   "goalVariant": true,
   "hullId": "pack_komondor",
   "hullMods": [],

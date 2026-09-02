@@ -14,8 +14,7 @@
 	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
 	"builtInMods":["armoredweapons","heavyarmor", "frontemitter", "hardenedshieldemitter", "pack_overclocked_rh"],
-	"builtInWeapons":{
-    },
+
 	"weaponSlotChanges":{
 		"WS 007":{
 			#"angle": 0,

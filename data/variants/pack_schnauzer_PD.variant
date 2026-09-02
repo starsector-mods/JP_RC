@@ -1,7 +1,7 @@
 {
   "displayName": "Point Defense",
-  "fluxCapacitors": 6,
-  "fluxVents": 9,
+  "fluxCapacitors": 9,
+  "fluxVents": 10,
   "goalVariant": true,
   "hullId": "pack_schnauzer",
   "hullMods": [

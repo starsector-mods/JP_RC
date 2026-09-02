@@ -1,7 +1,7 @@
 {
     "displayName": "Bullseye",
-    "fluxCapacitors": 0,
-    "fluxVents": 2,
+    "fluxCapacitors": 2,
+    "fluxVents": 10,
         "goalVariant": true,
     "hullId": "pack_pitbull_bullseye",
     "hullMods": [

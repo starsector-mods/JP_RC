@@ -59,6 +59,7 @@ public class Canis {
 
 
 		PlanetAPI canis1 = system.addPlanet("spot", star, "Spot", "rocky_metallic", 100, 120, 2000, 60);
+		canis1.setCustomDescriptionId("planet_canisI");
 
 		system.addRingBand(canis1, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 400, 100f);
 		system.addRingBand(canis1, "misc", "rings_asteroids0", 256f, 2, Color.white, 256f, 420, 80f);
@@ -77,7 +78,6 @@ public class Canis {
                                   "Jameson Orbital",
                                   3,
                                   new ArrayList<>(Arrays.asList(
-                                                        Conditions.POPULATION_3,
                                                         Conditions.FREE_PORT)),
                                   new ArrayList<>(Arrays.asList(
                                                         Industries.SPACEPORT,
@@ -92,7 +92,8 @@ public class Canis {
                                   0.3f
                 );                
                 
-		system.addPlanet("hooch", star, "Hooch", "rocky_ice", 120, 240, 4200, 180);
+		PlanetAPI canis2 = system.addPlanet("hooch", star, "Hooch", "rocky_ice", 120, 240, 4200, 180);
+		canis2.setCustomDescriptionId("planet_canisII");
 		SectorEntityToken hulk = system.addCustomEntity("hulk", "Decaying Hulk", "junk_pirates_abandoned_hulk", "neutral");
 		hulk.setCircularOrbitPointingDown(system.getEntityById("hooch"), 270, 360, 45);		
 
@@ -105,8 +106,7 @@ public class Canis {
                                                   new ArrayList<>(Arrays.asList(Conditions.HOT,
                                                                                 Conditions.TOXIC_ATMOSPHERE,
                                                                                 Conditions.VOLATILES_ABUNDANT,
-                                                                                Conditions.FARMLAND_POOR,
-                                                                                Conditions.POPULATION_5)),
+                                                                                Conditions.FARMLAND_POOR)),
                                                   new ArrayList<>(Arrays.asList(
                                                                         Industries.SPACEPORT,
                                                                         Industries.FARMING,
@@ -114,6 +114,7 @@ public class Canis {
                                                                         Industries.PATROLHQ,
                                                                         Industries.HEAVYINDUSTRY,
                                                                         Industries.BATTLESTATION_MID,
+                                                                        Industries.GROUNDDEFENSES,
                                                                         Industries.POPULATION)),
                                                   new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                                                 Submarkets.SUBMARKET_BLACK,
@@ -146,8 +147,7 @@ public class Canis {
                                   4,
                                   new ArrayList<>(Arrays.asList(Conditions.ORE_ABUNDANT,
                                                                 Conditions.RARE_ORE_MODERATE,
-                                                                Conditions.FREE_PORT,
-                                                                Conditions.POPULATION_4)),
+                                                                Conditions.FREE_PORT)),
                                   new ArrayList<>(Arrays.asList(
                                                         Industries.SPACEPORT,
                                                         Industries.MINING,
@@ -160,6 +160,7 @@ public class Canis {
                 );
 
 		PlanetAPI canis4 = system.addPlanet("laika", star, "Laika", "cryovolcanic", 240, 120, 12000, 480);
+		canis4.setCustomDescriptionId("planet_canisIV");
 
 		SectorEntityToken relay = system.addCustomEntity("pack_relay", // unique id
 				 "Petra Relay", // name - if null, defaultName from custom_entities.json will be used
@@ -180,8 +181,7 @@ public class Canis {
                     null,
                     "Port Revive",
                     3,
-                    new ArrayList<>(Arrays.asList(Conditions.POPULATION_3,
-                                          Conditions.FREE_PORT)),
+                    new ArrayList<>(Arrays.asList(Conditions.FREE_PORT)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.ORBITALSTATION,

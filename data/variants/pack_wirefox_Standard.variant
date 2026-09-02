@@ -1,6 +1,6 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 5,
+  "fluxCapacitors": 9,
   "fluxVents": 10,
   "goalVariant": true,
   "hullId": "pack_wirefox",

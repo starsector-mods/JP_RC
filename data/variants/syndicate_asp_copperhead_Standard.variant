@@ -1,11 +1,12 @@
 {
   "displayName": "Copperhead",
-  "fluxCapacitors": 4,
+  "fluxCapacitors": 8,
   "fluxVents": 20,
   "goalVariant": true,
   "hullId": "syndicate_asp_copperhead",
   "hullMods": [
-    "expanded_deck_crew"
+    "expanded_deck_crew",
+    "hardenedshieldemitter"
   ],
   "permaMods": [],
   "quality": 0,

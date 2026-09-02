@@ -30,7 +30,6 @@
             #"type": "ENERGY"
 		}
 	},
-	"builtInMods":["hardenedshieldemitter", "pack_overclocked_cb"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["hardenedshieldemitter", "pack_overclocked_cb"]
+	
 }

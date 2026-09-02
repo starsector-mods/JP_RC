@@ -1,12 +1,12 @@
 {
-  "displayName": "Support\r",
-  "fluxCapacitors": 12,
-  "fluxVents": 21,
+  "displayName": "Support",
+  "fluxCapacitors": 20,
+  "fluxVents": 18,
   "goalVariant": true,
   "hullId": "syndicate_asp_gigantophis_p",
   "hullMods": [
     "targetingunit",
-    "magazines"
+    "hardenedshieldemitter"
   ],
   "permaMods": [],
   "quality": 0,
@@ -16,7 +16,15 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS 016": "tpc"
+        "WS 016": "syndicate_asp_viper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 014": "pilum",
+        "WS 015": "pilum"
       }
     },
     {
@@ -41,18 +49,10 @@
         "WS 012": "pdlaser",
         "WS 013": "pdlaser"
       }
-    },
-    {
-      "autofire": true,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS 014": "pilum",
-        "WS 015": "pilum"
-      }
     }
   ],
   "wings": [
     "syndicate_asp_death_rattle_wing",
-    "syndicate_asp_bite_wing"
+    "syndicate_asp_venom_wing"
   ]
 }

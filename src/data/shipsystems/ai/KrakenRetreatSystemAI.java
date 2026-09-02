@@ -11,18 +11,15 @@ import com.fs.starfarer.api.combat.ShipwideAIFlags;
 import com.fs.starfarer.api.util.IntervalUtil;
 import java.util.Iterator;
 import java.util.List;
+import org.lazywizard.lazylib.MathUtils;
+import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-/**
- *
- * @author paul
- */
 public class KrakenRetreatSystemAI implements ShipSystemAIScript {
 
     private ShipAPI ship;
-
     private final IntervalUtil tracker = new IntervalUtil(0.35f, 0.6f);
 
     @Override
@@ -35,30 +32,20 @@ public class KrakenRetreatSystemAI implements ShipSystemAIScript {
             if (!AIUtils.canUseSystemThisFrame(ship)) {
                 return;
             }
-            FluxTrackerAPI fluxMonitor = ship.getFluxTracker(); // Allows us to set different parameters for hitting the button
+            FluxTrackerAPI fluxMonitor = ship.getFluxTracker();
             float fluxLevel = fluxMonitor.getFluxLevel();
-            //float hardFluxLevel = fluxMonitor.getHardFlux() / fluxMonitor.getMaxFlux(); // Not interested for Kraken
-            //we might think about skewing the decisions against hitpoints?        
             boolean shouldUseSystem = false;
             
-            float missileRadius;
-            float shipRadius;
-            float projRadius;
-            float noPressureRadius;
+            float missileRadius = 350f;
+            float shipRadius = 700f;
+            float projRadius = 300f;
+            float noPressureRadius = 1200f;
             float hitPoints = ship.getHitpoints() / ship.getMaxHitpoints();
-            
-            missileRadius = 350f;
-            shipRadius = 700f;
-            projRadius = 300f;
-            noPressureRadius = 1200f;
             
             List<ShipAPI> nearbyEnemies = AIUtils.getNearbyEnemies(ship, shipRadius);
             List<ShipAPI> notSoNearEnemies = AIUtils.getNearbyEnemies(ship, noPressureRadius);
-//we're checking out if there are numerous enemies near us; might need to know
             List<MissileAPI> nearbyMissiles = AIUtils.getNearbyEnemyMissiles(ship, missileRadius);
-//Need to see whether we think we should use it as a flare system
             List<DamagingProjectileAPI> nearbyBullets = CombatUtils.getProjectilesWithinRange(shipLoc, projRadius);
-//Is shit going down?
 
             /* Filter to just enemy bullets */
             Iterator<DamagingProjectileAPI> iter = nearbyBullets.iterator();
@@ -69,17 +56,37 @@ public class KrakenRetreatSystemAI implements ShipSystemAIScript {
                 }
             }
             
-            // to do create a threat matrix on numbers bullets / ships / projectiles etc. to better nuance the below
+            // Threat evaluation
             if (    fluxLevel > 0.85f && nearbyEnemies.size() > 0 && nearbyBullets.size() > 0 || // combined threat; high flux
                     fluxLevel > 0.85f && nearbyEnemies.size() > 0 && nearbyMissiles.size() > 0 || // combined threat; high flux
                     fluxLevel > 0.8f && nearbyEnemies.size() > 3 || // getting crowded; high flux
                     fluxLevel > 0.92f && nearbyBullets.size() > 0 || // threat; very high flux
                     fluxLevel > 0.92f && nearbyMissiles.size() > 0 || // threat; very high flux
-                    fluxLevel > 0.8f && hitPoints <= 0.5f && notSoNearEnemies.size() > 0|| // in peril; try anything
+                    fluxLevel > 0.8f && hitPoints <= 0.5f && notSoNearEnemies.size() > 0 || // in peril; try anything
                     fluxLevel > 0.7f && nearbyEnemies.size() > 0 && nearbyMissiles.size() > 5 || // bigger threat medium high flux
                     fluxLevel > 0.4f && nearbyEnemies.size() > 0 && nearbyMissiles.size() > 10) // heavy missile threat
             {
                 shouldUseSystem = true;
+            }
+            
+            // Directional check: MERMAN applies backward thrust.
+            // Ensure ship's bow is facing the threat so reverse thrust moves the ship away from danger.
+            if (shouldUseSystem) {
+                ShipAPI threat = target;
+                if (threat == null && !nearbyEnemies.isEmpty()) {
+                    threat = nearbyEnemies.get(0);
+                } else if (threat == null && !notSoNearEnemies.isEmpty()) {
+                    threat = notSoNearEnemies.get(0);
+                }
+                
+                if (threat != null) {
+                    float angleToThreat = VectorUtils.getAngle(shipLoc, threat.getLocation());
+                    float angleDiff = Math.abs(MathUtils.getShortestRotation(ship.getFacing(), angleToThreat));
+                    // If threat is behind the ship (>90 degrees), reversing would push us straight into them!
+                    if (angleDiff > 90f) {
+                        shouldUseSystem = false;
+                    }
+                }
             }
                 
             // If system is inactive and should be active, enable it
@@ -94,5 +101,4 @@ public class KrakenRetreatSystemAI implements ShipSystemAIScript {
     public void init(ShipAPI ship, ShipSystemAPI system, ShipwideAIFlags flags, CombatEngineAPI engine) {
         this.ship = ship;
     }
-    
 }

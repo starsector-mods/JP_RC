@@ -8,6 +8,7 @@ package data.shipsystems.scripts;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipCommand;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
@@ -16,6 +17,8 @@ import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import java.util.HashSet;
 import java.util.Set;
 import org.lazywizard.lazylib.MathUtils;
+import org.lwjgl.util.vector.Vector2f;
+import com.fs.starfarer.api.util.Misc;
 
 /**
  *
@@ -24,104 +27,95 @@ import org.lazywizard.lazylib.MathUtils;
 public class JunkPiratesBurstJets extends BaseShipSystemScript {
 
     private int flaresLaunched = 0;
-    //private float timestamp = 0f;
-    public static final float TIME_BETWEEN_FLARES = 0.45f;
-    public static final int MAX_FLARES = 3;
+    private float timestamp = 0f;
+    public static final float TIME_BETWEEN_FLARES = 0.70f;
+    public static final int MAX_FLARES = 5;
     public static final String ELECTRO_FLARE_WEAPON_ID = "junk_pirates_electrochafflauncher";
-    private static final Set<String> FLARE_SLOT_IDS = new HashSet<>(8);
-    
-    static
-    {
-        FLARE_SLOT_IDS.add("FLARE1");
-        FLARE_SLOT_IDS.add("FLARE2");
-        FLARE_SLOT_IDS.add("FLARE3");
-        FLARE_SLOT_IDS.add("FLARE4");
-        FLARE_SLOT_IDS.add("FLARE5");
-        FLARE_SLOT_IDS.add("FLARE6");
-        FLARE_SLOT_IDS.add("FLARE7");
-        FLARE_SLOT_IDS.add("FLARE8");
-    }
+    public static final float SPEED_BONUS = 100f;
+    public static final float ACCEL_BONUS = 150f;
+    public static final float TURN_ACCEL_BONUS = 100f;
+    public static final float TURN_RATE_BONUS = 50f;
      
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
-            if (state == ShipSystemStatsScript.State.OUT) {
+		if (stats == null) {
+			return;
+		}
+		if (state == ShipSystemStatsScript.State.OUT) {
 			stats.getMaxSpeed().unmodify(id); // to slow down ship to its regular top speed while powering drive down
 			stats.getMaxTurnRate().unmodify(id);
 		} else {
-			stats.getMaxSpeed().modifyFlat(id, 120f);
-			stats.getAcceleration().modifyPercent(id, 250f * effectLevel);
-			stats.getDeceleration().modifyPercent(id, 250f * effectLevel);
-			stats.getTurnAcceleration().modifyFlat(id, 50f * effectLevel);
-			stats.getTurnAcceleration().modifyPercent(id, 250f * effectLevel);
-			stats.getMaxTurnRate().modifyFlat(id, 25f);
-			stats.getMaxTurnRate().modifyPercent(id, 125f);
+			stats.getMaxSpeed().modifyFlat(id, SPEED_BONUS);
+			stats.getAcceleration().modifyPercent(id, ACCEL_BONUS * effectLevel);
+			stats.getDeceleration().modifyPercent(id, ACCEL_BONUS * effectLevel);
+			stats.getTurnAcceleration().modifyPercent(id, TURN_ACCEL_BONUS * effectLevel);
+			stats.getMaxTurnRate().modifyPercent(id, TURN_RATE_BONUS * effectLevel);
 		}
-		
-                
-                
-		if (stats.getEntity() instanceof ShipAPI && Boolean.FALSE.booleanValue()) {
-			ShipAPI ship = (ShipAPI) stats.getEntity();
-			String key = ship.getId() + "_" + id;
-			Object test = Global.getCombatEngine().getCustomData().get(key);
-			if (state == State.IN) {
-				if (test == null && effectLevel > 0.2f) {
-					Global.getCombatEngine().getCustomData().put(key, new Object());
-					ship.getEngineController().getExtendLengthFraction().advance(1f);
-					for (ShipEngineAPI engine : ship.getEngineController().getShipEngines()) {
-						if (engine.isSystemActivated()) {
-							ship.getEngineController().setFlameLevel(engine.getEngineSlot(), 1f);
-						}
+
+		if (!(stats.getEntity() instanceof ShipAPI)) {
+			return;
+		}
+		ShipAPI ship = (ShipAPI) stats.getEntity();
+		if (state == ShipSystemStatsScript.State.IN || state == ShipSystemStatsScript.State.ACTIVE) {
+			ship.giveCommand(ShipCommand.ACCELERATE, null, 0);
+		}
+		if (Global.getCombatEngine() == null || Global.getCombatEngine().isPaused()) {
+			return;
+		}
+
+		if (timestamp == 0f) {
+			timestamp = Global.getCombatEngine().getTotalElapsedTime(false);
+		}
+		float time = Global.getCombatEngine().getTotalElapsedTime(false) - timestamp;
+
+		if ((time >= flaresLaunched * TIME_BETWEEN_FLARES) && (flaresLaunched < MAX_FLARES)) {
+			flaresLaunched++;
+
+			if (Global.getSoundPlayer() != null && ship.getLocation() != null && ship.getVelocity() != null) {
+				Global.getSoundPlayer().playSound("system_flare_launcher_active", 1f, 1f, ship.getLocation(), ship.getVelocity());
+			}
+			java.util.List<ShipEngineAPI> engines = null;
+			if (ship.getEngineController() != null) {
+				engines = ship.getEngineController().getShipEngines();
+			}
+			if (engines != null && !engines.isEmpty()) {
+				int count = (engines.size() >= 2) ? 2 : 1;
+				for (int i = 0; i < count; i++) {
+					ShipEngineAPI engine = engines.get((flaresLaunched + i) % engines.size());
+					if (engine != null && engine.getEngineSlot() != null && engine.getLocation() != null) {
+						float nozzleAngle = Misc.normalizeAngle(ship.getFacing() + engine.getEngineSlot().getAngle() + MathUtils.getRandomNumberInRange(-8f, 8f));
+						Vector2f spawnLoc = MathUtils.getPointOnCircumference(engine.getLocation(), 4f, nozzleAngle);
+						Global.getCombatEngine().spawnProjectile(ship, null, ELECTRO_FLARE_WEAPON_ID, spawnLoc,
+								nozzleAngle, ship.getVelocity());
 					}
 				}
-			} else {
-				Global.getCombatEngine().getCustomData().remove(key);
+			} else if (ship.getLocation() != null) {
+				float spawnAngle = Misc.normalizeAngle(ship.getFacing() + 180f + MathUtils.getRandomNumberInRange(-15f, 15f));
+				Vector2f spawnLoc = MathUtils.getPointOnCircumference(ship.getLocation(), ship.getCollisionRadius() * 0.6f, spawnAngle);
+				Global.getCombatEngine().spawnProjectile(ship, null, ELECTRO_FLARE_WEAPON_ID, spawnLoc,
+						spawnAngle, ship.getVelocity());
 			}
 		}
-                
-//            if (timestamp == 0f)
-//            {
-//                timestamp = Global.getCombatEngine().getTotalElapsedTime(false);
-//            }
-//            float time = Global.getCombatEngine().getTotalElapsedTime(false) - timestamp;
-
-//            if ((time >= flaresLaunched * TIME_BETWEEN_FLARES) && (flaresLaunched < MAX_FLARES))
-            if (flaresLaunched < MAX_FLARES)
-            {
-                flaresLaunched++;
-                ShipAPI ship = (ShipAPI) stats.getEntity();
-                if (ship == null)
-                {
-                    return;
-                }
-
-                Global.getSoundPlayer().playSound("system_flare_launcher_active", 1f, 1f, ship.getLocation(), ship.getVelocity());
-                for (WeaponAPI weapon : ship.getAllWeapons())
-                {
-                    WeaponSlotAPI slot = weapon.getSlot();
-                    if (FLARE_SLOT_IDS.contains(slot.getId()))
-                    {
-                        Global.getCombatEngine().spawnProjectile(ship, weapon, ELECTRO_FLARE_WEAPON_ID, weapon.getLocation(),
-                        weapon.getCurrAngle() + MathUtils.getRandomNumberInRange(-15f, 15f), ship.getVelocity());
-                    }
-                }
-            }
-        }
+	}
             
 	public void unapply(MutableShipStatsAPI stats, String id) {
-		stats.getMaxSpeed().unmodify(id);
-		stats.getMaxTurnRate().unmodify(id);
-		stats.getTurnAcceleration().unmodify(id);
-		stats.getAcceleration().unmodify(id);
-		stats.getDeceleration().unmodify(id);
+		if (stats != null) {
+			stats.getMaxSpeed().unmodify(id);
+			stats.getMaxTurnRate().unmodify(id);
+			stats.getTurnAcceleration().unmodify(id);
+			stats.getAcceleration().unmodify(id);
+			stats.getDeceleration().unmodify(id);
+		}
                 
-                flaresLaunched = 0;
-                //timestamp = 0f;
+		flaresLaunched = 0;
+		timestamp = 0f;
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("improved maneuverability", false);
+			return new StatusData("sustained mobility boost", false);
 		} else if (index == 1) {
-			return new StatusData("+120 top speed", false);
+			if (state == State.OUT) return null;
+			return new StatusData("+" + (int) SPEED_BONUS + " top speed", false);
 		}
 		return null;
 	}

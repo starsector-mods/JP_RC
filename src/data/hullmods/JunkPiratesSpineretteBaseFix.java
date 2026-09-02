@@ -9,7 +9,7 @@ public class JunkPiratesSpineretteBaseFix extends BaseHullMod {
     @Override
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
         // Set the base ship to a small hull size in the refit screen so modules take click priority
-        ship.setHullSize(HullSize.FIGHTER);
+        //ship.setHullSize(HullSize.FIGHTER);
     }
 
     @Override

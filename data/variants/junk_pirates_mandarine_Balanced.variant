@@ -1,10 +1,12 @@
 {
     "displayName": "Balanced",
     "fluxCapacitors": 2,
-    "fluxVents": 7,
+    "fluxVents": 9,
         "goalVariant": true,
     "hullId": "junk_pirates_mandarine",
-    "hullMods": ["heavyarmor"],
+    "hullMods": [
+    "heavyarmor"
+  ],
     "quality": 0.5,
   "variantId": "junk_pirates_mandarine_Balanced",
   "weaponGroups": [

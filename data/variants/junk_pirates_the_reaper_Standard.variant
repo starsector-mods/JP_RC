@@ -1,14 +1,15 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 12,
   "fluxVents": 50,
   "goalVariant": true,
   "hullId": "junk_pirates_the_reaper",
   "hullMods": [
-        "targetingunit",
-        "magazines",
-        "autorepair"
-    ],
+    "targetingunit",
+    "magazines",
+    "autorepair",
+    "heavyarmor"
+  ],
   "permaMods": [],
   "quality": 0,
   "variantId": "junk_pirates_the_reaper_Standard",

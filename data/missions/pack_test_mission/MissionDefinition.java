@@ -61,6 +61,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addToFleet(FleetSide.PLAYER, "pack_schnauzer_rothund_Standard", FleetMemberType.SHIP, false);
 
 		// Bullseye (BE) sub-faction
+		api.addToFleet(FleetSide.PLAYER, "pack_bulldog_bullseye_Bullseye", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "pack_komondor_bullseye_Bullseye", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "pack_pitbull_bullseye_Bullseye", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "pack_schnauzer_bullseye_Bullseye", FleetMemberType.SHIP, false);

@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
   "fluxCapacitors": 6,
-  "fluxVents": 10,
+  "fluxVents": 12,
   "goalVariant": true,
   "hullId": "pack_komondor",
   "hullMods": [

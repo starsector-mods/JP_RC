@@ -1,0 +1,15 @@
+{
+	"id":"pack_ridgeback_drive",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.RidgebackDriveAI",
+	
+	"statsScript":"data.shipsystems.scripts.PackRidgebackDriveStats",
+	
+	"useSound":"maneuvering_jets_activate",
+	"loopSound":"maneuvering_jets_loop",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}

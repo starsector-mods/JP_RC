@@ -2,7 +2,7 @@
   "quality":0.5,
   "displayName": "Support",
   "fluxCapacitors": 9,
-  "fluxVents": 10,
+  "fluxVents": 13,
         "goalVariant": true,
   "hullId": "pack_komondor_rothund",
   "hullMods": [],

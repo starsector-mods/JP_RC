@@ -24,18 +24,18 @@ public class JunkPiratesModPlugin extends BaseModPlugin
 
     public static final boolean isExerelin;
     
-    public static boolean enableASP;
-    public static boolean enableASPCourierFleets;
-    public static boolean enableASPHitSquads;
-    public static boolean enablePACK;
-    public static boolean enablePACKDiplomats;
-    public static boolean enableJunkPirates;
-    public static boolean enableJunkExplorers;
+    public static boolean enableASP = true;
+    public static boolean enableASPCourierFleets = true;
+    public static boolean enableASPHitSquads = true;
+    public static boolean enablePACK = true;
+    public static boolean enablePACKDiplomats = true;
+    public static boolean enableJunkPirates = true;
+    public static boolean enableJunkExplorers = true;
     
-    public static boolean enableJunkPiratesIntel;
+    public static boolean enableJunkPiratesIntel = true;
     
-    public static float junkPiratesFleetFrequencyModifier;
-    public static float junkPiratesMaxFleetModifier;
+    public static float junkPiratesFleetFrequencyModifier = 1.0f;
+    public static float junkPiratesMaxFleetModifier = 1.0f;
     
 //    
 //    public static int minAnarchistConstellations;

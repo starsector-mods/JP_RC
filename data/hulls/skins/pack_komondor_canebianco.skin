@@ -13,7 +13,6 @@
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
-	"builtInMods":["frontemitter","hardenedshieldemitter","extendedshieldemitter", "pack_overclocked_cb"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["frontemitter","hardenedshieldemitter","extendedshieldemitter", "pack_overclocked_cb"]
+	
 }

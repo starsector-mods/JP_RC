@@ -10,7 +10,7 @@
 	"shipNamePrefix":"PSS",
 	"shipNameSources":{
 		"CANINE":1},
-	"description":"No description yet.",
+	"description":"The Post-Anarchist Canis Kollective (P.A.C.K.) is a pragmatic, semi-syndicalist union of former anarchist communes, outer-rim prospectors, and industrial cooperatives based in the Canis system. Emphasizing mutual aid, rugged self-reliance, and standardized heavy-metal modular hulls, P.A.C.K. fields heavily armored gunboats and multi-role combat transports capable of delivering punishing kinetic broadsides while maintaining exceptional fleet endurance.",
 	"names":{
 		"old english":1,
 		"world":1},
@@ -46,7 +46,8 @@
 			"pack_komondor_canebianco",
 			"pack_pitbull_rothund",
 			"pack_pitbull_canebianco",
-			"pack_bedlington_canebianco"]},
+			"pack_bedlington_canebianco",
+			"pack_bulldog"]},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
@@ -66,7 +67,8 @@
 			"pack_komondor_canebianco",
 			"pack_pitbull_rothund",
 			"pack_pitbull_canebianco",
-			"pack_bedlington_canebianco"]},
+			"pack_bedlington_canebianco",
+			"pack_bulldog"]},
 	"knownFighters":{
 		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
 		"fighters":[
@@ -172,8 +174,6 @@
 	"internalComms":"pack_internal",
 	"portraits":{
 		"standard_male":[
-			"graphics/portraits/pack_portrait_f_1.png",
-			"graphics/portraits/pack_portrait_f_2.png",
 			"graphics/portraits/pack_portrait_m_1.png",
 			"graphics/portraits/pack_portrait_m_2.png",
 			"graphics/portraits/portrait_corporate06.png",
@@ -182,7 +182,6 @@
 		"standard_female":[
 			"graphics/portraits/pack_portrait_f_1.png",
 			"graphics/portraits/pack_portrait_f_2.png",
-			"graphics/portraits/pack_portrait_m_1.png",
 			"graphics/portraits/portrait_corporate06.png",
 			"graphics/portraits/portrait_hegemony02.png",
 			"graphics/portraits/portrait_hegemony06.png"]},

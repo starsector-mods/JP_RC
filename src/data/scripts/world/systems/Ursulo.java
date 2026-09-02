@@ -57,11 +57,11 @@ public class Ursulo {
 		
 
 
-		system.addPlanet("rupert", star, "Rupert", "barren-bombarded", 75, 75, 1550, 60);
-		//ur1.setCustomDescriptionId("planet_ursuloI");
+		PlanetAPI ur1 = system.addPlanet("rupert", star, "Rupert", "barren-bombarded", 75, 75, 1550, 60);
+		ur1.setCustomDescriptionId("planet_ursuloI");
 
 		PlanetAPI ur2 = system.addPlanet("winnipeg", star, "Winnipeg", "rocky_metallic", 180, 85, 3200, 64);
-		//ur2.setCustomDescriptionId("planet_ursuloII");
+		ur2.setCustomDescriptionId("planet_ursuloII");
 
 		ur2.getSpec().setPlanetColor(new Color(195,195,215,255));
 		ur2.getSpec().setAtmosphereColor(new Color(160,110,45,140));
@@ -88,8 +88,7 @@ public class Ursulo {
                     4,
                     new ArrayList<>(Arrays.asList(Conditions.FREE_PORT,
                                                   Conditions.RARE_ORE_MODERATE,
-                                                  Conditions.ORE_MODERATE,
-                                                  Conditions.POPULATION_4)),
+                                                  Conditions.ORE_MODERATE)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.GROUNDDEFENSES,
@@ -133,8 +132,7 @@ public class Ursulo {
                                                   Conditions.THIN_ATMOSPHERE,
                                                   Conditions.POLLUTION,
                                                   Conditions.FARMLAND_POOR,
-                                                  Conditions.FREE_PORT,
-                                                  Conditions.POPULATION_6)),
+                                                  Conditions.FREE_PORT)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.POPULATION,
@@ -171,10 +169,10 @@ public class Ursulo {
                     null,
                     "Bear's Pit",
                     3,
-                    new ArrayList<>(Arrays.asList(Conditions.FREE_PORT,
-                                                  Conditions.POPULATION_3)),
+                    new ArrayList<>(Arrays.asList(Conditions.FREE_PORT)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
+                                          Industries.ORBITALSTATION,
                                           Industries.POPULATION)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                   Submarkets.SUBMARKET_BLACK,
@@ -208,7 +206,7 @@ public class Ursulo {
 			aloyL4.setCircularOrbit(star, 135f, 11000, 500);
 			aloyL5.setCircularOrbit(star, 15f, 11000, 500);
 
-		//ur4.setCustomDescriptionId("planet_ursuloIV");
+		ur4.setCustomDescriptionId("planet_ursuloIV");
 
 		ur4.getSpec().setPlanetColor(new Color(175,135,245,255));
 		ur4.getSpec().setAtmosphereColor(new Color(160,110,45,140));
@@ -229,8 +227,7 @@ public class Ursulo {
                     3,
                     new ArrayList<>(Arrays.asList(Conditions.HABITABLE,
                                                   Conditions.POLLUTION,
-                                                  Conditions.ORE_SPARSE,
-                                                  Conditions.POPULATION_3)),
+                                                  Conditions.ORE_SPARSE)),
                     new ArrayList<>(Arrays.asList(
                                           Industries.SPACEPORT,
                                           Industries.FUELPROD,
@@ -248,7 +245,7 @@ public class Ursulo {
 		relay.setCircularOrbit( system.getEntityById("ursulo"), 255, 7800, 400);
 
 		ur5.setCustomDescriptionId("planet_ursuloV");
-		//ur3a.setCustomDescriptionId("planet_ursuloVI");
+		ur3a.setCustomDescriptionId("planet_ursuloVI");
 
 		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("ursulo_gate", "Ursulo Hyper-Junction");
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 285, 7800, 400);

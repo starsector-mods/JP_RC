@@ -2,7 +2,6 @@ id
 # NOTES
 # Ship IDs entered here will be allowed for duplication.
 "# This feature is very hard to get working in campaign as a player, and lorewise, allows for duplication of even the most complex hulls."
-
 junk_pirates_sickle
 junk_pirates_hammer
 junk_pirates_clam
@@ -19,7 +18,6 @@ pack_schnauzer
 syndicate_asp_diamondback
 syndicate_asp_diamondback_p
 junk_pirates_tangerine
-
 junk_pirates_octopus
 junk_pirates_boxenstein
 junk_pirates_boxer
@@ -42,7 +40,6 @@ syndicate_asp_copperhead_p
 pack_spinone
 syndicate_asp_hognose
 syndicate_asp_hognose_p
-
 junk_pirates_dugong
 junk_pirates_orcenstein
 junk_pirates_jackdaw
@@ -50,7 +47,6 @@ junk_pirates_goat
 junk_pirates_magpie
 pack_mastiff
 pack_bullykutta
-
 syndicate_asp_gigantophis
 syndicate_asp_gigantophis_p
 junk_pirates_orca

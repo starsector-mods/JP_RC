@@ -6,11 +6,11 @@
 	
 	"statsScript":"data.shipsystems.scripts.JunkPiratesCruiserBurstJets",
 	
-	#"engineGlowColor":[255,175,125,255],
-	#"engineGlowContrailColor":[100,165,255,25],
-	"engineGlowLengthMult":1,
-	"engineGlowWidthMult":1,
-	"engineGlowGlowMult":2,
+	"engineGlowColor":[110,255,190,255],
+	"engineGlowContrailColor":[70,220,160,45],
+	"engineGlowLengthMult":1.8,
+	"engineGlowWidthMult":1.5,
+	"engineGlowGlowMult":3.0,
 	
 	"flameoutOnImpactChance":0,
 

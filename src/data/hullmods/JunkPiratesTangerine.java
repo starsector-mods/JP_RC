@@ -33,10 +33,10 @@ public class JunkPiratesTangerine extends BaseHullMod {
 	public static final float FLUX_RESISTANCE = 50f;
 	//public static final float DISSIPATION_BONUS = 10f;
 	public static final float VENT_RATE_BONUS = 25f;
-        public static final float MAX_SPEED_BONUS_PC = 125f;
-        public static final float MAX_DEC_BONUS_PC = 100f;
-        public static final float MAX_ACC_BONUS_PC = 110f;
-        public static final float MAX_TURN_BONUS_PC = 75f;
+        public static final float MAX_SPEED_BONUS_PC = 35f;
+        public static final float MAX_DEC_BONUS_PC = 40f;
+        public static final float MAX_ACC_BONUS_PC = 40f;
+        public static final float MAX_TURN_BONUS_PC = 30f;
         @SuppressWarnings("unused")
                 private float timestamp = 0f;
         @SuppressWarnings("unused")
@@ -96,171 +96,14 @@ public class JunkPiratesTangerine extends BaseHullMod {
         float maxDecBonus = MAX_DEC_BONUS_PC * (fluxTracker.getHardFlux() / fluxTracker.getMaxFlux());
         float maxAccBonus = MAX_ACC_BONUS_PC * (fluxTracker.getHardFlux() / fluxTracker.getMaxFlux());
         float maxTurnBonus = MAX_TURN_BONUS_PC * (fluxTracker.getHardFlux() / fluxTracker.getMaxFlux());
-
-        if (fluxTracker.isOverloaded() && fluxTracker.getFluxLevel() >= 0.5 ) {
-            float charges = fluxTracker.getCurrFlux() / 200f;
-            fluxTracker.setCurrFlux(0f);
-            ShipEngineControllerAPI engine = ship.getEngineController();
-            engine.forceFlameout();
-            // need to push this into a function
-            CombatEntityAPI target;
-            WeightedRandomPicker<MissileAPI> ctargets = new WeightedRandomPicker<>();
-            WeightedRandomPicker<MissileAPI> mtargets = new WeightedRandomPicker<>();
-            WeightedRandomPicker<ShipAPI> stargets = new WeightedRandomPicker<>();
-            List<MissileAPI> proj = CombatUtils.getMissilesWithinRange(ship.getLocation(), EMP_ARC_RANGE);
-            List<CombatEntityAPI> chaffed = new ArrayList<>();
-//            float overloadBonus = 0f;
-            
-            int chaffCount = 0;
-            for (MissileAPI c : proj) {
-
-                if (ELECTROCHAFF_PROJ_BASE_ID.equals(c.getProjectileSpecId())) {
-                    ctargets.add(c);
-                    chaffCount++;
-                }
-            }
-        
-            while (chaffCount > 0) {
-                if ((charges < 1) || (chaffCount < 1)) {
-                    return;
-                } else {
-                    chaffCount--;
-                    charges--;
-                    target = ctargets.pickAndRemove();
-
-                    if (target == null) {
-                        return;
-                    } else {
-
-                    Global.getCombatEngine().spawnEmpArc(ship,
-                    ship.getLocation(),
-                    ship,
-                    target,
-                    DamageType.ENERGY,
-                    200f,
-                    40f,
-                    6969420f,
-                    "tachyon_lance_emp_impact",
-                    15f,
-                    FRINGE_COLOR,
-                    CORE_COLOR);
-                    
-                    chaffed.add(target);
-                    
-//                    overloadBonus -= 10f;
-                    }
-                }
-            }            
-//            
-//            if (overloadBonus <=-100f) {
-//                overloadBonus = -100f;
-//            }
-                
-            List<MissileAPI> missiles = CombatUtils.getMissilesWithinRange(ship.getLocation(), EMP_ARC_RANGE);
-            List<ShipAPI> ships = CombatUtils.getShipsWithinRange(ship.getLocation(), EMP_ARC_RANGE);
-
-            int mcount = 0;
-            for (MissileAPI m : missiles) {
-
-                if (m.getOwner() != ship.getOwner()) {
-                    mtargets.add(m);
-                    mcount++;
-                }
-            }
-            int scount = 0;
-            for (ShipAPI s : ships) {
-                if (s.getOwner() != ship.getOwner()) {
-                    stargets.add(s);
-                    scount++;
-                }
-            }
-            int targetMaxCount = mcount + scount;
-
-            float chaffdam = 450;
-            float chaffemp = 250;
-            
-            for (CombatEntityAPI x : chaffed) {
-                if (MathUtils.getRandomNumberInRange(0, targetMaxCount) <= scount) {
-                    target = stargets.pick();
-                } else {
-                    target = mtargets.pick();
-                }
-                
-                if (target == null) {
-                    return;
-                } else {
-                    
-                Global.getCombatEngine().spawnEmpArc(ship,
-                x.getLocation(),
-                x,
-                target,
-                DamageType.ENERGY,
-                chaffdam,
-                chaffemp,
-                6969420f,
-                "tachyon_lance_emp_impact",
-                15f,
-                FRINGE_COLOR,
-                CORE_COLOR);
-                }
-            }
-            
-            float dam = 100;
-            float emp = 180;
-            
-//            if (timestamp == 0f)
-//            {
-//                timestamp = Global.getCombatEngine().getTotalElapsedTime(false);
-//            }
-//            float time = Global.getCombatEngine().getTotalElapsedTime(false) - timestamp;
-//
-//            if ((time >= TIME_BETWEEN_BURST) && (charges > 0)) {
-//                numberBursts++;
-                int count = 0;
-                while (count < charges) {
-
-                    count++;
-                    if (MathUtils.getRandomNumberInRange(0, targetMaxCount) <= scount) {
-                        target = stargets.pick();
-                    } else {
-                        target = mtargets.pick();
-                    }
-
-                    if (target == null) {
-                        return;
-                    } else {
-
-                    Global.getCombatEngine().spawnEmpArc(ship,
-                    ship.getLocation(),
-                    ship,
-                    target,
-                    DamageType.ENERGY,
-                    dam,
-                    emp,
-                    6969420f,
-                    "tachyon_lance_emp_impact",
-                    15f,
-                    FRINGE_COLOR,
-                    CORE_COLOR);
-                    }
-                }
-            
-//            if ( numberBursts > 0 || charges < 1) {
-//                timestamp = 0f;
-//                numberBursts = 0;
-//            }
-//        ship.getMutableStats().getOverloadTimeMod().modifyPercent("Tangerine", overloadBonus);
-//            }
-        }
-        
         ship.getMutableStats().getMaxSpeed().modifyPercent("Tangerine", maxSpeedBonus);
         ship.getMutableStats().getDeceleration().modifyPercent("Tangerine", maxDecBonus);
         ship.getMutableStats().getAcceleration().modifyPercent("Tangerine", maxAccBonus);
         ship.getMutableStats().getTurnAcceleration().modifyPercent("Tangerine", maxTurnBonus);
 
         
-        if (ship == Global.getCombatEngine().getPlayerShip() && fluxTracker.getHardFlux() > 0) {
-            Global.getCombatEngine().maintainStatusForPlayerShip(JPT_ID, JPT_ICON, JPT_NAME, "Max Speed increased by "+(int) maxSpeedBonus+"%", true);
+        if (ship == Global.getCombatEngine().getPlayerShip() && maxSpeedBonus >= 1f) {
+            Global.getCombatEngine().maintainStatusForPlayerShip(JPT_ID, JPT_ICON, JPT_NAME, "+" + (int) maxSpeedBonus + "% top speed & agility", false);
         }
         
 //        float otm = ship.getMutableStats().getOverloadTimeMod().percentMod;

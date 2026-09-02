@@ -1,7 +1,7 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 0,
-  "fluxVents": 17,
+  "fluxCapacitors": 20,
+  "fluxVents": 43,
   "goalVariant": true,
   "hullId": "junk_pirates_orca",
   "hullMods": [],
@@ -42,8 +42,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 015": "junk_pirates_haymaker",
-        "WS 016": "junk_pirates_haymaker"
+        "WS 015": "junk_pirates_mlrs",
+        "WS 016": "junk_pirates_mlrs"
       }
     },
     {

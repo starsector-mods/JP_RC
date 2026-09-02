@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 4,
-  "fluxVents": 17,
+  "fluxCapacitors": 3,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "pack_ridgeback_x",
   "hullMods": [

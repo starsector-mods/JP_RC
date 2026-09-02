@@ -44,9 +44,9 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
 
     @Override
     public void advance(float amount) {
-        //SectorEntityToken home = data.from.getPrimaryEntity();
+        if (fleet == null || data == null || data.from == null) return;
         
-        if (fleet.getAI().getCurrentAssignment() != null) { // there is a command to action
+        if (fleet.getAI() != null && fleet.getAI().getCurrentAssignment() != null) { // there is a command to action
             if (data.to != null && data.to.getPrimaryEntity() == null) { // nowhere to go
                 fleet.clearAssignments();
                 orderedEscape = true;
@@ -58,20 +58,29 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
             }
         } else {
             if (orderedEscape) { // review logic against behaviour!
-                fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, "aborting mission");// go back whence they came and despawn
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, "aborting mission");
+                } else {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000f, "aborting mission");
+                }
             } else if ("mission_complete".equals(data.mission)) { // no assignments and not escaping - get on with it
-                fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, getReturningActionText());
+                if (data.from != null && data.from.getPrimaryEntity() != null) {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, getReturningActionText());
+                } else {
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000f, getReturningActionText());
+                }
             } else if ("go_party".equals(data.mission)) {
                 
                 MarketAPI partyPlanet = findPartyPlanet();
                 
+                String cmdrName = (data.fleet != null && data.fleet.getCommander() != null) ? data.fleet.getCommander().getNameString() : "Captain";
                 if (partyPlanet != null) {
-                    log.info("Junk Explorer, " + data.fleet.getCommander().getNameString() + " wants to party at " + partyPlanet.getName());
+                    log.info("Junk Explorer, " + cmdrName + " wants to party at " + partyPlanet.getName());
                 } else {
-                    log.info("Junk Explorer, " + data.fleet.getCommander().getNameString() + " can't party today. Sadface.");
+                    log.info("Junk Explorer, " + cmdrName + " can't party today. Sadface.");
                 }
                 
-                if (data.fleet != null && partyPlanet != null) {
+                if (data.fleet != null && partyPlanet != null && partyPlanet.getPrimaryEntity() != null) {
                     data.to = partyPlanet;
                     if (enableJunkPiratesIntel) {
                         new JunkExplorerDecisionIntel(data, "party");
@@ -92,7 +101,7 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                     log.info("Junk Explorer, " + data.fleet.getCommander().getNameString() + " can't troll today. Not good.");
                 }
                 
-                if (data.fleet != null && friendlyTrollPort != null) {
+                if (data.fleet != null && friendlyTrollPort != null && friendlyTrollPort.getPrimaryEntity() != null) {
                     
                     data.to = friendlyTrollPort;
                     if (enableJunkPiratesIntel) {
@@ -222,24 +231,14 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                                     if (market.hasCondition(Conditions.DECIVILIZED_SUBPOP) || market.hasCondition(Conditions.DECIVILIZED)) {
                                         decivpop = true; // We need this, otherwise how else would we party.
                                         weight +=10; // strongly favour deciv pops, esp. will weight for multiple per system.
-                                                }
+                                    } else if (market.getFactionId().equals("pirates") || market.getFactionId().equals("junk_pirates_hounds") || market.getFactionId().equals("pack")) {
+                                        decivpop = true; // also willing to party at pirate or PACK stations
+                                        weight += 5;
+                                    }
                                     
-                                    if (market.hasCondition(Conditions.POPULATION_1) ||
-                                            market.hasCondition(Conditions.POPULATION_2) ||
-                                            market.hasCondition(Conditions.POPULATION_3) ||
-                                            market.hasCondition(Conditions.POPULATION_4) ||
-                                            market.hasCondition(Conditions.POPULATION_5) ||
-                                            market.hasCondition(Conditions.POPULATION_6) ||
-                                            market.hasCondition(Conditions.POPULATION_7) ||
-                                            market.hasCondition(Conditions.POPULATION_8) ||
-                                            market.hasCondition(Conditions.POPULATION_9) ||
-                                            market.hasCondition(Conditions.POPULATION_10)) {
-                                        
-                                        weight -= 5; // but try and steer clear of populated systems. Defeats the purpose.
-                                        
-                                                }
-
-
+                                    if (market.getSize() >= 4 && !market.getFactionId().equals("junk_pirates_hounds")) {
+                                        weight -= 5; // but try and steer clear of populated systems unless it's a friendly outlaw base.
+                                    }
                                     }
                                     // end of if market null check
 
@@ -285,16 +284,7 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                                         weight += 3;// we do want at least one hostile market
                                                 } else if
                                     
-                                     (market.hasCondition(Conditions.POPULATION_1) ||
-                                            market.hasCondition(Conditions.POPULATION_2) ||
-                                            market.hasCondition(Conditions.POPULATION_3) ||
-                                            market.hasCondition(Conditions.POPULATION_4) ||
-                                            market.hasCondition(Conditions.POPULATION_5) ||
-                                            market.hasCondition(Conditions.POPULATION_6) ||
-                                            market.hasCondition(Conditions.POPULATION_7) ||
-                                            market.hasCondition(Conditions.POPULATION_8) ||
-                                            market.hasCondition(Conditions.POPULATION_9) ||
-                                            market.hasCondition(Conditions.POPULATION_10)) {
+                                     (market.getSize() > 0) {
                                         
                                         systemfriendly = true; // any populated market suits
                                         weight += 2;
@@ -332,8 +322,11 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
 
                         if (market.getFaction() != null && market.getFaction().isHostileTo("junk_pirates")) continue; // might be in civ space, don't go to unfriendly market.
 
-                        if (market.hasCondition(Conditions.DECIVILIZED) || market.hasCondition(Conditions.DECIVILIZED_SUBPOP))
-                        markets.add(market,1); // go evens on all markets in this system that comply
+                        if (market.hasCondition(Conditions.DECIVILIZED) || market.hasCondition(Conditions.DECIVILIZED_SUBPOP)) {
+                            markets.add(market,1); // go evens on all markets in this system that comply
+                        } else if (market.getFactionId().equals("pirates") || market.getFactionId().equals("junk_pirates_hounds") || market.getFactionId().equals("pack")) {
+                            markets.add(market,1);
+                        }
                     }
 
                 }
@@ -529,7 +522,7 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
 	}
 	
 	protected String getInSystemActionText(RouteSegment segment) {
-            return "WHAT";
+            return "surveying the system";
 	}
         
         @Override
@@ -547,6 +540,10 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
 	protected JunkPiratesExplorerData getData() {
                 
                 return data;
+	}
+
+	protected Object readResolve() {
+		return this;
 	}
 	
 }

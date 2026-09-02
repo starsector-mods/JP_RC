@@ -32,7 +32,8 @@
     29
   ],
   "builtInMods": [
-    "phasefield"
+    "phasefield",
+    "junk_pirates_interdictor_housing"
   ],
   "builtInWings": [
     "junk_pirates_phase_drone"
@@ -111,7 +112,7 @@
       ],
       "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "MISSILE"
+      "type": "SYNERGY"
     },
     {
       "angle": 0,

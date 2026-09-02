@@ -178,8 +178,8 @@ public class JunkPiratesLostTechSalvageGen extends BaseCommandPlugin {
 		
 		Random fleetRandom = Misc.getRandom(seed, 1);
 		
-		String factionId = entity.getFaction().getId();
-		if (spec.getDefFaction() != null) {
+		String factionId = (entity.getFaction() != null) ? entity.getFaction().getId() : "junk_pirates_losttech";
+		if (spec != null && spec.getDefFaction() != null) {
 			factionId = spec.getDefFaction();
 		}
 		
@@ -218,7 +218,7 @@ public class JunkPiratesLostTechSalvageGen extends BaseCommandPlugin {
 				
 				fParams.random = fleetRandom;
 				fParams.withOfficers = false;
-				fParams.maxShipSize = (int) spec.getMaxDefenderSize();
+				fParams.maxShipSize = (spec != null) ? (int) spec.getMaxDefenderSize() : 4;
 //				if (override != null) {
 //					fParams.maxShipSize = override.maxDefenderSize;
 //				}

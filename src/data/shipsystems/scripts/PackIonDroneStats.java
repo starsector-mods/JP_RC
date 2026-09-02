@@ -28,12 +28,9 @@ public class PackIonDroneStats extends BaseShipSystemScript {
 		float sensorRangePercent = SENSOR_RANGE_PERCENT * effectLevel;
 		float weaponRangePercent = WEAPON_RANGE_PERCENT * effectLevel;
 		if (index == 0) {
-			return new StatusData("sensor range +" + (int) sensorRangePercent + "%", false);
+			return new StatusData("sensor range +" + (int) Math.round(sensorRangePercent) + "%", false);
 		} else if (index == 1) {
-			//return new StatusData("increased energy weapon range", false);
-			return null;
-		} else if (index == 2) {
-			return new StatusData("weapon range +" + (int) weaponRangePercent + "%", false);
+			return new StatusData("weapon range +" + (int) Math.round(weaponRangePercent) + "%", false);
 		}
 		return null;
 	}

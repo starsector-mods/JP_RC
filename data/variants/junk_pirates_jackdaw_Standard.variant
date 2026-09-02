@@ -1,11 +1,12 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 31,
+  "fluxCapacitors": 7,
   "fluxVents": 30,
   "goalVariant": true,
   "hullId": "junk_pirates_jackdaw",
   "hullMods": [
-    "pointdefenseai"
+    "pointdefenseai",
+    "armoredweapons"
   ],
   "permaMods": [],
   "quality": 0,

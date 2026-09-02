@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 0,
-  "fluxVents": 6,
+  "fluxCapacitors": 4,
+  "fluxVents": 18,
   "goalVariant": true,
   "hullId": "pack_spinone",
   "hullMods": [

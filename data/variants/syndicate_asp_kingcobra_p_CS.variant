@@ -1,11 +1,12 @@
 {
   "displayName": "Support",
-  "fluxCapacitors": 0,
-  "fluxVents": 21,
+  "fluxCapacitors": 28,
+  "fluxVents": 50,
   "goalVariant": true,
   "hullId": "syndicate_asp_kingcobra_p",
   "hullMods": [
     "targetingunit",
+    "hardenedshieldemitter",
     "expanded_deck_crew"
   ],
   "permaMods": [],
@@ -16,28 +17,8 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS 003": "squall"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 001": "hil",
-        "WS 004": "gravitonbeam",
-        "WS 007": "taclaser"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 002": "pdlaser",
-        "WS 008": "pdlaser",
-        "WS 009": "pdlaser",
-        "WS 010": "pdlaser",
-        "WS 011": "pdlaser",
-        "WS 012": "pdlaser"
+        "WS 003": "gauss",
+        "WS 001": "hil"
       }
     },
     {
@@ -45,14 +26,28 @@
       "mode": "ALTERNATING",
       "weapons": {
         "WS 005": "squall",
-        "WS 013": "squall"
+        "WS 013": "squall",
+        "WS 006": "pilum"
       }
     },
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS 006": "pilum"
+        "WS 004": "gravitonbeam",
+        "WS 002": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdlaser",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser",
+        "WS 012": "pdlaser"
       }
     }
   ],

@@ -38,7 +38,7 @@ public class JunkPiratesPackMesh extends BaseHullMod {
         public static String PM_ID = "JunkPiratesPackMesh";
         public static String PM_ID5 = "JunkPiratesPackMesh5";
         public static String PM_ID10 = "JunkPiratesPackMesh10";
-        public static String PM_NAME = "PACK MESH: ";
+        public static String PM_NAME = "PACK Mesh";
              
         public static final float SMOD_SPEED_BONUS = 5f;
         public static final float SMOD_FLUX_COST_BONUS = 5f;
@@ -143,7 +143,9 @@ public class JunkPiratesPackMesh extends BaseHullMod {
 
                     } else if ("calibrate".equals(meshstate)) {
 
-                        packMeshCombatData.put("reportText" + ship.getId(),CALIBRATING_TEXT);
+                        if (packMeshCombatData.get("reportText" + ship.getId()) == null) {
+                            packMeshCombatData.put("reportText" + ship.getId(), CALIBRATING_TEXT);
+                        }
 
                         packMeshCombatData.put("meshstate" + ship.getId(), "operate");
     //                    packMeshCombatData.put("num_friendly_stored" + ship.getId(), countFriendlyShips(ship));
@@ -260,7 +262,10 @@ public class JunkPiratesPackMesh extends BaseHullMod {
 //                    if ( TOTAL_DAMAGE_MULT > 120 ) TOTAL_DAMAGE_MULT = 120;
 //                    if ( TOTAL_DAMAGE_MULT < 80 ) TOTAL_DAMAGE_MULT = 80;
 
-                    packMeshCombatData.put("reportText" + ship.getId(), "(sp):" + (int) TOTAL_SPEED_BOOST + " (ra):" + (int) TOTAL_RANGE_BOOST + " (sh):" + (int) TOTAL_DAMAGE_BOOST);
+                    int spdBonus = (int) (speed_bonus * SPEED_BONUS_MULT);
+                    int rngBonus = (int) (range_bonus * RANGE_BONUS_MULT);
+                    int shdBonus = (int) (damage_bonus * DAMAGE_BONUS_MULT);
+                    packMeshCombatData.put("reportText" + ship.getId(), "Speed +" + spdBonus + "%, Range +" + rngBonus + "%, Shield Dmg -" + shdBonus + "%");
                     packMeshCombatData.put("bonusONE" + ship.getId(), false);
                     packMeshCombatData.put("bonusTWO" + ship.getId(), false);
 
@@ -322,11 +327,11 @@ public class JunkPiratesPackMesh extends BaseHullMod {
             }
 
             if (ship == Global.getCombatEngine().getPlayerShip() && (boolean) packMeshCombatData.get("bonusONE" + ship.getId())) {
-                Global.getCombatEngine().maintainStatusForPlayerShip(PM_ID5, PM_ICON, PM_NAME + "(5 node)", "weapon flux cost (-" + (int) WEAPON_FLUX_MULT + "%)", false);
+                Global.getCombatEngine().maintainStatusForPlayerShip(PM_ID5, PM_ICON, PM_NAME + " (5 Nodes)", "weapon flux cost -" + (int) WEAPON_FLUX_MULT + "%", false);
             }
 
             if (ship == Global.getCombatEngine().getPlayerShip() && (boolean) packMeshCombatData.get("bonusTWO" + ship.getId())) {
-                Global.getCombatEngine().maintainStatusForPlayerShip(PM_ID10, PM_ICON, PM_NAME + "(10 node)", "ship flux stats (+" + (int) SHIP_FLUX_MULT + "%)", false);
+                Global.getCombatEngine().maintainStatusForPlayerShip(PM_ID10, PM_ICON, PM_NAME + " (10 Nodes)", "flux capacity & dissipation +" + (int) SHIP_FLUX_MULT + "%", false);
             }
 //        	void maintainStatusForPlayerShip(Object key, String spriteName, String title, String data, boolean isDebuff);
         }

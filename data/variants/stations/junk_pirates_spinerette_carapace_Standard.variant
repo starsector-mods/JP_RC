@@ -9,8 +9,5 @@
   "quality": 0,
   "variantId": "junk_pirates_spinerette_carapace_Standard",
   "weaponGroups": [],
-  "wings": [
-    "junk_pirates_latrodectus_wing",
-    "junk_pirates_latrodectus_wing"
-  ]
+  "wings": []
 }

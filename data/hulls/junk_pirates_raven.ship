@@ -28,9 +28,7 @@
   },
   "builtInWings": [],
   "builtInModules": null,
-  "builtInMods": [
-    "targetingunit"
-  ],
+  "builtInMods": [],
   "weaponSlots": [
     {
       "id": "WS 000",

@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 8,
-  "fluxVents": 9,
+  "fluxCapacitors": 9,
+  "fluxVents": 10,
   "goalVariant": true,
   "hullId": "pack_wirefox_sh",
   "hullMods": [

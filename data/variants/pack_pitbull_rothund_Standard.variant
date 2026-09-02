@@ -1,9 +1,9 @@
 {
   "quality":0.5,
   "displayName": "Standard",
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 4,
         "goalVariant": true,
-  "fluxVents": 6,
+  "fluxVents": 12,
   "hullId": "pack_pitbull_rothund",
   "hullMods": [
     "missleracks",

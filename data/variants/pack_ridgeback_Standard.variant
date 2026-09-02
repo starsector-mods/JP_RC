@@ -2,9 +2,9 @@
   "displayName": "Standard",
   "hullId": "pack_ridgeback",
   "variantId": "pack_ridgeback_Standard",
-  "fluxVents": 19,
+  "fluxVents": 20,
         "goalVariant": true,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 1,
   "hullMods": [
     "turretgyros"
   ],

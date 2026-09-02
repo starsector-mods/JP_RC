@@ -1,13 +1,14 @@
 {
   "displayName": "Brutaliser",
-  "fluxCapacitors": 0,
-  "fluxVents": 8,
+  "fluxCapacitors": 3,
+  "fluxVents": 29,
   "goalVariant": true,
   "hullId": "syndicate_asp_copperhead_p",
   "hullMods": [
-        "hardenedshieldemitter",
-        "missleracks"
-    ],
+    "hardenedshieldemitter",
+    "missleracks",
+    "turretgyros"
+  ],
   "permaMods": [],
   "quality": 0,
   "variantId": "syndicate_asp_copperhead_p_Brutaliser",

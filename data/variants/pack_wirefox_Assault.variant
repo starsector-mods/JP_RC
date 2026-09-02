@@ -1,6 +1,6 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 4,
   "fluxVents": 10,
   "goalVariant": true,
   "hullId": "pack_wirefox",

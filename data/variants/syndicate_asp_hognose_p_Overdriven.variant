@@ -1,11 +1,12 @@
 {
   "displayName": "Overdriven",
-  "fluxCapacitors": 0,
-  "fluxVents": 2,
+  "fluxCapacitors": 3,
+  "fluxVents": 0,
   "goalVariant": true,
   "hullId": "syndicate_asp_hognose_p",
   "hullMods": [
-    "safetyoverrides"
+    "safetyoverrides",
+    "hardenedshieldemitter"
   ],
   "permaMods": [],
   "quality": 0,
@@ -22,7 +23,7 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS 005": "amblaster"
+        "WS 005": "irpulse"
       }
     },
     {
@@ -31,9 +32,18 @@
       "weapons": {
         "WS 002": "heavymg"
       }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdlaser",
+        "WS 003": "pdlaser"
+      }
     }
   ],
   "wings": [
+    "syndicate_asp_bite_wing",
     "syndicate_asp_bite_wing"
   ]
 }

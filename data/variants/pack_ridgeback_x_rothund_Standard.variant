@@ -3,8 +3,8 @@
   "displayName": "Standard",
   "hullId": "pack_ridgeback_x_rothund",
   "variantId": "pack_ridgeback_x_rothund_Standard",
-  "fluxVents": 18,
-        "goalVariant": true,
+  "fluxVents": 14,
+  "goalVariant": true,
   "fluxCapacitors": 0,
   "hullMods": [
     "turretgyros"

@@ -7,8 +7,7 @@
   "fluxCapacitors": 0,
   "hullMods": [
     "missleracks",
-    "eccm",
-    "heavyarmor"
+    "eccm"
   ],
   "weaponGroups": [
     {

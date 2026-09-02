@@ -1,7 +1,7 @@
 {
   "displayName": "Point Defense",
   "fluxCapacitors": 5,
-  "fluxVents": 6,
+  "fluxVents": 8,
         "goalVariant": true,
   "hullId": "junk_pirates_sickle",
   "hullMods": [

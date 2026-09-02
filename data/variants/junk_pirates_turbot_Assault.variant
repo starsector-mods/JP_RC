@@ -2,8 +2,8 @@
   "displayName": "Assault",
   "hullId": "junk_pirates_turbot",
   "variantId": "junk_pirates_turbot_Assault",
-  "fluxVents": 15,
-        "goalVariant": true,
+  "fluxVents": 11,
+  "goalVariant": true,
   "fluxCapacitors": 5,
   "hullMods": [
     "eccm",

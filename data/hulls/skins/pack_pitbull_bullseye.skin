@@ -15,7 +15,5 @@
 	"removeBuiltInWeapons":[], 		# weapon slot ids
 	"builtInMods":["targetingunit","pack_bullseye_suite", "insulatedengine"],
 	"weaponSlotChanges":{    
-        },
-	"builtInWeapons":{
-	}
+        }
 }

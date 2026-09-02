@@ -1,12 +1,12 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 0,
-  "fluxVents": 3,
+  "fluxCapacitors": 19,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "syndicate_asp_gigantophis_p",
   "hullMods": [
     "targetingunit",
-    "recovery_shuttles"
+    "hardenedshieldemitter"
   ],
   "permaMods": [],
   "quality": 0,
@@ -16,30 +16,7 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS 016": "tpc"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 001": "pdburst",
-        "WS 010": "heavyburst",
-        "WS 002": "pdburst",
-        "WS 007": "pdburst",
-        "WS 008": "pdburst",
-        "WS 012": "pdburst",
-        "WS 013": "pdburst"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 011": "ionbeam",
-        "WS 004": "ioncannon",
-        "WS 005": "ioncannon",
-        "WS 006": "ioncannon"
+        "WS 016": "syndicate_asp_viper"
       }
     },
     {
@@ -49,10 +26,39 @@
         "WS 014": "salamanderpod",
         "WS 015": "salamanderpod"
       }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "phasebeam",
+        "WS 010": "heavyburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "taclaser",
+        "WS 005": "taclaser",
+        "WS 006": "taclaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "pdlaser",
+        "WS 002": "pdlaser",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 012": "pdlaser",
+        "WS 013": "pdlaser"
+      }
     }
   ],
   "wings": [
-    "syndicate_asp_venom_wing",
+    "syndicate_asp_death_rattle_wing",
     "syndicate_asp_venom_wing"
   ]
 }

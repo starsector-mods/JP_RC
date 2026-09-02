@@ -55,7 +55,6 @@
 			"type": "BALLISTIC"
 		}
 	},
-	"builtInMods":["safetyoverrides"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["safetyoverrides"]
+	
 }

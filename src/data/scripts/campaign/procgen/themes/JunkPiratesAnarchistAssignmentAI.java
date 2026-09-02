@@ -100,5 +100,9 @@ public final class JunkPiratesAnarchistAssignmentAI implements EveryFrameScript{
 	public boolean runWhilePaused() {
 		return false;
 	}
+
+	protected Object readResolve() {
+		return this;
+	}
     
 }

@@ -1,10 +1,12 @@
 {
   "displayName": "Marauder",
-  "fluxCapacitors": 19,
+  "fluxCapacitors": 13,
   "fluxVents": 20,
   "goalVariant": true,
   "hullId": "junk_pirates_langoustine_p",
-  "hullMods": [],
+  "hullMods": [
+    "fluxdistributor"
+  ],
   "permaMods": [],
   "quality": 0,
   "variantId": "junk_pirates_langoustine_p_Standard",
@@ -29,15 +31,15 @@
       "weapons": {
         "WS 004": "pdlaser",
         "WS 005": "pdlaser",
-	"WS 006": "flak"
+        "WS 006": "flak"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-	 "WS 001": "junk_pirates_electrobeam"
-	}
+        "WS 001": "junk_pirates_electrobeam"
+      }
     }
   ],
   "wings": [

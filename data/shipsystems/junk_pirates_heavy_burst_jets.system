@@ -1,0 +1,29 @@
+{
+	"id":"junk_pirates_heavy_burst_jets",
+	"type":"ENGINE_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.PlugJetsAI",
+	
+	"statsScript":"data.shipsystems.scripts.JunkPiratesHeavyBurstJets",
+	
+	"engineGlowColor":[110,255,190,255],
+	"engineGlowContrailColor":[70,220,160,45],
+	"engineGlowLengthMult":2.0,
+	"engineGlowWidthMult":1.8,
+	"engineGlowGlowMult":3.5,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":false,
+
+	"useSound":"system_maneuvering_jets",
+	"loopSound":"system_maneuvering_jets_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":40,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":15
+	}
+}

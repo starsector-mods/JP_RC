@@ -74,9 +74,9 @@
     "pack_felix_drone"
   ],
   "builtInMods": [
-     "hbi",
-     "pack_mesh"
-     ],
+    "hbi",
+    "pack_mesh"
+  ],
   "center": [
     140,
     171
@@ -222,7 +222,7 @@
   "hullSize": "CAPITAL_SHIP",
   "shieldCenter": [
     16,
-    -0
+    0
   ],
   "shieldRadius": 201.703369,
   "spriteName": "graphics/pack/ships/pack_bulldog.png",
@@ -326,8 +326,8 @@
       "type": "ENERGY"
     },
     {
-      "angle": 85.601296,
-      "arc": 207.41011,
+      "angle": 0,
+      "arc": 360,
       "id": "WS 009",
       "locations": [
         35.5,
@@ -335,11 +335,11 @@
       ],
       "mount": "TURRET",
       "size": "SMALL",
-      "type": "ENERGY"
+      "type": "BUILT_IN"
     },
     {
-      "angle": -85.601296,
-      "arc": 207.41011,
+      "angle": 0,
+      "arc": 360,
       "id": "WS 010",
       "locations": [
         35.5,
@@ -347,7 +347,7 @@
       ],
       "mount": "TURRET",
       "size": "SMALL",
-      "type": "ENERGY"
+      "type": "BUILT_IN"
     },
     {
       "angle": 75.398727,
@@ -446,7 +446,7 @@
       "type": "ENERGY"
     },
     {
-      "angle": -0,
+      "angle": 0,
       "arc": 10.507606,
       "id": "WS 019",
       "locations": [
@@ -518,5 +518,9 @@
       "type": "BALLISTIC"
     }
   ],
-  "width": 280
+  "width": 280,
+  "builtInWeapons": {
+    "WS 009": "pack_affenpinscher",
+    "WS 010": "pack_affenpinscher"
+  }
 }

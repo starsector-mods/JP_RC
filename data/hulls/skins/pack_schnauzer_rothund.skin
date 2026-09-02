@@ -29,7 +29,6 @@
             #"type": "ENERGY"
 		}
 	},
-	"builtInMods":["heavyarmor","blast_doors","hardenedshieldemitter", "pack_overclocked_rh"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["heavyarmor","blast_doors","hardenedshieldemitter", "pack_overclocked_rh"]
+	
 }

@@ -1,0 +1,21 @@
+{
+	"id":"junk_pirates_interdictor",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.JunkPiratesInterdictorAI",
+	
+	"statsScript":"data.shipsystems.scripts.JunkPiratesInterdictorStats",
+
+	"runScriptWhileIdle":true,
+		
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_interdictor",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"threatRange":1000,
+		"threatAmount":10,
+		"threatAngle":0,
+		"threatArc":360
+	}
+}

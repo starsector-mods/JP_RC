@@ -35,31 +35,60 @@ import org.apache.log4j.Logger;
  */
 public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener implements EveryFrameScript {
 
-    private final List<JunkPiratesExplorerData> activeJunkFleets = new LinkedList<>();
-    private final IntervalUtil tracker;
+    private List<JunkPiratesExplorerData> activeJunkFleets = new LinkedList<>();
+    private IntervalUtil tracker;
+    transient private boolean hasRunSweep = false;
     
     public static final Logger log = Global.getLogger(JunkPiratesExplorerFleetManager.class);
     
     public JunkPiratesExplorerFleetManager() {
         super(true);
-        
-        float interval = Global.getSettings().getFloat("averagePatrolSpawnInterval");
-        tracker = new IntervalUtil(interval * 0.45f / junkPiratesFleetFrequencyModifier, interval * 0.75f / junkPiratesFleetFrequencyModifier);
-        
+    }
+
+    public IntervalUtil getTracker() {
+        if (tracker == null) {
+            float interval = Global.getSettings().getFloat("averagePatrolSpawnInterval");
+            tracker = new IntervalUtil(interval * 0.45f / junkPiratesFleetFrequencyModifier, interval * 0.75f / junkPiratesFleetFrequencyModifier);
+        }
+        return tracker;
     }
 
     protected Object readResolve() {
         Global.getSector().addTransientListener(this);
+        getTracker();
+        
+        if (activeJunkFleets == null) activeJunkFleets = new java.util.LinkedList<>();
+        
         return this;
     }
     
     @Override
     public void advance(float amount) {
-        
+        if (!hasRunSweep) {
+            if (activeJunkFleets == null) activeJunkFleets = new java.util.LinkedList<>();
+            if (activeJunkFleets.isEmpty()) {
+                for (com.fs.starfarer.api.campaign.LocationAPI loc : Global.getSector().getAllLocations()) {
+                    for (com.fs.starfarer.api.campaign.CampaignFleetAPI f : loc.getFleets()) {
+                        if (f != null && f.getMemoryWithoutUpdate() != null && f.getMemoryWithoutUpdate().getBoolean("junkPirateExplorers")) {
+                            boolean found = false;
+                            for (JunkPiratesExplorerFleetAssignmentAI.JunkPiratesExplorerData rd : activeJunkFleets) {
+                                if (rd.fleet == f) { found = true; break; }
+                            }
+                            if (!found) {
+                                activeJunkFleets.add(new JunkPiratesExplorerFleetAssignmentAI.JunkPiratesExplorerData(f));
+                            }
+                        }
+                    }
+                }
+            }
+            hasRunSweep = true;
+        }
+
+        if (Global.getSector() == null || Global.getSector().getClock() == null) return;
         float days = Global.getSector().getClock().convertToDays(amount);
         
-        tracker.advance(days);
-        if (!tracker.intervalElapsed()) {
+        getTracker().advance(days);
+        if (!getTracker().intervalElapsed()) {
             return;
         }
 
@@ -90,10 +119,10 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
     }
     
     protected int getMaxFleets() {
-        int numMarkets = Global.getSector().getEconomy().getNumMarkets();
+        int numMarkets = 0; for(com.fs.starfarer.api.campaign.econ.MarketAPI m : Global.getSector().getEconomy().getMarketsCopy()) { if("junk_pirates".equals(m.getFactionId())) numMarkets++; }
+        if (numMarkets == 0) return 0;
         int maxBasedOnMarket = (int) ( numMarkets * junkPiratesMaxFleetModifier / 6 ); //numMarkets * 2 is vanilla equivalent for Economy fleets. We want to be well below this.
         return Math.max(3, maxBasedOnMarket); // probably want to externalise this in mendoncaModSettings? 3, or more
-
     }
     
     protected void addExplorerFleetIfPossible() {
@@ -127,7 +156,7 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
             if (market.isHidden()) continue;
             
             if (!market.hasSpaceport()) continue;
-            if (market.getFaction() != null && !"junk_pirates".equals(market.getFaction().getId())) continue; // only get ASP Syndicate Markets
+            if (!"junk_pirates".equals(market.getFactionId())) continue; // only get ASP Syndicate Markets
             
             float w = market.getSize() + market.getStabilityValue();
             
@@ -181,7 +210,8 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
         
         CampaignFleetAPI fleet = createJunkExplorerFleet(data);
         
-        if (fleet == null || data.from == null) return null;
+        if (fleet == null || data.from == null || data.from.getPrimaryEntity() == null || 
+            data.from.getPrimaryEntity().getContainingLocation() == null || data.from.getPrimaryEntity().getLocation() == null) return null;
         data.fleet = fleet;
         data.startingFP = fleet.getFleetPoints();
         
@@ -215,7 +245,7 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
             if (market.isHidden()) continue;
             
             if (!market.hasSpaceport()) continue;
-            if (!"junk_pirates".equals(market.getFaction().getId())) continue; // don't get non-syndicate markets
+            if (!"junk_pirates".equals(market.getFactionId())) continue; // don't get non-syndicate markets
             
             float w = market.getSize(); // weight by market size
             
@@ -276,11 +306,11 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
         String factionId = "junk_pirates";
         
         float combat = fp_fleet; // how is this defined
-        float freighter = 0f;
+        float freighter = 0.1f;
         float liner = 0f;
-        float tanker = 0f;
+        float tanker = 0.15f;
         float transport = 0f;
-        float utility = 0f;
+        float utility = 0.05f;
         
         String type = getFleetTypeIdForTier(fp_fleet);
         

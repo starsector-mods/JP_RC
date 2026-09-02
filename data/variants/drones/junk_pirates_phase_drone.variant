@@ -11,7 +11,7 @@
 	"weaponGroups":[
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 001":"pdlaser"
+		 			"WS 001":"ioncannon_fighter"
 		 		   }
 		}
 	]

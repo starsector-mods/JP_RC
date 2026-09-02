@@ -1,6 +1,6 @@
 {
   "displayName": "Elite",
-  "fluxCapacitors": 10,
+  "fluxCapacitors": 12,
   "fluxVents": 30,
   "goalVariant": true,
   "hullId": "pack_mastiff",

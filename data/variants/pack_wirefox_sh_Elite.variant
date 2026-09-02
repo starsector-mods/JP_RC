@@ -1,6 +1,6 @@
 {
   "displayName": "Elite",
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 5,
   "fluxVents": 10,
   "goalVariant": true,
   "hullId": "pack_wirefox_sh",

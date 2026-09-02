@@ -5,7 +5,9 @@
 	"descriptionId":"pack_ridgeback_x",
 	"tags":["rare_bp", "pack_bp", "junk_technicians"],
 	"descriptionPrefix":"A Ridgeback X class destroyer as modified by the Rothund machine shop - with improved armour, enhanced bulkheads and a modernised shield.",
-	"fleetPoints":10,
+	"fleetPoints":12,
+	"suppliesToRecover":12,
+	"suppliesPerMonth":12,
 	"ordnancePoints":68,
 	"baseValueMult":1.2,
 	"spriteName":"graphics/pack/ships/pack_ridgeback_x_rothund.png",
@@ -13,7 +15,6 @@
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
-	"builtInMods":["auxiliarythrusters","heavyarmor","blast_doors","hardenedshieldemitter", "pack_overclocked_rh"],
-	"builtInWeapons":{
-    }
+	"builtInMods":["auxiliarythrusters","heavyarmor","blast_doors","hardenedshieldemitter", "pack_overclocked_rh"]
+	
 }
