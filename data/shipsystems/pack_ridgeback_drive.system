@@ -6,7 +6,7 @@
 	
 	"statsScript":"data.shipsystems.scripts.PackRidgebackDriveStats",
 	
-	"useSound":"maneuvering_jets_activate",
+	"useSound":"system_ammo_feeder",
 	"loopSound":"maneuvering_jets_loop",
 	"outOfUsesSound":"gun_out_of_ammo",
 	

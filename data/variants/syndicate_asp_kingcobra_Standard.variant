@@ -1,7 +1,7 @@
 {
   "displayName": "Cruise Liner",
-  "fluxCapacitors": 47,
-  "fluxVents": 50,
+  "fluxCapacitors": 23,
+  "fluxVents": 45,
   "goalVariant": true,
   "hullId": "syndicate_asp_kingcobra",
   "hullMods": [
@@ -60,6 +60,7 @@
   "wings": [
     "syndicate_asp_constrictor_wing",
     "syndicate_asp_venom_wing",
+    "syndicate_asp_bite_wing",
     "syndicate_asp_bite_wing"
   ]
 }

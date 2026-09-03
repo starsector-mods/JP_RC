@@ -234,13 +234,14 @@ public class JunkPiratesElectroChaffAndJunkjetPlugin extends BaseEveryFrameComba
                 log.info(String.format("didn't find a spawnChance for [%s] in the list, loading from weapon_data.csv", weaponId));
             }
             String weaponData = actualWeapon.getSpec().getCustomPrimaryHL();
-            int splitIndex = weaponData.indexOf("%");
+            int splitIndex = (weaponData != null) ? weaponData.indexOf("%") : -1;
             String subString;
             if (splitIndex > 0) {
-                subString = weaponData.substring(splitIndex - 2, splitIndex).trim();
+                int start = Math.max(0, splitIndex - 2);
+                subString = weaponData.substring(start, splitIndex).trim();
             } else {
-                // if we don't find one, use 100%
-                subString = "100";
+                // if we don't find a percentage, default to 25%
+                subString = "25";
             }
             baseSpawnChance = Integer.valueOf(subString);
             WEAPON_CHAFF_DATA.put(weaponId + "_spawnChance", baseSpawnChance);

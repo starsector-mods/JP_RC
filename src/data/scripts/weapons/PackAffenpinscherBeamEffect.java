@@ -13,10 +13,8 @@ import org.lwjgl.util.vector.Vector2f;
 public class PackAffenpinscherBeamEffect implements BeamEffectPlugin {
 
     private static final String TUMBLE_TAG = "pack_affenpinscher_tumbled";
-    private static final String HP_TAG = "pack_affenpinscher_hp";
     private static final Color SPARK_COLOR = new Color(255, 175, 90, 255);
     private static final Color JITTER_COLOR = new Color(255, 120, 50, 200);
-    private static final float TUMBLE_CHANCE = 0.50f;
 
     @Override
     public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
@@ -34,35 +32,33 @@ public class PackAffenpinscherBeamEffect implements BeamEffectPlugin {
             MissileAPI missile = (MissileAPI) target;
 
             if (missile.getCustomData() != null) {
-                // Initial roll for this missile
+                // Initial roll for this missile, scaled inversely with missile durability
                 if (!missile.getCustomData().containsKey(TUMBLE_TAG)) {
-                    if (Math.random() < TUMBLE_CHANCE) {
+                    float maxHp = Math.max(1f, missile.getMaxHitpoints());
+                    float tumbleChance = Math.min(0.60f, 150f / maxHp);
+                    if (Math.random() < tumbleChance) {
                         missile.setCustomData(TUMBLE_TAG, Boolean.TRUE);
-                        missile.setCustomData(HP_TAG, missile.getHitpoints());
 
-                        // 1. Permanently flame out the missile engine and break contrail
+                        // 1. Flame out the missile engine and break contrail
                         missile.flameOut();
                         missile.interruptContrail();
 
-                        // 2. Set owner to neutral (100) so the Affenpinscher and all PD immediately drop target lock
-                        missile.setOwner(100);
-
-                        // 3. Tumble spin (300 - 600 deg/sec)
+                        // 2. Tumble spin (300 - 600 deg/sec)
                         float spinSign = (Math.random() < 0.5f) ? -1.0f : 1.0f;
                         float spinRate = spinSign * (300f + (float) (Math.random() * 300f));
 
-                        // 4. Replace guidance AI with tumbling AI
+                        // 3. Replace guidance AI with tumbling AI
                         missile.setMissileAI(new TumblingMissileAI(missile, spinRate));
                         missile.setAngularVelocity(spinRate);
 
-                        // 5. Apply strong lateral deflection velocity kick
+                        // 4. Apply lateral deflection velocity kick
                         Vector2f beamDir = VectorUtils.getDirectionalVector(beam.getFrom(), missile.getLocation());
                         Vector2f lateralKick = new Vector2f(-beamDir.y * spinSign, beamDir.x * spinSign);
                         float kickSpeed = 130f + (float) (Math.random() * 100f);
                         lateralKick.scale(kickSpeed);
                         Vector2f.add(missile.getVelocity(), lateralKick, missile.getVelocity());
 
-                        // 6. Visual feedback
+                        // 5. Visual feedback
                         missile.setJitter(beam.getWeapon(), JITTER_COLOR, 0.5f, 4, 6f);
                         engine.addHitParticle(
                                 missile.getLocation(),
@@ -75,15 +71,6 @@ public class PackAffenpinscherBeamEffect implements BeamEffectPlugin {
                     } else {
                         // Roll failed: regular beam damage applies (no tumble)
                         missile.setCustomData(TUMBLE_TAG, Boolean.FALSE);
-                    }
-                }
-
-                // If this missile was tumbled, ensure 0 damage is taken so it tumbles away intact
-                if (Boolean.TRUE.equals(missile.getCustomData().get(TUMBLE_TAG))) {
-                    Object savedHpObj = missile.getCustomData().get(HP_TAG);
-                    if (savedHpObj instanceof Float) {
-                        float savedHp = (Float) savedHpObj;
-                        missile.setHitpoints(savedHp);
                     }
                 }
             }

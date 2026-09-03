@@ -1,11 +1,12 @@
 {
   "displayName": "Assault",
-  "fluxCapacitors": 23,
-  "fluxVents": 0,
+  "fluxCapacitors": 14,
+  "fluxVents": 25,
   "goalVariant": true,
   "hullId": "syndicate_asp_copperhead_p",
   "hullMods": [
-    "safetyoverrides",
+    "targetingunit",
+    "fluxdistributor",
     "armoredweapons",
     "hardenedshieldemitter"
   ],

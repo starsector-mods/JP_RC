@@ -1,7 +1,7 @@
 {
   "displayName": "Social Justice",
-  "fluxCapacitors": 20,
-  "fluxVents": 50,
+  "fluxCapacitors": 15,
+  "fluxVents": 45,
   "goalVariant": true,
   "hullId": "junk_pirates_kraken",
   "hullMods": [
@@ -64,5 +64,7 @@
       }
     }
   ],
-  "wings": []
+  "wings": [
+    "junk_pirates_shard_wing"
+  ]
 }

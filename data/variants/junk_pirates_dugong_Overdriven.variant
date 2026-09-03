@@ -1,11 +1,13 @@
 {
-  "displayName": "Overdriven",
-  "fluxCapacitors": 17,
-  "fluxVents": 0,
+  "displayName": "Assault",
+  "fluxCapacitors": 0,
+  "fluxVents": 11,
   "goalVariant": false,
   "hullId": "junk_pirates_dugong",
   "hullMods": [
-    "safetyoverrides"
+    "heavyarmor",
+    "armoredweapons",
+    "targetingunit"
   ],
   "permaMods": [],
   "quality": 0,

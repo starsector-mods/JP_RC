@@ -21,10 +21,10 @@ public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
     private static final float MAX_RAMP_TIME = 3f;
     
     // Ticks for spawning sparks, debris chunks, explosions, and arcs
-    private final IntervalUtil sparkInterval = new IntervalUtil(0.02f, 0.04f);
-    private final IntervalUtil debrisInterval = new IntervalUtil(0.18f, 0.30f);
-    private final IntervalUtil explosionInterval = new IntervalUtil(0.10f, 0.16f);
-    private final IntervalUtil arcInterval = new IntervalUtil(0.20f, 0.35f);
+    private final IntervalUtil sparkInterval = new IntervalUtil(0.06f, 0.10f);
+    private final IntervalUtil debrisInterval = new IntervalUtil(0.50f, 0.75f);
+    private final IntervalUtil explosionInterval = new IntervalUtil(0.12f, 0.20f);
+    private final IntervalUtil arcInterval = new IntervalUtil(0.25f, 0.40f);
     
     @Override
     public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon) {
@@ -159,7 +159,7 @@ public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
                             int numDebris = 1 + (int)(2 * intensity);
                             float minSpeed = 40f + 30f * intensity;
                             float maxSpeed = 100f + 80f * intensity;
-                            float duration = 5f + 5f * intensity;
+                            float duration = 1f + 1f * intensity;
                             
                             engine.spawnDebrisSmall(hitLoc, targetVel, numDebris, reverseAngle, 120f, minSpeed, maxSpeed, duration);
                             

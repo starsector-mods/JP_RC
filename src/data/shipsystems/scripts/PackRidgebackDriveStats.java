@@ -17,25 +17,29 @@ import org.lazywizard.lazylib.combat.CombatUtils;
  * Inspired by the Rhodesian Ridgeback:
  * - Dorsal Ridge Thermal Shunt: +40% Dissipation, -25% Weapon Flux Cost (unmatched stamina, zero overheat trap)
  * - Predator Harasser Agility: +35% Turn Rate, +20% Acceleration, +15% Top Speed (agile circling around larger prey)
- * - Hunting Pressure: +25% Ballistic & Energy Rate of Fire, +30% Weapon Turn Rate, -30% Recoil
+ * - Hunting Pressure: +15% Fire Rate, +30% Weapon Turn Rate, -30% Recoil
  * - Drone Synergy: Overdrives the built-in FELIX Escort Drone (+35% speed & fire rate)
- * - Visuals: Clean weapon mount glow and subtle engine flare (no hull jitter or visual clutter)
+ * - Visuals & SFX: Clean weapon mount glow, subtle engine flare, and accelerated ammo feeder activation audio
  */
 public class PackRidgebackDriveStats extends BaseShipSystemScript {
 
     public static final Object KEY_JITTER = new Object();
 
+    // 1. Dorsal Ridge Thermal Shunt
     public static final float DISSIPATION_BONUS_PERCENT = 40f;
     public static final float WEAPON_FLUX_REDUCTION = 25f;
 
+    // 2. Harasser Mobility
     public static final float SPEED_BONUS_PERCENT = 15f;
     public static final float ACCEL_BONUS_PERCENT = 20f;
     public static final float TURN_BONUS_PERCENT = 35f;
 
+    // 3. Hunting Fire Pressure
     public static final float ROF_BONUS_PERCENT = 15f;
     public static final float WEAPON_TURN_BONUS = 30f;
     public static final float RECOIL_REDUCTION = 30f;
 
+    // 4. Drone Overdrive
     public static final float DRONE_SPEED_BONUS = 35f;
     public static final float DRONE_ROF_BONUS = 35f;
 
@@ -102,6 +106,17 @@ public class PackRidgebackDriveStats extends BaseShipSystemScript {
                 ship.getEngineController().extendFlame(KEY_JITTER, 1.2f * effectLevel, 1.2f * effectLevel, 1.2f * effectLevel);
             }
         }
+
+        // 6. Player UI HUD Status
+        if (ship == engine.getPlayerShip()) {
+            engine.maintainStatusForPlayerShip(
+                    KEY_JITTER,
+                    ship.getSystem().getSpecAPI().getIconSpriteName(),
+                    "Ridgeback Protocol",
+                    "flux dissipation +" + (int) DISSIPATION_BONUS_PERCENT + "%, fire rate +" + (int) ROF_BONUS_PERCENT + "%",
+                    false
+            );
+        }
     }
 
     @Override
@@ -141,11 +156,13 @@ public class PackRidgebackDriveStats extends BaseShipSystemScript {
     @Override
     public StatusData getStatusData(int index, State state, float effectLevel) {
         if (index == 0) {
-            return new StatusData("ridgeback protocol: +" + (int) DISSIPATION_BONUS_PERCENT + "% flux dissipation, -" + (int) WEAPON_FLUX_REDUCTION + "% weapon flux", false);
+            return new StatusData("flux dissipation +" + (int) DISSIPATION_BONUS_PERCENT + "%", false);
         } else if (index == 1) {
-            return new StatusData("+" + (int) TURN_BONUS_PERCENT + "% turn rate, +" + (int) SPEED_BONUS_PERCENT + "% speed, +" + (int) ROF_BONUS_PERCENT + "% fire rate", false);
+            return new StatusData("weapon flux use -" + (int) WEAPON_FLUX_REDUCTION + "%", false);
         } else if (index == 2) {
-            return new StatusData("drone escort overcharged (+" + (int) DRONE_SPEED_BONUS + "% speed & RoF)", false);
+            return new StatusData("weapon rate of fire +" + (int) ROF_BONUS_PERCENT + "%", false);
+        } else if (index == 3) {
+            return new StatusData("improved maneuverability and engine power", false);
         }
         return null;
     }

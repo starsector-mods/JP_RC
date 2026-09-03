@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 26,
-  "fluxVents": 44,
+  "fluxCapacitors": 8,
+  "fluxVents": 30,
   "goalVariant": true,
   "hullId": "pack_bulldog",
   "hullMods": [
@@ -58,5 +58,8 @@
       }
     }
   ],
-  "wings": []
+  "wings": [
+    "pack_gunship_wing",
+    "pack_gunship_wing"
+  ]
 }

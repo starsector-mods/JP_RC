@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 9,
-  "fluxVents": 12,
+  "fluxCapacitors": 10,
+  "fluxVents": 14,
   "goalVariant": true,
   "hullId": "pack_GFB",
   "hullMods": [
@@ -42,6 +42,7 @@
     }
   ],
   "wings": [
+    "pack_drone_gunship_wing",
     "pack_drone_gunship_wing"
   ]
 }

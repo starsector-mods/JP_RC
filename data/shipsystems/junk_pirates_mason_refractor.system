@@ -1,0 +1,23 @@
+{
+	"id":"junk_pirates_mason_refractor",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.JunkPiratesMasonRefractorAI",
+	
+	"statsScript":"data.shipsystems.scripts.JunkPiratesMasonRefractorStats",
+
+	"runScriptWhileIdle":true,
+		
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_damper",
+	"loopSound":"system_damper_loop",
+	"deactivateSound":"system_damper_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"threatRange":900,
+		"threatAmount":10,
+		"threatAngle":0,
+		"threatArc":360
+	}
+}

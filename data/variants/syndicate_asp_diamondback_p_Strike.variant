@@ -1,11 +1,10 @@
 {
   "displayName": "Strike",
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 7,
   "fluxVents": 10,
   "goalVariant": true,
   "hullId": "syndicate_asp_diamondback_p",
   "hullMods": [
-    "advancedshieldemitter",
     "extendedshieldemitter",
     "missleracks",
     "hardenedshieldemitter"

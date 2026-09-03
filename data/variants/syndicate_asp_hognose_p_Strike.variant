@@ -1,12 +1,12 @@
 {
   "displayName": "Strike",
-  "fluxCapacitors": 7,
-  "fluxVents": 13,
+  "fluxCapacitors": 5,
+  "fluxVents": 12,
   "goalVariant": true,
   "hullId": "syndicate_asp_hognose_p",
   "hullMods": [
     "missleracks",
-    "magazines",
+    "hardenedshieldemitter",
     "armoredweapons"
   ],
   "permaMods": [],

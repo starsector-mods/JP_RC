@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 12,
-  "fluxVents": 50,
+  "fluxCapacitors": 10,
+  "fluxVents": 36,
   "goalVariant": true,
   "hullId": "junk_pirates_the_reaper",
   "hullMods": [
@@ -40,5 +40,9 @@
       }
     }
   ],
-  "wings": []
+  "wings": [
+    "junk_pirates_shard_wing",
+    "junk_pirates_shard_wing",
+    "junk_pirates_cleat_wing"
+  ]
 }

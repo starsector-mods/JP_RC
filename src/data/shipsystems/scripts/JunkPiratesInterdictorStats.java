@@ -92,7 +92,7 @@ public class JunkPiratesInterdictorStats extends BaseShipSystemScript {
 			if (mainTarget.getFluxTracker().showFloaty() || 
 					ship == Global.getCombatEngine().getPlayerShip() ||
 					mainTarget == Global.getCombatEngine().getPlayerShip()) {
-				mainTarget.getFluxTracker().showOverloadFloatyIfNeeded("Ship function interrupted", color, 4f, true);
+				mainTarget.getFluxTracker().showOverloadFloatyIfNeeded("Ship systems interdicted", color, 4f, true);
 			}
 
 			// 1. Initial complete engine flameout (triggered ONCE on hit)
@@ -178,7 +178,7 @@ public class JunkPiratesInterdictorStats extends BaseShipSystemScript {
 						if (mainTarget != null) {
 							Color color = getEffectColor(mainTarget);
 							color = Misc.setAlpha(color, 255);
-							mainTarget.getFluxTracker().showOverloadFloatyIfNeeded("Ship functions restored", color, 4f, true);
+							mainTarget.getFluxTracker().showOverloadFloatyIfNeeded("Ship systems restored", color, 4f, true);
 						}
 						
 						Global.getCombatEngine().removePlugin(this);
@@ -216,6 +216,17 @@ public class JunkPiratesInterdictorStats extends BaseShipSystemScript {
 							}
 						}
 					}
+
+					// Maintain HUD debuff status for player ship with vanilla interdictor icon
+					if (mainTarget == Global.getCombatEngine().getPlayerShip()) {
+						Global.getCombatEngine().maintainStatusForPlayerShip(
+							TARGET_KEY,
+							"graphics/icons/hullsys/interdictor_array.png",
+							"Ship systems interdicted",
+							"engines and navigation disrupted",
+							true
+						);
+					}
 				}
 			});
 		}
@@ -234,6 +245,16 @@ public class JunkPiratesInterdictorStats extends BaseShipSystemScript {
 			ship.setJitter(this,
 					getEffectColor(mainTarget),
 					jitterLevel, 6, 0f, jitterRangeBonus);
+		}
+
+		if (ship == Global.getCombatEngine().getPlayerShip() && ship.getSystem() != null) {
+			Global.getCombatEngine().maintainStatusForPlayerShip(
+				SHIP_KEY,
+				ship.getSystem().getSpecAPI().getIconSpriteName(),
+				ship.getSystem().getDisplayName(),
+				"interdiction field active",
+				false
+			);
 		}
 	}
 

@@ -1,7 +1,7 @@
 {
   "displayName": "Elite",
-  "fluxCapacitors": 5,
-  "fluxVents": 9,
+  "fluxCapacitors": 8,
+  "fluxVents": 15,
   "goalVariant": true,
   "hullId": "pack_GFB",
   "hullMods": [
@@ -36,6 +36,7 @@
     }
   ],
   "wings": [
-    "pack_shock_gunship_wing"
+    "pack_shock_gunship_wing",
+    "pack_drone_gunship_wing"
   ]
 }

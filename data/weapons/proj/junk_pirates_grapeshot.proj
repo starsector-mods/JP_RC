@@ -35,7 +35,7 @@
 	"behaviorSpec":{"behavior":"MIRV",
 					"splitRange":350,
 					"minTimeToSplit":0.5,
-					"numShots":18,
+					"numShots":12,
 					"damage":150,
 					"emp":0,
 					"damageType":"FRAGMENTATION",

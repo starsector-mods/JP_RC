@@ -1,7 +1,7 @@
 {
   "displayName": "Support",
-  "fluxCapacitors": 14,
-  "fluxVents": 30,
+  "fluxCapacitors": 10,
+  "fluxVents": 26,
   "goalVariant": true,
   "hullId": "junk_pirates_goat",
   "hullMods": [
@@ -44,5 +44,7 @@
       }
     }
   ],
-  "wings": []
+  "wings": [
+    "junk_pirates_shard_wing"
+  ]
 }
