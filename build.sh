@@ -36,6 +36,7 @@ add_jar_by_name "MagicLib.jar"
 add_jar_by_name "MagicLib-Kotlin.jar"
 add_jar_by_name "Graphics.jar"
 add_jar_by_name "ExerelinCore.jar"
+add_jar_by_name "LunaLib.jar"
 
 find src -name "*.java" > sources.txt
 mkdir -p bin
