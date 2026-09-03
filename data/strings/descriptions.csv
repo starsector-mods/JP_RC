@@ -277,3 +277,20 @@ pack,FACTION,"The Post Anarchist Canis Kollective have recently emerged from und
 In recent times it has become a smothering blanket, as the technology which has kept them in food, supplies and energy by resynthesising the atmospheric material has rejected non-ideal isotopes and compounds back to the planet to the point where the existence of the colony is threatened.
 In their emergence they are socially and technologically unprepared for the current state of the sector.",,,,,
 syndicate_asp_viper,WEAPON,"The Viper Pulse Cannon is a heavily modified underworld knockoff of the Hegemony's Thermal Pulse Cannon. Built directly into the prow of ASP Familia enforcer vessels, it overcharges its containment coils to violently expel a 5-round burst of high-velocity violet plasma, trading the raw thermal efficiency of the original for raw, destabilizing EMP damage.",Heavy Assault,,,,
+syndicate_asp_cerberus,SHIP,"Maintained under a premium ASP Syndicate service contract. The hull gleams with a polished finish, and all internal systems are kept in immaculate condition.
+
+The Cerberus is prized for providing a cost-effective balance between cargo capacity and enough combat power for its size to discourage casual piracy with the happy result of lowered insurance rates compared to standard Domain-era civilian grade freighters. The Cerberus is now widely considered to be a wise choice for independent traders in the Sector. 
+
+While somewhat expensive to produce and maintain compared to standard Hounds, it carries almost as much cargo and mounts substantially more firepower and armor.",,,,,
+syndicate_asp_hammerhead,SHIP,"Maintained under a premium ASP Syndicate service contract. The hull gleams with a polished finish, and all internal systems are kept in immaculate condition.
+
+A midline destroyer from the golden age of the Domain, the Hammerhead is respected for its staying power in battle as well as its ballistic capabilities.",,,,,
+syndicate_asp_mercury,SHIP,"Maintained under a premium ASP Syndicate service contract. The hull gleams with a polished finish, and all internal systems are kept in immaculate condition.
+
+One of the smallest ships in the Sector equipped with an on-board hyperdrive actuator, this class is typically used for safely transporting VIPs or couriers between star systems.
+
+Though not heavily armed, it has substantial armour and a robust structural design.",,,,,
+syndicate_asp_vigilance,SHIP,"Maintained under a premium ASP Syndicate service contract. The hull gleams with a polished finish, and all internal systems are kept in immaculate condition.
+
+An excellent harasser and support frigate, the Vigilance-class has oversized (for its class) hybrid and missile mounts. While it shines in a fleet setting, it can be easily overwhelmed by large numbers of smaller threats.",,,,,
+

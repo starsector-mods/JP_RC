@@ -1,7 +1,7 @@
 {
   "displayName": "Macerator",
-  "fluxCapacitors": 16,
-  "fluxVents": 50,
+  "fluxCapacitors": 0,
+  "fluxVents": 43,
   "goalVariant": true,
   "hullId": "syndicate_asp_kingcobra_p",
   "hullMods": [
@@ -9,7 +9,8 @@
     "hardenedshieldemitter",
     "magazines",
     "turretgyros",
-    "armoredweapons"
+    "armoredweapons",
+    "missleracks"
   ],
   "permaMods": [],
   "quality": 0,
@@ -34,9 +35,9 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 005": "cyclone",
-        "WS 013": "cyclone",
-        "WS 006": "harpoonpod"
+        "WS 005": "dragonpod",
+        "WS 013": "hydra",
+        "WS 006": "gorgonpod"
       }
     },
     {

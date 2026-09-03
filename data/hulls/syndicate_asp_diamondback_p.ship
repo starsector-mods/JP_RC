@@ -7,7 +7,7 @@
     2.5,
     25,
     33,
-    -0,
+    0,
     37,
     -33,
     -36,
@@ -49,7 +49,7 @@
   "hullSize": "FRIGATE",
   "shieldCenter": [
     1,
-    -0
+    0
   ],
   "shieldRadius": 67.599998,
   "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_diamondback_p.png",
@@ -74,7 +74,7 @@
       "id": "WS 002",
       "locations": [
         -23,
-        -0
+        0
       ],
       "mount": "TURRET",
       "size": "SMALL",
@@ -117,5 +117,6 @@
       "type": "MISSILE"
     }
   ],
-  "width": 76
+  "width": 76,
+  "builtInMods": []
 }
