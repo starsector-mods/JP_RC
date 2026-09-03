@@ -3,7 +3,7 @@
 	"skinHullId":"pack_samoyed_decoupled_caomarelo",
 	"hullName":"Samoyed (Base, CA)",
 	"descriptionId":"pack_samoyed_decoupled",
-	"tags":["rare_bp", "pack_bp"],
+	"tags":["rare_bp", "junk_pirates_pack_bp"],
 	"descriptionPrefix":"A Samoyed class light freighter, without cargo module, as modified by Caomarelo Arms and armour - with increased engine performance and a re-tooled strike package.",
 	"fleetPoints":5,
 	"ordnancePoints":31,

@@ -1,10 +1,10 @@
-
 package data.scripts.world;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.util.Misc;
 import java.util.ArrayList;
 
 public class AddMarketPlace {
@@ -18,13 +18,19 @@ public class AddMarketPlace {
         MarketAPI newMarket = Global.getFactory().createMarket(marketID, name, size);  
         newMarket.setFactionId(factionID);  
         newMarket.setPrimaryEntity(primaryEntity);  
+        newMarket.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         newMarket.getTariff().modifyFlat("generator", tariff);  
+        newMarket.setUseStockpilesForShortages(true);
               
         if (null != submarkets){  
             for (String market : submarkets){  
                 newMarket.addSubmarket(market);  
             }  
         }  
+        
+        if (!marketConditions.contains("population_" + size)) {
+            newMarket.addCondition("population_" + size);
+        }
               
         for (String condition : marketConditions) {  
             newMarket.addCondition(condition);  
@@ -36,7 +42,9 @@ public class AddMarketPlace {
               
         if (null != connectedEntities) {  
             for (SectorEntityToken entity : connectedEntities) {  
-                newMarket.getConnectedEntities().add(entity);  
+                if (entity != primaryEntity && !newMarket.getConnectedEntities().contains(entity)) {
+                    newMarket.getConnectedEntities().add(entity);  
+                }
             }  
         }  
             
@@ -44,11 +52,14 @@ public class AddMarketPlace {
         primaryEntity.setMarket(newMarket);
         primaryEntity.setFaction(factionID);
         newMarket.getMemoryWithoutUpdate().set("$core_noDeciv", true);
+        Misc.setFullySurveyed(newMarket, null, false);
               
         if (null != connectedEntities) {  
             for (SectorEntityToken entity : connectedEntities) {  
-                entity.setMarket(newMarket);
-                entity.setFaction(factionID);
+                if (entity != primaryEntity) {
+                    entity.setMarket(newMarket);
+                    entity.setFaction(factionID);
+                }
             }  
         }
             

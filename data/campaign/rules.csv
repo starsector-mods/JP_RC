@@ -54,74 +54,74 @@ Sensors are indicating many discrete energy signatures in a cloud of varying den
 junkpiratesSpineretteDefenders,TriggerAutomatedDefenses,$customType == junk_pirates_spinerette_active score:1000,JunkPiratesLostTechDefenderInteraction,"As your $shipOrFleet moves in closer, the dim glow from planetside starts to bring into relief a huge mechanical ballet of various drones and other automata in the midst of some bizarre planetary-scale mining and fabrication exercise.
 With your increasing proximity, the interplay seems to gradually slow down and coalesce, inferring an awareness of you as a potential threat.",,
 #ASP Courier Flavour Text,,,,,,
-greetingAspItemsFriendly,OpenCommLink,"$aspCourierFleetITEMS score:1000
+greetingAspItemsFriendly,OpenCommLink,"$entity.aspCourierFleetITEMS score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","Hi, friend. Can this wait? We're on the clock here.",,
-greetingAspItemsNeutral,OpenCommLink,"$aspCourierFleetITEMS score:1000
+greetingAspItemsNeutral,OpenCommLink,"$entity.aspCourierFleetITEMS score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","I'm sorry but we can't be kept long, we're on important Syndicate Business.",,
-greetingAspItemsHostile,OpenCommLink,"$aspCourierFleetITEMS score:1000
-$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
-greetingAspMoneyFriendly,OpenCommLink,"$aspCourierFleetMONEY score:1000
+greetingAspItemsHostile,OpenCommLink,"$entity.aspCourierFleetITEMS score:1000
+$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
+greetingAspMoneyFriendly,OpenCommLink,"$entity.aspCourierFleetMONEY score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","Hi, friend. Can this wait? We're on the clock here.",,
-greetingAspMoneyNeutral,OpenCommLink,"$aspCourierFleetMONEY score:1000
+greetingAspMoneyNeutral,OpenCommLink,"$entity.aspCourierFleetMONEY score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","I'm sorry but we can't be kept long, we're on important Syndicate Business.",,
-greetingAspMoneyHostile,OpenCommLink,"$aspCourierFleetMONEY score:1000
-$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
-greetingAspVIPFriendly,OpenCommLink,"$aspCourierFleetVIP score:1000
+greetingAspMoneyHostile,OpenCommLink,"$entity.aspCourierFleetMONEY score:1000
+$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
+greetingAspVIPFriendly,OpenCommLink,"$entity.aspCourierFleetVIP score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","Hi, friend. Can this wait? We're on the clock here.",,
-greetingAspVIPNeutral,OpenCommLink,"$aspCourierFleetVIP score:1000
+greetingAspVIPNeutral,OpenCommLink,"$entity.aspCourierFleetVIP score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","I'm sorry but we can't be kept long, we're on important Syndicate Business.",,
-greetingAspVIPHostile,OpenCommLink,"$aspCourierFleetVIP score:1000
-$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,"$personRank appears over the comms channel: ""We are carrying someone of extreme importance and any interference will be dealt with appropriately. Back off.""",,
-greetingAspPrisonerFriendly,OpenCommLink,"$aspCourierFleetPRISONER score:1000
+greetingAspVIPHostile,OpenCommLink,"$entity.aspCourierFleetVIP score:1000
+$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,"$personRank appears over the comms channel: ""We are carrying someone of extreme importance and any interference will be dealt with appropriately. Back off.""",cutCommLink:Cut the comm link,
+greetingAspPrisonerFriendly,OpenCommLink,"$entity.aspCourierFleetPRISONER score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","Hi, friend. Can this wait? We're on the clock here.",,
-greetingAspPrisonerNeutral,OpenCommLink,"$aspCourierFleetPRISONER score:1000
+greetingAspPrisonerNeutral,OpenCommLink,"$entity.aspCourierFleetPRISONER score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","I'm sorry but we can't be kept long, we're on important Syndicate Business.",,
-greetingAspPrisonerHostile,OpenCommLink,"$aspCourierFleetPRISONER
-$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,"$personRank appears over the comms channel: ""We are willing to defend ourselves and are appropriately armed. Any interference will see ramifications.""",,
+greetingAspPrisonerHostile,OpenCommLink,"$entity.aspCourierFleetPRISONER score:1000
+$faction.hostileToPlayer",$ignorePlayerCommRequests = true 1,"$personRank appears over the comms channel: ""We are willing to defend ourselves and are appropriately armed. Any interference will see ramifications.""",cutCommLink:Cut the comm link,
 #ASP Normal Flavour text,,,,,,
 greetingAspFriendly,OpenCommLink,"$faction.id == syndicate_asp
 $faction.friendlyToPlayer
-!$aspCourierFleetITEMS
-!$aspCourierFleetVIP
-!$aspCourierFleetPRISONER
-!$aspCourierFleetMONEY","$menuState = fleetConvMain 0
+!$entity.aspCourierFleetITEMS
+!$entity.aspCourierFleetVIP
+!$entity.aspCourierFleetPRISONER
+!$entity.aspCourierFleetMONEY","$menuState = fleetConvMain 0
 FireAll PopulateOptions","Hi, friend. Can this wait? We're on the clock here.",,
 greetingAspHostileWeaker,OpenCommLink,"$faction.id == syndicate_asp
 $faction.hostileToPlayer
 $relativeStrength < 0
-!$aspCourierFleetITEMS
-!$aspCourierFleetVIP
-!$aspCourierFleetPRISONER
-!$aspCourierFleetMONEY",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
+!$entity.aspCourierFleetITEMS
+!$entity.aspCourierFleetVIP
+!$entity.aspCourierFleetPRISONER
+!$entity.aspCourierFleetMONEY",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
 greetingAspHostileWeakerDefiant,OpenCommLink,"$faction.id == syndicate_asp
 $faction.hostileToPlayer
 $relativeStrength < 0
 $weakerThanPlayerButHolding
-!$aspCourierFleetITEMS
-!$aspCourierFleetVIP
-!$aspCourierFleetPRISONER
-!$aspCourierFleetMONEY",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
+!$entity.aspCourierFleetITEMS
+!$entity.aspCourierFleetVIP
+!$entity.aspCourierFleetPRISONER
+!$entity.aspCourierFleetMONEY",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
 greetingAspHostileStronger,OpenCommLink,"$faction.id == syndicate_asp
 $faction.hostileToPlayer
 $relativeStrength >= 0
-!$aspCourierFleetITEMS
-!$aspCourierFleetVIP
-!$aspCourierFleetPRISONER
-!$aspCourierFleetMONEY",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
+!$entity.aspCourierFleetITEMS
+!$entity.aspCourierFleetVIP
+!$entity.aspCourierFleetPRISONER
+!$entity.aspCourierFleetMONEY",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
 greetingAspNeutral,OpenCommLink,"$faction.id == syndicate_asp
 $faction.neutralToPlayer
-!$aspCourierFleetITEMS
-!$aspCourierFleetVIP
-!$aspCourierFleetPRISONER
-!$aspCourierFleetMONEY","$menuState = fleetConvMain 0
+!$entity.aspCourierFleetITEMS
+!$entity.aspCourierFleetVIP
+!$entity.aspCourierFleetPRISONER
+!$entity.aspCourierFleetMONEY","$menuState = fleetConvMain 0
 FireAll PopulateOptions","I'm sorry but we can't be kept long, we're on important Syndicate Business.",,
 #PACK Normal Flavour text,,,,,,
 greetingPackFriendly,OpenCommLink,"$faction.id == pack
@@ -129,82 +129,111 @@ $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","Hey there, what's happenin'?",,
 greetingPackHostileWeaker,OpenCommLink,"$faction.id == pack
 $faction.hostileToPlayer
-$relativeStrength < 0",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
 greetingPackHostileWeakerDefiant,OpenCommLink,"$faction.id == pack
 $faction.hostileToPlayer
 $relativeStrength < 0
-$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
 greetingPackHostileStronger,OpenCommLink,"$faction.id == pack
 $faction.hostileToPlayer
-$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,,
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,All requests for comms are being denied.,cutCommLink:Cut the comm link,
 greetingPackNeutral,OpenCommLink,"$faction.id == pack
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions",Can we help you?,,
 #JP Explorer Flavour Text,,,,,,
-greetingJUNKExplorerNeutral,OpenCommLink,"$entity.junkPirateExplorers score:1000
+greetingJUNKExplorerNeutral_1,OpenCommLink,"$entity.junkPirateExplorers score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","Dream of the Tangerine? So do we all, but best not to spend too long on one.
-OR
-Why don't the hab tubes break, you may ask? It is purely the force of our will. Our nature. We bind the planet, stitched up by our souls.
-OR
-If man seeks perfection, he is seeking failure. For the man who achieves perfection has failed.
-OR
-There are millions of people floating around this little sector of ours. All of them are people, not all of them are leaders.
-OR
-Sometimes, $playerName, it just rains, you know?",,
-greetingJUNKExplorerHostileStronger,OpenCommLink,"$entity.junkPirateExplorers score:1000
+FireAll PopulateOptions","Dream of the Tangerine? So do we all, but best not to spend too long on one.",,
+greetingJUNKExplorerNeutral_2,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","Why don't the hab tubes break, you may ask? It is purely the force of our will. Our nature. We bind the planet, stitched up by our souls.",,
+greetingJUNKExplorerNeutral_3,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","If man seeks perfection, he is seeking failure. For the man who achieves perfection has failed.",,
+greetingJUNKExplorerNeutral_4,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","There are millions of people floating around this little sector of ours. All of them are people, not all of them are leaders.",,
+greetingJUNKExplorerNeutral_5,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","Sometimes, $playerName, it just rains, you know?",,
+greetingJUNKExplorerHostileStronger_1,OpenCommLink,"$entity.junkPirateExplorers score:1000
 $faction.hostileToPlayer
-$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"Remember, please, do not seek perfection. In fact, seek the opposite. Seek the purest kind of chaos, because then anything can happen.
-OR
-Perfection is death, $playerName. See you around, maybe not in this life.
-OR
-The conclusion of it all, really, is nothing. It's not true to say 'nothing is PERFECT', more accurately 'perfect IS nothing'. You are perfect, $playerName.
-OR
-I would make the sincere recommendation that the best you can do is enjoy it.
-OR
-We fight, not because we are angry. We fight, not because we are right. We fight, because YOU are wrong.
-OR
-When you strive to make the little man your friend; you make him weaker. When you strive to make the big man your friend; he will take your world.",,
-greetingJUNKExplorerHostileWeakerDefiant,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"Remember, please, do not seek perfection. In fact, seek the opposite. Seek the purest kind of chaos, because then anything can happen.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileStronger_2,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"Perfection is death, $playerName. See you around, maybe not in this life.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileStronger_3,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"The conclusion of it all, really, is nothing. It's not true to say 'nothing is PERFECT', more accurately 'perfect IS nothing'. You are perfect, $playerName.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileStronger_4,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"I would make the sincere recommendation that the best you can do is enjoy it.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileStronger_5,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"We fight, not because we are angry. We fight, not because we are right. We fight, because YOU are wrong.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileStronger_6,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"When you strive to make the little man your friend; you make him weaker. When you strive to make the big man your friend; he will take your world.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeakerDefiant_1,OpenCommLink,"$entity.junkPirateExplorers score:1000
 $faction.hostileToPlayer
 $relativeStrength < 0
-$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"Remember, please, do not seek perfection. In fact, seek the opposite. Seek the purest kind of chaos, because then anything can happen.
-OR
-Perfection is death, $playerName.
-OR
-The conclusion of it all, really, is nothing. It's not true to say 'nothing is PERFECT', more accurately 'perfect IS nothing'. You are perfect, $playerName.
-OR
-I would make the sincere recommendation that the best we can do is enjoy it.
-OR
-We fight, not because we are angry. We fight, not because we are right. We fight, because YOU are wrong.
-OR
-When you strive to make the little man your friend; you make him weaker. When you strive to make the big man your friend; he will take your world.",,
-greetingJUNKExplorerHostileWeaker,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"Remember, please, do not seek perfection. In fact, seek the opposite. Seek the purest kind of chaos, because then anything can happen.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeakerDefiant_2,OpenCommLink,"$entity.junkPirateExplorers score:1000
 $faction.hostileToPlayer
-$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"Remember, please, do not seek perfection. In fact, seek the opposite. Seek the purest kind of chaos, because then anything can happen.
-OR
-Perfection is death, $playerName.
-OR
-The conclusion of it all, really, is nothing. It's not true to say 'nothing is PERFECT', more accurately 'perfect IS nothing'.
-OR
-I would make the sincere recommendation that the best we can do is enjoy it.
-OR
-When you strive to make the little man your friend; you make him weaker. When you strive to make the big man your friend; he will take your world.",,
-greetingJUNKExplorerFriendly,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"Perfection is death, $playerName.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeakerDefiant_3,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"The conclusion of it all, really, is nothing. It's not true to say 'nothing is PERFECT', more accurately 'perfect IS nothing'. You are perfect, $playerName.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeakerDefiant_4,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"I would make the sincere recommendation that the best we can do is enjoy it.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeakerDefiant_5,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"We fight, not because we are angry. We fight, not because we are right. We fight, because YOU are wrong.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeakerDefiant_6,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"When you strive to make the little man your friend; you make him weaker. When you strive to make the big man your friend; he will take your world.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeaker_1,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"Remember, please, do not seek perfection. In fact, seek the opposite. Seek the purest kind of chaos, because then anything can happen.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeaker_2,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"Perfection is death, $playerName.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeaker_3,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"The conclusion of it all, really, is nothing. It's not true to say 'nothing is PERFECT', more accurately 'perfect IS nothing'.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeaker_4,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"I would make the sincere recommendation that the best we can do is enjoy it.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerHostileWeaker_5,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"When you strive to make the little man your friend; you make him weaker. When you strive to make the big man your friend; he will take your world.",cutCommLink:Cut the comm link,
+greetingJUNKExplorerFriendly_1,OpenCommLink,"$entity.junkPirateExplorers score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","My advice to you, $playerName, is that happiness is just the way your brain takes on certain chemicals. Sometimes you can ... encourage ... those chemicals by having a near-death experience in a starship.
-OR
-If it doesn't look right, it doesn't mean it isn't right. If people choose to rewrite what is 'right', that is not your problem.
-OR
-If you're the only one carrying an opinion in a room of a hundred people, it probably means you are the one who has got it right.
-OR
-Who is the King? Who are you? He has chosen to walk round with a big target on his back and the weight of our great lands around his shoulders. Who do you think is really holding the power?
-OR
-If you want to make waves, $playerName - dont try and control the water - just rearrange the sea bed.
-OR
-Its cold outside, theres no kind of atmosphere. Do you think we are all alone, $playerName? More or less.
-OR
-You know who made these tubes? The tubes that hold tight as the Glorious plates shift around us and huge rifts of ammonia ice drift right into us? It was us. We made them, with the force of our spirit alone.",,
+FireAll PopulateOptions","My advice to you, $playerName, is that happiness is just the way your brain takes on certain chemicals. Sometimes you can ... encourage ... those chemicals by having a near-death experience in a starship.",,
+greetingJUNKExplorerFriendly_2,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","If it doesn't look right, it doesn't mean it isn't right. If people choose to rewrite what is 'right', that is not your problem.",,
+greetingJUNKExplorerFriendly_3,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","If you're the only one carrying an opinion in a room of a hundred people, it probably means you are the one who has got it right.",,
+greetingJUNKExplorerFriendly_4,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","Who is the King? Who are you? He has chosen to walk round with a big target on his back and the weight of our great lands around his shoulders. Who do you think is really holding the power?",,
+greetingJUNKExplorerFriendly_5,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","If you want to make waves, $playerName - dont try and control the water - just rearrange the sea bed.",,
+greetingJUNKExplorerFriendly_6,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","Its cold outside, theres no kind of atmosphere. Do you think we are all alone, $playerName? More or less.",,
+greetingJUNKExplorerFriendly_7,OpenCommLink,"$entity.junkPirateExplorers score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","You know who made these tubes? The tubes that hold tight as the Glorious plates shift around us and huge rifts of ammonia ice drift right into us? It was us. We made them, with the force of our spirit alone.",,
 # JUNK fleet greeting lines,,,,,,
 greetingJUNKFriendly,OpenCommLink,"$faction.id == junk_pirates
 $faction.friendlyToPlayer

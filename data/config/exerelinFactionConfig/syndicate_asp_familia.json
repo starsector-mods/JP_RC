@@ -1,5 +1,6 @@
 {
     "playableFaction":false,
+    "startingFaction":true,
     "corvusCompatible":true,
     "spawnAsFactionId":"syndicate_asp",
     "ngcTooltip":"ASP Familia start, with purple nasty ships",

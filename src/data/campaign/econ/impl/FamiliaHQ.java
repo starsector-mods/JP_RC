@@ -86,7 +86,9 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 		
 		if (!isFunctional()) {
 			supply.clear();
+			demand.clear();
 			unapply();
+			return;
 		}
 
 	}
@@ -279,17 +281,13 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 
 	public int getMaxPatrols(PatrolType type) {
-		if (market == null || market.getStats() == null || market.getStats().getDynamic() == null) return 0;
-		if (type == PatrolType.FAST) {
-			return (int) market.getStats().getDynamic().getMod(Stats.PATROL_NUM_LIGHT_MOD).computeEffective(0);
+		if (!isFunctional() || market == null) return 0;
+		switch (type) {
+			case FAST: return 2;
+			case COMBAT: return 1;
+			case HEAVY: return market.getSize() >= 6 ? 1 : 0;
+			default: return 0;
 		}
-		if (type == PatrolType.COMBAT) {
-			return (int) market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).computeEffective(0);
-		}
-		if (type == PatrolType.HEAVY) {
-			return (int) market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).computeEffective(0);
-		}
-		return 0;
 	}
 	
 	public boolean shouldCancelRouteAfterDelayCheck(RouteData route) {
@@ -299,6 +297,8 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
 		
 	}
+
+
 
 	public void reportFleetDespawnedToListener(CampaignFleetAPI fleet, FleetDespawnReason reason, Object param) {
 		if (!isFunctional() || fleet == null || reason == null || market == null || RouteManager.getInstance() == null) return;
@@ -316,8 +316,9 @@ public class FamiliaHQ extends BaseIndustry implements RouteFleetSpawner, FleetE
 	}
 	
 	public CampaignFleetAPI spawnFleet(RouteData route) {
+		if (!isFunctional()) return null;
 		if (route == null || !(route.getCustom() instanceof PatrolFleetData)) return null;
-		if (market == null || market.getContainingLocation() == null || market.getPrimaryEntity() == null) return null;
+		if (market == null || market.getContainingLocation() == null || market.getPrimaryEntity() == null || market.getFactionId() == null) return null;
 		
 		PatrolFleetData custom = (PatrolFleetData) route.getCustom();
 		PatrolType type = custom.type;

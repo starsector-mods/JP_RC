@@ -87,7 +87,7 @@
 		"showNameOnMap":false,
 		"scaleNameWithZoom":false,
 		"scaleIconWithZoom":true,
-		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "junk_pirates_spinerette_active"],
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "junk_pirates_spinerette_active", "non_expiring"],
 		"layers":["STATIONS"], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true

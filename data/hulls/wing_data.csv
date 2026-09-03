@@ -7,7 +7,7 @@ junk_pirates_splinter_wing,junk_pirates_splinter_Standard,"fighter3, fighter, mi
 syndicate_asp_constrictor_wing,syndicate_asp_constrictor_Support,"fighter2, interceptor, high, junk_pirates_asp_bp",2,,8,12,V,4000,1000,,2,FIGHTER,,15,14000
 syndicate_asp_venom_wing,syndicate_asp_venom_Interceptor,"interceptor3, interceptor, high, junk_pirates_asp_bp",1,,4,8,V,4000,500,300,3,INTERCEPTOR,,10,9000
 syndicate_asp_bite_wing,syndicate_asp_bite_Drone,"interceptor1, interceptor, low, junk_pirates_asp_bp",0,,4,8,CLAW,4000,200,700,4,INTERCEPTOR,,9,6000
-syndicate_asp_death_rattle_wing,syndicate_asp_death_rattle_Standard,"support3, fighter, high, rare_bp",2,0.5,8,12,V,4000,500,,2,SUPPORT,,15,12000
+syndicate_asp_death_rattle_wing,syndicate_asp_death_rattle_Standard,"support3, fighter, high, rare_bp, junk_pirates_asp_bp",2,0.5,8,12,V,4000,500,,2,SUPPORT,,15,12000
 ,,,,,,,,,,,,,,,
 junk_pirates_phase_drone,junk_pirates_phase_drone,"no_drop, no_sell, high",1,,4,0,BOX,1500,250,700,3,INTERCEPTOR,,5,1500
 pack_drone_ion,pack_drone_ion,"no_drop, no_sell, high",2,,6,0,V,1500,200,,1,FIGHTER,,20,6000

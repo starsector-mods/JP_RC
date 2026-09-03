@@ -42,7 +42,8 @@
 			"junk_pirates_the_reaper",
 			"junk_pirates_boxenstein_blue",
 			"junk_pirates_raven",
-			"junk_pirates_tangerine"]},
+			"junk_pirates_tangerine",
+			"junk_pirates_tangerine_blue"]},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
@@ -54,7 +55,8 @@
 			"junk_pirates_the_reaper",
 			"junk_pirates_boxenstein_blue",
 			"junk_pirates_raven",
-			"junk_pirates_tangerine"]},
+			"junk_pirates_tangerine",
+			"junk_pirates_tangerine_blue"]},
 	"knownFighters":{
 		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
 		"fighters":[
@@ -93,7 +95,6 @@
 			"magazines",
 			"missleracks",
 			"extendedshieldemitter",
-			"frontemitter",
 			"frontshield",
 			"heavyarmor",
 			"insulatedengine",
@@ -102,7 +103,6 @@
 			"operations_center",
 			"fluxbreakers",
 			"stabilizedshieldemitter",
-			"frontshield",  # makeshift
 			"surveying_equipment",
 			"hiressensors",
 			"efficiency_overhaul"]},

@@ -71,6 +71,7 @@ public class SyndicateAspHitSquadFleetManager extends BaseCampaignEventListener 
     @Override
     public void advance(float amount) {
         if (!hasRunSweep) {
+            Global.getSector().addTransientListener(this);
             if (activeAspHitFleets == null) activeAspHitFleets = new java.util.LinkedList<>();
             if (activeAspHitFleets.isEmpty()) {
                 for (com.fs.starfarer.api.campaign.LocationAPI loc : Global.getSector().getAllLocations()) {

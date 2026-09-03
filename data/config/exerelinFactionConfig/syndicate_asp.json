@@ -9,6 +9,7 @@
     "vengeanceFleetNames":["Enforcers", "Hit-Fleet", "Kill-Fleet"],
     "vengeanceFleetNamesSingle":["an Enforcer fleet", "a Hit-Fleet", "a Kill-Fleet"],
     
+    "miningVariantsOrWings":["syndicate_asp_cerberus_Standard"],
     "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
     "specialForcesFlagshipVariants":{ "syndicate_asp_copperhead_p_Brutaliser": 1, "syndicate_asp_kingcobra_Standard": 0.5 },
     

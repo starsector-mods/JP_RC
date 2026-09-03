@@ -60,7 +60,7 @@ public class York {
 		system.addRingBand(york3, "misc", "rings1", 256f, 2, Color.white, 256f, 400, 40f);
 		system.addRingBand(york3, "misc", "rings1", 256f, 2, Color.white, 256f, 420, 60f);
 
-		PlanetAPI york4 = system.addPlanet("swanage", star, "Swanage", "gas_giant", 15, 280, 12500, 450);
+		PlanetAPI york4 = system.addPlanet("york_swanage", star, "Swanage", "gas_giant", 15, 280, 12500, 450);
 
 		york4.setCustomDescriptionId("planet_yorkIV");
 
@@ -76,13 +76,13 @@ public class York {
 				 "hegemony"); // faction
 		relay.setCircularOrbit( system.getEntityById("lincoln"), 350, 1200, 60);
 
-		PlanetAPI york4a = system.addPlanet("dartmouth", york4, "Dartmouth", "rocky_ice", 290, 55, 800, 45);
+		PlanetAPI york4a = system.addPlanet("york_dartmouth", york4, "Dartmouth", "rocky_ice", 290, 55, 800, 45);
 		york4a.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "barren"));
 		york4a.getSpec().setGlowColor(new Color(245,235,250,185));
 		york4a.applySpecChanges();
 		york4a.setFaction("junk_pirates");
 
-		PlanetAPI york4b = system.addPlanet("christchurch", york4, "Christchurch", "rocky_metallic", 280, 65, 1000, 55);
+		PlanetAPI york4b = system.addPlanet("york_christchurch", york4, "Christchurch", "rocky_metallic", 280, 65, 1000, 55);
 		york4b.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "volturn"));
 		york4b.getSpec().setGlowColor(new Color(245,255,250,125));
 		york4b.applySpecChanges();

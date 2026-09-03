@@ -1,6 +1,7 @@
 package data.campaign.intel.misc;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
@@ -29,6 +30,7 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     protected float fleetSize;
     protected boolean sameLocation;
     protected String cargoListString;
+    protected CampaignFleetAPI fleet;
 
     transient protected boolean money;
     transient protected boolean prisoner;
@@ -41,6 +43,7 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     public SyndicateAspCourierDepartureIntel(SyndicateAspCourierRouteData data) {
         if (data == null || data.from == null || data.fleet == null || data.cargotype == null || data.to == null) return;
         
+        this.fleet = data.fleet;
         this.fromEntity = data.from.getPrimaryEntity();
         this.toEntity = data.to.getPrimaryEntity();
         this.fromName = data.from.getName();
@@ -240,7 +243,9 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     @Override
     public FactionAPI getFactionForUIColors() {
         initTransientData();
-        return customerFaction;
+        if (customerFaction != null) return customerFaction;
+        if (aspFaction != null) return aspFaction;
+        return Global.getSector().getPlayerFaction();
     }
 
     public String getSmallDescriptionTitle() {
@@ -250,6 +255,21 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     @Override
     public SectorEntityToken getMapLocation(SectorMapAPI map) {
         return fromEntity;
+    }
+
+    protected float elapsedDays = 0f;
+
+    @Override
+    public void advance(float amount) {
+        super.advance(amount);
+        if (isEnding() || isEnded()) return;
+        
+        float days = Global.getSector().getClock().convertToDays(amount);
+        elapsedDays += days;
+        
+        if (fleet == null || !fleet.isAlive() || elapsedDays > 60f) {
+            endAfterDelay();
+        }
     }
 
     protected Object readResolve() {

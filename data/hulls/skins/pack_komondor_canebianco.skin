@@ -3,7 +3,7 @@
 	"skinHullId":"pack_komondor_canebianco",
 	"hullName":"Komondor (CB)",
 	"descriptionId":"pack_komondor",
-	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"tags":["rare_bp", "junk_pirates_packprime_bp", "junk_technicians"],
 	"descriptionPrefix":"A Komondor class destroyer as modified by Canebianco technicians - with an enhanced shield emitter and advanced ordnance systems.",
 	"fleetPoints":9,
 	"ordnancePoints":90,

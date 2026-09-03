@@ -69,7 +69,13 @@ public final class JunkPiratesAnarchistAssignmentAI implements EveryFrameScript{
 				return;
 			} else {
 				float days = 5f + 5f * (float) Math.random();
-				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, null, days, "patrolling");
+				SectorEntityToken center = homeSystem != null ? homeSystem.getCenter() : null;
+				if (center == null && homeSystem != null) center = homeSystem.getStar();
+				if (center == null) center = source;
+				if (center != null) {
+					fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, center, days, "patrolling");
+				}
+				return;
 			}
 		}
 		
@@ -94,7 +100,7 @@ public final class JunkPiratesAnarchistAssignmentAI implements EveryFrameScript{
 	
 	
 	public boolean isDone() {
-		return false;
+		return fleet == null || !fleet.isAlive();
 	}
 
 	public boolean runWhilePaused() {

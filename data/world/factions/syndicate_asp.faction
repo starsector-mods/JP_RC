@@ -35,12 +35,12 @@
 			"syndicate_asp_kingcobra"]},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
-		"tags":["junk_pirates_asp_bp", "base_bp", "midline_bp", "hightech_bp"],
+		"tags":["junk_pirates_asp_bp"],
 		"hulls":[
 			"syndicate_asp_kingcobra"]},
 	"knownFighters":{
 		"tags":["junk_pirates_asp_bp", "midline_bp"],
-		"hulls":[
+		"fighters":[
 			"syndicate_asp_death_rattle_wing"
 		]},
 	"priorityFighters":{
@@ -90,7 +90,6 @@
 			"magazines",
 			"missleracks",
 			"extendedshieldemitter",
-			"frontemitter",
 			"frontshield",  # makeshift
 			"hardenedshieldemitter",
 			"hardened_subsystems",
@@ -117,7 +116,7 @@
 		
 		"shipSize":4,
 		
-		"aggression":1,
+		"aggression":2,
 		
 		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
 		"combatFreighterCombatUseFraction":0.5,				# as part of the normal combat lineup

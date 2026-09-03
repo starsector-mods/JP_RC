@@ -3,7 +3,7 @@
 	"skinHullId":"pack_ridgeback_x_rothund",
 	"hullName":"Ridgeback X (RH)",
 	"descriptionId":"pack_ridgeback_x",
-	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"tags":["rare_bp", "junk_pirates_packprime_bp", "junk_technicians"],
 	"descriptionPrefix":"A Ridgeback X class destroyer as modified by the Rothund machine shop - with improved armour, enhanced bulkheads and a modernised shield.",
 	"fleetPoints":12,
 	"suppliesToRecover":12,

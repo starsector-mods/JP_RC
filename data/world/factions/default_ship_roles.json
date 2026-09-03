@@ -54,7 +54,10 @@
 	        "junk_pirates_hammer_Assault":10,
 		"junk_pirates_tangerine_Standard":4,
 		"junk_pirates_tangerine_blue_CS":2,
-		"junk_pirates_tangerine_blue_Assault":2
+		"junk_pirates_tangerine_blue_Assault":2,
+		"junk_pirates_tangerine_Filthbag":4,
+		"pack_schnauzer_caomarelo_PD":5,
+		"syndicate_asp_diamondback_p_Strike":2
 	},
 	"combatMedium":{
 		"syndicate_asp_copperhead_Standard":10,
@@ -99,7 +102,10 @@
 	        "junk_pirates_boxenstein_Slugger":10,
 	        "junk_pirates_boxenstein_Support":10,
 		"junk_pirates_boxenstein_blue_Support":3,
-		"junk_pirates_tangerine_Filthbag":4
+		"junk_pirates_scythe_Standard":10,
+		"pack_BRT_Guard":10,
+		"pack_komondor_Support":10,
+		"syndicate_asp_hognose_Standard":10
 	},
 	"combatLarge":{
 		"syndicate_asp_gigantophis_p_Standard":2,
@@ -141,8 +147,7 @@
 	        "junk_pirates_kraken_Elite":5,
 	        "junk_pirates_kraken_CS":10,
 	        "junk_pirates_kraken_Violent":10,
-		
-		"junk_pirates_spinerette_base_Standard":10
+	        "junk_pirates_the_reaper_Standard":5
 
 	},
 	
@@ -175,6 +180,7 @@
 		"syndicate_asp_kingcobra_Standard":10,
 
 	        "junk_pirates_orca_Standard":10,
+	        "junk_pirates_orca_Assault":10,
 	        "junk_pirates_the_reaper_Standard":10
 
 	},
@@ -208,7 +214,9 @@
 		"syndicate_asp_gigantophis_Standard":10,
 		"syndicate_asp_kingcobra_Standard":10,
 
-	        "junk_pirates_orca_Standard":10
+	        "junk_pirates_orca_Standard":10,
+	        "junk_pirates_orca_Assault":10,
+	        "junk_pirates_the_reaper_Standard":5
 
 	},
 

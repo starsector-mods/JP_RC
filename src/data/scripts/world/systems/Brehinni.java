@@ -195,7 +195,7 @@ public class Brehinni {
 
 		ring = system.addTerrain(Terrain.RING, new RingParams(200 + 256, 1200, null, "Hope Rings"));
 		ring.setName("Hope Rings");
-		ring.setCircularOrbit(star, 0, 0, 100);
+		ring.setCircularOrbit(bh4, 0, 0, 100);
 
 		SectorEntityToken relay = system.addCustomEntity("listening_post", // unique id
 				 "Listening Post", // name - if null, defaultName from custom_entities.json will be used
@@ -338,7 +338,7 @@ public class Brehinni {
 		// generates hyperspace destinations for in-system jump points
 		system.autogenerateHyperspaceJumpPoints(true, true);
 
-                addDerelict(system, hypercube, "junk_pirates_tangerine_Hull", ShipRecoverySpecial.ShipCondition.AVERAGE, 75, true);
+                addDerelict(system, hypercube, "junk_pirates_tangerine_Standard", ShipRecoverySpecial.ShipCondition.AVERAGE, 75, true);
 
 		/*
 		DiktatPatrolSpawnPoint patrolSpawn = new DiktatPatrolSpawnPoint(sector, system, 5, 3, a1);

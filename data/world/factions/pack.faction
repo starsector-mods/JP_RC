@@ -29,7 +29,7 @@
 		"hulls":[
 			"pack_ridgeback_x"]},
 	"knownShips":{
-		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp", "base_bp"],
 		"hulls":[
 			"pack_ridgeback_x",
 			"pack_ridgeback_x_rothund",
@@ -47,7 +47,11 @@
 			"pack_pitbull_rothund",
 			"pack_pitbull_canebianco",
 			"pack_bedlington_canebianco",
-			"pack_bulldog"]},
+			"pack_bulldog",
+			"pack_schnauzer_bullseye",
+			"pack_pitbull_bullseye",
+			"pack_komondor_bullseye",
+			"pack_bulldog_bullseye"]},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
@@ -68,7 +72,11 @@
 			"pack_pitbull_rothund",
 			"pack_pitbull_canebianco",
 			"pack_bedlington_canebianco",
-			"pack_bulldog"]},
+			"pack_bulldog",
+			"pack_schnauzer_bullseye",
+			"pack_pitbull_bullseye",
+			"pack_komondor_bullseye",
+			"pack_bulldog_bullseye"]},
 	"knownFighters":{
 		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
 		"fighters":[
@@ -119,7 +127,6 @@
 			"magazines",
 			"missleracks",
 			"extendedshieldemitter",
-			"frontemitter",
 			"frontshield",  # makeshift
 			"hardenedshieldemitter",
 			"heavyarmor",

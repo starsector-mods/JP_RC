@@ -3,7 +3,7 @@
 	"skinHullId":"pack_komondor_rothund",
 	"hullName":"Komondor (RH)",
 	"descriptionId":"pack_komondor",
-	"tags":["rare_bp", "pack_bp", "junk_technicians"],
+	"tags":["rare_bp", "junk_pirates_packprime_bp", "junk_technicians"],
 	"descriptionPrefix":"A Komondor class destroyer as modified by the Rothund machine shop - with added armour plating and covered in lurid graffiti.",
 	"fleetPoints":9,
 	"ordnancePoints":72,

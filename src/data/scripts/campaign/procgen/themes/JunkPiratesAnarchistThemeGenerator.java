@@ -162,7 +162,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 		}
 		
 		List<Constellation> constellations = getSortedAvailableConstellations(context, false, new Vector2f(), null); //sorts constellations from 0,0, false means empty is not ok
-		Collections.reverse(constellations); // flip them; put the furthest away candidates at the top of the list. 
+		// Vanilla already sorts furthest constellations first 
 		
 		float skipProb = skipProbability; // just a mixer-upper; chance of skipping a given constellation, I think, based on number of candidates vs. number of systems we want.
 		if (total < num / (1f - skipProb)) {
@@ -260,7 +260,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 					data.system.addScript(fleets); // assign a fleetmanager to the system
 
 					Boolean addStation = random.nextFloat() < suppressedStationMult; // put in a suppressed station, maybe
-					if (j == 0 && !addSuppressedStation.isEmpty()) addSuppressedStation.pickAndRemove();
+					if (j == 0 && !addSuppressedStation.isEmpty()) addStation = addSuppressedStation.pickAndRemove();
 					if (addStation) {
 						List<CampaignFleetAPI> stations = addBattlestations(data, 1f, 1, 1, createStringPicker("pack_anarchist_station1_Den", 10f));
 						for (CampaignFleetAPI station : stations) {
@@ -355,7 +355,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
             
 
             List<Constellation> constellations = getSortedAvailableConstellations(context, false, new Vector2f(), null); //sorts constellations from 0,0, false means empty is not ok
-            Collections.reverse(constellations); // flip them; put the furthest away candidates at the top of the list. 
+            // Vanilla already sorts furthest constellations first 
             
             
             for (int i = 0; i < constellations.size(); i++) {
@@ -722,7 +722,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 			}
 		}
 		
-		Collections.sort(systems, new Comparator<StarSystemData>() {
+		Collections.sort(result, new Comparator<StarSystemData>() {
 			public int compare(StarSystemData o1, StarSystemData o2) {
 				float s1 = getMainCenterScore(o1);
 				float s2 = getMainCenterScore(o2);

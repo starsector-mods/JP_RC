@@ -2,26 +2,26 @@ name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn r
 Cutlass,junk_pirates_cutlass,0,,1000,600,,75,25,0,22,9,,,,ENERGY,65,,0,0.5,3,0.1,,,,,,1000,,,,,"energy14, MR, junk_pirates_junk_bp",,,,General,,,,,,,,,,51
 Scatter PD Laser,junk_pirates_scatterpd,1,,250,400,,40,,,60,5,,,,FRAGMENTATION,20,,0,0.2,6,0.1,4,18,3,15,,800,,,,PD,"pd6, SR, junk_pirates_junk_bp",,,,Point Defense,,,,,,,,,,52
 Light Excimer,junk_pirates_lexcimer,2,,600,500,150,,,0,40,4,,,,ENERGY,,150,0.1,0.1,0.25,0.1,,,,,2400,,,,,,"beam7, energy7, junk_pirates_junk_bp",,,,Anti Small Craft,,,,,,,,,,53
-Grape Cannon,junk_pirates_grapeshot,1,,5000,800,,400,,100,10,15,16,,,FRAGMENTATION,0,,0,5,2,0.25,0,0,0,0,,400,80,8,250,"DO_NOT_AIM, ANTI_FTR","utility14, missile14, rare_bp",,,,General,,,,,,,,,TRUE,54
+Grape Cannon,junk_pirates_grapeshot,1,,5000,800,,400,,100,10,15,16,,,FRAGMENTATION,0,,0,5,2,0.25,0,0,0,0,,400,80,8,250,"DO_NOT_AIM, ANTI_FTR","utility14, missile14, rare_bp, junk_pirates_junkprime_bp",,,,General,,,,,,,,,TRUE,54
 Grape Launcher,junk_pirates_grapeshot_m,1,,1200,800,,400,,100,10,9,14,,,FRAGMENTATION,0,,0,5,2,0.3,0,0,0,0,,400,65,8,250,"DO_NOT_AIM, ANTI_FTR","utility12, missile12, junk_pirates_junkprime_bp",,,,General,,,,,,,,,TRUE,55
 Grapeshot,junk_pirates_grapeshot_s,1,,200,800,,400,,100,10,5,5,,,FRAGMENTATION,0,,0,6,1,0,0,0,0,0,,400,55,8,250,"DO_NOT_AIM, ANTI_FTR","utility8, missile8, junk_pirates_junk_bp",,,,General,,,,,,,,,TRUE,56
 PICA,junk_pirates_pica,0,,7500,700,,260,75,0,35,,,,,ENERGY,380,,0,3.5,4,0.15,,,,,,1000,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,General,,,,,,,,,,62
 Scorpion,junk_pirates_scorpion,,,3000,800,,210,60,,,,8,0.5,,ENERGY,250,,0,0.2,1,0,0,0,0,0,,800,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,General,,,,,,,,,,57
 Haymaker,junk_pirates_haymaker,1,,2000,600,,500,250,,,15,1,0.2,,ENERGY,650,,0,3,1,0,0,0,0,0,,1000,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,General,,,,,,,,,,58
 Haymaker (Blue),junk_pirates_haymaker_blue,,,3000,650,,650,325,,,,1,0.15,,ENERGY,850,,0,3,1,0,0,0,0,0,,1000,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,General,,,,,,,,,,58
-Stygian Drill,junk_pirates_welder,1,,7500,800,1000,,50,,,20,,,,FRAGMENTATION,,1200,0.5,0.5,,,,,,,2400,,,,,SHOW_IN_CODEX,"beam7, energy7, strike7",,Junk Pirates,,Heavy Industrial Cutting,Beam,,,,"Sustained fire superheats beam, scaling damage to %s.","1,800 DPS over 3s",,,,7 Large Energy
+Stygian Drill,junk_pirates_welder,1,,7500,800,1000,,50,,,20,,,,FRAGMENTATION,,1200,0.5,0.5,,,,,,,2400,,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,Junk Pirates,,Heavy Industrial Cutting,Beam,,,,"Sustained fire superheats beam, scaling damage to %s.","1,800 DPS over 3s",,,,7 Large Energy
 Ripsaw,pack_ripsaw,0,,1500,700,,45,,3,10,,,,,KINETIC,32,,0,0.5,4,0.1,0,10,2,9,,950,,,20,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,Anti Shield,,,,,,,,,,691901
-Ripsaw (Mini),pack_mini_ripsaw,0,,1500,550,,45,,3,10,10,,,,KINETIC,32,,0,0.5,2,0.1,0,10,2,9,,950,,,20,SYSTEM,kinetic9,,,,Anti Shield,,,,,,,,,,
+Ripsaw (Mini),pack_mini_ripsaw,0,,1500,550,,45,,3,10,10,,,,KINETIC,32,,0,0.5,2,0.1,0,10,2,9,,950,,,20,SYSTEM,"kinetic9, no_drop, no_sell",,,,Anti Shield,,,,,,,,,,
 Typewriter,syndicate_asp_typewriter,0,,1500,550,,25,,3,80,,,,,KINETIC,20,,0,0.8,8,0.05,2,8,1,15,,800,,,30,"SYSTEM, PD, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex, pd",,,,Point Defense,,,,,,,,,,3.85
 Affenpinscher,pack_affenpinscher,,,2500,650,440,,,0,50,,6,0.3,,ENERGY,,300,0.05,0.05,0.25,0.1,,,,,10000,,,,,"SYSTEM, PD, ANTI_FTR, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex, pd",,,,Point Defense,,,,,High-energy point-defense pulse beam.,,"%s to force guidance failure, engine flameout, and erratic tumbling on intercepted missiles.",50% chance,,691902
-Swarmer SRM Launcher,pack_swarmer_gunship,0,,250,1000,,75,,5,50,4,,,,HIGH_EXPLOSIVE,0,,0,5,2,0.2,0,0,0,0,,300,100,5,50,"ANTI_FTR, DO_NOT_AIM, DO_NOT_CONSERVE, SYSTEM","utility8, missile0",,,,,,,,,,,,,,10
-Light Assault Gun,pack_lightag,1,,300,600,,40,,3,40,5,,,,HIGH_EXPLOSIVE,40,,0,0.25,1,,0,10,2,10,,800,,,30,"PD, PD_ALSO","he6, pd",,,,,,,,,,,,,,
+Swarmer SRM Launcher,pack_swarmer_gunship,0,,250,1000,,75,,5,50,4,,,,HIGH_EXPLOSIVE,0,,0,5,2,0.2,0,0,0,0,,300,100,5,50,"ANTI_FTR, DO_NOT_AIM, DO_NOT_CONSERVE, SYSTEM","utility8, missile0, no_drop, no_sell",,,,,,,,,,,,,,10
+Light Assault Gun,pack_lightag,1,,300,600,,40,,3,40,5,,,,HIGH_EXPLOSIVE,40,,0,0.25,1,,0,10,2,10,,800,,,30,"PD, PD_ALSO, SYSTEM","he6, pd, no_drop, no_sell",,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Throb,junk_pirates_engine_throb,0,,,300,300,,,,,,,,,,,,,100,,,,,,,,,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,,,,,,,,,,,60
 Blinking Bay,junk_pirates_blinking_bay,0,,,300,300,,,,,,,,,,,,,100,,,,,,,,,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,,,,,,,,,,,,,61
-Plan-D,junk_pirates_bangpod,1,,200,1400,,1300,250,200,10,2,1,,,HIGH_EXPLOSIVE,0,,0,5,1,,0,0,0,0,,400,600,4,500,"SHOW_IN_CODEX, STRIKE","strike8, rocket3",,,,Torpedo,Fast,None,,,,,,,TRUE,62
+Plan-D,junk_pirates_bangpod,1,,200,1400,,1300,250,200,10,2,1,,,HIGH_EXPLOSIVE,0,,0,5,1,,0,0,0,0,,400,600,4,500,"SHOW_IN_CODEX, STRIKE, SYSTEM","strike8, rocket3, no_drop, no_sell",,,,Torpedo,Fast,None,,,,,,,TRUE,62
 Mag Bomb,pack_torp,0,,400,1100,,1100,300,200,10,2,1,,,HIGH_EXPLOSIVE,0,,0,5,1,,0,0,0,0,,200,400,4,500,"SHOW_IN_CODEX, STRIKE, SYSTEM","strike8, rocket3",,,,Torpedo,Medium,None,,,,,,,TRUE,63
-Mini Vulcan Cannon,pack_mini_vulcan,0,,0,250,,25,,1,75,2,,,,FRAGMENTATION,1,,0,1.05,20,0.05,0,15,1,15,,800,,,10,"PD, SYSTEM","pd5,SR",,,,,,,,,,,,,,64
+Mini Vulcan Cannon,pack_mini_vulcan,0,,0,250,,25,,1,75,2,,,,FRAGMENTATION,1,,0,1.05,20,0.05,0,15,1,15,,800,,,10,"PD, SYSTEM","pd5, SR, no_drop, no_sell",,,,,,,,,,,,,,64
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Electrostatic Chaff Dispenser,junk_pirates_electrochafflauncher,,,,400,,10,100,,,,,0,,ENERGY,0,0,0,0.1,3,0.1,60,60,0,0,,50,150,4,1,SYSTEM,,,,,,,,,,,,,,,ZZ System
 Electrostatic Chaff Dispenser,junk_pirates_electrochafflauncher_copy,,,,400,,10,100,,,,,0,,ENERGY,0,0,0,0.1,3,0.1,60,60,0,0,,50,150,4,1,SYSTEM,,,,,,,,,,,,,,,ZZ Copy System
@@ -64,5 +64,5 @@ goat deco2,junk_pirates_goat_deco2,0,,,,,,,,,,,,,,,,,100,,,,,,,,,,,,SYSTEM,"no_d
 dugong deco1,junk_pirates_dugong_deco1,0,,,,,,,,,,,,,,,,,100,,,,,,,,,,,,SYSTEM,"no_drop, no_sell",,,,,,,,,,,,,,
 dugong deco2,junk_pirates_dugong_deco2,0,,,,,,,,,,,,,,,,,100,,,,,,,,,,,,SYSTEM,"no_drop, no_sell",,,,,,,,,,,,,,
 dugong deco3,junk_pirates_dugong_deco3,0,,,,,,,,,,,,,,,,,100,,,,,,,,,,,,SYSTEM,"no_drop, no_sell",,,,,,,,,,,,,,
-Viper Pulse Cannon,syndicate_asp_viper,1,,5000,900,,250,100,,,0,,,,ENERGY,285,,0.5,2.2,5,0.1,,,,,,1500,,,,SYSTEM,energy7,,ASP Syndicate,,Heavy Assault,,,,,Fires a devastating 5-round burst of high-velocity violet plasma.,5-Round Burst,,,,1 Built-In
-Tactical Laser (Fighter),syndicate_asp_taclaser_f,1,,200,600,75,,,0,50,0,,,,ENERGY,,60,0.1,0.1,,,,,,,2400,,,,,,SYSTEM,,ASP Syndicate,,General,,,,,,,,,,691903
+Viper Pulse Cannon,syndicate_asp_viper,1,,5000,900,,250,100,,,0,,,,ENERGY,285,,0.5,2.2,5,0.1,,,,,,1500,,,,"SYSTEM, SHOW_IN_CODEX","no_drop, no_sell, show_in_codex",,ASP Syndicate,,Heavy Assault,,,,,Fires a devastating 5-round burst of high-velocity violet plasma.,5-Round Burst,,,,1 Built-In
+Tactical Laser (Fighter),syndicate_asp_taclaser_f,1,,200,600,75,,,0,50,0,,,,ENERGY,,60,0.1,0.1,,,,,,,2400,,,,,SYSTEM,"no_drop, no_sell",,ASP Syndicate,,General,,,,,,,,,,691903

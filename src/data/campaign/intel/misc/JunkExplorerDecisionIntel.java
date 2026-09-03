@@ -1,6 +1,7 @@
 package data.campaign.intel.misc;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -29,6 +30,7 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
     protected String commanderRank;
     protected boolean commanderIsMale;
     protected String decision;
+    protected CampaignFleetAPI fleet;
 
     transient protected FactionAPI junkFaction;
     transient protected FactionAPI origFaction;
@@ -37,7 +39,7 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
 
     public JunkExplorerDecisionIntel(JunkPiratesExplorerData data, String decision) {
         this.decision = decision;
-        
+        if (data != null) this.fleet = data.fleet;
         if (data == null || data.from == null || data.to == null || data.fleet == null || data.fleet.getFaction() == null) return;
         
         this.fromEntity = data.from.getPrimaryEntity();
@@ -244,10 +246,10 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
     @Override
     public FactionAPI getFactionForUIColors() {
         initTransientData();
-        if (toFactionId != null) {
+        if (toFactionId != null && Global.getSector().getFaction(toFactionId) != null) {
             return Global.getSector().getFaction(toFactionId);
         }
-        return null;
+        return Global.getSector().getFaction("junk_pirates");
     }
 
     public String getSmallDescriptionTitle() {
@@ -257,6 +259,21 @@ public final class JunkExplorerDecisionIntel extends BaseIntelPlugin {
     @Override
     public SectorEntityToken getMapLocation(SectorMapAPI map) {
         return fromEntity;
+    }
+
+    protected float elapsedDays = 0f;
+
+    @Override
+    public void advance(float amount) {
+        super.advance(amount);
+        if (isEnding() || isEnded()) return;
+        
+        float days = Global.getSector().getClock().convertToDays(amount);
+        elapsedDays += days;
+        
+        if (fleet == null || !fleet.isAlive() || elapsedDays > 60f) {
+            endAfterDelay();
+        }
     }
 
     protected Object readResolve() {
