@@ -74,15 +74,16 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
     @Override
     public void advance(float amount) {
         if (!hasRunSweep) {
+            Global.getSector().addTransientListener(this);
             if (activeAspFleets == null) activeAspFleets = new java.util.LinkedList<>();
             if (activeAspFleets.isEmpty()) {
                 for (com.fs.starfarer.api.campaign.LocationAPI loc : Global.getSector().getAllLocations()) {
                     for (com.fs.starfarer.api.campaign.CampaignFleetAPI f : loc.getFleets()) {
                         if (f != null && f.getMemoryWithoutUpdate() != null && 
-                            (f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetITEMS") ||
-                             f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetMONEY") ||
-                             f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetVIP") ||
-                             f.getMemoryWithoutUpdate().getBoolean("aspCourierFleetPRISONER"))) {
+                            (f.getMemoryWithoutUpdate().getBoolean("$aspCourierFleetITEMS") ||
+                             f.getMemoryWithoutUpdate().getBoolean("$aspCourierFleetMONEY") ||
+                             f.getMemoryWithoutUpdate().getBoolean("$aspCourierFleetVIP") ||
+                             f.getMemoryWithoutUpdate().getBoolean("$aspCourierFleetPRISONER"))) {
                             boolean found = false;
                             for (SyndicateAspCourierRouteData rd : activeAspFleets) {
                                 if (rd.fleet == f) { found = true; break; }
@@ -136,8 +137,9 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
     
     protected int getMaxFleets() {
         int numMarkets = 0; for(com.fs.starfarer.api.campaign.econ.MarketAPI m : Global.getSector().getEconomy().getMarketsCopy()) { if("syndicate_asp".equals(m.getFactionId())) numMarkets++; }
-        int maxBasedOnMarket = (int) ( numMarkets * junkPiratesMaxFleetModifier/ 4 ); //numMarkets * 2 is vanilla equivalent for Economy fleets. We want to be well below this.
-        return maxBasedOnMarket; // probably want to externalise this in mendoncaModSettings
+        if (numMarkets == 0) return 0;
+        int maxBasedOnMarket = (int) ( numMarkets * junkPiratesMaxFleetModifier/ 4 );
+        return Math.max(2, maxBasedOnMarket);
     }
     
     protected void addRouteFleetIfPossible() {
@@ -158,14 +160,13 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
                         //log.info("Added ASP courier fleet route from " + from.getName() + " to " + to.getName());
                         //log.info("The fellas are mucking about with " + data.mission);
 
-                        if (data.fleet != null && !Factions.PLAYER.equals(data.from.getFactionId())) {
+                        CampaignFleetAPI spawned = spawnFleet(data);
+                        if (spawned != null && !Factions.PLAYER.equals(data.from.getFactionId())) {
                             // queues itself; don't do ones running from Player Colonies
                             if (enableJunkPiratesIntel) {
                                 new SyndicateAspCourierDepartureIntel(data);
                             }
                         }
-                        
-                        spawnFleet(data);
                         
 
 
@@ -496,16 +497,16 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
                 if (fleet == null || fleet.isEmpty()) return null;
                 
                 if (vip) {
-                    fleet.getMemoryWithoutUpdate().set("aspCourierFleetVIP", true);
+                    fleet.getMemoryWithoutUpdate().set("$aspCourierFleetVIP", true);
                     fleet.setName("Pleasure Cruise");
                 } else if (prisoner) {
-                    fleet.getMemoryWithoutUpdate().set("aspCourierFleetPRISONER", true);
+                    fleet.getMemoryWithoutUpdate().set("$aspCourierFleetPRISONER", true);
                     fleet.setName("Armed Guard");
                 } else if (money) {
-                    fleet.getMemoryWithoutUpdate().set("aspCourierFleetMONEY", true);
+                    fleet.getMemoryWithoutUpdate().set("$aspCourierFleetMONEY", true);
                     fleet.setName("Courier");
                 } else {
-                    fleet.getMemoryWithoutUpdate().set("aspCourierFleetITEMS", true);
+                    fleet.getMemoryWithoutUpdate().set("$aspCourierFleetITEMS", true);
                     fleet.setName("Courier");
                 }
                 
@@ -551,15 +552,18 @@ public class SyndicateAspFleetManager extends BaseCampaignEventListener implemen
         boolean player_won = result.didPlayerWin();
         if (player_won) {
             boolean foughtAsp = false;
-            if (result.getBattle() != null) {
+            if (result.getBattle() != null && result.getBattle().getNonPlayerSide() != null) {
                 for (CampaignFleetAPI f : result.getBattle().getNonPlayerSide()) {
-                    if (f.getFaction() != null && "syndicate_asp".equals(f.getFaction().getId()) && !f.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
+                    if (f != null && f.getFaction() != null && "syndicate_asp".equals(f.getFaction().getId()) 
+                            && f.getMemoryWithoutUpdate() != null && !f.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
                         foughtAsp = true;
                         break;
                     }
                 }
             } else if (result.getLoserResult() != null && result.getLoserResult().getFleet() != null) {
-                if (result.getLoserResult().getFleet().getFaction() != null && "syndicate_asp".equals(result.getLoserResult().getFleet().getFaction().getId()) && !result.getLoserResult().getFleet().getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
+                CampaignFleetAPI loserFleet = result.getLoserResult().getFleet();
+                if (loserFleet.getFaction() != null && "syndicate_asp".equals(loserFleet.getFaction().getId()) 
+                        && loserFleet.getMemoryWithoutUpdate() != null && !loserFleet.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
                     foughtAsp = true;
                 }
             }

@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 0,
-    "fluxVents": 5,
+    "fluxVents": 2,
     "hullId": "syndicate_asp_mercury",
     "hullMods": [
     "hardenedshieldemitter"

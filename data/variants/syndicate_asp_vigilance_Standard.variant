@@ -17,9 +17,9 @@
             "weapons": {"WS 001": "pulselaser"}
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "harpoonpod"}
+            "weapons": {"WS 002": "heavyac"}
         }
     ]
 }

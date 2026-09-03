@@ -5,10 +5,10 @@
 	"size":"MEDIUM",
 	"turretSprite":"graphics/junk_pirates/weapons/junk_pirates_mlrs_hardpoint_base.png",
 	"hardpointSprite":"graphics/junk_pirates/weapons/junk_pirates_mlrs_hardpoint_base.png",
-	#"turretOffsets":[9, -12, 9, -9, 9, -3, 9, 3, 9, 9, 9, -12, 14, -8, 14, -3, 14, 3, 14, 8, 18, -3, 18, 3],
-	#"turretAngleOffsets":[-20, -10, -5, 5, 10, 20, -15, -7.5, 7.5, 15, -12.5, 12.5],
-	#"hardpointOffsets":[18, -12, 18, -9, 18, -3, 18, -3, 18, -9, 18, -12, 23, -8, 23, -3, 23, 3, 23, 8, 27, -3, 27, 3],
-	#"hardpointAngleOffsets":[-20, -10, -5, 5, 10, 20, -15, -7.5, 7.5, 15, -12.5, 12.5],
+	
+	
+	
+	
 	"turretOffsets":[16, -8, 16, 3, 16, 8, 16, -3],
 	"turretAngleOffsets":[-2, 1, 2, -1],
 	"hardpointOffsets":[18, -8, 18, 3, 18, 8, 18, -3],

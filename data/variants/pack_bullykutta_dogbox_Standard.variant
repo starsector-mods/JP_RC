@@ -1,12 +1,11 @@
 {
   "displayName": "Overdriven",
-  "fluxCapacitors": 3,
-  "fluxVents": 15,
+  "fluxCapacitors": 5,
+  "fluxVents": 20,
   "goalVariant": true,
   "hullId": "pack_bullykutta_dogbox",
   "hullMods": [
-    "heavyarmor",
-    "eccm"
+    "heavyarmor"
   ],
   "permaMods": [],
   "quality": 0,

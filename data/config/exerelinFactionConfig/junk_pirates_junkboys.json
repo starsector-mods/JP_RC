@@ -4,5 +4,8 @@
     "dropPrisoners":false,
     "hostileToAll":2,
     "startRelationships":{ "pack": 0 },
-    "noRandomizeRelations":true
+    "noRandomizeRelations":true,
+    "noSyncRelations":true,
+    "canInvade":false,
+    "canRebel":false
 }

@@ -49,6 +49,18 @@ public class JunkPiratesModPlugin extends BaseModPlugin
     static
     {
         isExerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
+        
+        // Force LunaLib to initialize its settings map early on the main thread (Thread-3).
+        // This prevents a known race condition where the background script compiler (Thread-6)
+        // triggers LunaSettingsLoader concurrently while Thread-3 is evaluating rules.csv,
+        // which can cause dependent mods (like IndEvo) to crash with a NullPointerException.
+        if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            try {
+                lunalib.lunaSettings.LunaSettings.getBoolean("junk_pirates_release", "enableASP");
+            } catch (Throwable t) {
+                // Ignore
+            }
+        }
     }
     
     
@@ -69,8 +81,16 @@ public class JunkPiratesModPlugin extends BaseModPlugin
             junkPiratesFleetFrequencyModifier = (float) settings.getDouble("junkPiratesFleetFrequencyModifier");
             junkPiratesMaxFleetModifier = (float) settings.getDouble("junkPiratesMaxFleetModifier");
   
-        } catch (IOException | JSONException ex) {
+        } catch (Exception ex) {
             System.out.println("JP Config Exception " + ex);
+        }
+        
+        if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            try {
+                JunkPiratesLunaConfig.init();
+            } catch (Throwable t) {
+                Global.getLogger(JunkPiratesModPlugin.class).error("Failed to load LunaSettings for Junk Pirates", t);
+            }
         }
     }
     
@@ -116,19 +136,77 @@ public class JunkPiratesModPlugin extends BaseModPlugin
     }
     @Override
     public void onGameLoad(boolean newGame) {
+        getProcGenSettings();
         applyNoDecivFlags();
         
         if (!Global.getSector().hasScript(data.scripts.campaign.SpineretteRespawnManager.class)) {
             Global.getSector().addScript(new data.scripts.campaign.SpineretteRespawnManager());
         }
-        if (enableASPCourierFleets && !Global.getSector().hasScript(SyndicateAspFleetManager.class)) {
+        if (!enableASPCourierFleets) {
+            Global.getSector().removeScriptsOfClass(SyndicateAspFleetManager.class);
+        } else if (!Global.getSector().hasScript(SyndicateAspFleetManager.class)) {
             Global.getSector().addScript(new SyndicateAspFleetManager());
         }
-        if (enableASPCourierFleets && enableASPHitSquads && !Global.getSector().hasScript(SyndicateAspHitSquadFleetManager.class)) {
+        if (!enableASPCourierFleets || !enableASPHitSquads) {
+            Global.getSector().removeScriptsOfClass(SyndicateAspHitSquadFleetManager.class);
+        } else if (!Global.getSector().hasScript(SyndicateAspHitSquadFleetManager.class)) {
             Global.getSector().addScript(new SyndicateAspHitSquadFleetManager());
         }
-        if (enableJunkExplorers && !Global.getSector().hasScript(JunkPiratesExplorerFleetManager.class)) {
+        if (!enableJunkExplorers) {
+            Global.getSector().removeScriptsOfClass(JunkPiratesExplorerFleetManager.class);
+        } else if (!Global.getSector().hasScript(JunkPiratesExplorerFleetManager.class)) {
             Global.getSector().addScript(new JunkPiratesExplorerFleetManager());
+        }
+
+        retrofitHypercube();
+        retrofitYork();
+
+        if (com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance() != null) {
+            if (!com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().hasEventCreator(data.campaign.intel.bar.YorkBarEventCreator.class)) {
+                com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().addEventCreator(new data.campaign.intel.bar.YorkBarEventCreator());
+            }
+        }
+    }
+
+    private static void retrofitYork() {
+        if (Global.getSector() == null) return;
+        com.fs.starfarer.api.campaign.StarSystemAPI york = Global.getSector().getStarSystem("York");
+        if (york == null) {
+            new data.scripts.world.systems.York().generate(Global.getSector());
+        } else {
+            data.scripts.world.systems.York.spawnRemnants(york);
+        }
+    }
+
+    private static void retrofitHypercube() {
+        if (Global.getSector() == null) return;
+        boolean found = false;
+        for (com.fs.starfarer.api.campaign.StarSystemAPI system : Global.getSector().getStarSystems()) {
+            if (system == null) continue;
+            for (com.fs.starfarer.api.campaign.SectorEntityToken entity : system.getCustomEntities()) {
+                if (entity == null) continue;
+                if ("junk_pirates_hypercube".equals(entity.getCustomEntityType())) {
+                    found = true;
+                    if (!entity.hasTag("has_interaction_dialog")) {
+                        entity.addTag("has_interaction_dialog");
+                    }
+                    if (!entity.hasTag("non_expiring")) {
+                        entity.addTag("non_expiring");
+                    }
+                }
+            }
+        }
+        if (!found) {
+            com.fs.starfarer.api.campaign.StarSystemAPI brehinni = Global.getSector().getStarSystem("Brehinni");
+            if (brehinni != null) {
+                com.fs.starfarer.api.campaign.SectorEntityToken swanage = brehinni.getEntityById("swanage");
+                if (swanage != null) {
+                    com.fs.starfarer.api.campaign.SectorEntityToken hypercube = brehinni.addCustomEntity("hypercube", "Hypercube", "junk_pirates_hypercube", "junk_pirates");
+                    hypercube.setCircularOrbitPointingDown(swanage, 270, 1000, 45);
+                    hypercube.addTag("has_interaction_dialog");
+                    hypercube.addTag("non_expiring");
+                }
+            }
         }
     }
     @Override
@@ -150,8 +228,18 @@ public class JunkPiratesModPlugin extends BaseModPlugin
     @Override  
     public void onApplicationLoad()
     {  
-    
-        SectorThemeGenerator.generators.add(1, new JunkPiratesAnarchistThemeGenerator());
+        if (SectorThemeGenerator.generators != null) {
+            boolean hasGenerator = false;
+            for (com.fs.starfarer.api.impl.campaign.procgen.themes.ThemeGenerator tg : SectorThemeGenerator.generators) {
+                if (tg instanceof JunkPiratesAnarchistThemeGenerator) {
+                    hasGenerator = true;
+                    break;
+                }
+            }
+            if (!hasGenerator) {
+                SectorThemeGenerator.generators.add(new JunkPiratesAnarchistThemeGenerator());
+            }
+        }
         
         getProcGenSettings();
         

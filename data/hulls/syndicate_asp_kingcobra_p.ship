@@ -16,6 +16,8 @@
     ],
     "shieldRadius":224,
     "viewOffset":0,
+  "builtInMods": [
+    ],
     "builtInWings":[],
     "builtInModules":null,
     "weaponSlots":[
@@ -370,6 +372,6 @@
         
              -71,       67,
              -97,       59
-    # 17 points total.
+    
     ]
 }

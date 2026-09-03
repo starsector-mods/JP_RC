@@ -65,11 +65,12 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
     @Override
     public void advance(float amount) {
         if (!hasRunSweep) {
+            Global.getSector().addTransientListener(this);
             if (activeJunkFleets == null) activeJunkFleets = new java.util.LinkedList<>();
             if (activeJunkFleets.isEmpty()) {
                 for (com.fs.starfarer.api.campaign.LocationAPI loc : Global.getSector().getAllLocations()) {
                     for (com.fs.starfarer.api.campaign.CampaignFleetAPI f : loc.getFleets()) {
-                        if (f != null && f.getMemoryWithoutUpdate() != null && f.getMemoryWithoutUpdate().getBoolean("junkPirateExplorers")) {
+                        if (f != null && f.getMemoryWithoutUpdate() != null && f.getMemoryWithoutUpdate().getBoolean("$junkPirateExplorers")) {
                             boolean found = false;
                             for (JunkPiratesExplorerFleetAssignmentAI.JunkPiratesExplorerData rd : activeJunkFleets) {
                                 if (rd.fleet == f) { found = true; break; }
@@ -278,13 +279,11 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
         
         MarketAPI market = data.from;
         
-        if (market.hasIndustry(Industries.PATROLHQ)) fp_bonus += 20f;
-        if (market.hasIndustry(Industries.TAG_BATTLESTATION)) fp_bonus += 20f;
-        if (market.hasIndustry(Industries.TAG_GROUNDDEFENSES)) fp_bonus += 10f;
-        if (market.hasIndustry(Industries.HEAVYBATTERIES)) fp_bonus += 20f;
-        if (market.hasIndustry(Industries.TAG_MILITARY)) fp_bonus += 20f;
-        if (market.hasIndustry(Industries.TAG_HEAVYINDUSTRY)) fp_bonus += 40f;
-        if (market.hasIndustry(Industries.TAG_STARFORTRESS)) fp_bonus += 40f;
+        if (market.hasIndustry(Industries.PATROLHQ) || market.hasIndustry(Industries.MILITARYBASE) || market.hasIndustry(Industries.HIGHCOMMAND)) fp_bonus += 20f;
+        if (market.hasIndustry(Industries.BATTLESTATION) || market.hasIndustry(Industries.BATTLESTATION_MID) || market.hasIndustry(Industries.BATTLESTATION_HIGH)) fp_bonus += 20f;
+        if (market.hasIndustry(Industries.GROUNDDEFENSES) || market.hasIndustry(Industries.HEAVYBATTERIES)) fp_bonus += 10f;
+        if (market.hasIndustry(Industries.HEAVYINDUSTRY) || market.hasIndustry(Industries.ORBITALWORKS)) fp_bonus += 40f;
+        if (market.hasIndustry(Industries.STARFORTRESS) || market.hasIndustry(Industries.STARFORTRESS_MID) || market.hasIndustry(Industries.STARFORTRESS_HIGH)) fp_bonus += 40f;
         if (market.hasIndustry(Industries.WAYSTATION)) fp_bonus += 10f;
         
         return fp_bonus;
@@ -341,7 +340,9 @@ public class JunkPiratesExplorerFleetManager extends BaseCampaignEventListener i
                 
                 if (fleet == null || fleet.isEmpty()) return null;
                 
-                fleet.getMemoryWithoutUpdate().set("junkPirateExplorers", true);
+                fleet.getMemoryWithoutUpdate().set("$junkPirateExplorers", true);
+                
+                //is this the place to add cargo / loot? Possibly now whilst we've got Market info ...
                 fleet.setName("Explorer");
                 
                 return fleet;

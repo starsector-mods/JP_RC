@@ -105,11 +105,9 @@ public class Canis {
                                                   5,
                                                   new ArrayList<>(Arrays.asList(Conditions.HOT,
                                                                                 Conditions.TOXIC_ATMOSPHERE,
-                                                                                Conditions.VOLATILES_ABUNDANT,
-                                                                                Conditions.FARMLAND_POOR)),
+                                                                                Conditions.VOLATILES_ABUNDANT)),
                                                   new ArrayList<>(Arrays.asList(
                                                                         Industries.SPACEPORT,
-                                                                        Industries.FARMING,
                                                                         Industries.MINING,
                                                                         Industries.PATROLHQ,
                                                                         Industries.HEAVYINDUSTRY,
@@ -166,7 +164,7 @@ public class Canis {
 				 "Petra Relay", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "pack"); // faction
-		relay.setCircularOrbit( system.getEntityById("canis"), 2250, 12000, 480);
+		relay.setCircularOrbit( system.getEntityById("canis"), 225, 12000, 480);
 
 		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("canis_gate", "Canis Jump-Point");
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 230, 12000, 480);

@@ -7,10 +7,10 @@
 	"hardpointSprite":"graphics/junk_pirates/weapons/junk_pirates_grapeshot_hardpoint_base.png",
 	"hardpointOffsets":[18, -8, 18, 8],
 	"turretOffsets":[13, -8, 13, 8],
-	#"hardpointAngleOffsets":[0, 0],
-	#"turretAngleOffsets":[0, 0],
-	#"hardpointOffsets":[23, 0],
-	#"turretOffsets":[17, 0],
+	
+	
+	
+	
 	"hardpointAngleOffsets":[0],
 	"turretAngleOffsets":[0],	
 	"barrelMode":"ALTERNATING",

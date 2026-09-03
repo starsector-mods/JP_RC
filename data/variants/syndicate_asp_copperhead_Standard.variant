@@ -1,6 +1,6 @@
 {
   "displayName": "Copperhead",
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 7,
   "fluxVents": 20,
   "goalVariant": true,
   "hullId": "syndicate_asp_copperhead",

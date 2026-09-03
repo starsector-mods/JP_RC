@@ -13,7 +13,7 @@ import static data.scripts.JunkPiratesModPlugin.enablePACK;
 
 import data.scripts.world.systems.Brehinni;
 import data.scripts.world.systems.Canis;
-//import data.scripts.world.systems.York;
+import data.scripts.world.systems.York;
 import data.scripts.world.systems.Ursulo;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class JunkGen implements SectorGeneratorPlugin{
     if (enablePACK) {
         new Canis().generate(sector);
     }
-    //new York().generate(sector);
+    new York().generate(sector);
     if (enableASP) {
         new Ursulo().generate(sector);
     }
@@ -57,17 +57,24 @@ public class JunkGen implements SectorGeneratorPlugin{
     private static ArrayList<String> makeArrayList(JSONArray list) {
             
             ArrayList<String> newlist = new ArrayList<>();
+            if (list == null) return newlist;
             
             try {
                 for (int i=0; i<list.length(); i++)
                 {
                         newlist.add(list.getString(i));
                 }
-                        return newlist;
+                return newlist;
                         
-                        } catch (Exception ex) { }
+            } catch (Exception ex) { }
             
-            return null;
+            return newlist;
+    }
+    
+    private static void setRel(FactionAPI f1, FactionAPI f2, RepLevel level) {
+        if (f1 != null && f2 != null && f1.getId() != null && f2.getId() != null) {
+            f1.setRelationship(f2.getId(), level);
+        }
     }
     
     public static void initFactionRelationships(SectorAPI sector) {
@@ -164,268 +171,278 @@ public class JunkGen implements SectorGeneratorPlugin{
 
 
         // set up relations - PACK to others
-        
-        for (Object faction : makeArrayList(VengefulPack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.VENGEFUL);
+        if (pack != null) {
+            for (Object faction : makeArrayList(VengefulPack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.VENGEFUL);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(HostilePack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.HOSTILE);
+            for (Object faction : makeArrayList(HostilePack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.HOSTILE);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(InhospitablePack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.INHOSPITABLE);
+            for (Object faction : makeArrayList(InhospitablePack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.INHOSPITABLE);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(SuspiciousPack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.SUSPICIOUS);
+            for (Object faction : makeArrayList(SuspiciousPack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.SUSPICIOUS);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(NeutralPack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.NEUTRAL);
+            for (Object faction : makeArrayList(NeutralPack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.NEUTRAL);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(FavorablePack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.FAVORABLE);
+            for (Object faction : makeArrayList(FavorablePack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.FAVORABLE);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(FriendlyPack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.WELCOMING);
+            for (Object faction : makeArrayList(FriendlyPack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.WELCOMING);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(WelcomingPack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.FRIENDLY);
+            for (Object faction : makeArrayList(WelcomingPack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.FRIENDLY);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(CooperativePack)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                pack.setRelationship((String) faction, RepLevel.COOPERATIVE);
+            for (Object faction : makeArrayList(CooperativePack)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    pack.setRelationship((String) faction, RepLevel.COOPERATIVE);
+                }
             }
         }
 
         // JUNK PIRATES relations
-        
-        for (Object faction : makeArrayList(VengefulJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.VENGEFUL);
+        if (junk != null) {
+            for (Object faction : makeArrayList(VengefulJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.VENGEFUL);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(HostileJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.HOSTILE);
+            for (Object faction : makeArrayList(HostileJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.HOSTILE);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(InhospitableJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.INHOSPITABLE);
+            for (Object faction : makeArrayList(InhospitableJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.INHOSPITABLE);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(SuspiciousJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.SUSPICIOUS);
+            for (Object faction : makeArrayList(SuspiciousJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.SUSPICIOUS);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(NeutralJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.NEUTRAL);
+            for (Object faction : makeArrayList(NeutralJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.NEUTRAL);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(FavorableJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.FAVORABLE);
+            for (Object faction : makeArrayList(FavorableJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.FAVORABLE);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(WelcomingJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.WELCOMING);
+            for (Object faction : makeArrayList(WelcomingJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.WELCOMING);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(FriendlyJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.FRIENDLY);
+            for (Object faction : makeArrayList(FriendlyJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.FRIENDLY);
+                }
             }
-        }
 
-        for (Object faction : makeArrayList(CooperativeJunk)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                junk.setRelationship((String) faction, RepLevel.COOPERATIVE);
+            for (Object faction : makeArrayList(CooperativeJunk)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    junk.setRelationship((String) faction, RepLevel.COOPERATIVE);
+                }
             }
         }
         
         // ASP Relations
-        
-        for (Object faction : makeArrayList(VengefulASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.VENGEFUL);
+        if (asp != null) {
+            for (Object faction : makeArrayList(VengefulASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.VENGEFUL);
+                }
+            }
+
+            for (Object faction : makeArrayList(HostileASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.HOSTILE);
+                }
+            }
+
+            for (Object faction : makeArrayList(InhospitableASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.INHOSPITABLE);
+                }
+            }
+
+            for (Object faction : makeArrayList(SuspiciousASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.SUSPICIOUS);
+                }
+            }
+
+            for (Object faction : makeArrayList(NeutralASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.NEUTRAL);
+                }
+            }
+
+            for (Object faction : makeArrayList(FavorableASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.FAVORABLE);
+                }
+            }
+
+            for (Object faction : makeArrayList(WelcomingASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.WELCOMING);
+                }
+            }
+
+            for (Object faction : makeArrayList(FriendlyASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.FRIENDLY);
+                }
+            }
+
+            for (Object faction : makeArrayList(CooperativeASP)) {
+                if (Global.getSector().getFaction((String) faction) != null) {  
+                    asp.setRelationship((String) faction, RepLevel.COOPERATIVE);
+                }
             }
         }
-
-        for (Object faction : makeArrayList(HostileASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.HOSTILE);
-            }
-        }
-
-        for (Object faction : makeArrayList(InhospitableASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.INHOSPITABLE);
-            }
-        }
-
-        for (Object faction : makeArrayList(SuspiciousASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.SUSPICIOUS);
-            }
-        }
-
-        for (Object faction : makeArrayList(NeutralASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.NEUTRAL);
-            }
-        }
-
-        for (Object faction : makeArrayList(FavorableASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.FAVORABLE);
-            }
-        }
-
-        for (Object faction : makeArrayList(WelcomingASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.WELCOMING);
-            }
-        }
-
-        for (Object faction : makeArrayList(FriendlyASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.FRIENDLY);
-            }
-        }
-
-        for (Object faction : makeArrayList(CooperativeASP)) {
-            if (Global.getSector().getFaction((String) faction) != null) {  
-                asp.setRelationship((String) faction, RepLevel.COOPERATIVE);
-            }
-        }
-
 
         
         // PLAYER STARTING relations to MOD Factions
-        
-        player.setRelationship(junk.getId(), 0);
-        player.setRelationship(pack.getId(), 0);
-        player.setRelationship(asp.getId(), 0);
+        if (player != null) {
+            if (junk != null) player.setRelationship(junk.getId(), 0);
+            if (pack != null) player.setRelationship(pack.getId(), 0);
+            if (asp != null) player.setRelationship(asp.getId(), 0);
+        }
         
         // Vanilla and this mod
-        junk.setRelationship(hegemony.getId(), RepLevel.HOSTILE);
-        junk.setRelationship(path.getId(), RepLevel.HOSTILE);
-        junk.setRelationship(church.getId(), RepLevel.HOSTILE);
-        junk.setRelationship(pirates.getId(), RepLevel.FAVORABLE);
-        junk.setRelationship(diktat.getId(), RepLevel.HOSTILE);
-        junk.setRelationship(tritachyon.getId(), RepLevel.HOSTILE);
-        junk.setRelationship(independent.getId(), RepLevel.NEUTRAL);
-        junk.setRelationship(asp.getId(), RepLevel.HOSTILE);
-        junk.setRelationship(pack.getId(), RepLevel.FAVORABLE);
-        junk.setRelationship(league.getId(), RepLevel.NEUTRAL); // Common borders; League remain more open than Heg
-        junk.setRelationship(remnants.getId(), RepLevel.HOSTILE); // Common borders; League remain more open than Heg
+        setRel(junk, hegemony, RepLevel.HOSTILE);
+        setRel(junk, path, RepLevel.HOSTILE);
+        setRel(junk, church, RepLevel.HOSTILE);
+        setRel(junk, pirates, RepLevel.FAVORABLE);
+        setRel(junk, diktat, RepLevel.HOSTILE);
+        setRel(junk, tritachyon, RepLevel.HOSTILE);
+        setRel(junk, independent, RepLevel.NEUTRAL);
+        setRel(junk, asp, RepLevel.HOSTILE);
+        setRel(junk, pack, RepLevel.FAVORABLE);
+        setRel(junk, league, RepLevel.NEUTRAL); // Common borders; League remain more open than Heg
+        setRel(junk, remnants, RepLevel.HOSTILE); // Common borders; League remain more open than Heg
         
         // make all the NRK fellas hostile, generally, to other people. Except big boy ANARCHISTS. All NRK friendly to PACK, and low tier boys tolerate JP
-        List<FactionAPI> factionList = sector.getAllFactions();
-        factionList.remove(junkboys);
-        factionList.remove(technicians);
-        factionList.remove(hounds);
+        List<FactionAPI> factionList = new ArrayList<>(sector.getAllFactions());
+        if (junkboys != null) factionList.remove(junkboys);
+        if (technicians != null) factionList.remove(technicians);
+        if (hounds != null) factionList.remove(hounds);
         for (FactionAPI faction : factionList) {
-            junkboys.setRelationship(faction.getId(), RepLevel.HOSTILE);
-            technicians.setRelationship(faction.getId(), RepLevel.HOSTILE);
-            hounds.setRelationship(faction.getId(), RepLevel.HOSTILE);
+            if (faction == null) continue;
+            if (junkboys != null) junkboys.setRelationship(faction.getId(), RepLevel.HOSTILE);
+            if (technicians != null) technicians.setRelationship(faction.getId(), RepLevel.HOSTILE);
+            if (hounds != null) hounds.setRelationship(faction.getId(), RepLevel.HOSTILE);
         }
-        junkboys.setRelationship("player", RepLevel.NEUTRAL);
-        junkboys.setRelationship(junk.getId(), RepLevel.NEUTRAL);
-        junkboys.setRelationship(pack.getId(), RepLevel.FRIENDLY);
-        technicians.setRelationship("player", RepLevel.HOSTILE);
-        technicians.setRelationship(pack.getId(), RepLevel.FRIENDLY);
-        hounds.setRelationship("player", RepLevel.NEUTRAL);
-        hounds.setRelationship(pack.getId(), RepLevel.FRIENDLY);
+        if (junkboys != null) {
+            junkboys.setRelationship("player", RepLevel.NEUTRAL);
+            if (junk != null) junkboys.setRelationship(junk.getId(), RepLevel.NEUTRAL);
+            if (pack != null) junkboys.setRelationship(pack.getId(), RepLevel.FRIENDLY);
+        }
+        if (technicians != null) {
+            technicians.setRelationship("player", RepLevel.HOSTILE);
+            if (pack != null) technicians.setRelationship(pack.getId(), RepLevel.FRIENDLY);
+        }
+        if (hounds != null) {
+            hounds.setRelationship("player", RepLevel.NEUTRAL);
+            if (pack != null) hounds.setRelationship(pack.getId(), RepLevel.FRIENDLY);
+        }
         
-        tritachyon.setRelationship(junk.getId(), RepLevel.HOSTILE); // We are not a tech mine
-        hegemony.setRelationship(junk.getId(), RepLevel.HOSTILE); // Villainous scum
-        pirates.setRelationship(junk.getId(), RepLevel.FAVORABLE); // He he these fellas are funny
-        kol.setRelationship(junk.getId(), RepLevel.HOSTILE); // IN LUDDS NAME BEGONE
-        league.setRelationship(junk.getId(), RepLevel.NEUTRAL); // Kinda misunderstood
-        independent.setRelationship(junk.getId(), RepLevel.NEUTRAL); // Just like us; if more chaotic
-        church.setRelationship(junk.getId(), RepLevel.NEUTRAL);
-        path.setRelationship(junk.getId(), RepLevel.HOSTILE); // tech lovin heathens
-        diktat.setRelationship(junk.getId(), RepLevel.HOSTILE); // Get outta our sector and hands off my synchrotron core
-        remnants.setRelationship(junk.getId(), RepLevel.HOSTILE); // Get outta our sector and hands off my synchrotron core
+        setRel(tritachyon, junk, RepLevel.HOSTILE); // We are not a tech mine
+        setRel(hegemony, junk, RepLevel.HOSTILE); // Villainous scum
+        setRel(pirates, junk, RepLevel.FAVORABLE); // He he these fellas are funny
+        setRel(kol, junk, RepLevel.HOSTILE); // IN LUDDS NAME BEGONE
+        setRel(league, junk, RepLevel.NEUTRAL); // Kinda misunderstood
+        setRel(independent, junk, RepLevel.NEUTRAL); // Just like us; if more chaotic
+        setRel(church, junk, RepLevel.NEUTRAL);
+        setRel(path, junk, RepLevel.HOSTILE); // tech lovin heathens
+        setRel(diktat, junk, RepLevel.HOSTILE); // Get outta our sector and hands off my synchrotron core
+        setRel(remnants, junk, RepLevel.HOSTILE); // Get outta our sector and hands off my synchrotron core
         
 
-        pack.setRelationship(hegemony.getId(), RepLevel.SUSPICIOUS);
-        pack.setRelationship(pirates.getId(), RepLevel.NEUTRAL);
-        pack.setRelationship(church.getId(), RepLevel.NEUTRAL);
-        pack.setRelationship(path.getId(), RepLevel.HOSTILE);
-        pack.setRelationship(diktat.getId(), RepLevel.SUSPICIOUS);
-        pack.setRelationship(tritachyon.getId(), RepLevel.SUSPICIOUS);
-        pack.setRelationship(independent.getId(), RepLevel.FAVORABLE);
-        pack.setRelationship(junk.getId(), RepLevel.FAVORABLE);
-        pack.setRelationship(asp.getId(), RepLevel.NEUTRAL);
-        pack.setRelationship(league.getId(), RepLevel.WELCOMING);
-        pack.setRelationship(remnants.getId(), RepLevel.HOSTILE);
+        setRel(pack, hegemony, RepLevel.SUSPICIOUS);
+        setRel(pack, pirates, RepLevel.NEUTRAL);
+        setRel(pack, church, RepLevel.NEUTRAL);
+        setRel(pack, path, RepLevel.HOSTILE);
+        setRel(pack, diktat, RepLevel.SUSPICIOUS);
+        setRel(pack, tritachyon, RepLevel.SUSPICIOUS);
+        setRel(pack, independent, RepLevel.FAVORABLE);
+        setRel(pack, junk, RepLevel.FAVORABLE);
+        setRel(pack, asp, RepLevel.NEUTRAL);
+        setRel(pack, league, RepLevel.WELCOMING);
+        setRel(pack, remnants, RepLevel.HOSTILE);
         
-        tritachyon.setRelationship(pack.getId(), RepLevel.SUSPICIOUS);
-        hegemony.setRelationship(pack.getId(), RepLevel.NEUTRAL);
-        pirates.setRelationship(pack.getId(), RepLevel.HOSTILE);
-        remnants.setRelationship(pack.getId(), RepLevel.HOSTILE);
-        kol.setRelationship(pack.getId(), RepLevel.NEUTRAL);
-        league.setRelationship(pack.getId(), RepLevel.WELCOMING);
-        diktat.setRelationship(pack.getId(), RepLevel.SUSPICIOUS);
-        independent.setRelationship(pack.getId(), RepLevel.FAVORABLE);
-        church.setRelationship(pack.getId(), RepLevel.SUSPICIOUS);
-        path.setRelationship(pack.getId(), RepLevel.SUSPICIOUS);
+        setRel(tritachyon, pack, RepLevel.SUSPICIOUS);
+        setRel(hegemony, pack, RepLevel.NEUTRAL);
+        setRel(pirates, pack, RepLevel.HOSTILE);
+        setRel(remnants, pack, RepLevel.HOSTILE);
+        setRel(kol, pack, RepLevel.NEUTRAL);
+        setRel(league, pack, RepLevel.WELCOMING);
+        setRel(diktat, pack, RepLevel.SUSPICIOUS);
+        setRel(independent, pack, RepLevel.FAVORABLE);
+        setRel(church, pack, RepLevel.SUSPICIOUS);
+        setRel(path, pack, RepLevel.SUSPICIOUS);
 
-        asp.setRelationship(hegemony.getId(), RepLevel.FAVORABLE);
-        asp.setRelationship(pirates.getId(), RepLevel.HOSTILE);
-        asp.setRelationship(church.getId(), RepLevel.FAVORABLE);
-        asp.setRelationship(path.getId(), RepLevel.HOSTILE);
-        asp.setRelationship(diktat.getId(), RepLevel.FAVORABLE);
-        asp.setRelationship(tritachyon.getId(), RepLevel.WELCOMING);
-        asp.setRelationship(independent.getId(), RepLevel.WELCOMING);
-        asp.setRelationship(pack.getId(), RepLevel.NEUTRAL);
-        asp.setRelationship(league.getId(), RepLevel.HOSTILE); // it just aint working. They want to cut us off
-        asp.setRelationship(junk.getId(), RepLevel.HOSTILE);
-        asp.setRelationship(remnants.getId(), RepLevel.HOSTILE);
+        setRel(asp, hegemony, RepLevel.FAVORABLE);
+        setRel(asp, pirates, RepLevel.HOSTILE);
+        setRel(asp, church, RepLevel.FAVORABLE);
+        setRel(asp, path, RepLevel.HOSTILE);
+        setRel(asp, diktat, RepLevel.FAVORABLE);
+        setRel(asp, tritachyon, RepLevel.WELCOMING);
+        setRel(asp, independent, RepLevel.WELCOMING);
+        setRel(asp, pack, RepLevel.NEUTRAL);
+        setRel(asp, league, RepLevel.HOSTILE); // it just aint working. They want to cut us off
+        setRel(asp, junk, RepLevel.HOSTILE);
+        setRel(asp, remnants, RepLevel.HOSTILE);
 
-	pirates.setRelationship(asp.getId(), RepLevel.HOSTILE);
-        tritachyon.setRelationship(asp.getId(), RepLevel.WELCOMING);
-        hegemony.setRelationship(asp.getId(), RepLevel.FAVORABLE);
-        kol.setRelationship(asp.getId(), RepLevel.NEUTRAL);
-        diktat.setRelationship(asp.getId(), RepLevel.NEUTRAL);
-	league.setRelationship(asp.getId(), RepLevel.HOSTILE);
-	church.setRelationship(asp.getId(), RepLevel.FAVORABLE);
-	path.setRelationship(asp.getId(), RepLevel.HOSTILE);
-	remnants.setRelationship(asp.getId(), RepLevel.HOSTILE);
-	independent.setRelationship(asp.getId(), RepLevel.WELCOMING);
+        setRel(pirates, asp, RepLevel.HOSTILE);
+        setRel(tritachyon, asp, RepLevel.WELCOMING);
+        setRel(hegemony, asp, RepLevel.FAVORABLE);
+        setRel(kol, asp, RepLevel.NEUTRAL);
+        setRel(diktat, asp, RepLevel.NEUTRAL);
+        setRel(league, asp, RepLevel.HOSTILE);
+        setRel(church, asp, RepLevel.FAVORABLE);
+        setRel(path, asp, RepLevel.HOSTILE);
+        setRel(remnants, asp, RepLevel.HOSTILE);
+        setRel(independent, asp, RepLevel.WELCOMING);
     }
 }

@@ -2,11 +2,10 @@
 	"quality":0.5,
     "displayName": "Standard",
     "fluxCapacitors": 0,
-    "fluxVents": 7,
+    "fluxVents": 4,
         "goalVariant": true,
     "hullId": "syndicate_asp_cerberus",
     "hullMods": [
-    "insulatedengine",
     "heavyarmor",
     "hardenedshieldemitter"
   ],

@@ -1,0 +1,20 @@
+{
+  "bounds": [-1,-1, 1,-1, 0,1],
+  "center": [0, 0],
+  "collisionRadius": 1,
+  "builtInMods": [
+    "shield_always_on"
+  ],
+  "engineSlots": [],
+  "height": 2,
+  "hullId": "junk_pirates_mason_dummy",
+  "hullName": "Prison Drone",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [0, 0],
+  "shieldRadius": 10,
+  "spriteName": "graphics/missiles/junk_pirates_junkjet_missile_empty.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [],
+  "width": 2
+}

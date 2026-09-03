@@ -9,17 +9,17 @@
 			},
 
 
-#		"music_campaign":[
-#			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.6}, 
-#			{"file":"campaign_music_part_2_v28.ogg","source":"sounds/music/music.bin","volume":0.6},
-#			{"file":"Versus The Ghost - Versus The Ghost - 05 The Great Ascend.ogg","source":"data/sounds/music","volume":0.52},		
-#		],
-#
-#		"music_campaign_hyperspace":[
-#			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":0.5},
-#			{"file":"Versus The Ghost - Versus The Ghost - 05 The Great Ascend.ogg","source":"data/sounds/music","volume":0.43},
-#		],
-#			},
+
+
+
+
+
+
+
+
+
+
+
 
 	"junk_pirates_shocking_behavour":[
 		{"file":"sounds/sfx_systems/emp_emitter_impact_01.ogg","pitch":0.8,"volume":0.12},
@@ -46,11 +46,11 @@
         ],
 
         "junk_pirates_scatterpd_fire":[
-                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.6,"volume":0.6},
-                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.6,"volume":0.6},
-                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_2.ogg","pitch":0.6,"volume":0.6},
-                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_2.ogg","pitch":0.6,"volume":0.6},
-                #{"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.6,"volume":0.6},
+                
+                
+                
+                
+                
                 {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_1.ogg","pitch":0.95,"volume":0.86},
                 {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_2.ogg","pitch":1.00,"volume":0.90},
                 {"file":"data/sounds/weapon_sounds/junk_pirates_scatterpd_3.ogg","pitch":1.05,"volume":0.88},

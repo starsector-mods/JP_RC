@@ -74,7 +74,7 @@ public class Brehinni {
 
 
 
-		PlanetAPI bh1 = system.addPlanet("ear_burns", star, "Ear Burns", "rocky_metallic", 70, 120, 2000, 60);
+		PlanetAPI bh1 = system.addPlanet("ear_burns", star, "Ear Burns", "rocky_metallic", 70, 120, 1500, 60);
 		//bh1.setFaction("independent");
                 
                 AddMarketPlace.addMarketplace("independent", bh1,
@@ -101,7 +101,7 @@ public class Brehinni {
 		bh1.getSpec().setGlowColor(new Color(245,255,250,255));
 		bh1.applySpecChanges();
 
-		PlanetAPI bh2 = system.addPlanet("back_spin", star, "Backspin", "gas_giant", 120, 240, 3500, 130);
+		PlanetAPI bh2 = system.addPlanet("back_spin", star, "Backspin", "gas_giant", 120, 240, 2500, 130);
 		bh2.setCustomDescriptionId("planet_brehinniII");
 
 		SectorEntityToken milStation = system.addCustomEntity("karkov_academy", "Karkov Academy", "station_karkov_academy", "junk_pirates");
@@ -142,7 +142,7 @@ public class Brehinni {
 		ring.setName("Backspin Debris Field");
 		ring.setCircularOrbit(bh2, 0, 0, 100);
 
-		PlanetAPI bh3 = system.addPlanet("glory", star, "Glory", "planet_glory", 240, 150, 6300, 130);
+		PlanetAPI bh3 = system.addPlanet("glory", star, "Glory", "planet_glory", 240, 150, 4500, 130);
 		
                 AddMarketPlace.addMarketplace("junk_pirates", bh3,
                                                   null,
@@ -180,7 +180,7 @@ public class Brehinni {
 		bh3.getSpec().setGlowColor(new Color(245,255,250,255));
 		bh3.setInteractionImage("illustrations", "glory_background");bh3.applySpecChanges();
 
-		PlanetAPI bh4 = system.addPlanet("hope", star, "Hope", "gas_giant", 180, 260, 10000, 260);
+		PlanetAPI bh4 = system.addPlanet("hope", star, "Hope", "gas_giant", 180, 260, 7000, 260);
 
 		bh4.setCustomDescriptionId("planet_brehinniIV");
 		bh4.getSpec().setPlanetColor(new Color(175,135,245,255));
@@ -195,23 +195,23 @@ public class Brehinni {
 
 		ring = system.addTerrain(Terrain.RING, new RingParams(200 + 256, 1200, null, "Hope Rings"));
 		ring.setName("Hope Rings");
-		ring.setCircularOrbit(star, 0, 0, 100);
+		ring.setCircularOrbit(bh4, 0, 0, 100);
 
 		SectorEntityToken relay = system.addCustomEntity("listening_post", // unique id
 				 "Listening Post", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "junk_pirates"); // faction
-		relay.setCircularOrbit( system.getEntityById("brehinni"), 240, 10000, 260);
+		relay.setCircularOrbit( system.getEntityById("brehinni"), 240, 7000, 260);
 
 		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("brehinni_gate", "Breh'Inni Gate");
-		OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 120, 10000, 260);
+		OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 120, 7000, 260);
 		jumpPoint.setOrbit(orbit);
 		//jumpPoint.setRelatedPlanet(bh4);
 		jumpPoint.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(jumpPoint);
 
-		PlanetAPI bh5 = system.addPlanet("nearly_there", star, "Nearly There", "rocky_ice", 290, 120, 12000, 340);
-		PlanetAPI bh6 = system.addPlanet("too_far", star, "Too Far", "rocky_metallic", 280, 90, 15000, 340);
+		PlanetAPI bh5 = system.addPlanet("nearly_there", star, "Nearly There", "rocky_ice", 290, 120, 8500, 340);
+		PlanetAPI bh6 = system.addPlanet("too_far", star, "Too Far", "rocky_metallic", 280, 90, 10500, 340);
 
 			SectorEntityToken bh5bh6debris = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -224,7 +224,7 @@ public class Brehinni {
 						"N.O.M.D.E. Ejected Mass Field")); // null for default name
 			bh5bh6debris.setName("N.O.M.D.E. Ejected Mass Field");
 
-			bh5bh6debris.setCircularOrbit(star, 285f, 13500, 340);
+			bh5bh6debris.setCircularOrbit(star, 285f, 9500, 340);
 
 		SectorEntityToken volStation = system.addCustomEntity("nomde_plume", "N.O.M.D.E.", "station_nomde_plume", "junk_pirates");
 		volStation.setCircularOrbitPointingDown(system.getEntityById("nearly_there"), 90, 315, 125);
@@ -262,7 +262,7 @@ public class Brehinni {
 		bh6.getSpec().setTilt(10);
 		bh6.applySpecChanges();
 
-		PlanetAPI york4 = system.addPlanet("swanage", star, "Swanage", "gas_giant", 15, 300, 15000, 450);
+		PlanetAPI york4 = system.addPlanet("swanage", star, "Swanage", "gas_giant", 15, 300, 10500, 450);
 
 		york4.setCustomDescriptionId("planet_yorkIV");
 
@@ -338,7 +338,7 @@ public class Brehinni {
 		// generates hyperspace destinations for in-system jump points
 		system.autogenerateHyperspaceJumpPoints(true, true);
 
-                addDerelict(system, hypercube, "junk_pirates_tangerine_Hull", ShipRecoverySpecial.ShipCondition.AVERAGE, 75, true);
+                addDerelict(system, hypercube, "junk_pirates_tangerine_Standard", ShipRecoverySpecial.ShipCondition.AVERAGE, 160, true);
 
 		/*
 		DiktatPatrolSpawnPoint patrolSpawn = new DiktatPatrolSpawnPoint(sector, system, 5, 3, a1);

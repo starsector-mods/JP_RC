@@ -8,6 +8,7 @@ package data.scripts.campaign.fleets;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
@@ -47,17 +48,17 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
                 orderedEscape = true;
             }
         } else {
-            if (orderedEscape) { // review logic against behaviour!
+            if (orderedEscape) {
                 if (data.from != null && data.from.getPrimaryEntity() != null) {
-                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000, "aborting mission");
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, "aborting mission");
                 } else {
-                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000, "aborting mission");
+                    fleet.despawn();
                 }
-            } else if ("mission_complete".equals(data.mission)) { // no assignments and not escaping - get on with it
+            } else if ("mission_complete".equals(data.mission)) {
                 if (data.from != null && data.from.getPrimaryEntity() != null) {
-                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), getOrbitDays(), getReturningActionText());
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, getReturningActionText());
                 } else {
-                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, getOrbitDays(), getReturningActionText());
+                    fleet.despawn();
                 }
             } else if ("loiter".equals(data.mission)) {
                 if (data.to != null && data.to.getPrimaryEntity() != null) {
@@ -95,10 +96,14 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
                         data.intelAdded = true;
                     }
                 }
-                fleet.addAssignment(FleetAssignment.INTERCEPT, Global.getSector().getPlayerFleet(), 7.0f); // spend a week on it
-                data.mission = "hunting";
+                if (Global.getSector().getPlayerFleet() != null) {
+                    fleet.addAssignment(FleetAssignment.INTERCEPT, Global.getSector().getPlayerFleet(), 7.0f); // spend a week on it
+                    data.mission = "hunting";
+                } else {
+                    data.mission = "mission_complete";
+                }
             } else if ("hunting".equals(data.mission)) { // we started but do we finish
-                if (Global.getSector().getPlayerFleet().isVisibleToSensorsOf(fleet)) { // we got the fucker in our sights
+                if (Global.getSector().getPlayerFleet() != null && Global.getSector().getPlayerFleet().isVisibleToSensorsOf(fleet)) { // we got the fucker in our sights
                     data.mission = "hunt_player";
                 } else { // fuck it
                     data.mission = "then_what";
@@ -137,11 +142,11 @@ public final class SyndicateAspHitSquadFleetAssignmentAI implements EveryFrameSc
     }
     
     public boolean playerHere() {
-        if (Global.getSector().getPlayerFleet().getStarSystem() == data.to.getStarSystem()) {
-            return true;
-        } else {
-            return false;
-        }
+        CampaignFleetAPI player = Global.getSector().getPlayerFleet();
+        if (player == null || data == null || data.to == null) return false;
+        StarSystemAPI playerSys = player.getStarSystem();
+        StarSystemAPI destSys = data.to.getStarSystem();
+        return playerSys != null && playerSys == destSys;
     }
     
     public MarketAPI findNewTarget() {

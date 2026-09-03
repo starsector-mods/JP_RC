@@ -230,8 +230,11 @@ public class JunkPiratesLostTechSalvageGen extends BaseCommandPlugin {
 				
 				CampaignFleetAPI defenders = FleetFactoryV3.createFleet(fParams);
                                 defenders.getFleetData().clear();
-                                defenders.getFaction().pickShipAndAddToFleet(ShipRoles.COMBAT_CAPITAL, ShipPickParams.all(), defenders);
-                                defenders.getFaction().pickShipAndAddToFleet(ShipRoles.COMBAT_CAPITAL, ShipPickParams.all(), defenders);
+                                com.fs.starfarer.api.fleet.FleetMemberAPI spinerette = defenders.getFleetData().addFleetMember("junk_pirates_spinerette_base_Standard");
+                                if (spinerette != null) {
+                                    spinerette.setShipName("Automata Cloud");
+                                    spinerette.getRepairTracker().setCR(spinerette.getRepairTracker().getMaxCR());
+                                }
                                 
                                 //memory.set("defenderFleet", defenders, 0);
 				

@@ -1,12 +1,16 @@
 {
     "displayName": "Bullseye",
-    "fluxCapacitors": 53,
-    "fluxVents": 52,
+    "fluxCapacitors": 5,
+    "fluxVents": 35,
     "hullId": "pack_bulldog_bullseye",
     "hullMods": ["targetingunit"],
     "quality": 0.5,
         "goalVariant": true,
     "variantId": "pack_bulldog_bullseye_Bullseye",
+    "wings": [
+        "pack_gunship_wing",
+        "pack_gunship_wing"
+    ],
     "weaponGroups": [
         {
             "autofire": false,

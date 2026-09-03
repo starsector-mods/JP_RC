@@ -7,11 +7,11 @@
 	"center":[2,2],
 	"collisionRadius":7,
 	"collisionClass":"MISSILE_NO_FF",
-	"explosionColor":[185,255,200,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":50, # purely visual
-	"flameoutTime":1, # total time from flameout to full fadeout
-	"noEngineGlowTime":0.1, # time spent without the engine glow being rendered
-	"fadeTime":0.5, # fadeout duration
+	"explosionColor":[185,255,200,255],  
+	"explosionRadius":50, 
+	"flameoutTime":1, 
+	"noEngineGlowTime":0.1, 
+	"fadeTime":0.5, 
 	"behaviorSpec":{"behavior":"CUSTOM",
 					"effectRange":300,
 					"effectChance":0.2

@@ -3,17 +3,17 @@
 	"specClass":"missile",
 	"missileType":"ROCKET",
 	"sprite":"graphics/pack/missiles/pack_torp.png",
-	#"size":[16,28],	
-	#"center":[8,14],
+	
+	
 	"size":[14,23],	
 	"center":[7,11],
 	"collisionRadius":20,
 	"collisionClass":"MISSILE_FF",
-	"explosionColor":[255,100,100,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":225, # purely visual
-	"explosionSpec":{"duration":0.1, # not visual
+	"explosionColor":[255,100,100,255],  
+	"explosionRadius":225, 
+	"explosionSpec":{"duration":0.1, 
 					 "radius":175,
-					 "coreRadius":75, # full damage within core radius
+					 "coreRadius":75, 
 					 "collisionClass":"HITS_SHIPS_AND_ASTEROIDS",
 					 "collisionClassByFighter":"HITS_SHIPS_AND_ASTEROIDS",
 					 "particleSizeMin":5.0,
@@ -21,33 +21,33 @@
 					 "particleDuration":1,
 					 "particleCount":200,
 					 "particleColor":[255,155,155,255]},
-	"flameoutTime":3, # total time from flameout to full fadeout
-	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
-	"fadeTime":0.5, # fadeout duration					 
+	"flameoutTime":3, 
+	"noEngineGlowTime":0.5, 
+	"fadeTime":0.5, 
 	"engineSpec":{"turnAcc":0,
 				  "turnRate":0,
-				  #"acc":35,
+				  
 				  "acc":0,
 				  "dec":100},
 	"engineSlots":[{"id":"ES1",
 					"loc":[-11, 0],
-					#"loc":[-14, 0],
-				    #"style":"TORPEDO",
+					
+				    
 				    "style":"CUSTOM",
 					"styleSpec":{
-						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"mode":"QUAD_STRIP", 
 						"engineColor":[100,100,255,255],
 						"contrailDuration":1.5,
 						"contrailWidthMult":1.5,
-						"contrailWidthAddedFractionAtEnd":1,  # can be negative. makes trail spread out/narrow at the end
-						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailWidthAddedFractionAtEnd":1,  
+						"contrailMinSeg":5, 
 						"contrailMaxSpeedMult":0.0,
 						"contrailAngularVelocityMult":0.5,
-						"contrailSpawnDistMult":0.0, # how far away from engine it starts
+						"contrailSpawnDistMult":0.0, 
 						"contrailColor":[125,100,255,50],
 						"glowSizeMult":2,
 						"glowAlternateColor":[255,0,0,255],
-						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+						"type":"GLOW" 
 					},
 				    "width":6.0,
 				    "length":50.0,

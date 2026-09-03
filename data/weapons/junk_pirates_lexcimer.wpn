@@ -14,9 +14,9 @@
 	"fringeColor":[0,0,155,255],
 	"coreColor":[255,255,255,255],
 	"glowColor":[100,100,200,255],
-	#"fringeColor":[0,155,0,255],
-	#"coreColor":[255,255,255,255],
-	#"glowColor":[100,200,100,255],
+	
+	
+	
 	"width":12.0,
 	"textureType":ROUGH,
 	"textureScrollSpeed":128.0,

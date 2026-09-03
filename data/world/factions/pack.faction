@@ -10,26 +10,26 @@
 	"shipNamePrefix":"PSS",
 	"shipNameSources":{
 		"CANINE":1},
-	"description":"The Post-Anarchist Canis Kollective (P.A.C.K.) is a pragmatic, semi-syndicalist union of former anarchist communes, outer-rim prospectors, and industrial cooperatives based in the Canis system. Emphasizing mutual aid, rugged self-reliance, and standardized heavy-metal modular hulls, P.A.C.K. fields heavily armored gunboats and multi-role combat transports capable of delivering punishing kinetic broadsides while maintaining exceptional fleet endurance.",
+	"description":"The Post-Anarchist Canis Kollective (P.A.C.K.) recently emerged from beneath the thick and increasingly toxic atmosphere of Petra in the Canis system—a protective shield for centuries that kept their federated communes hidden from outsiders and Sector warfare. In recent cycles, that shield became a smothering blanket: the vital technology that sustained them in food, supplies, and energy by resynthesizing atmospheric material began dumping non-ideal isotopes and toxic compounds back into the lower biosphere, threatening the colony's very existence. Emerging into the stars socially and technologically unprepared for the cutthroat Persean Sector, the hab-tube miners and worker syndicates of Canterbury and Christchurch survive through fierce union solidarity and mutual aid. To defend their hard-won autonomy, P.A.C.K. fields heavily armored 'workdog' fighting vessels—flying fortresses such as the Bulldog, Mastiff, and Komondor—sheathed in massive composite plates and engineered to endure catastrophic fleet engagements while unleashing punishing ballistic broadsides.",
 	"names":{
 		"old english":1,
 		"world":1},
 	"variantOverrides":{
 	},
-	# multiplier for how often hulls show up in the faction's fleets
+	
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0 #just say no
+			"buffalo2":0 
 		}},
-	# ships the faction gets access to when importing S&W out-of-faction
+	
 	"shipsWhenImporting":{
 		"tags":["junk_pirates_pack_bp", "base_bp"],
 		"hulls":[
 			"pack_ridgeback_x"]},
 	"knownShips":{
-		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
+		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp", "base_bp"],
 		"hulls":[
 			"pack_ridgeback_x",
 			"pack_ridgeback_x_rothund",
@@ -47,8 +47,12 @@
 			"pack_pitbull_rothund",
 			"pack_pitbull_canebianco",
 			"pack_bedlington_canebianco",
-			"pack_bulldog"]},
-	# listing ships here will make the faction mostly use them even if other hulls become available
+			"pack_bulldog",
+			"pack_schnauzer_bullseye",
+			"pack_pitbull_bullseye",
+			"pack_komondor_bullseye",
+			"pack_bulldog_bullseye"]},
+	
 	"priorityShips":{
 		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
 		"hulls":[
@@ -68,7 +72,11 @@
 			"pack_pitbull_rothund",
 			"pack_pitbull_canebianco",
 			"pack_bedlington_canebianco",
-			"pack_bulldog"]},
+			"pack_bulldog",
+			"pack_schnauzer_bullseye",
+			"pack_pitbull_bullseye",
+			"pack_komondor_bullseye",
+			"pack_bulldog_bullseye"]},
 	"knownFighters":{
 		"tags":["junk_pirates_pack_bp", "junk_pirates_packprime_bp"],
 		"fighters":[
@@ -107,7 +115,7 @@
 	"knownHullMods":{
 		"tags":["base_bp"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
+			"advancedshieldemitter", 
 			"turretgyros",
 			"armoredweapons",
 			"augmentedengines",
@@ -119,14 +127,13 @@
 			"magazines",
 			"missleracks",
 			"extendedshieldemitter",
-			"frontemitter",
-			"frontshield",  # makeshift
+			"frontshield",  
 			"hardenedshieldemitter",
 			"heavyarmor",
 			"insulatedengine",
 			"targetingunit",
 			"nav_relay",
-			"adaptiveshields", # omni
+			"adaptiveshields", 
 			"operations_center",
 			"recovery_shuttles",
 			"fluxbreakers",
@@ -147,9 +154,9 @@
 		
 		"aggression":2,
 		
-		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0.5,				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"combatFreighterProbability":0.5,     				
+		"combatFreighterCombatUseFraction":0.5,				
+		"combatFreighterCombatUseFractionWhenPriority":1,   
 		"autofitRandomizeProbability":0.6,
 
 		"officerSkillsShuffleProbability":1,

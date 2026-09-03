@@ -12,21 +12,22 @@
 	"shipNameSources":{
 		"GREEK":3,
 		"CELTIC":1},
+	"description":"The Familia is the untouchable executive council and private enforcement armada of the ASP Syndicate, ruling the criminal underworld of Paddington from fortified orbital sanctuaries. Where ordinary corporate couriers deliver parcels, the Familia's capos and debt-enforcers dispense lethal boardroom justice and violent debt collection. Operating within a cold-blooded Sicilian mafia hierarchy disguised as corporate directorship, they take personal command of high-stakes gang wars and contract liquidations. Their strike armadas are spearheaded by terrifying, heavily customized warships—most notoriously the lethal 3-Large-Missile King Cobra (F) command flagships and Copperhead (F) strike carriers—utilizing devastating missile salvos and carrier-borne fighter swarms to eliminate competitors and traitors with merciless, calculated finality.",
 	"names":{
 		"old english":1},
-	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	
 	"variantOverrides":{
 	},
 	
-	# multiplier for how often hulls show up in the faction's fleets
+	
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0, # just say no
-			"apogee":0 # too civilian.
+			"buffalo2":0, 
+			"apogee":0 
 		}},
-	# ships the faction gets access to when importing S&W out-of-faction
+	
 	"shipsWhenImporting":{
 		"tags":["base_bp", "junk_pirates_asp_bp", "midline_bp"],
 		"hulls":[
@@ -35,7 +36,7 @@
 		"tags":["base_bp", "junk_pirates_asp_bp", "midline_bp", "junk_pirates_familia_bp"],
 		"hulls":[
 		]},
-	# listing ships here will make the faction mostly use them even if other hulls become available
+	
 	"priorityShips":{
 		"tags":["junk_pirates_familia_bp"],
 		"hulls":[
@@ -86,7 +87,7 @@
 	"knownHullMods":{
 		"tags":["base_bp", "sindrian_diktat", "lions_guard"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
+			"advancedshieldemitter", 
 			"advancedoptics",
 			"turretgyros",
 			"armoredweapons",
@@ -100,14 +101,14 @@
 			"missleracks",
 			"extendedshieldemitter",
 			"frontemitter",
-			"frontshield",  # makeshift
+			"frontshield",  
 			"hardenedshieldemitter",
 			"heavyarmor",
 			"insulatedengine",
 			"pointdefenseai",
 			"targetingunit",
 			"nav_relay",
-			"adaptiveshields", # omni
+			"adaptiveshields", 
 			"operations_center",
 			"recovery_shuttles",
 			"fluxbreakers",
@@ -127,9 +128,9 @@
 		
 		"aggression":3,
 		
-		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"combatFreighterProbability":0.1,      				
+		"combatFreighterCombatUseFraction":0,  				
+		"combatFreighterCombatUseFractionWhenPriority":0,   
 		"autofitRandomizeProbability":0.1,
 		
 		"officerSkillsShuffleProbability":1,

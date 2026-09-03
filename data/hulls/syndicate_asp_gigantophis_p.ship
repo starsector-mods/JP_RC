@@ -81,6 +81,7 @@
   "spriteName": "graphics/syndicate_asp/ships/syndicate_asp_gigantophis_p.png",
   "style": "MIDLINE",
   "viewOffset": 0,
+  "builtInMods": [],
   "weaponSlots": [
     {
       "angle": -88,
@@ -194,12 +195,16 @@
       "angle": 0,
       "arc": 360,
       "id": "WS 017",
-      "locations":[
-        -13.0, 40.5,
-        -13.0, 40.5,
-        -25.0, 46.5,
-        -25.0, 34.5
-    ],
+      "locations": [
+        -13.0,
+        40.5,
+        -13.0,
+        40.5,
+        -25.0,
+        46.5,
+        -25.0,
+        34.5
+      ],
       "mount": "HIDDEN",
       "size": "LARGE",
       "type": "LAUNCH_BAY"
@@ -208,12 +213,16 @@
       "angle": 0,
       "arc": 360,
       "id": "WS 018",
-      "locations":[
-        26.5, 41.0,
-        26.5, 41.0,
-        14.5, 47.0,
-        14.5, 35.0
-    ],
+      "locations": [
+        26.5,
+        41.0,
+        26.5,
+        41.0,
+        14.5,
+        47.0,
+        14.5,
+        35.0
+      ],
       "mount": "HIDDEN",
       "size": "LARGE",
       "type": "LAUNCH_BAY"

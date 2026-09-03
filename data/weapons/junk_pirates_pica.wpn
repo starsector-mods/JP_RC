@@ -1,5 +1,5 @@
 {
-	"id":"junk_pirates_pica",  # this id must match what's in the spreadsheet
+	"id":"junk_pirates_pica",  
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"LARGE",
@@ -8,21 +8,21 @@
 	"turretGunSprite":"graphics/junk_pirates/weapons/junk_pirates_pica_turret_recoil.png",
 	"hardpointSprite":"graphics/junk_pirates/weapons/junk_pirates_pica_hardpoint_base.png",
 	"hardpointGunSprite":"graphics/junk_pirates/weapons/junk_pirates_pica_hardpoint_recoil.png",	
-	"visualRecoil":6.0,  # the gun sprites are only used if this is non-0
+	"visualRecoil":6.0,  
 	"renderHints":[RENDER_BARREL_BELOW],
 	"turretOffsets":[13, 0],
 	"turretAngleOffsets":[0],
 	"hardpointOffsets":[28, 0],
 	"hardpointAngleOffsets":[0],
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
-	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
-	"muzzleFlashSpec":{"length":45.0,   # only used if animationType = MUZZLE_FLASH
+	"barrelMode":"ALTERNATING", 
+	"animationType":"GLOW_AND_FLASH",  
+	"muzzleFlashSpec":{"length":45.0,   
 					   "spread":10.0,
 					   "particleSizeMin":8.0,
 					   "particleSizeRange":15.0,
 					   "particleDuration":0.9,
 					   "particleCount":10,
 					  "particleColor":[255,195,255,235]},
-	"projectileSpecId":"junk_pirates_pica_shot",  # projectile that will be fired	
+	"projectileSpecId":"junk_pirates_pica_shot",  
 	"fireSoundTwo":"junk_pirates_pica_fire"
 }

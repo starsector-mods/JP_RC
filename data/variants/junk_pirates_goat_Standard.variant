@@ -1,7 +1,7 @@
 {
   "displayName": "Standard",
-  "fluxCapacitors": 23,
-  "fluxVents": 30,
+  "fluxCapacitors": 14,
+  "fluxVents": 25,
   "goalVariant": true,
   "hullId": "junk_pirates_goat",
   "hullMods": [
@@ -42,5 +42,8 @@
         "WS 003": "autopulse"
       }
     }
+  ],
+  "wings": [
+    "junk_pirates_shard_wing"
   ]
 }

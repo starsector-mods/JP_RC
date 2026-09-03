@@ -17,18 +17,20 @@ import org.lwjgl.util.vector.Vector2f;
 public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
     
     private float contactTime = 0f;
-    // Takes 3 seconds of continuous contact with stripped bare hull to reach maximum damage
+    // Takes 3.0 seconds of continuous bare-hull contact to reach maximum superheated damage (1,800 DPS)
     private static final float MAX_RAMP_TIME = 3f;
+    private static final float BASE_DPS = 1000f;
+    private static final float MAX_DPS = 1800f;
     
     // Ticks for spawning sparks, debris chunks, explosions, and arcs
-    private final IntervalUtil sparkInterval = new IntervalUtil(0.02f, 0.04f);
-    private final IntervalUtil debrisInterval = new IntervalUtil(0.18f, 0.30f);
-    private final IntervalUtil explosionInterval = new IntervalUtil(0.10f, 0.16f);
-    private final IntervalUtil arcInterval = new IntervalUtil(0.20f, 0.35f);
+    private final IntervalUtil sparkInterval = new IntervalUtil(0.06f, 0.10f);
+    private final IntervalUtil debrisInterval = new IntervalUtil(0.50f, 0.75f);
+    private final IntervalUtil explosionInterval = new IntervalUtil(0.12f, 0.20f);
+    private final IntervalUtil arcInterval = new IntervalUtil(0.25f, 0.40f);
     
     @Override
     public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon) {
-        if (engine.isPaused()) return;
+        if (engine == null || engine.isPaused() || weapon == null) return;
         
         // Check if any active beam is making contact with stripped/exposed bare hull
         boolean isMakingContact = false;
@@ -48,19 +50,21 @@ public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
                 contactTime = MAX_RAMP_TIME;
             }
         } else {
-            // Cool down when not contacting stripped bare hull
+            // Cool down when not contacting stripped bare hull (1.5 seconds to return to baseline)
             contactTime -= amount * 2f; 
             if (contactTime < 0f) {
                 contactTime = 0f;
             }
         }
         
-        // Base damage is 1000 DPS. Scales up to 1800 DPS (1.0x -> 1.8x) upon sustained contact.
+        // Base damage is 1000 DPS. Scales up to 1800 DPS (1.0x -> 1.8x) over 3 seconds of sustained bare hull contact.
         float intensity = contactTime / MAX_RAMP_TIME;
         float damageMult = 1f + (0.8f * intensity);
         
-        // Apply the damage multiplier
-        weapon.getDamage().getModifier().modifyMult("stygian_drill_ramp", damageMult);
+        // Apply damage multiplier to weapon stats (for AI threat appraisal and derived queries)
+        if (weapon.getDamage() != null && weapon.getDamage().getModifier() != null) {
+            weapon.getDamage().getModifier().modifyMult("stygian_drill_ramp", damageMult);
+        }
         
         // Advance VFX intervals
         sparkInterval.advance(amount);
@@ -68,10 +72,17 @@ public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
         explosionInterval.advance(amount);
         arcInterval.advance(amount);
         
-        // Render beam body, core & impact tip effects
+        // Render beam body, core, impact tip effects, and apply multiplier to active beams
         if (weapon.getBeams() != null && !weapon.getBeams().isEmpty()) {
             for (BeamAPI beam : weapon.getBeams()) {
-                // Focus beam from wide heavy plume (42 width) down to concentrated cutter (24 width) ONLY upon contact
+                // Apply the damage multiplier directly to the active beam's DamageAPI.
+                // In Starsector, active beams deal damage from their own BeamAPI.getDamage() instance,
+                // so modifying weapon.getDamage() alone does NOT update the beam's actual damage output.
+                if (beam.getDamage() != null && beam.getDamage().getModifier() != null) {
+                    beam.getDamage().getModifier().modifyMult("stygian_drill_ramp", damageMult);
+                }
+                
+                // Focus beam from wide heavy plume (42 width) down to concentrated cutter (24 width) as it superheats
                 beam.setWidth(42f - (18f * intensity));
                 
                 // Beam Core: Starts warm incandescent red-orange (255, 180, 140), superheats to glowing fiery amber-white (255, 220, 160)
@@ -159,7 +170,7 @@ public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
                             int numDebris = 1 + (int)(2 * intensity);
                             float minSpeed = 40f + 30f * intensity;
                             float maxSpeed = 100f + 80f * intensity;
-                            float duration = 5f + 5f * intensity;
+                            float duration = 1f + 1f * intensity;
                             
                             engine.spawnDebrisSmall(hitLoc, targetVel, numDebris, reverseAngle, 120f, minSpeed, maxSpeed, duration);
                             
@@ -220,23 +231,53 @@ public class StygianDrillEffect implements EveryFrameWeaponEffectPlugin {
         // Combat UI Status text
         if (weapon.getChargeLevel() > 0f) {
             if (weapon.getShip() == Global.getCombatEngine().getPlayerShip()) {
-                float baseDps = weapon.getDerivedStats().getDps();
+                float baseDps = (weapon.getDerivedStats() != null && weapon.getDerivedStats().getDps() > 0f) 
+                    ? weapon.getDerivedStats().getDps() : BASE_DPS;
                 float currentDps = baseDps * damageMult;
-                String status;
-                if (isMakingContact) {
-                    int bonusPct = (int)((damageMult - 1f) * 100f);
-                    status = String.format("drilling bare hull: %d DPS (+%d%%)", (int) currentDps, bonusPct);
-                } else if (weapon.isFiring() && weapon.getBeams() != null && !weapon.getBeams().isEmpty()) {
-                    boolean hitShip = false;
+                int bonusPct = Math.round((damageMult - 1f) * 100f);
+                
+                boolean hitBareHull = false;
+                boolean hitShield = false;
+                boolean hitTarget = false;
+                
+                if (weapon.getBeams() != null && !weapon.getBeams().isEmpty()) {
                     for (BeamAPI beam : weapon.getBeams()) {
-                        if (beam.getDamageTarget() instanceof ShipAPI) {
-                            hitShip = true;
+                        if (beam.getDamageTarget() != null) {
+                            hitTarget = true;
+                            if (beam.getDamageTarget() instanceof ShipAPI) {
+                                ShipAPI targetShip = (ShipAPI) beam.getDamageTarget();
+                                if (targetShip.getShield() != null && targetShip.getShield().isOn() && targetShip.getShield().isWithinArc(beam.getTo())) {
+                                    hitShield = true;
+                                } else if (isContactingBareHull(beam)) {
+                                    hitBareHull = true;
+                                }
+                            }
                             break;
                         }
                     }
-                    status = hitShip ? String.format("contact: armor/shield (%d DPS)", (int) baseDps) : String.format("active (%d DPS)", (int) baseDps);
+                }
+                
+                String status;
+                if (intensity >= 0.99f) {
+                    if (hitBareHull) {
+                        status = String.format("MAX DRILL: BARE HULL (%d DPS)", Math.round(currentDps));
+                    } else {
+                        status = String.format("COOLING DOWN (%d DPS / +%d%%)", Math.round(currentDps), bonusPct);
+                    }
+                } else if (intensity > 0.05f) {
+                    if (hitBareHull) {
+                        status = String.format("drilling bare hull: %d DPS (+%d%%)", Math.round(currentDps), bonusPct);
+                    } else {
+                        status = String.format("cooling down: %d DPS (+%d%%)", Math.round(currentDps), bonusPct);
+                    }
                 } else {
-                    status = String.format("ready (%d DPS)", (int) baseDps);
+                    if (hitShield) {
+                        status = String.format("contact: shields (%d DPS)", Math.round(baseDps));
+                    } else if (hitTarget) {
+                        status = String.format("contact: armor (%d DPS)", Math.round(baseDps));
+                    } else {
+                        status = String.format("active (%d DPS)", Math.round(baseDps));
+                    }
                 }
                 
                 Global.getCombatEngine().maintainStatusForPlayerShip(

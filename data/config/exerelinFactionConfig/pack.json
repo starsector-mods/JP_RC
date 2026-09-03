@@ -8,6 +8,11 @@
     "diplomacyTraits":["anarchist"],
     "colonyTargetValuator":"exerelin.campaign.colony.LuddicColonyTargetValuator",
     
+    "vengeanceLevelNames":["Outrage", "Retaliation", "Pack Hunt"],
+    "vengeanceFleetNames":["Vigilantes", "Pack Fleet", "Alpha Pack"],
+    "vengeanceFleetNamesSingle":["a Vigilante fleet", "a Pack Fleet", "an Alpha Pack"],
+    "miningVariantsOrWings":["pack_labrador_Standard", "pack_samoyed_Standard"],
+    
     "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
     "specialForcesFlagshipVariants":{ "pack_mastiff_Elite": 1, "pack_komondor_Standard": 0.5 },
     
@@ -23,7 +28,9 @@
 
     "alignments":{
         "diplomatic":0.5,
-	"militarist":-1
+        "militarist":-1,
+        "hierarchical":-1,
+        "corporate":-1
     },
     
     "startShipsSolo":[
@@ -51,11 +58,12 @@
         ["pack_mastiff_Standard", "pack_labrador_Standard", "pack_wirefox_Standard"]
     ],
     "startShipsSuper":[
+        ["pack_bulldog_Standard"],
         ["pack_komondor_Standard"],
         ["pack_mastiff_Elite"]
     ],
     "startShipsGrandFleet":[
-        ["pack_komondor_Standard", "pack_mastiff_Standard", "pack_ridgeback_Standard", "pack_wirefox_Standard", "pack_BRT_Guard"]
+        ["pack_bulldog_Standard", "pack_komondor_Standard", "pack_mastiff_Standard", "pack_ridgeback_Standard", "pack_wirefox_Standard", "pack_BRT_Guard"]
     ],
     
     "defenceStations":[

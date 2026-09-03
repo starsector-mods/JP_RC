@@ -1,21 +1,21 @@
 {
     "planet_glory":{
 		"name":"Rocky Ice",
-		"tilt":20, # left-right (>0 tilts to the left)
-		"pitch":0, # towards-away from the viewer (>0 pitches towards)
-		"rotation":-3, # degrees/second
+		"tilt":20, 
+		"pitch":0, 
+		"rotation":-3, 
 		"planetColor":[255,255,255,255],
-		"atmosphereThickness":0.2, # as fraction of radius.  Set to 0 for no atmosphere
-		"atmosphereThicknessMin":40, #  minimum thickness in pixels
+		"atmosphereThickness":0.2, 
+		"atmosphereThicknessMin":40, 
 		"atmosphereColor":[140,150,165,140],
 		"texture":"graphics/planets/planet_brehinni.jpg",
 		"icon":"graphics/warroom/icon_planet.png",
 		"iconColor":[200,170,145,255],
 		"isStar":false,
-		"lightPosition":[1,-3,8], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
-		"cloudTexture":"graphics/planets/clouds_banded01.png",# omit for no cloud layer
+		"lightPosition":[1,-3,8], 
+		"cloudTexture":"graphics/planets/clouds_banded01.png",
 		"cloudColor":[190,180,170,240],
-		"cloudRotation":-10, # degrees/second, optional
-		"cloudOffset":2 # optional, this is how much bigger the cloud sphere is than the planet.  Good values are 2-10		
+		"cloudRotation":-10, 
+		"cloudOffset":2 
 	}
 }

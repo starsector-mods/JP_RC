@@ -57,17 +57,17 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                 orderedEscape = true;
             }
         } else {
-            if (orderedEscape) { // review logic against behaviour!
+            if (orderedEscape) {
                 if (data.from != null && data.from.getPrimaryEntity() != null) {
                     fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, "aborting mission");
                 } else {
-                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000f, "aborting mission");
+                    fleet.despawn();
                 }
-            } else if ("mission_complete".equals(data.mission)) { // no assignments and not escaping - get on with it
+            } else if ("mission_complete".equals(data.mission)) {
                 if (data.from != null && data.from.getPrimaryEntity() != null) {
                     fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, getReturningActionText());
                 } else {
-                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000f, getReturningActionText());
+                    fleet.despawn();
                 }
             } else if ("go_party".equals(data.mission)) {
                 
@@ -95,10 +95,11 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                 
                 MarketAPI friendlyTrollPort = findBaseToTrollSystemFrom();
                 
+                String trollCmdr = (data.fleet != null && data.fleet.getCommander() != null) ? data.fleet.getCommander().getNameString() : "Captain";
                 if (friendlyTrollPort != null) {
-                    log.info("Junk Explorer, " + data.fleet.getCommander().getNameString() + " wants to troll around from " + friendlyTrollPort.getName());
+                    log.info("Junk Explorer, " + trollCmdr + " wants to troll around from " + friendlyTrollPort.getName());
                 } else {
-                    log.info("Junk Explorer, " + data.fleet.getCommander().getNameString() + " can't troll today. Not good.");
+                    log.info("Junk Explorer, " + trollCmdr + " can't troll today. Not good.");
                 }
                 
                 if (data.fleet != null && friendlyTrollPort != null && friendlyTrollPort.getPrimaryEntity() != null) {
@@ -128,6 +129,7 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                 }
                 
                 MarketAPI targetMarket = findScavengePlanetMarket(scavSystem);
+                if (targetMarket == null) targetMarket = data.from;
                 
                 if (data.fleet != null && targetEntity != null && targetMarket != null) {
                     data.to = targetMarket;
@@ -433,7 +435,10 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
         }
 
         protected String fleetCommanderName() {
-            return data.fleet.getCommander().getNameString();
+            if (data != null && data.fleet != null && data.fleet.getCommander() != null) {
+                return data.fleet.getCommander().getNameString();
+            }
+            return "Captain";
         }
         
         protected String factionDisplayName(String faction) {
@@ -447,7 +452,8 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
                 // Hanging about ...
                 
                 if ("troll_about".equals(data.mission)) {
-                    return "Preparing for local raids in " + data.to.getStarSystem().getBaseName();
+                    String sName = (data.to != null && data.to.getStarSystem() != null) ? data.to.getStarSystem().getBaseName() : "deep space";
+                    return "Preparing for local raids in " + sName;
                 } else if ("go_party".equals(data.mission)) {
                     return randomPartyActivity() + " at " + data.to.getName();
                 }
@@ -511,7 +517,10 @@ public final class JunkPiratesExplorerFleetAssignmentAI implements EveryFrameScr
             String missionText = "Traveling";
 
             if ( "troll_about".equals(mission)) missionText = "Traveling to " + data.to.getName();
-            if ( "go_party".equals(mission)) missionText = "Exploring; Traveling to " + data.to.getName() + " in the " + data.to.getStarSystem().getBaseName() + " system";
+            if ( "go_party".equals(mission)) {
+                String sName = (data.to != null && data.to.getStarSystem() != null) ? data.to.getStarSystem().getBaseName() : "deep space";
+                missionText = "Exploring; Traveling to " + data.to.getName() + " in the " + sName + " system";
+            }
             if ( "mission_complete".equals(mission)) missionText = "Returning to " + data.from.getName();
                 
                 if (mission.isEmpty()) {

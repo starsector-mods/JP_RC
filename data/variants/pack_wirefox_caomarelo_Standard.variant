@@ -2,10 +2,10 @@
   "displayName": "Standard",
   "hullId": "pack_wirefox_caomarelo",
   "variantId": "pack_wirefox_caomarelo_Standard",
-  "fluxVents": 8,
+  "fluxVents": 7,
         "goalVariant": true,
   "fluxCapacitors": 0,
-  "hullMods": ["targetingunit", "advancedshieldemitter", "frontemitter"],
+  "hullMods": ["targetingunit", "frontemitter"],
   "weaponGroups": [
     {
       "autofire": false,

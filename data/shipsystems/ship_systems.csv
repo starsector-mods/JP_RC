@@ -19,3 +19,4 @@ Heavy VIE Plug Jets,junk_pirates_heavy_burst_jets,,,,,,,,2,0.04,0.15,2,0.75,10,,
 Alpha Call,pack_alpha_call,,,,,,,,,,0.5,8,1.0,20,,,,,,,,,,,,,
 Tri-Feed Overcharge,pack_tri_overcharge,,,,,,,,,,0.5,5,0.5,10,,,,,,,,,,,,offensive,
 Ridgeback Protocol,pack_ridgeback_drive,,,,,,,,,,0.3,6,0.5,10,,,,,,,,,,,,"offensive, movement",
+Mason Refractor,junk_pirates_mason_refractor,,,,1500,,,,,,0.3,3.5,0.5,25,,,,,,,,,,,,defensive,graphics/icons/hullsys/fortress_shield.png

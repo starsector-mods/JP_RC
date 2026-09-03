@@ -14,16 +14,16 @@
 	"renderHints":[RENDER_LOADED_MISSILES],
 	"interruptibleBurst":false,
 	"displayArcRadius":1000,
-	#"smokeSpec":{"particleSizeMin":20.0,
-	#			 "particleSizeRange":20.0,
-	#			 "cloudParticleCount":3,
-	#			 "cloudDuration":1.0,
-	#			 "cloudRadius":10.0,
-	#			 "blowbackParticleCount":3,
-	#			 "blowbackDuration":2.0,
-	#			 "blowbackLength":30.0,
-	#			 "blowbackSpread":10.0,
-	#			 "particleColor":[100,100,100,200]},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	"smokeSpec":{"particleSizeMin":16.0,
 				 "particleSizeRange":18.0,
 				 "cloudParticleCount":8,
@@ -37,5 +37,3 @@
 	"projectileSpecId":"junk_pirates_bangpod_torp",
 	"fireSoundTwo":"junk_pirates_plan_d_launch"
 }
-
-

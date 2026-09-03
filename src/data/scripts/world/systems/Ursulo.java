@@ -94,7 +94,6 @@ public class Ursulo {
                                           Industries.GROUNDDEFENSES,
                                           Industries.MINING,
                                           Industries.ORBITALSTATION_HIGH,
-                                          Industries.MILITARYBASE,
                                           "syndicate_asp_familia",
                                           Industries.POPULATION)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
@@ -122,7 +121,7 @@ public class Ursulo {
 		station.setCustomDescriptionId("paddington_station");
 
                 AddMarketPlace.addMarketplace("syndicate_asp", ur3,
-                    new ArrayList<>(Arrays.asList(ur3, station)),
+                    new ArrayList<>(Arrays.asList(station)),
                     "Paddington",
                     6,
                     new ArrayList<>(Arrays.asList(Conditions.HABITABLE,
@@ -143,6 +142,7 @@ public class Ursulo {
                                           Industries.PATROLHQ)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                   Submarkets.SUBMARKET_BLACK,
+                                                  Submarkets.GENERIC_MILITARY,
                                                   Submarkets.SUBMARKET_OPEN)),
                     0.3f
                     );
@@ -176,6 +176,7 @@ public class Ursulo {
                                           Industries.POPULATION)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                   Submarkets.SUBMARKET_BLACK,
+                                                  Submarkets.GENERIC_MILITARY,
                                                   Submarkets.SUBMARKET_OPEN)),
                     0.3f
                     );
@@ -234,6 +235,7 @@ public class Ursulo {
                                           Industries.POPULATION)),
                     new ArrayList<>(Arrays.asList(Submarkets.SUBMARKET_STORAGE,
                                                   Submarkets.SUBMARKET_BLACK,
+                                                  Submarkets.GENERIC_MILITARY,
                                                   Submarkets.SUBMARKET_OPEN)),
                     0.3f
                     );

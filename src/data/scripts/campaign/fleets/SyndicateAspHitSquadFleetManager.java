@@ -71,6 +71,7 @@ public class SyndicateAspHitSquadFleetManager extends BaseCampaignEventListener 
     @Override
     public void advance(float amount) {
         if (!hasRunSweep) {
+            Global.getSector().addTransientListener(this);
             if (activeAspHitFleets == null) activeAspHitFleets = new java.util.LinkedList<>();
             if (activeAspHitFleets.isEmpty()) {
                 for (com.fs.starfarer.api.campaign.LocationAPI loc : Global.getSector().getAllLocations()) {
@@ -402,15 +403,16 @@ public class SyndicateAspHitSquadFleetManager extends BaseCampaignEventListener 
         boolean player_won = result.didPlayerWin();
         if (!player_won) {
             boolean foughtHitSquad = false;
-            if (result.getBattle() != null) {
+            if (result.getBattle() != null && result.getBattle().getNonPlayerSide() != null) {
                 for (CampaignFleetAPI f : result.getBattle().getNonPlayerSide()) {
-                    if (f.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
+                    if (f != null && f.getMemoryWithoutUpdate() != null && f.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
                         foughtHitSquad = true;
                         break;
                     }
                 }
             } else if (result.getWinnerResult() != null && result.getWinnerResult().getFleet() != null) {
-                if (result.getWinnerResult().getFleet().getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
+                CampaignFleetAPI winnerFleet = result.getWinnerResult().getFleet();
+                if (winnerFleet.getMemoryWithoutUpdate() != null && winnerFleet.getMemoryWithoutUpdate().getBoolean("$aspHitSquad")) {
                     foughtHitSquad = true;
                 }
             }

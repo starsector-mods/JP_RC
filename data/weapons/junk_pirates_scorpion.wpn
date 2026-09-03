@@ -1,5 +1,5 @@
 {
-	"id":"junk_pirates_scorpion",  # this id must match what's in the spreadsheet
+	"id":"junk_pirates_scorpion",  
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"MEDIUM",
@@ -11,7 +11,7 @@
 	"turretAngleOffsets":[0],
 	"hardpointOffsets":[12, 0],
 	"hardpointAngleOffsets":[0],
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"barrelMode":"ALTERNATING", 
 	"animationType":"GLOW_AND_FLASH",
 	"glowColor":[125,100,255,255],
 	"muzzleFlashSpec":{"length":15.0,
@@ -21,7 +21,7 @@
 					   "particleDuration":0.12,
 					   "particleCount":10,
 					   "particleColor":[125,100,255,255]},		
-	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
-	"projectileSpecId":"junk_pirates_scorpion_shot",  # projectile that will be fired
+	"autocharge":true,  
+	"projectileSpecId":"junk_pirates_scorpion_shot",  
 	"fireSoundTwo":"junk_pirates_scorpion_fire"
 }

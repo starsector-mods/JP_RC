@@ -67,6 +67,7 @@ public class SpineretteRespawnManager implements EveryFrameScript {
                     mem.unset("$spineretteWasDefeated");
                     mem.unset("$hasDefenders");
                     mem.unset("$defenderFleet");
+                    mem.unset("$salvaged");
 
                     // Re-apply hazard tubes condition to the market if one exists
                     if (entity.getOrbit() != null && entity.getOrbit().getFocus() != null) {
@@ -74,6 +75,7 @@ public class SpineretteRespawnManager implements EveryFrameScript {
                         if (focusMarket != null && focusMarket.hasCondition("JUNK_habTubes")) {
                             focusMarket.removeCondition("JUNK_habTubes");
                             focusMarket.addCondition("JUNK_habTubes_active");
+                            focusMarket.reapplyConditions();
                         }
                     }
 

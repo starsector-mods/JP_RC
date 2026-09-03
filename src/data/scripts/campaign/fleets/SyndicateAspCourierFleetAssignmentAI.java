@@ -56,16 +56,16 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
         } else {
             if (orderedEscape) {
                 if (data.from != null && data.from.getPrimaryEntity() != null) {
-                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000, "aborting mission");
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, "aborting mission");
                 } else {
-                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, 1000, "aborting mission");
+                    fleet.despawn();
                 }
-            } else if ("delivered".equals(data.mission)) { // no assignments and not esacping - get on with it
+            } else if ("delivered".equals(data.mission)) {
                 data.fleet.getCargo().clear();
                 if (data.from != null && data.from.getPrimaryEntity() != null) {
-                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), getOrbitDays(), getReturningActionText());
+                    fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, data.from.getPrimaryEntity(), 1000f, getReturningActionText());
                 } else {
-                    fleet.addAssignment (FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, fleet, getOrbitDays(), getReturningActionText());
+                    fleet.despawn();
                 }
             } else {
                 if (data.from != null && data.from.getPrimaryEntity() != null && data.to != null && data.to.getPrimaryEntity() != null) {
@@ -157,10 +157,10 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
                     if (isExerelin) { // Nex is enabled and we can stick a prisoner in the cargo hold
                             data.addDeliver("prisoner", (int) tier);
                             float creds = (float) Math.random() * tier;
-                            data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
+                            data.addDeliver("syndicate_asp_credit_chip", Math.max(1, (int) (tier * 2)));
                     } else {
                         float creds = (float) Math.random() * 3 + tier;// not much to do I guess ... stick a few credits in the hold
-                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
+                        data.addDeliver("syndicate_asp_credit_chip", Math.max(1, (int) (tier * 2)));
                     }
                 }
                 
@@ -170,21 +170,21 @@ public final class SyndicateAspCourierFleetAssignmentAI implements EveryFrameScr
                     if (isExerelin) { // Nex is enabled and we can stick a VIP in the cargo hold
                             data.addDeliver("agent", (int) tier);
                             float creds = (float) Math.random() * 3 + tier;
-                            data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
+                            data.addDeliver("syndicate_asp_credit_chip", Math.max(1, (int) (tier * 2)));
                     } else {
                         float creds = (float) Math.random() * 6 + tier;// not much to do I guess ... stick a few thousand credits in the hold
-                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
+                        data.addDeliver("syndicate_asp_credit_chip", Math.max(1, (int) (tier * 2)));
                     }
                 }
                 
                 if ("money".equals(data.mission)) {
                         float creds = (float) Math.random() + tier * 3;// not much to do I guess ... stick a few thousand credits in the hold
-                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
+                        data.addDeliver("syndicate_asp_credit_chip", Math.max(1, (int) (tier * 2)));
                 }
                 
                 if ("items".equals(data.mission)) {
                         float creds = (float) Math.random() * tier + 3;
-                        data.addDeliver("syndicate_asp_credit_chip", (int) (creds / 10));
+                        data.addDeliver("syndicate_asp_credit_chip", Math.max(1, (int) (tier * 2)));
                         
                         boolean isMilitary = data.to.hasIndustry("militarybase") || data.to.hasIndustry("highcommand");
                         boolean isHeavy = data.to.hasIndustry("heavyindustry") || data.to.hasIndustry("orbitalworks");

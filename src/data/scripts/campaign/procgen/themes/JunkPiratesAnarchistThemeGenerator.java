@@ -64,14 +64,14 @@ import org.lwjgl.util.vector.Vector2f;
  */
 public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 
-        private int minAnarchistConstellations = 3;
-        private int maxAnarchistConstellations = 6;
-        private float skipProbability = 0.9f;
+        public int minAnarchistConstellations = 3;
+        public int maxAnarchistConstellations = 6;
+        public float skipProbability = 0.9f;
 
-        private int softMaxSpinerettes = 3;
+        public int softMaxSpinerettes = 3;
 
-        private boolean enableProcGen = true;
-        private boolean enableSpinerettes = true;
+        public boolean enableProcGen = true;
+        public boolean enableSpinerettes = true;
     
         
     
@@ -116,8 +116,16 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
                 skipProbability = (float)procGenSettings.getDouble("skipProbability");
                 softMaxSpinerettes = procGenSettings.getInt("softMaxSpinerettes");
 
-            } catch (IOException | JSONException ex) {
+            } catch (Exception ex) {
                 System.out.println("JP Config Exception " + ex);
+            }
+            
+            if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+                try {
+                    data.scripts.JunkPiratesLunaConfig.loadProcGenSettings(this);
+                } catch (Throwable t) {
+                    Global.getLogger(JunkPiratesAnarchistThemeGenerator.class).error("Failed to load LunaSettings for Junk Pirates", t);
+                }
             }
             
             System.out.println("enableProcGen: " + enableProcGen);
@@ -162,7 +170,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 		}
 		
 		List<Constellation> constellations = getSortedAvailableConstellations(context, false, new Vector2f(), null); //sorts constellations from 0,0, false means empty is not ok
-		Collections.reverse(constellations); // flip them; put the furthest away candidates at the top of the list. 
+		// Vanilla already sorts furthest constellations first 
 		
 		float skipProb = skipProbability; // just a mixer-upper; chance of skipping a given constellation, I think, based on number of candidates vs. number of systems we want.
 		if (total < num / (1f - skipProb)) {
@@ -260,7 +268,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 					data.system.addScript(fleets); // assign a fleetmanager to the system
 
 					Boolean addStation = random.nextFloat() < suppressedStationMult; // put in a suppressed station, maybe
-					if (j == 0 && !addSuppressedStation.isEmpty()) addSuppressedStation.pickAndRemove();
+					if (j == 0 && !addSuppressedStation.isEmpty()) addStation = addSuppressedStation.pickAndRemove();
 					if (addStation) {
 						List<CampaignFleetAPI> stations = addBattlestations(data, 1f, 1, 1, createStringPicker("pack_anarchist_station1_Den", 10f));
 						for (CampaignFleetAPI station : stations) {
@@ -355,7 +363,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
             
 
             List<Constellation> constellations = getSortedAvailableConstellations(context, false, new Vector2f(), null); //sorts constellations from 0,0, false means empty is not ok
-            Collections.reverse(constellations); // flip them; put the furthest away candidates at the top of the list. 
+            // Vanilla already sorts furthest constellations first 
             
             
             for (int i = 0; i < constellations.size(); i++) {
@@ -722,7 +730,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 			}
 		}
 		
-		Collections.sort(systems, new Comparator<StarSystemData>() {
+		Collections.sort(result, new Comparator<StarSystemData>() {
 			public int compare(StarSystemData o1, StarSystemData o2) {
 				float s1 = getMainCenterScore(o1);
 				float s2 = getMainCenterScore(o2);
@@ -949,7 +957,7 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 				if (damaged) {
 					mult = 10f;
 					level = 4;
-					fleet.getMemoryWithoutUpdate().set("damagedStation", true);
+					fleet.getMemoryWithoutUpdate().set("$damagedStation", true);
 				} //else {
 					PersonAPI commander = OfficerManagerEvent.createOfficer(
 							Global.getSector().getFaction(anarchist_faction), level, true);
@@ -958,7 +966,11 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 //					}
 					FleetFactoryV3.addCommanderSkills(commander, fleet, random);
 					fleet.setCommander(commander);
-					fleet.getFlagship().setCaptain(commander);
+					if (fleet.getFlagship() != null) {
+						fleet.getFlagship().setCaptain(commander);
+					} else if (member != null) {
+						member.setCaptain(commander);
+					}
 				//}
 				
 				member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());

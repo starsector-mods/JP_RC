@@ -9,24 +9,24 @@
 	"ordnancePoints":50,
 	"baseValueMult":1.3,
 	"spriteName":"graphics/pack/ships/pack_schnauzer_bullseye.png",
-	"removeWeaponSlots":[], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":[], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":["pack_mesh"], 		
+	"removeBuiltInWeapons":[], 		
 	"weaponSlotChanges":{
 		"WS 001":{
 			"angle": 0,
             "arc": 10,
             "mount": "HARDPOINT"
-            #"size": "SMALL"
-            #"type": "ENERGY"
+            
+            
 		},
 		"WS 002":{
 			"angle": 0,
             "arc": 10,
             "mount": "HARDPOINT"
-            #"size": "SMALL"
-            #"type": "ENERGY"
+            
+            
 		}
 	},
 	"builtInMods":["targetingunit","pack_bullseye_suite", "insulatedengine"]

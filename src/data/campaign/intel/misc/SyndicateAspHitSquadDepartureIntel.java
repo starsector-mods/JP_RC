@@ -71,6 +71,7 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
     @Override
     public void advance(float amount) {
         super.advance(amount);
+        if (isEnding() || isEnded()) return;
         if (hitSquad == null || !hitSquad.isAlive()) {
             endAfterDelay();
         }
@@ -190,7 +191,9 @@ public final class SyndicateAspHitSquadDepartureIntel extends BaseIntelPlugin {
     @Override
     public FactionAPI getFactionForUIColors() {
         initTransientData();
-        return customerFaction;
+        if (customerFaction != null) return customerFaction;
+        if (aspFaction != null) return aspFaction;
+        return Global.getSector().getPlayerFaction();
     }
 
     public String getSmallDescriptionTitle() {

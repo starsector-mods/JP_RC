@@ -1,5 +1,5 @@
 {
-	"id":"junk_pirates_scatterpd",  # this id must match what's in the spreadsheet
+	"id":"junk_pirates_scatterpd",  
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"SMALL",
@@ -13,7 +13,7 @@
 	"hardpointOffsets":[15, 0],
 	"hardpointAngleOffsets":[0],
 	"glowColor":[155,255,155,255],
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"barrelMode":"ALTERNATING", 
 	"animationType":"GLOW_AND_FLASH",
 	"muzzleFlashSpec":{"length":5.0,
 					   "spread":2.0,
@@ -22,6 +22,6 @@
 					   "particleDuration":0.12,
 					   "particleCount":3,
 					   "particleColor":[255,125,155,255]},
-	"projectileSpecId":"junk_pirates_scatterpd_shot",  # projectile that will be fired
+	"projectileSpecId":"junk_pirates_scatterpd_shot",  
 	"fireSoundTwo":"junk_pirates_scatterpd_fire"
 }
