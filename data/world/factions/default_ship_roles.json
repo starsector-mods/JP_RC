@@ -2,7 +2,6 @@
 	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
 	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
 	"combatSmallForSmallFleet":{
-		"syndicate_asp_vigilance_Standard":7,
 	        "pack_bedlington_Standard":10,
 
 	        "junk_pirates_sickle_Strike":10,
@@ -16,9 +15,6 @@
 	        "junk_pirates_hammer_Assault":10
 	},
 	"combatSmall":{
-		"syndicate_asp_diamondback_Standard":10,
-		"syndicate_asp_diamondback_p_Standard":2,
-		"syndicate_asp_vigilance_Standard":7,
 
 	        "pack_bedlington_Standard":10,
 	        "pack_bedlington_canebianco_Standard":5,
@@ -56,18 +52,9 @@
 		"junk_pirates_tangerine_blue_CS":2,
 		"junk_pirates_tangerine_blue_Assault":2,
 		"junk_pirates_tangerine_Filthbag":4,
-		"pack_schnauzer_caomarelo_PD":5,
-		"syndicate_asp_diamondback_p_Strike":2
+		"pack_schnauzer_caomarelo_PD":5
 	},
 	"combatMedium":{
-		"syndicate_asp_copperhead_Standard":10,
-		"syndicate_asp_copperhead_p_Brutaliser":2,
-		"syndicate_asp_copperhead_p_Assault":2,
-		"syndicate_asp_hammerhead_Balanced":10,
-		"syndicate_asp_hognose_p_Standard":10,
-		"syndicate_asp_hognose_p_Overdriven":10,
-		"syndicate_asp_hognose_p_Strike":10,
-		"syndicate_asp_hognose_p_Support":10,
 
 	        "pack_BRT_Strike":10,
 	        "pack_BRT_Support":10,
@@ -104,14 +91,9 @@
 		"junk_pirates_boxenstein_blue_Support":3,
 		"junk_pirates_scythe_Standard":10,
 		"pack_BRT_Guard":10,
-		"pack_komondor_Support":10,
-		"syndicate_asp_hognose_Standard":10
+		"pack_komondor_Support":10
 	},
 	"combatLarge":{
-		"syndicate_asp_gigantophis_p_Standard":2,
-		"syndicate_asp_gigantophis_p_CS":2,
-		"syndicate_asp_gigantophis_p_Strike":2,
-		"syndicate_asp_gigantophis_Standard":10,
 
 	        "pack_mastiff_Assault":10,
 	        "pack_mastiff_Standard":10,
@@ -135,10 +117,6 @@
 	        "junk_pirates_raven_Standard":5
 	},
 	"combatCapital":{
-		"syndicate_asp_kingcobra_Standard":10,
-		"syndicate_asp_kingcobra_p_Macerator":2,
-		"syndicate_asp_kingcobra_p_PD":2,
-		"syndicate_asp_kingcobra_p_CS":2,
 
 	        "pack_bulldog_Standard":10,
 		"pack_bulldog_bullseye_Bullseye":1,
@@ -154,8 +132,6 @@
 	
 	# hybrid ships with good combat and cargo capacity
 	"combatFreighterSmall":{
-		"syndicate_asp_cerberus_Standard":10,
-		"syndicate_asp_diamondback_Standard":10,
 
 	        "pack_samoyed_Standard":10,
 	        "pack_samoyed_Support":10,
@@ -165,8 +141,6 @@
 
 	},
 	"combatFreighterMedium":{
-		"syndicate_asp_copperhead_Standard":10,
-		"syndicate_asp_hognose_Standard":10,
 
 	        "pack_ridgeback_x_Standard":10,
 	        "pack_ridgeback_x_rothund_Standard":4,
@@ -176,8 +150,6 @@
 
 	},
 	"combatFreighterLarge":{
-		"syndicate_asp_gigantophis_Standard":10,
-		"syndicate_asp_kingcobra_Standard":10,
 
 	        "junk_pirates_orca_Standard":10,
 	        "junk_pirates_orca_Assault":10,
@@ -191,7 +163,6 @@
 
 	# carriers
 	"carrierSmall":{
-		"syndicate_asp_hognose_Standard":10,
 
 		"pack_BRT_canebianco_Standard":1,
 		"pack_BRT_canebianco_Strike":1,
@@ -203,7 +174,6 @@
 
 	},
 	"carrierMedium":{
-		"syndicate_asp_copperhead_Standard":10,
 
 		"pack_spinone_Standard":10,
 		"pack_spinone_Strike":6,
@@ -211,8 +181,6 @@
 
 	},
 	"carrierLarge":{
-		"syndicate_asp_gigantophis_Standard":10,
-		"syndicate_asp_kingcobra_Standard":10,
 
 	        "junk_pirates_orca_Standard":10,
 	        "junk_pirates_orca_Assault":10,
@@ -242,8 +210,6 @@
 
 	# freighters and such
 	"freighterSmall":{
-		"syndicate_asp_mercury_Standard":10,
-		"syndicate_asp_diamondback_Standard":10,
 
 	        "pack_samoyed_Standard":10,
 		"pack_wirefox_sh_Standard":10,
@@ -253,7 +219,6 @@
 
 	},
 	"freighterMedium":{
-		"syndicate_asp_copperhead_Standard":10,
 
 		"pack_ridgeback_Standard":10,
 		"pack_labrador_Standard":10,
@@ -262,7 +227,6 @@
 
 	},
 	"freighterLarge":{
-		"syndicate_asp_gigantophis_Standard":10
 
 	},
 	
