@@ -64,14 +64,14 @@ import org.lwjgl.util.vector.Vector2f;
  */
 public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
 
-        private int minAnarchistConstellations = 3;
-        private int maxAnarchistConstellations = 6;
-        private float skipProbability = 0.9f;
+        public int minAnarchistConstellations = 3;
+        public int maxAnarchistConstellations = 6;
+        public float skipProbability = 0.9f;
 
-        private int softMaxSpinerettes = 3;
+        public int softMaxSpinerettes = 3;
 
-        private boolean enableProcGen = true;
-        private boolean enableSpinerettes = true;
+        public boolean enableProcGen = true;
+        public boolean enableSpinerettes = true;
     
         
     
@@ -116,8 +116,16 @@ public class JunkPiratesAnarchistThemeGenerator extends BaseThemeGenerator {
                 skipProbability = (float)procGenSettings.getDouble("skipProbability");
                 softMaxSpinerettes = procGenSettings.getInt("softMaxSpinerettes");
 
-            } catch (IOException | JSONException ex) {
+            } catch (Exception ex) {
                 System.out.println("JP Config Exception " + ex);
+            }
+            
+            if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+                try {
+                    data.scripts.JunkPiratesLunaConfig.loadProcGenSettings(this);
+                } catch (Throwable t) {
+                    Global.getLogger(JunkPiratesAnarchistThemeGenerator.class).error("Failed to load LunaSettings for Junk Pirates", t);
+                }
             }
             
             System.out.println("enableProcGen: " + enableProcGen);

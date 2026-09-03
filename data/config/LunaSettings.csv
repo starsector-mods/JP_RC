@@ -1,0 +1,21 @@
+modID,fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+junk_pirates_release,jp_header_core,Core Factions,Header,Core Faction Toggles,,,,,Factions
+junk_pirates_release,enableASP,Enable ASP Syndicate,Boolean,true,,"Set to false to disable the Ursulo star system. Does not affect procgen.",,,Factions
+junk_pirates_release,enablePACK,Enable P.A.C.K.,Boolean,true,,"Set to false to disable the Canis star system. Does not affect procgen.",,,Factions
+junk_pirates_release,enableJunkPirates,Enable Junk Pirates,Boolean,true,,"Set to false to disable the Breh'inni star system. Does not affect procgen.",,,Factions
+junk_pirates_release,,,,,,,,,
+junk_pirates_release,jp_header_fleets,Campaign Fleets,Header,Fleets & Encounters,,,,,Fleets
+junk_pirates_release,enableASPCourierFleets,Enable ASP Courier Fleets,Boolean,true,,"Set to false to disable ASP Syndicate Courier Fleets.",,,Fleets
+junk_pirates_release,enableASPHitSquads,Enable ASP Hit Squads,Boolean,true,,"Set to false to disable ASP Syndicate Hit Squads (requires Courier Fleets).",,,Fleets
+junk_pirates_release,enableJunkExplorers,Enable Junk Explorers,Boolean,true,,"Switches off Junk Pirate explorer expeditions that spawn from JP worlds.",,,Fleets
+junk_pirates_release,enableJunkPiratesIntel,Enable Fleet Intel,Boolean,true,,"Controls whether Intel messages and map markers are generated for special fleets.",,,Fleets
+junk_pirates_release,junkPiratesFleetFrequencyModifier,Fleet Frequency Modifier,Double,1.0,,"Multiplier for how often fleets spawn (default: 1.0).",0.1,5.0,Fleets
+junk_pirates_release,junkPiratesMaxFleetModifier,Max Fleet Modifier,Double,1.0,,"Multiplier for maximum active fleets simultaneously (default: 1.0).",0.1,5.0,Fleets
+junk_pirates_release,,,,,,,,,
+junk_pirates_release,jp_header_procgen,Procedural Generation,Header,Procedural Generation,,,,,ProcGen
+junk_pirates_release,enableProcGen,Enable Procedural Generation,Boolean,true,,"Set to false to disable all procgen elements (Anarchist stations, Spinerettes, wild Tangerines, debris graveyards).",,,ProcGen
+junk_pirates_release,enableSpinerettes,Enable Spinerettes,Boolean,true,,"Controls generation of Automata Swarms around cryovolcanic worlds with rare ore deposits.",,,ProcGen
+junk_pirates_release,skipProbability,Constellation Skip Probability,Double,0.9,,"Chance (0-1) that candidate constellations are skipped after reaching minimum.",0.0,1.0,ProcGen
+junk_pirates_release,minAnarchistConstellations,Min Anarchist Constellations,Int,3,,"Minimum number of constellations selected for Anarchist outposts.",0,15,ProcGen
+junk_pirates_release,maxAnarchistConstellations,Max Anarchist Constellations,Int,6,,"Maximum number of constellations selected for Anarchist outposts.",0,25,ProcGen
+junk_pirates_release,softMaxSpinerettes,Soft Max Spinerettes,Int,3,,"Soft cap on Spinerette Automata Swarms generated in the sector.",0,10,ProcGen

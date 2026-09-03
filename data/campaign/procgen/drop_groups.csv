@@ -1,10 +1,10 @@
 commodity,group,freq
-special_item:junk_pirates_junk_bp,blueprints,10
-special_item:junk_pirates_pack_bp,blueprints,10
-special_item:junk_pirates_asp_bp,blueprints,10
-special_item:junk_pirates_junkprime_bp,rare_tech,5
-special_item:junk_pirates_packprime_bp,rare_tech,5
-special_item:junk_pirates_familia_bp,rare_tech,4
+item_junk_pirates_junk_bp,blueprints,10
+item_junk_pirates_pack_bp,blueprints,10
+item_junk_pirates_asp_bp,blueprints,10
+item_junk_pirates_junkprime_bp,rare_tech,5
+item_junk_pirates_packprime_bp,rare_tech,5
+item_junk_pirates_familia_bp,rare_tech,4
 ,,
 nothing,junk_anarchy1,350
 "wpn_:{tags:[low, !no_drop], weaponSize:SMALL, weaponType:BALLISTIC}",junk_anarchy1,100

@@ -1,6 +1,45 @@
 # Junk Pirates Changelog
 
-## [3.6.1] - 2026-09-01
+## [3.6.1] - 2026-09-03
+
+**LunaLib Settings Integration**
+- **In-Game Settings UI:** Integrated native LunaLib settings menu support via `data/config/LunaSettings.csv` with 3 curated categories (Core Toggles, Fleets & Encounters, Procedural Generation) to dynamically toggle ASP, PACK, and Junk Pirates systems, courier/hit squads, fleet frequency/density multipliers, and procgen parameters.
+- **Graceful Fallback:** Added safe reflection-isolated loader (`JunkPiratesLunaConfig.java`) that preserves baseline defaults from `mendoncaModSettings.json` if LunaLib is not installed, preventing class loader crashes.
+
+**Campaign Fleets, World Economy, & AI Overhaul**
+- **Fleet Spawning & Listeners Restored:** Fixed integer truncation bug in `SyndicateAspFleetManager` that previously suppressed all ASP Courier fleet spawns on standard sector generations. Registered transient listeners on new game across all fleet managers (`SyndicateAspFleetManager`, `SyndicateAspHitSquadFleetManager`, `JunkPiratesExplorerFleetManager`) so hit squads, bounty escalations, and fleet respawns activate without requiring a save reload.
+- **Assignment AI Crash & Timeout Fixes:** Fixed game-crashing `NullPointerException` on `PATROL_SYSTEM` with null targets in `JunkPiratesAnarchistAssignmentAI`. Fixed self-targeting despawn calls and replaced premature 3/8-day timeouts with persistent 1000-day journey assignments for cross-sector couriers and explorers.
+- **Intel Lifecycle & Memory Leaks:** Implemented automatic 60-day lifecycle cleanup for `SyndicateAspCourierDepartureIntel` and `JunkExplorerDecisionIntel`, preventing unbounded memory leaks and map UI clutter. Fixed potential CTD in courier map arrow rendering when customer factions are null.
+- **ASP Courier Economy & Scavenging:** Corrected credit chip cargo calculation (`(creds / 10)` -> 0) so courier fleets actually carry valuable ASP credit chips. Fixed `TAG_HEAVYINDUSTRY` query in explorer fleet bonus calculation and added fallback for scavenge expeditions targeting uninhabited systems.
+- **Spinerette Boss Encounter & Megastructure:** Directly instantiated the Spinerette flagship in `JunkPiratesLostTechSalvageGen` to guarantee the Automata Cloud boss encounter triggers. Added `"non_expiring"` tag in `custom_entities.json` and reset `$salvaged` flags in `SpineretteRespawnManager` to preserve the 60-day reboot cycle. Rebalanced astronomical salvage drops (10,000 -> 3,300 volume).
+- **World, System Orbits & Economy:** Fixed Hope Rings terrain collision mis-anchored to the star in `Brehinni.java`. Fixed Petra Relay angle typo (2250° -> 225°) and removed invalid gas giant farming in `Canis.java`. Added Military Submarket to Paddington and removed fleet stacking exploit on Fireworks Factory (24 patrol fleets). Added `SurveyLevel.FULL` and `population_X` condition generation in `AddMarketPlace.java`.
+- **Dialogue Softlocks & Parsing:** Added `cutCommLink` exit option to 13 hostile comm rules in `rules.csv` to prevent dialog lockups. Added `$entity.` prefix to ASP courier conditions. Exploded unparsed literal `"OR"` text strings in Junk Pirate Explorer comm greetings into distinct randomized rules.
+- **Procgen Anarchist Themes:** Fixed inverted rim constellation sorting and captured station generation rolls in `JunkPiratesAnarchistThemeGenerator`.
+
+**Campaign, Blueprint Drops, & Nexerelin Integration**
+- **Blueprint Package Salvage Restored:** Registered all 6 blueprint packages into vanilla salvage pools (`blueprints`, `rare_tech`). Fixed outdated `junk_pirates_bp` and `pack_bp` tags in procedural drop groups (`junk_anarchy1`, `junk_anarchy2`, `junk_scrap2`).
+- **13 PACK Skins Unlocked:** Migrated 13 PACK variant skins from legacy `pack_bp` to `junk_pirates_packprime_bp` / `junk_pirates_pack_bp`, ensuring they unlock properly when learning PACK blueprint packages.
+- **ASP Syndicate Fleet Identity:** Fixed priority ships tag leak in `syndicate_asp.faction` that caused ASP fleets to spawn vanilla midline/hightech ships instead of ASP hulls. Fixed `knownFighters` syntax bug that prevented learning the Death Rattle wing.
+- **Fleet Role Realignment:** Moved Tangerine (Filthbag) frigate from destroyer to frigate role. Removed Spinerette boss station from wandering capital combat fleets in `default_ship_roles.json`. Added missing variants to role pools.
+- **Nexerelin Familia Start Enabled:** Added `"startingFaction": true` to `syndicate_asp_familia.json`, making the custom Familia starting scenario accessible in character creation.
+- **Mod Integrations & Mining:** Added missing core ships to Industrial Evolution printing/reverse-engineering whitelists (`syndicate_asp_cerberus`, `hammerhead`, `mercury`, `vigilance`, `junk_pirates_raven`). Configured custom mining fleets and vengeance fleets for P.A.C.K. and ASP Syndicate.
+
+**Engine Limits, Hullmods, & Exploit Fixes**
+- **Engine OP/Cap Hardcaps:** Fixed critical `pack_bulldog_bullseye_Bullseye.variant` exceeding engine hard caps (53 capacitors/52 vents on a 50 limit). Removed illegal Safety Overrides from cruiser variants.
+- **Hullmod Exploits Removed:** Set `hidden: TRUE` on `pack_overclocked_ca`, `junk_pirates_premil`, `syndicate_asp_mod`, and Commissioned Crew hullmods to prevent 0 OP free installations on arbitrary player ships.
+- **Scrap Damper Exploit:** Fixed multiplicative damage stacking bug in `JunkPiratesDamperStats.java` so active + passive mitigation scales properly to exactly 50% net damage reduction rather than 57.5%.
+
+**Weapons, Performance, & VFX Tuning**
+- **Affenpinscher Beam:** Removed immortal missile HP freeze. Inversely scaled tumble chance with missile durability (`Math.min(0.60f, 150f / maxHp)`). Heavy torpedoes take normal damage and cannot be permastunned.
+- **Stygian Drill Performance:** Reined in physical debris spawn rates (0.02s -> 0.08s) and particle lifetime (5-10s -> 1-2s) to prevent extreme framerate collapse during prolonged firing. Range reduced to 800.
+- **Weapon Rebalancing:** Rebalanced Cutlass (600 range, 75 dmg), Typewriter (25 dmg, 20 energy, 2-8 spread), Micro Scrapjet MLRS (1150 range, 200 dmg, 0.1 regen), Scatter PD (400 range, 40 dmg), Viper Pulse Cannon (900 range, 2.2s chargedown), and Grape Cannons (reduced submunitions). Fixed 100% Chaff spawn bug on Scrapjets.
+
+**Fighter Wings, Empty Decks & Fleet Synchronization**
+- **Flight Decks Filled:** Assigned proper fighter wings to all 8 empty built-in carrier bays across Reaper, Bulldog, Kraken, Goat, GFB, and King Cobra variants.
+- **Wing Tuning:** Rebalanced OP costs and durability for Oblonsky (9 OP, 12s refit), Ivan (9 OP, 14s refit), Cleat (8 OP, 450 HP, 65 Armor), Spike (7 OP), and Splinter (8 OP).
+- **DP/FP Synchronization:** Synchronized `fleet pts` and `supplies/rec` across 40 hulls to ensure campaign autoresolve matches combat Deployment Points (e.g. Kraken 35/35, Bullseye 36/36, Reaper 32/32). Normalized crippling 0.8 shield upkeeps down to 0.35 on Bully Kutta and Orcenstein.
+
+
 
 **P.A.C.K. Systems & Balance Tuning**
 - **Custom System Limiter:** Nerfed *Tri-Feed Overcharge* and *Ridgeback Protocol* RoF/Flux modifiers from an unstable 25% to a mathematically stable 15%.

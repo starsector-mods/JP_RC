@@ -113,3 +113,4 @@ Hammerhead (ASP),syndicate_asp_hammerhead,Destroyer,ASP Syndicate,ammofeed,10,50
 Mercury (ASP),syndicate_asp_mercury,Shuttle,ASP Syndicate,flarelauncher_active,3,1000,150,1600,1875,150,20,,135,100,100,90,120,125,OMNI,,120,0.5,0.8,,,1,30,20,15,0.5,30,9,2750,5,20,180,0.25,2,2,"CIVILIAN, LINER",junk_pirates_asp_bp,,0.5,2,2,203
 Vigilance (ASP),syndicate_asp_vigilance,Frigate,ASP Syndicate,fastmissileracks,5,1750,200,2500,2250,180,45,,110,120,100,45,90,100,OMNI,,150,0.4,0.8,,,10,25,40,25,1,25,10,13750,8,10,240,0.25,5,5,,junk_pirates_asp_bp,,0.5,2,2,208
 Shield Prison Drone,junk_pirates_mason_dummy,,,,,1,0,10000,,10000,0,,0,0,0,0,0,0,OMNI,,360,0,1,,,0,0,,,,,,,,,,,,,,,,0,,,
+

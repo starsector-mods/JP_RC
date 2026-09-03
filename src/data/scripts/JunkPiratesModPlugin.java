@@ -69,8 +69,16 @@ public class JunkPiratesModPlugin extends BaseModPlugin
             junkPiratesFleetFrequencyModifier = (float) settings.getDouble("junkPiratesFleetFrequencyModifier");
             junkPiratesMaxFleetModifier = (float) settings.getDouble("junkPiratesMaxFleetModifier");
   
-        } catch (IOException | JSONException ex) {
+        } catch (Exception ex) {
             System.out.println("JP Config Exception " + ex);
+        }
+        
+        if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            try {
+                JunkPiratesLunaConfig.init();
+            } catch (Throwable t) {
+                Global.getLogger(JunkPiratesModPlugin.class).error("Failed to load LunaSettings for Junk Pirates", t);
+            }
         }
     }
     
@@ -116,18 +124,25 @@ public class JunkPiratesModPlugin extends BaseModPlugin
     }
     @Override
     public void onGameLoad(boolean newGame) {
+        getProcGenSettings();
         applyNoDecivFlags();
         
         if (!Global.getSector().hasScript(data.scripts.campaign.SpineretteRespawnManager.class)) {
             Global.getSector().addScript(new data.scripts.campaign.SpineretteRespawnManager());
         }
-        if (enableASPCourierFleets && !Global.getSector().hasScript(SyndicateAspFleetManager.class)) {
+        if (!enableASPCourierFleets) {
+            Global.getSector().removeScriptsOfClass(SyndicateAspFleetManager.class);
+        } else if (!Global.getSector().hasScript(SyndicateAspFleetManager.class)) {
             Global.getSector().addScript(new SyndicateAspFleetManager());
         }
-        if (enableASPCourierFleets && enableASPHitSquads && !Global.getSector().hasScript(SyndicateAspHitSquadFleetManager.class)) {
+        if (!enableASPCourierFleets || !enableASPHitSquads) {
+            Global.getSector().removeScriptsOfClass(SyndicateAspHitSquadFleetManager.class);
+        } else if (!Global.getSector().hasScript(SyndicateAspHitSquadFleetManager.class)) {
             Global.getSector().addScript(new SyndicateAspHitSquadFleetManager());
         }
-        if (enableJunkExplorers && !Global.getSector().hasScript(JunkPiratesExplorerFleetManager.class)) {
+        if (!enableJunkExplorers) {
+            Global.getSector().removeScriptsOfClass(JunkPiratesExplorerFleetManager.class);
+        } else if (!Global.getSector().hasScript(JunkPiratesExplorerFleetManager.class)) {
             Global.getSector().addScript(new JunkPiratesExplorerFleetManager());
         }
     }
