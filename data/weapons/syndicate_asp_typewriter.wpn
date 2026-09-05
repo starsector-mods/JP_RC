@@ -1,5 +1,5 @@
 {
-	"id":"syndicate_asp_typewriter",  # this id must match what's in the spreadsheet
+	"id":"syndicate_asp_typewriter",  
 	"specClass":"projectile",
 	"type":"BALLISTIC",
 	"size":"MEDIUM",
@@ -9,23 +9,23 @@
 	"hardpointSprite":"graphics/weapons/heavy_machinegun_hardpoint_base.png",
 	"hardpointGunSprite":"graphics/weapons/heavy_machinegun_hardpoint_recoil.png",
 	"renderHints":[RENDER_BARREL_BELOW],
-	"visualRecoil":1.0,  # the gun sprites are only used if this is non-0
+	"visualRecoil":1.0,  
 	"turretOffsets":[17, -6, 17, 0, 17, 6],
 	"turretAngleOffsets":[0, 0, 0],
 	"hardpointOffsets":[25, -5, 25, 0, 25, 5],
 	"hardpointAngleOffsets":[0, 0, 0],
 	"specialWeaponGlowWidth":15,
 	"specialWeaponGlowHeight":25,
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"barrelMode":"ALTERNATING", 
 	"animationType":"MUZZLE_FLASH",
-	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+	"muzzleFlashSpec":{"length":30.0,   
 					   "spread":6.0,
 					   "particleSizeMin":7.0,
 					   "particleSizeRange":9.0,
 					   "particleDuration":0.15,
 					   "particleCount":11,
 					   "particleColor":[255,120,105,250]},
-	"projectileSpecId":"heavymg_shot",  # projectile that will be fired
-	#"fireSoundOne":"heavy_machinegun_intro",
+	"projectileSpecId":"heavymg_shot",  
+	
 	"fireSoundTwo":"heavy_machinegun_fire"
 }

@@ -7,8 +7,8 @@
 	"center":[6,10.5],
 	"collisionRadius":11,
 	"collisionClass":"MISSILE_NO_FF",
-	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":125, # purely visual
+	"explosionColor":[255,165,0,255],  
+	"explosionRadius":125, 
 	"engineSpec":{"turnAcc":600,
 				  "turnRate":120,
 				  "acc":150,
@@ -43,7 +43,7 @@
 					"arc":40,
 					"spreadSpeed":500,
 					"projectileSpec":"junk_pirates_grapeshot_warhead",
-					#"emptySpec":"junk_pirates_grapeshot_empty",
+					
 					"smokeSpec":{"particleSizeMin":20.0,
 								 "particleSizeRange":20.0,
 								 "cloudParticleCount":18,

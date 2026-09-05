@@ -17,14 +17,14 @@
 		"old english":1},
 	"variantOverrides":{
 	},
-	# multiplier for how often hulls show up in the faction's fleets
+	
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0 #just say no
+			"buffalo2":0 
 		}},
-	# ships the faction gets access to when importing S&W out-of-faction
+	
 	"shipsWhenImporting":{
 		"tags":["junk_pirates_asp_bp", "base_bp", "midline_bp", "hightech_bp"],
 		"hulls":[
@@ -33,7 +33,7 @@
 		"tags":["junk_pirates_asp_bp", "base_bp", "midline_bp", "hightech_bp"],
 		"hulls":[
 			"syndicate_asp_kingcobra"]},
-	# listing ships here will make the faction mostly use them even if other hulls become available
+	
 	"priorityShips":{
 		"tags":["junk_pirates_asp_bp"],
 		"hulls":[
@@ -78,7 +78,7 @@
 	"knownHullMods":{
 		"tags":["base_bp"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
+			"advancedshieldemitter", 
 			"turretgyros",
 			"armoredweapons",
 			"augmentedengines",
@@ -90,14 +90,14 @@
 			"magazines",
 			"missleracks",
 			"extendedshieldemitter",
-			"frontshield",  # makeshift
+			"frontshield",  
 			"hardenedshieldemitter",
 			"hardened_subsystems",
 			"heavyarmor",
 			"insulatedengine",
 			"targetingunit",
 			"nav_relay",
-			"adaptiveshields", # omni
+			"adaptiveshields", 
 			"operations_center",
 			"recovery_shuttles",
 			"fluxbreakers",
@@ -118,9 +118,9 @@
 		
 		"aggression":2,
 		
-		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0.5,				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"combatFreighterProbability":0.5,     				
+		"combatFreighterCombatUseFraction":0.5,				
+		"combatFreighterCombatUseFractionWhenPriority":1,   
 		"autofitRandomizeProbability":0.2,
 
 		"officerSkillsShuffleProbability":1,

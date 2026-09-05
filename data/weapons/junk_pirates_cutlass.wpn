@@ -1,5 +1,5 @@
 {
-	"id":"junk_pirates_cutlass",  # this id must match what's in the spreadsheet
+	"id":"junk_pirates_cutlass",  
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"MEDIUM",
@@ -12,7 +12,7 @@
 	"turretAngleOffsets":[0, 0],
 	"hardpointOffsets":[15, 5, 15, -5],
 	"hardpointAngleOffsets":[0],
-	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"barrelMode":"ALTERNATING", 
 	"animationType":"GLOW_AND_FLASH",
 	"muzzleFlashSpec":{"length":8.0,
 					   "spread":5.0,
@@ -21,7 +21,7 @@
 					   "particleDuration":0.12,
 					   "particleCount":8,
 					   "particleColor":[125,255,100,255]},
-	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
-	"projectileSpecId":"junk_pirates_cutlass_shot",  # projectile that will be fired
+	"autocharge":true,  
+	"projectileSpecId":"junk_pirates_cutlass_shot",  
 	"fireSoundTwo":"junk_pirates_cutlass_fire"
 }

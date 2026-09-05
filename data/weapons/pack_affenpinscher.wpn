@@ -1,5 +1,5 @@
 {
-	"id":"pack_affenpinscher",  # this id must match what's in the spreadsheet
+	"id":"pack_affenpinscher",  
 	"specClass":"beam",
 	"beamEffect":"data.scripts.weapons.PackAffenpinscherBeamEffect",
 	"type":"ENERGY",

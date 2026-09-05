@@ -41,7 +41,7 @@
     }
   ],
    "modules": [
-  #station modules
+  
         {"WS 010": "junk_pirates_shield_module_Standard"}
   ],
   "wings": [

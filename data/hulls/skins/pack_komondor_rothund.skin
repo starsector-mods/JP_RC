@@ -9,10 +9,10 @@
 	"ordnancePoints":72,
 	"baseValueMult":1.3,
 	"spriteName":"graphics/pack/ships/pack_komondor_rothund.png",
-	"removeWeaponSlots":["WS 003", "WS 004"], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":["WS 003", "WS 004"], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":["pack_mesh"], 		
+	"removeBuiltInWeapons":[], 		
 	"builtInMods":["heavyarmor","insulatedengine", "pack_overclocked_rh"]
 	
 }

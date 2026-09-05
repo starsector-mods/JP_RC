@@ -16,18 +16,18 @@
 	"description":"Born from the lawless asteroid belts and salvage fields of Breh'Inni, the Junk Pirates are a loose feudal confederation of scrappers, privateers, and eccentric outer-fringe nobility answering to the King on Glory. Their fleets are welded together from civilian hulls, industrial machinery, and experimental scavenged technology, relying on heavy armor, high-energy salvos, and volatile Plug-Jet engine overclocks to overwhelm their foes in brutal close-range brawls.",
 	"names":{
 		"old english":1},
-	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	
 	"variantOverrides":{
 	},
 	
-	# multiplier for how often hulls show up in the faction's fleets
+	
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0 # just say no
+			"buffalo2":0 
 		}},
-	# ships the faction gets access to when importing S&W out-of-faction
+	
 	"shipsWhenImporting":{
 		"tags":["junk_pirates_junk_bp", "base_bp"],
 		"hulls":[
@@ -44,7 +44,7 @@
 			"junk_pirates_raven",
 			"junk_pirates_tangerine",
 			"junk_pirates_tangerine_blue"]},
-	# listing ships here will make the faction mostly use them even if other hulls become available
+	
 	"priorityShips":{
 		"tags":["junk_pirates_junk_bp", "junk_pirates_junkprime_bp"],
 		"hulls":[
@@ -119,10 +119,10 @@
 		
 		"aggression":3,
 		
-		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
-		"autofitRandomizeProbability":0.9, #these guys are wild
+		"combatFreighterProbability":0.1,      				
+		"combatFreighterCombatUseFraction":0,  				
+		"combatFreighterCombatUseFractionWhenPriority":0,   
+		"autofitRandomizeProbability":0.9, 
 		
 		"officerSkillsShuffleProbability":1,
 		"officerSkills":[
@@ -149,9 +149,9 @@
 		"encounter_hostile":"music_pirates_encounter_hostile",
 		"encounter_friendly":"music_pirates_encounter_friendly"},	
 	"internalComms":"junk_pirates_internal",
-	#"tariffFraction":0.4,
-	#"tollFraction":0.1,
-	#"fineFraction":0.25,
+	
+	
+	
 	"portraits":{
 		"standard_male":[
 			"graphics/portraits/junk_pirates_portrait_m_1.png",

@@ -9,30 +9,30 @@
 	"ordnancePoints":31,
 	"baseValueMult":1.3,
 	"spriteName":"graphics/pack/ships/pack_samoyed_decoupled_caomarelo.png",
-	"removeWeaponSlots":[], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":[], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":[], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":[], 		
+	"removeBuiltInWeapons":[], 		
 	"weaponSlotChanges":{
 		"WS 003":{
-			#"angle": 90,
+			
             "arc": 230,
-            #"mount": "HARDPOINT",
-            #"size": "SMALL",
+            
+            
             "type": "BALLISTIC"
 		},
 		"WS 004":{
-			#"angle": 90,
+			
             "arc": 230,
-            #"mount": "HARDPOINT",
-            #"size": "SMALL",
+            
+            
             "type": "BALLISTIC"
 		},
 		"WS 005":{
-			#"angle": 90,
+			
             "arc": 10,
             "mount": "HARDPOINT",
-            #"size": "SMALL",
+            
             "type": "MISSILE"
 		}
 	},

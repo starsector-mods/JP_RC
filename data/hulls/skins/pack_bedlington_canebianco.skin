@@ -9,10 +9,10 @@
 	"ordnancePoints":35,
 	"baseValueMult":1.3,
 	"spriteName":"graphics/pack/ships/pack_bedlington_canebianco.png",
-	"removeWeaponSlots":[], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":[], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":["pack_mesh"], 		
+	"removeBuiltInWeapons":[], 		
 	"builtInMods":["frontemitter","hardenedshieldemitter", "extendedshieldemitter" ,"pack_overclocked_cb"]
 	
 }

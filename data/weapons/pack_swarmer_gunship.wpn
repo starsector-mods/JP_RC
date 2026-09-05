@@ -7,8 +7,8 @@
 	"hardpointSprite":"graphics/pack/weapons/pack_swarmer_gunship_base.png",
 	"hardpointOffsets":[15, -4, 15, -2, 15, 2, 15, 4],
 	"turretOffsets":[10, -4, 10, -2, 10, 2, 10, 4],
-	#"hardpointAngleOffsets":[-20, -10, 10, 20],
-	#"turretAngleOffsets":[-20, -10, 10, 20],
+	
+	
 	"hardpointAngleOffsets":[0, 0, 0, 0],
 	"turretAngleOffsets":[0, 0, 0, 0],
 	"barrelMode":"ALTERNATING",

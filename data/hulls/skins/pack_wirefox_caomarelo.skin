@@ -9,16 +9,16 @@
 	"ordnancePoints":40,
 	"baseValueMult":1.3,
 	"spriteName":"graphics/pack/ships/pack_wirefox_caomarelo.png",
-	"removeWeaponSlots":[], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":[], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":["pack_mesh"], 		
+	"removeBuiltInWeapons":[], 		
 	"weaponSlotChanges":{
 		"WS 003":{
-			#"angle": 90,
-            #"arc": 210,
-            #"mount": "HARDPOINT",
-            #"size": "SMALL",
+			
+            
+            
+            
             "type": "BALLISTIC"
 		}
 	},

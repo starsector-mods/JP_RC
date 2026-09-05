@@ -15,11 +15,11 @@
 	
 	"color":[155,55,125,255],
 	"baseUIColor":[225,255,235,255],
-	#"color":[100,100,100,255],
-	#"baseUIColor":[155,155,155,255],
 	
-	#"darkUIColor":[31,94,112,175],
-	#"gridUIColor":[70,200,255,75],
+	
+	
+	
+	
 	
 	"showInIntelTab":false,
 	
@@ -32,13 +32,13 @@
 		"world":1},
 	"variantOverrides":{
 	},
-	# multiplier for how often hulls show up in the faction's fleets
+	
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
 		}},
-	# ships the faction gets access to when importing S&W out-of-faction
+	
 	"shipsWhenImporting":{
 		"tags":["junk_boys"],
 		"hulls":[
@@ -47,7 +47,7 @@
 		"tags":["junk_boys"],
 		"hulls":[
 		]},
-	# listing ships here will make the faction mostly use them even if other hulls become available
+	
 	"priorityShips":{
 		"tags":["junk_boys"],
 		"hulls":[
@@ -95,7 +95,7 @@
 	"knownHullMods":{
 		"tags":["base_bp"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
+			"advancedshieldemitter", 
 			"advancedoptics",
 			"turretgyros",
 			"armoredweapons",
@@ -109,14 +109,14 @@
 			"missleracks",
 			"extendedshieldemitter",
 			"frontemitter",
-			"frontshield",  # makeshift
+			"frontshield",  
 			"hardenedshieldemitter",
 			"heavyarmor",
 			"insulatedengine",
 			"pointdefenseai",
 			"targetingunit",
 			"nav_relay",
-			"adaptiveshields", # omni
+			"adaptiveshields", 
 			"operations_center",
 			"recovery_shuttles",
 			"fluxbreakers",
@@ -136,9 +136,9 @@
 		
 		"aggression":5,
 		
-		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"combatFreighterProbability":0,     				
+		"combatFreighterCombatUseFraction":1,				
+		"combatFreighterCombatUseFractionWhenPriority":1,   
 		"autofitRandomizeProbability":0.25,
 
 		"officerSkillsShuffleProbability":1,
@@ -161,10 +161,10 @@
 			"pack_anarchist_station2_Camp":10}},
 	"illegalCommodities":[
 	],
-	#"music":{
-	#	"encounter_hostile":"music_tritach_encounter_hostile",
-	#},	
-	#"internalComms":"hegemony_internal",
+	
+	
+	
+	
 	"portraits":{
 		"standard_male":[
 			"graphics/portraits/junk_pirates_portrait_m_1.png",
@@ -193,9 +193,9 @@
 		}},
 	"custom":{
 		"engageWhenEvenStrength":true,
-		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
+		"allowsTransponderOffTrade":true, 
 		"postsNoBounties":true,
-		"fightToTheLast":true # order a full assault instead of retreating, in most cases
+		"fightToTheLast":true 
 	},	
 	"fleetTypeNames":{
 		"patrolSmall":"Thug",

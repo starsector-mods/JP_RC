@@ -1,5 +1,5 @@
 {
-	"id":"junk_pirates_blinking_bay",  # this id must match what's in the spreadsheet
+	"id":"junk_pirates_blinking_bay",  
 	"specClass":"beam",
 	"type":"DECORATIVE",
 	"size":"SMALL",

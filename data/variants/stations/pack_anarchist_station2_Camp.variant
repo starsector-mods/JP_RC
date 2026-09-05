@@ -10,7 +10,7 @@
   "variantId": "pack_anarchist_station2_Camp",
   "weaponGroups": [],
   "modules": [
-  #station modules
+  
     {"WS 001": "pack_semi_broadsideModuleL_Standard"},
         {"WS 002": "pack_partial_supportL_Standard"},
         {"WS 003": "pack_small_missile1_Standard"},

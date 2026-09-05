@@ -11,10 +11,10 @@
 	"ordnancePoints":68,
 	"baseValueMult":1.2,
 	"spriteName":"graphics/pack/ships/pack_ridgeback_x_rothund.png",
-	"removeWeaponSlots":[], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":["pack_mesh"], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":[], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":["pack_mesh"], 		
+	"removeBuiltInWeapons":[], 		
 	"builtInMods":["auxiliarythrusters","heavyarmor","blast_doors","hardenedshieldemitter", "pack_overclocked_rh"]
 	
 }

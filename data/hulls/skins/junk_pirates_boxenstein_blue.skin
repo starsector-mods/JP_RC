@@ -3,15 +3,15 @@
 	"skinHullId":"junk_pirates_boxenstein_blue",
 	"hullName":"Boxenstein (Blue)",
 	"tags":["rare_bp"],
-	"descriptionId":"junk_pirates_boxenstein",  # optional
+	"descriptionId":"junk_pirates_boxenstein",  
 	"descriptionPrefix":"This ship carries all of the same attributes of the normal Boxenstein. Apart from the iconic blue paint-job and reinforced thruster housings.",
 	"spriteName":"graphics/junk_pirates/ships/boxenstein/junk_pirates_boxenstein_blue.png",
 	"baseValueMult":1.1,
 	"ordnancePoints":95,
-	"removeWeaponSlots":[], 		# ids
-	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":[], 		# hullmod ids
-	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeWeaponSlots":[], 		
+	"removeEngineSlots":[], 		
+	"removeBuiltInMods":[], 		
+	"removeBuiltInWeapons":[], 		
 	"builtInMods":["auxiliarythrusters", "insulatedengine"],
 	"builtInWeapons":{
 		"WS 014": "junk_pirates_boxer_blue_deco2",

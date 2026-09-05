@@ -10,8 +10,8 @@
     "insulatedengine"
   ],
 	
-	# mode is either LINKED or ALTERNATING
-	# slot ids (WS ***) must match what's in the .ship file
+	
+	
 	"weaponGroups":[
 		{
 		"autofire": true,
