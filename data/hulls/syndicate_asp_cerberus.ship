@@ -3,7 +3,7 @@
     "hullId":"syndicate_asp_cerberus",
     "hullSize":"FRIGATE",
     "style":"LOW_TECH",
-    "spriteName":"mods/JP_RC/graphics/syndicate_asp/ships/syndicate_asp_superhound.png",
+    "spriteName":"graphics/syndicate_asp/ships/syndicate_asp_superhound.png",
     "height":100,
     "width":80,
     "center":[

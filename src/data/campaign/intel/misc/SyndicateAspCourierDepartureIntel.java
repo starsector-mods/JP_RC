@@ -213,7 +213,7 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     @Override
     public String getIcon() {
         initTransientData();
-        return (aspFaction != null) ? aspFaction.getCrest() : "graphics/icons/intel/courier.png";
+        return (aspFaction != null) ? aspFaction.getCrest() : "graphics/icons/intel/tradefleet_other.png";
     }
     
     @Override
