@@ -1,6 +1,6 @@
 {
   "displayName": "Elite",
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 5,
   "fluxVents": 15,
   "goalVariant": true,
   "hullId": "pack_GFB",
