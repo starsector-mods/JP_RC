@@ -7,6 +7,6 @@
 		"contrailMaxSpeedMult":0.2,
 		"contrailAngularVelocityMult":0,
 		"contrailColor":[185,255,200,100],
-		"type":"GLOW" # GLOW or SMOKE
+		"type":"GLOW" 
 	}
 }
