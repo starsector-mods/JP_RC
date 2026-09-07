@@ -95,7 +95,7 @@ public class York {
 		SectorEntityToken station = system.addCustomEntity("lincoln_cathedral", "Lincoln Cathedral", "station_side02", Factions.NEUTRAL);
 		station.setCircularOrbitPointingDown(system.getEntityById("lincoln"), 45, 300, 50);
 		station.setCustomDescriptionId("station_lincoln_cathedral");
-		// station.setInteractionImage("illustrations", "abandoned_station3");
+		station.setInteractionImage("illustrations", "lincoln_cathedral");
 		Misc.setAbandonedStationMarket("lincoln_cathedral_market", station);
 
 		// Abandoned Comm Relay (Can be restored by player)

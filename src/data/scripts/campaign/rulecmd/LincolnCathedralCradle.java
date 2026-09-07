@@ -32,11 +32,11 @@ import data.campaign.intel.misc.YorkDiscoveryIntel;
 public class LincolnCathedralCradle extends BaseCommandPlugin {
 
     public static final String MEMORY_KEY_SLOTTED = "$alphaCoreSlotted";
-    public static final String CATHEDRAL_CONDITION_ID = "JUNK_cathedral_link";
 
     @Override
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
         if (dialog == null) return false;
+        if (params.isEmpty()) return false;
         String action = params.get(0).getString(memoryMap);
 
         SectorEntityToken station = dialog.getInteractionTarget();
@@ -50,19 +50,19 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
         CargoAPI cargo = playerFleet != null ? playerFleet.getCargo() : null;
 
         if ("init".equals(action)) {
-            if (station.getCustomInteractionDialogImageVisual() != null) {
-                // dialog.getVisualPanel().showImageVisual(station.getCustomInteractionDialogImageVisual());
-            }
+            data.campaign.intel.misc.YorkDiscoveryIntel.addIntelIfNeeded(text, "discovery");
+            dialog.getVisualPanel().showImageVisual(new com.fs.starfarer.api.InteractionDialogImageVisual("illustrations", "lincoln_cathedral_cradle", 480, 300));
 
             text.addPara(
-                "You take a pressurized transit skiff deep into the station's central sanctuary spire. " +
+                "You ride a transit skiff down from the high-orbit docking spires, descending deep into the installation's surface-level sanctuary. " +
+                "Passing through the massive jagged entryway radiating with brilliant blue light, the humid jungle atmosphere and the sound of cascading waterfalls outside gives way to a sterile, ancient chill. " +
                 "Past soaring colonnades of copper heat-sinks and vaulted halls of silent fiber-optic conduits, " +
                 "you arrive at the Cathedral's cognitive nerve center.",
                 Misc.getTextColor()
             );
             text.addPara(
-                "A massive, suspended gantry hangs over a dormant Domain-era neural interface cradle. " +
-                "Its heavy hexagonal socket is keyed specifically to accommodate an Alpha Core.",
+                "A massive network of thick wires and fiber-optic cables cascades from the vaulted ceiling, feeding into a dormant Domain-era neural interface cradle on the floor. " +
+                "A heavy armored hatch stands swung wide, exposing the concentric locking rings of a hexagonal socket keyed specifically to accommodate an Alpha Core.",
                 Misc.getHighlightColor()
             );
             text.addPara(
@@ -89,6 +89,8 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
         }
 
         if ("slot".equals(action)) {
+            if (station.getMemoryWithoutUpdate().getBoolean(MEMORY_KEY_SLOTTED)) return false;
+
             if (cargo == null || cargo.getCommodityQuantity(Commodities.ALPHA_CORE) < 1) {
                 text.addPara("You do not have an Alpha Core to slot into the cradle.", Misc.getNegativeHighlightColor());
                 options.addOption("Return to the station concourse", "lincolnCathedralBack");
@@ -119,7 +121,7 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
             dialog.getVisualPanel().showPersonInfo(admin, true);
 
             text.addPara(
-                "With a deafening hydraulic hum, the suspended cradle clamps down into the socket. " +
+                "With a deafening hydraulic hiss, the heavy armored hatch slams shut, its perimeter locking latches sealing the core within with a resounding mechanical thud. " +
                 "Superconducting conduits engage with a blinding flash of cerulean light.",
                 Misc.getHighlightColor()
             );
@@ -131,7 +133,7 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
             );
             text.addPara(
                 "Status indicators across the vaulted concourse turn from dead amber to brilliant electric blue. " +
-                "Deep atmospheric cyclers purge centuries of stagnant vacuum chill, and automated drydocks " +
+                "Deep atmospheric cyclers purge centuries of stagnant jungle humidity, sealing the inner sanctum as automated drydocks " +
                 "throughout the lower bays hum into active readiness.",
                 Misc.getTextColor()
             );
@@ -141,7 +143,7 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
             );
             text.addPara(
                 "\"Neural synchronization complete. Welcome, Administrator. Lincoln Cathedral is fully operational. " +
-                "Orbital telemetry link established with Lincoln; automated storage vaults and fleet maintenance berths active.\"",
+                "Automated storage vaults and fleet maintenance berths active.\"",
                 Misc.getPositiveHighlightColor()
             );
             text.addPara(
@@ -153,22 +155,6 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
                 "(The Alpha Core is permanently slotted and cannot be unplugged.)",
                 Misc.getNegativeHighlightColor()
             );
-
-            // Link with Lincoln planet below
-            if (station.getContainingLocation() != null) {
-                SectorEntityToken lincolnToken = station.getContainingLocation().getEntityById("lincoln");
-                if (lincolnToken instanceof PlanetAPI) {
-                    PlanetAPI lincoln = (PlanetAPI) lincolnToken;
-                    if (lincoln.getMarket() != null && !lincoln.getMarket().hasCondition(CATHEDRAL_CONDITION_ID)) {
-                        lincoln.getMarket().addCondition(CATHEDRAL_CONDITION_ID);
-                        text.addPara(
-                            "Orbital link established with Lincoln: %s condition applied to the planetary biosphere.",
-                            Misc.getPositiveHighlightColor(),
-                            "Cathedral Orbital Link"
-                        );
-                    }
-                }
-            }
 
             // Award XP & Story Point bonus
             Global.getSector().getPlayerPerson().getStats().addXP(50000, text);
@@ -182,6 +168,8 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
         }
 
         if ("commune".equals(action)) {
+            if (!station.getMemoryWithoutUpdate().getBoolean(MEMORY_KEY_SLOTTED)) return false; // Prevent free Alpha Core bypass
+
             PersonAPI admin = station.getMarket() != null ? station.getMarket().getAdmin() : null;
             if (admin == null || !Commodities.ALPHA_CORE.equals(admin.getAICoreId())) {
                 AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
@@ -204,12 +192,11 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
             );
             text.addPara(
                 "\"Administrator. Lincoln Cathedral's automated systems remain operating at 100% efficiency. " +
-                "Planetary environmental monitors on Lincoln confirm optimal biosphere parameters. " +
                 "All storage vaults and maintenance berths are fully secure.\"",
                 Misc.getTextColor()
             );
 
-            options.addOption("Inquire about station operations & telemetry", "lincolnCathedralAskStatus");
+            options.addOption("Inquire about station operations", "lincolnCathedralAskStatus");
             options.addOption("Attempt to unslot or retrieve the Alpha Core", "lincolnCathedralTryUnplug");
             options.addOption("Return to the station concourse", "lincolnCathedralBack");
             return true;
@@ -217,13 +204,12 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
 
         if ("status".equals(action)) {
             text.addPara(
-                "\"Telemetry feed nominal. Lincoln Cathedral provides:",
+                "\"Station systems nominal. Lincoln Cathedral provides:",
                 Misc.getTextColor()
             );
             text.addPara(
                 "— Permanent, secure, and fee-free automated storage berths for your fleet.\n" +
                 "— Autonomous drydock systems ensuring rapid fleet maintenance and combat readiness restoration.\n" +
-                "— Active orbital environmental link with Lincoln, reducing local colonial hazard rating and bolstering planetary defenses.\n" +
                 "All systems stable. No intrusions detected.\"",
                 Misc.getPositiveHighlightColor()
             );
@@ -261,7 +247,7 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
                 Misc.getNegativeHighlightColor()
             );
 
-            options.addOption("Inquire about station operations & telemetry", "lincolnCathedralAskStatus");
+            options.addOption("Inquire about station operations", "lincolnCathedralAskStatus");
             options.addOption("Return to the station concourse", "lincolnCathedralBack");
             return true;
         }

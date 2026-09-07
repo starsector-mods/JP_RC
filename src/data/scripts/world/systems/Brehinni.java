@@ -319,7 +319,9 @@ public class Brehinni {
 		//spinerette.setInteractionImage("illustrations", "pirate_station");
 
 		SectorEntityToken hypercube = system.addCustomEntity("hypercube", "Hypercube", "junk_pirates_hypercube", "junk_pirates");
-		hypercube.setCircularOrbitPointingDown(system.getEntityById("swanage"), 270, 1000, 45);
+		hypercube.setCircularOrbitPointingDown(system.getCenter(), 270, 6000, 750);
+		hypercube.setDiscoverable(true);
+		hypercube.setSensorProfile(500f);
 		//spinerette.setCustomDescriptionId("junk_pirates_spinerette");
 		//spinerette.setInteractionImage("illustrations", "pirate_station");
 

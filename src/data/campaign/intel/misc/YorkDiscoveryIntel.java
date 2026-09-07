@@ -23,7 +23,16 @@ public class YorkDiscoveryIntel extends BaseIntelPlugin {
     }
 
     public static boolean hasIntel() {
-        return Global.getSector().getIntelManager().hasIntelOfClass(YorkDiscoveryIntel.class);
+        if (Global.getSector().getIntelManager().hasIntelOfClass(YorkDiscoveryIntel.class)) return true;
+        // Check if organic discovery already completed it
+        com.fs.starfarer.api.campaign.StarSystemAPI york = Global.getSector().getStarSystem("York");
+        if (york != null) {
+            com.fs.starfarer.api.campaign.SectorEntityToken station = york.getEntityById("lincoln_cathedral");
+            if (station != null && station.getMemoryWithoutUpdate().getBoolean("$alphaCoreSlotted")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void addIntelIfNeeded(TextPanelAPI textPanel, String source) {
@@ -115,7 +124,7 @@ public class YorkDiscoveryIntel extends BaseIntelPlugin {
         Color h = Misc.getHighlightColor();
         float opad = 10f;
 
-        // info.addImage(Global.getSettings().getSpriteName("illustrations", "abandoned_station3"), width, opad);
+        info.addImage(Global.getSettings().getSpriteName("illustrations", "lincoln_cathedral"), width, opad);
 
         if (stage == YorkQuestStage.EXPLORE_YORK) {
             info.addPara(
@@ -125,8 +134,8 @@ public class YorkDiscoveryIntel extends BaseIntelPlugin {
             );
             info.addPara(
                 "According to recovered survey archives, the system harbors an untouched %s garden world (%s) " +
-                "and an imposing vaulted orbital installation known as %s. " +
-                "The station's primary cognitive architecture requires an %s to fully awaken.",
+                "and a colossal vaulted planetary installation known as %s. " +
+                "The facility's primary cognitive architecture requires an %s to fully awaken.",
                 opad, h, "Terran", "Lincoln", "Lincoln Cathedral", "Alpha Core"
             );
             info.addPara(
@@ -157,13 +166,13 @@ public class YorkDiscoveryIntel extends BaseIntelPlugin {
         } else {
             info.addPara(
                 "The %s has been permanently slotted into the central neural cradle of %s. " +
-                "Superconducting clamps have fused the core directly to the station's structural keel, establishing a permanent " +
-                "orbital telemetry link with %s below.",
+                "Superconducting clamps have fused the core directly to the facility's structural keel, establishing a permanent " +
+                "neural-biosphere telemetry link with the jungles of %s outside.",
                 opad, h, "Alpha Core", "Lincoln Cathedral", "Lincoln"
             );
             info.addPara(
                 "The awakened Alpha Core now serves as the eternal, sentient custodian of the Cathedral—overseeing " +
-                "free storage berths, autonomous drydock repairs, and planetary environmental coordination.",
+                "subterranean storage berths, autonomous surface drydocks, and planetary ecological coordination.",
                 opad, Misc.getPositiveHighlightColor()
             );
             info.addPara(

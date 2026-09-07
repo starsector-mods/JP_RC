@@ -162,9 +162,7 @@ public class JunkPiratesModPlugin extends BaseModPlugin
         retrofitYork();
 
         if (com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance() != null) {
-            if (!com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().hasEventCreator(data.campaign.intel.bar.YorkBarEventCreator.class)) {
-                com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().addEventCreator(new data.campaign.intel.bar.YorkBarEventCreator());
-            }
+            // YorkBarEvent removed; now uses rules.csv
         }
     }
 
@@ -197,15 +195,17 @@ public class JunkPiratesModPlugin extends BaseModPlugin
             }
         }
         if (!found) {
-            com.fs.starfarer.api.campaign.StarSystemAPI brehinni = Global.getSector().getStarSystem("Brehinni");
+            com.fs.starfarer.api.campaign.StarSystemAPI brehinni = Global.getSector().getStarSystem("Breh'Inni");
+            if (brehinni == null) {
+                brehinni = Global.getSector().getStarSystem("Brehinni");
+            }
             if (brehinni != null) {
-                com.fs.starfarer.api.campaign.SectorEntityToken swanage = brehinni.getEntityById("swanage");
-                if (swanage != null) {
-                    com.fs.starfarer.api.campaign.SectorEntityToken hypercube = brehinni.addCustomEntity("hypercube", "Hypercube", "junk_pirates_hypercube", "junk_pirates");
-                    hypercube.setCircularOrbitPointingDown(swanage, 270, 1000, 45);
-                    hypercube.addTag("has_interaction_dialog");
-                    hypercube.addTag("non_expiring");
-                }
+                com.fs.starfarer.api.campaign.SectorEntityToken hypercube = brehinni.addCustomEntity("hypercube", "Hypercube", "junk_pirates_hypercube", "junk_pirates");
+                hypercube.setCircularOrbitPointingDown(brehinni.getCenter(), 270, 6000, 750);
+                hypercube.setDiscoverable(true);
+                hypercube.setSensorProfile(500f);
+                hypercube.addTag("has_interaction_dialog");
+                hypercube.addTag("non_expiring");
             }
         }
     }
