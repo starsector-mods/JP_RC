@@ -31,7 +31,7 @@ import data.campaign.intel.misc.YorkDiscoveryIntel;
 
 public class LincolnCathedralCradle extends BaseCommandPlugin {
 
-    public static final String MEMORY_KEY_SLOTTED = "$alphaCoreSlotted";
+    public static final String MEMORY_KEY_SLOTTED = "alphaCoreSlotted";
 
     @Override
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
@@ -90,6 +90,7 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
 
         if ("slot".equals(action)) {
             if (station.getMemoryWithoutUpdate().getBoolean(MEMORY_KEY_SLOTTED)) return false;
+            if (Global.getSector().getMemoryWithoutUpdate().getBoolean("$global.jp_york_quest_complete_global")) return false;
 
             if (cargo == null || cargo.getCommodityQuantity(Commodities.ALPHA_CORE) < 1) {
                 text.addPara("You do not have an Alpha Core to slot into the cradle.", Misc.getNegativeHighlightColor());
@@ -157,11 +158,19 @@ public class LincolnCathedralCradle extends BaseCommandPlugin {
             );
 
             // Award XP & Story Point bonus
-            Global.getSector().getPlayerPerson().getStats().addXP(50000, text);
-            Global.getSector().getPlayerPerson().getStats().addBonusXP(50000L, true, text, true);
+            if (Global.getSector().getPlayerPerson() != null && Global.getSector().getPlayerPerson().getStats() != null) {
+                Global.getSector().getPlayerPerson().getStats().addXP(50000, text);
+                Global.getSector().getPlayerPerson().getStats().addBonusXP(50000L, true, text, true);
+            }
 
             // Progress quest
             YorkDiscoveryIntel.markCoreSlotted(text);
+            Global.getSector().getMemoryWithoutUpdate().set("$global.jp_york_quest_complete_global", true);
+
+            text.addPara(
+                "You should return to the spacer at Ear Burns to let them know the deed is done.",
+                Misc.getHighlightColor()
+            );
 
             options.addOption("Acknowledge the Custodian and return to the station concourse", "lincolnCathedralBack");
             return true;

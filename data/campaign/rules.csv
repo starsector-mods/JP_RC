@@ -280,7 +280,7 @@ junkpiratesHypercubeActRing,DialogOptionSelected,$option == hypercube_act_ring,J
 junkpiratesHypercubeActCore,DialogOptionSelected,$option == hypercube_act_core,JunkPiratesHypercubePuzzle core,,,
 junkpiratesHypercubeActFacets,DialogOptionSelected,$option == hypercube_act_facets,JunkPiratesHypercubePuzzle facets,,,
 junkpiratesHypercubeActPin,DialogOptionSelected,$option == hypercube_act_pin,JunkPiratesHypercubePuzzle pin,,,
-junkpiratesHypercubeClue,DialogOptionSelected,$option == hypercube_clue,"JunkPiratesHypercubePuzzle init","You review the degraded audio log recovered from the shattered scavenger frigate drifting nearby:
+junkpiratesHypercubeClue,DialogOptionSelected,$option == hypercube_clue,JunkPiratesHypercubePuzzle init,"You review the degraded audio log recovered from the shattered scavenger frigate drifting nearby:
 
 ""...they are bound in a closed ring! Sound feeds Light. Light feeds Gravity. Gravity feeds Sound. If you try to force one channel past three units, it fractures. If you try to siphon from an empty channel, it cavitates and violently backfires!
 
@@ -294,55 +294,94 @@ junkpiratesHypercubeLeave,DialogOptionSelected,$option == hypercube_leave,Dismis
 # ==============================================================================
 lincolnCathedralOptionSlot,PopulateOptions,"$entity.id == lincoln_cathedral
 $menuState == main
-!$entity.alphaCoreSlotted",,,"lincolnCathedralInspectCradle:Inspect the Cathedral's neural cradle",
+!$entity.alphaCoreSlotted",,,lincolnCathedralInspectCradle:Inspect the Cathedral's neural cradle,
 lincolnCathedralOptionActive,PopulateOptions,"$entity.id == lincoln_cathedral
 $menuState == main
-$entity.alphaCoreSlotted",,,"lincolnCathedralCommuneCore:Interface with the Cathedral's Alpha Core custodian",
+$entity.alphaCoreSlotted",,,lincolnCathedralCommuneCore:Interface with the Cathedral's Alpha Core custodian,
 lincolnCathedralCradleSelected,DialogOptionSelected,$option == lincolnCathedralInspectCradle,LincolnCathedralCradle init,,,
 lincolnCathedralCommuneSelected,DialogOptionSelected,$option == lincolnCathedralCommuneCore,LincolnCathedralCradle commune,,,
 lincolnCathedralDoSlotSelected,DialogOptionSelected,$option == lincolnCathedralDoSlot,LincolnCathedralCradle slot,,,
 lincolnCathedralAskStatusSelected,DialogOptionSelected,$option == lincolnCathedralAskStatus,LincolnCathedralCradle status,,,
 lincolnCathedralTryUnplugSelected,DialogOptionSelected,$option == lincolnCathedralTryUnplug,LincolnCathedralCradle try_unplug,,,
 lincolnCathedralBackSelected,DialogOptionSelected,$option == lincolnCathedralBack,FireAll PopulateOptions,,,
-jp_yorkBar_pop,PopulateOptions,"$isBar == true, JP_YorkBar_Cmd isValid",,,"jp_yorkBar_approach:Approach the spacer and inquire about their survey charts",
-jp_yorkBar_init_fresh,DialogOptionSelected,"$option == jp_yorkBar_approach, !$global.jp_yorkBar_mealBought",JP_YorkBar_Cmd showPerson,"You slide into the booth opposite the spacer. They glance up, their eyes sunken and unfocused, before looking back down at their battered TriPad. Their stomach gives a loud, hollow growl.
+jp_yorkBar_pop,DialogOptionSelected,"$option == marketVisitBar
+JP_YorkBar_Cmd isValid score:100",FireBest BarShuttleDownPrintDesc,"As you enter the dockside bar, you notice a weary-looking spacer slumped in a booth, poring over a battered TriPad filled with encrypted astrometric survey charts.","jp_yorkBar_approach:Approach the spacer and inquire about their survey charts
+jp_yorkBar_ignore:Ignore them and head into the main bar area",
+jp_yorkBar_init_fresh,DialogOptionSelected,"$option == jp_yorkBar_approach
+!$global.jp_yorkBar_mealBought",JP_YorkBar_Cmd showPerson,"You slide into the booth opposite the spacer. They glance up, their eyes sunken and unfocused, before looking back down at their battered TriPad. Their stomach gives a loud, hollow growl.
 
-""I don't have time for tourists, captain,"" they mutter. ""I'm trying to figure out how to stretch my last credits into a week of nutrient paste.""","jp_yorkBar_buyMeal:Order a top-of-the-line luxury meal for the spacer (40000 credits), jp_yorkBar_leave:Leave them to their charts",
-jp_yorkBar_init_returning,DialogOptionSelected,"$option == jp_yorkBar_approach, $global.jp_yorkBar_mealBought",JP_YorkBar_Cmd showPerson,"You slide back into the booth. The spacer gives you a knowing nod, sliding the empty luxury plate aside.
+""I don't have time for tourists, captain,"" they mutter. ""I'm trying to figure out how to stretch my last credits into a week of nutrient paste.","jp_yorkBar_buyMeal:Order a top-of-the-line luxury meal for the spacer (40000 credits)
+jp_yorkBar_leave:Leave them to their charts",
+jp_yorkBar_init_returning,DialogOptionSelected,"$option == jp_yorkBar_approach
+$global.jp_yorkBar_mealBought",JP_YorkBar_Cmd showPerson,"You slide back into the booth. The spacer gives you a knowing nod, sliding the empty luxury plate aside.
 
-""You're back,"" they say, leaning forward. ""Still interested in those survey charts?""","jp_yorkBar_hub:Resume your conversation, jp_yorkBar_leave:Leave them to their charts",
-jp_yorkBar_noCredits,DialogOptionSelected,"$option == jp_yorkBar_buyMeal, !JP_YorkBar_Cmd hasCredits 40000",,"You can't afford a meal for them.","jp_yorkBar_leave:Leave them to their charts",
-jp_yorkBar_meal,DialogOptionSelected,"$option == jp_yorkBar_buyMeal, JP_YorkBar_Cmd hasCredits 40000","JP_YorkBar_Cmd spendCredits 40000; $global.jp_yorkBar_mealBought = true","You flag down a server drone and order a top-of-the-line luxury meal—genuine vat-grown steak, real hydroponic greens, and a bottle of pristine pre-Collapse vintage. The spacer stares in sheer disbelief before devouring it with startling speed, wiping their mouth with the back of their sleeve.
+""You're back,"" they say, leaning forward. ""Still interested in those survey charts?","jp_yorkBar_hub:Resume your conversation
+jp_yorkBar_leave:Leave them to their charts",
+jp_yorkBar_noCredits,DialogOptionSelected,"$option == jp_yorkBar_buyMeal
+!JP_YorkBar_Cmd hasCredits 40000",,You can't afford a meal for them.,jp_yorkBar_leave:Leave them to their charts,
+jp_yorkBar_meal,DialogOptionSelected,"$option == jp_yorkBar_buyMeal
+JP_YorkBar_Cmd hasCredits 40000",JP_YorkBar_Cmd spendCredits 40000,"You flag down a server drone and order a top-of-the-line luxury meal—genuine vat-grown steak, real hydroponic greens, and a bottle of pristine pre-Collapse vintage. The spacer stares in sheer disbelief before devouring it with startling speed, wiping their mouth with the back of their sleeve.
 
 The spacer looks up from the display, glancing around the crowded room before leaning forward across the table.
 
 ""You have the bearing of someone who looks beyond the Core, captain. Most in this bar only care about the next supply run or the price of fuel on the black market. But me? I trace the ghosts.""
 
-""My family flew deep-scan recon on an exploratory hauler long before the AI Wars. Far beyond the edge of the Sector, their sensors locked onto two distinct anomalies.""","jp_yorkBar_hub:Listen",
-jp_yorkBar_hub,DialogOptionSelected,$option == jp_yorkBar_hub,,,"jp_yorkBar_askCathedral:Inquire about the uncatalogued yellow star (Vision for Tomorrow), jp_yorkBar_askHypercube:Inquire about the geometric spatial anomaly (The Hypercube), jp_yorkBar_leave:Politely decline and step away",
-jp_yorkBar_hideCath,DialogOptionSelected,"$option == jp_yorkBar_hub, JP_YorkBar_Cmd hasYork",,,"!jp_yorkBar_askCathedral",
-jp_yorkBar_hideHyp,DialogOptionSelected,"$option == jp_yorkBar_hub, JP_YorkBar_Cmd hasHypercube",,,"!jp_yorkBar_askHypercube",
-jp_yorkBar_bothDone,DialogOptionSelected score:10,"$option == jp_yorkBar_hub, JP_YorkBar_Cmd hasYork, JP_YorkBar_Cmd hasHypercube",,"""You've got both sets of coordinates now, captain. May the void treat you well.""","jp_yorkBar_leave:Leave",
-jp_yorkBar_askCathedral,DialogOptionSelected,$option == jp_yorkBar_askCathedral,,,"""Far beyond the southern edge of the Sector, past where the beacons die, sensors locked onto a clean, uncatalogued yellow star. They swore on their dying breaths that it harbored an untouched Terran garden world, rich companion mining moons, and an ancient Domain cathedral station silently holding orbit.""
+""My family flew deep-scan recon on an exploratory hauler long before the AI Wars. Far beyond the edge of the Sector, their sensors locked onto two distinct anomalies.",jp_yorkBar_hub:Listen,
+jp_yorkBar_hub,DialogOptionSelected,$option == jp_yorkBar_hub,,,jp_yorkBar_leave:Politely decline and step away,
+jp_yorkBar_hub_addHyp,DialogOptionSelected,"$option == jp_yorkBar_hub
+!JP_YorkBar_Cmd hasHypercube",,,jp_yorkBar_askHypercube:Inquire about the geometric spatial anomaly (The Hypercube),
+jp_yorkBar_hub_addCath,DialogOptionSelected,"$option == jp_yorkBar_hub
+JP_YorkBar_Cmd isHypercubeSolved
+!JP_YorkBar_Cmd hasYork",,,jp_yorkBar_askCathedral:Hand over the encrypted Astrometric Datacore from the anomaly,
+jp_yorkBar_hub_addFinal,DialogOptionSelected,"$option == jp_yorkBar_hub
+JP_YorkBar_Cmd isQuestComplete",,,jp_yorkBar_finalReward:Tell the spacer the Cathedral is secure,
+jp_yorkBar_bothDone,DialogOptionSelected score:10,"$option == jp_yorkBar_hub
+JP_YorkBar_Cmd hasYork
+JP_YorkBar_Cmd hasHypercube
+!JP_YorkBar_Cmd isQuestComplete",,"You've got the coordinates now, captain. May the void treat you well.",jp_yorkBar_leave:Leave,
+jp_yorkBar_askHypercube,DialogOptionSelected,$option == jp_yorkBar_askHypercube,,"The first anomaly is buried in the deep outer fringes of this very system. It's a massive, perfectly geometric structure floating in absolute darkness. It emits no heat, no standard radiation, but it bends spatial telemetry around it like a puzzle box.""
+
+""I'm not letting that data go to just any scavenger. This Sector is full of fools who'd crack it open and doom us all.","jp_yorkBar_hub:Return to the previous topics
+jp_yorkBar_leave:Politely decline and step away",
+jp_yorkBar_askHypercube_addSP,DialogOptionSelected,"$option == jp_yorkBar_askHypercube
+JP_YorkBar_Cmd hasSP 3",,,jp_yorkBar_spendHypercube:Convince the spacer you have the expertise to safely investigate the anomaly [3 Story Points],
+jp_yorkBar_noSPHypercube,DialogOptionSelected,"$option == jp_yorkBar_askHypercube
+!JP_YorkBar_Cmd hasSP 3",,,jp_yorkBar_noSP_HypDummy:Convince the spacer you have the expertise to safely investigate the anomaly [Requires 3 Story Points],
+jp_yorkBar_spendHypercube,DialogOptionSelected,"$option == jp_yorkBar_spendHypercube
+JP_YorkBar_Cmd hasSP 3",JP_YorkBar_Cmd spendSP_Hypercube,"You lay out your technical background and history of dealing with volatile deep-space phenomena, making it clear you are one of the few who can handle Domain-era physics puzzles without triggering a catastrophic reaction.
+
+The spacer nods slowly and transmits a corrupted data packet containing deep-space coordinates.",jp_yorkBar_hub:Return to previous topics,
+jp_yorkBar_askCathedral,DialogOptionSelected,$option == jp_yorkBar_askCathedral,,"You slide the encrypted Early-Domain Astrometric Datacore across the table. The spacer's eyes widen as they plug it into their TriPad and decrypt the navigation telemetry.
+
+""Far beyond the southern edge of the Sector, past where the beacons die, sensors locked onto a clean, uncatalogued yellow star. They swore on their dying breaths that it harbored an untouched Terran garden world, rich companion mining moons, and an ancient Domain cathedral station silently holding orbit.""
 
 ""Word of caution, though: our old sensor logs caught terrifying, non-human neutrino signatures pulsing in that gravity well—heavy automated drone battlegroups. If you go out there looking for a new home, bring enough guns to fight a war.""
 
-""And one more thing: it takes an Alpha Core to awaken the station's automated systems. If you bring one out there and slot it into the cradle, Domain protocols will fuse it permanently into the bulkheads. But it'll watch over your people forever. I'm not giving this to a warlord or a corporate suit. It needs to go to someone who wants to build something real.""","jp_yorkBar_spendCathedral:Confront the spacer with your vision of a free haven beyond the Core [3 Story Points], jp_yorkBar_hub:Return to the previous topics, jp_yorkBar_leave:Politely decline and step away",
-jp_yorkBar_noSPCathedral,DialogOptionSelected,"$option == jp_yorkBar_askCathedral, !JP_YorkBar_Cmd hasSP 3",,,"jp_yorkBar_noSP_CathDummy:Confront the spacer with your vision of a free haven beyond the Core [Requires 3 Story Points]",
-jp_yorkBar_disableSPCathedral,DialogOptionSelected,"$option == jp_yorkBar_askCathedral, !JP_YorkBar_Cmd hasSP 3",,,"!jp_yorkBar_spendCathedral",
-jp_yorkBar_spendCathedral,DialogOptionSelected,"$option == jp_yorkBar_spendCathedral, JP_YorkBar_Cmd hasSP 3",JP_YorkBar_Cmd spendSP_Cathedral,"You outline your plans for the frontier—not another corporate tech-mine or bloody warlord fief, but a genuine sanctuary where crews can build a future.
+""And one more thing: it takes an Alpha Core to awaken the station's automated systems. If you bring one out there and slot it into the cradle, Domain protocols will fuse it permanently into the bulkheads. But it'll watch over your people forever. I'm not giving this to a warlord or a corporate suit. It needs to go to someone who wants to build something real.","jp_yorkBar_hub:Return to the previous topics
+jp_yorkBar_leave:Politely decline and step away",
+jp_yorkBar_askCathedral_addSP,DialogOptionSelected,"$option == jp_yorkBar_askCathedral
+JP_YorkBar_Cmd hasSP 3",,,jp_yorkBar_spendCathedral:Confront the spacer with your vision of a free haven beyond the Core [3 Story Points],
+jp_yorkBar_noSPCathedral,DialogOptionSelected,"$option == jp_yorkBar_askCathedral
+!JP_YorkBar_Cmd hasSP 3",,,jp_yorkBar_noSP_CathDummy:Confront the spacer with your vision of a free haven beyond the Core [Requires 3 Story Points],
+jp_yorkBar_spendCathedral,DialogOptionSelected,"$option == jp_yorkBar_spendCathedral
+JP_YorkBar_Cmd hasSP 3",JP_YorkBar_Cmd spendSP_Cathedral,"You outline your plans for the frontier—not another corporate tech-mine or bloody warlord fief, but a genuine sanctuary where crews can build a future.
 
 The spacer stares at you in silence for a long moment, then pushes a heavy, lead-jacketed nav-cartridge into your hands.
 
-""Take it, captain. If someone is finally going to wake the Cathedral and plant crops under that yellow star, I want it to be someone with fire in their chest. Go make it count.""","jp_yorkBar_hub:Return to previous topics",
-jp_yorkBar_askHypercube,DialogOptionSelected,$option == jp_yorkBar_askHypercube,,,"""The first anomaly is buried in the deep outer fringes of this very system. It's a massive, perfectly geometric structure floating in absolute darkness. It emits no heat, no standard radiation, but it bends spatial telemetry around it like a puzzle box.""
+""Take it, captain. If someone is finally going to wake the Cathedral and plant crops under that yellow star, I want it to be someone with fire in their chest. Go make it count.",jp_yorkBar_hub:Return to previous topics,
+jp_yorkBar_finalReward,DialogOptionSelected,$option == jp_yorkBar_finalReward,JP_YorkBar_Cmd completeQuest,"You tell the spacer about the Cathedral, the Alpha Core, and the garden world. The spacer leans back, a genuine smile breaking across their face.
 
-""I'm not letting that data go to just any scavenger. This Sector is full of fools who'd crack it open and doom us all.""","jp_yorkBar_spendHypercube:Convince the spacer you have the expertise to safely investigate the anomaly [3 Story Points], jp_yorkBar_hub:Return to the previous topics, jp_yorkBar_leave:Politely decline and step away",
-jp_yorkBar_noSPHypercube,DialogOptionSelected,"$option == jp_yorkBar_askHypercube, !JP_YorkBar_Cmd hasSP 3",,,"jp_yorkBar_noSP_HypDummy:Convince the spacer you have the expertise to safely investigate the anomaly [Requires 3 Story Points]",
-jp_yorkBar_disableSPHypercube,DialogOptionSelected,"$option == jp_yorkBar_askHypercube, !JP_YorkBar_Cmd hasSP 3",,,"!jp_yorkBar_spendHypercube",
-jp_yorkBar_spendHypercube,DialogOptionSelected,"$option == jp_yorkBar_spendHypercube, JP_YorkBar_Cmd hasSP 3",JP_YorkBar_Cmd spendSP_Hypercube,"You lay out your technical background and history of dealing with volatile deep-space phenomena, making it clear you are one of the few who can handle Domain-era physics puzzles without triggering a catastrophic reaction.
+""You really did it. You actually built something real out there."" They reach into their satchel and pull out a glowing, impossibly complex mechanism. ""I found this a long time ago. I was saving it, but I think you've earned it.",jp_yorkBar_leave:Leave,
+jp_yorkBar_noSP_CathDummy_handler,DialogOptionSelected,$option == jp_yorkBar_noSP_CathDummy,,You do not have enough Story Points to convince the spacer.,jp_yorkBar_hub:Return to previous topics,
+jp_yorkBar_noSP_HypDummy_handler,DialogOptionSelected,$option == jp_yorkBar_noSP_HypDummy,,You do not have enough Story Points to convince the spacer.,jp_yorkBar_hub:Return to previous topics,
+jp_yorkBar_hypDone,DialogOptionSelected score:10,"$option == jp_yorkBar_hub
+JP_YorkBar_Cmd hasHypercube
+!JP_YorkBar_Cmd isHypercubeSolved",,"You have the coordinates for the anomaly, captain. Come back when you crack it.",jp_yorkBar_leave:Leave,
 
-The spacer nods slowly and transmits a corrupted data packet containing deep-space coordinates.","jp_yorkBar_hub:Return to previous topics",
-jp_yorkBar_noSP_CathDummy_handler,DialogOptionSelected,$option == jp_yorkBar_noSP_CathDummy,,"You do not have enough Story Points to convince the spacer.","jp_yorkBar_hub:Return to previous topics",
-jp_yorkBar_noSP_HypDummy_handler,DialogOptionSelected,$option == jp_yorkBar_noSP_HypDummy,,"You do not have enough Story Points to convince the spacer.","jp_yorkBar_hub:Return to previous topics",
-jp_yorkBar_leave,DialogOptionSelected,$option == jp_yorkBar_leave,FireAll PopulateOptions,,,
+jp_yorkBar_questDoneHub,DialogOptionSelected score:10,"$option == jp_yorkBar_hub
+JP_YorkBar_Cmd isQuestComplete",,You've returned. What did you find out there?,jp_yorkBar_finalReward:Tell the spacer the Cathedral is secure, jp_yorkBar_leave:Leave,
+
+jp_yorkBar_leave,DialogOptionSelected,$option == jp_yorkBar_leave,"FireBest BarPrintDesc
+BarCMD showOptions",,,
+jp_yorkBar_ignore_rule,DialogOptionSelected,$option == jp_yorkBar_ignore,"FireBest BarPrintDesc
+BarCMD showOptions",,,

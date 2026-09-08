@@ -211,9 +211,9 @@ public class JunkPiratesModPlugin extends BaseModPlugin
     }
     @Override
     public void onNewGame() {
-        if (isExerelin && !JP_NexIntegration.isCorvusMode())
+        // if (isExerelin && !JP_NexIntegration.isCorvusMode())
             {
-                return;
+                // return;
             }
         initJunkPirates();
     }

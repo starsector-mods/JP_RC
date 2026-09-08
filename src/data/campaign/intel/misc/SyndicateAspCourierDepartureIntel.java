@@ -219,7 +219,9 @@ public final class SyndicateAspCourierDepartureIntel extends BaseIntelPlugin {
     @Override
     public Set<String> getIntelTags(SectorMapAPI map) {
         Set<String> tags = super.getIntelTags(map);
-        tags.add(Tags.INTEL_ACCEPTED);
+        if (!isEnded() && !isEnding()) {
+            tags.add(Tags.INTEL_ACCEPTED);
+        }
         tags.add(Tags.INTEL_FLEET_LOG);
         return tags;
     }

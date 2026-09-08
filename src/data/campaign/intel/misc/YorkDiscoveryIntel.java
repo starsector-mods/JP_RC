@@ -59,9 +59,23 @@ public class YorkDiscoveryIntel extends BaseIntelPlugin {
     protected boolean completed = false;
     protected YorkQuestStage stage = YorkQuestStage.EXPLORE_YORK;
 
+    public boolean isCompleted() { return completed; }
+
     public YorkDiscoveryIntel(String source) {
         this.source = source != null ? source : "datacore";
-        Global.getSector().addScript(this);
+        
+        StarSystemAPI york = Global.getSector().getStarSystem("York");
+        if (york != null) {
+            SectorEntityToken cathedral = york.getEntityById("lincoln_cathedral");
+            if (cathedral != null && cathedral.getMemoryWithoutUpdate().getBoolean("$alphaCoreSlotted")) {
+                this.stage = YorkQuestStage.SANCTUARY_AWAKENED;
+                this.completed = true;
+            } else if (Global.getSector().getPlayerFleet() != null && Global.getSector().getPlayerFleet().getContainingLocation() == york) {
+                this.stage = YorkQuestStage.SLOT_ALPHA_CORE;
+            } else {
+                this.stage = YorkQuestStage.EXPLORE_YORK;
+            }
+        }
     }
 
     @Override
@@ -193,7 +207,9 @@ public class YorkDiscoveryIntel extends BaseIntelPlugin {
         Set<String> tags = super.getIntelTags(map);
         tags.add(Tags.INTEL_EXPLORATION);
         tags.add(Tags.INTEL_STORY);
-        tags.add(Tags.INTEL_ACCEPTED);
+        if (!isCompleted() && !isEnded() && !isEnding()) {
+            tags.add(Tags.INTEL_ACCEPTED);
+        }
         return tags;
     }
 

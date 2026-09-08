@@ -46,13 +46,13 @@ public class JP_YorkBar_Cmd extends BaseCommandPlugin {
             if (dialog.getInteractionTarget() == null || dialog.getInteractionTarget().getMarket() == null) return false;
             MarketAPI market = dialog.getInteractionTarget().getMarket();
             if (!"ear_burns".equals(market.getId())) return false;
-            if (YorkDiscoveryIntel.hasIntel() && HypercubeDiscoveryIntel.hasIntel()) return false;
+            if (Global.getSector().getMemoryWithoutUpdate().getBoolean("$global.jp_quest_fully_complete")) return false;
             return true;
         }
         
         if ("showPerson".equals(action)) {
             // Generate person if not already in memory
-            PersonAPI person = (PersonAPI) memoryMap.get(com.fs.starfarer.api.campaign.rules.MemKeys.GLOBAL).get("$jp_yorkBar_person");
+            PersonAPI person = (PersonAPI) memoryMap.get(com.fs.starfarer.api.campaign.rules.MemKeys.GLOBAL).get("$global.jp_yorkBar_person");
             if (person == null) {
                 person = Global.getFactory().createPerson();
                 person.setFaction(Factions.INDEPENDENT);
@@ -67,7 +67,7 @@ public class JP_YorkBar_Cmd extends BaseCommandPlugin {
                 person.setRankId(Ranks.SPACE_SAILOR);
                 person.setPostId(Ranks.POST_SPACER);
                 
-                memoryMap.get(com.fs.starfarer.api.campaign.rules.MemKeys.GLOBAL).set("$jp_yorkBar_person", person, 0);
+                memoryMap.get(com.fs.starfarer.api.campaign.rules.MemKeys.GLOBAL).set("$global.jp_yorkBar_person", person);
             }
             dialog.getVisualPanel().showPersonInfo(person, true);
             return true;
@@ -82,6 +82,7 @@ public class JP_YorkBar_Cmd extends BaseCommandPlugin {
             int amount = (int) params.get(1).getFloat(memoryMap);
             Global.getSector().getPlayerFleet().getCargo().getCredits().subtract(amount);
             AddRemoveCommodity.addCreditsLossText(amount, dialog.getTextPanel());
+            Global.getSector().getMemoryWithoutUpdate().set("$global.jp_yorkBar_mealBought", true);
             return true;
         }
         
@@ -110,6 +111,27 @@ public class JP_YorkBar_Cmd extends BaseCommandPlugin {
         
         if ("hasHypercube".equals(action)) {
             return HypercubeDiscoveryIntel.hasIntel();
+        }
+        
+        if ("isHypercubeSolved".equals(action)) {
+            return Global.getSector().getMemoryWithoutUpdate().getBoolean("$global.jp_hypercube_solved_global");
+        }
+        
+        if ("isQuestComplete".equals(action)) {
+            return Global.getSector().getMemoryWithoutUpdate().getBoolean("$global.jp_york_quest_complete_global");
+        }
+        
+        if ("removeOption".equals(action)) {
+            String optId = params.get(1).getString(memoryMap);
+            dialog.getOptionPanel().removeOption(optId);
+            return true;
+        }
+
+        if ("completeQuest".equals(action)) {
+            Global.getSector().getMemoryWithoutUpdate().set("$global.jp_quest_fully_complete", true);
+            Global.getSector().getPlayerFleet().getCargo().addCommodity("omega_core", 1);
+            AddRemoveCommodity.addCommodityGainText("omega_core", 1, dialog.getTextPanel());
+            return true;
         }
 
         return false;

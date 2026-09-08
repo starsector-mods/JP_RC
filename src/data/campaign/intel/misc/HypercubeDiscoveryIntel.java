@@ -124,7 +124,9 @@ public class HypercubeDiscoveryIntel extends BaseIntelPlugin {
         Set<String> tags = super.getIntelTags(map);
         tags.add(Tags.INTEL_EXPLORATION);
         tags.add(Tags.INTEL_STORY);
-        tags.add(Tags.INTEL_ACCEPTED);
+        if (!isCompleted() && !isEnded() && !isEnding()) {
+            tags.add(Tags.INTEL_ACCEPTED);
+        }
         return tags;
     }
 

@@ -160,6 +160,7 @@ public class York {
 
 		system.addTag(Tags.THEME_REMNANT_RESURGENT);
 		system.addTag(Tags.THEME_UNSAFE);
+		system.addTag(Tags.THEME_HIDDEN);
 
 		// Warning beacon in hyperspace indicating high-danger Remnant presence
 		try {

@@ -222,7 +222,7 @@
 		"showIconOnMap":true,
 		"scaleIconWithZoom":true,
 		"customDescriptionId":"warning_beacon",
-		"interactionImage":"graphics/illustrations/junk_pirates_warning_beacon.jpg",
+		"interactionImage":"graphics/illustrations/junk_pirates_warning_beacon.png",
 		"tags":["has_interaction_dialog", "warning_beacon", "neutrino_high"],
 		"layers":["STATIONS"], 
 		"pluginClass":"com.fs.starfarer.api.impl.campaign.WarningBeaconEntityPlugin"

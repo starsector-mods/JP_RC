@@ -47,7 +47,7 @@ public class JunkPiratesHypercubePuzzle extends BaseCommandPlugin {
 
         if ("init".equals(action)) {
             data.campaign.intel.misc.HypercubeDiscoveryIntel.addIntelIfNeeded(text, "discovery");
-            data.campaign.intel.misc.HypercubeDiscoveryIntel.markFound(text);
+
             printTelemetry(dialog, text, sound, light, tension);
             return true;
         }
@@ -128,10 +128,9 @@ public class JunkPiratesHypercubePuzzle extends BaseCommandPlugin {
             if (sound == 0 && light == 0 && tension == 0) {
                 // WIN!
                 SectorEntityToken target = dialog.getInteractionTarget();
-                if (target != null) {
-                    if (target.getMemoryWithoutUpdate().getBoolean("$hypercube_completed")) return false; // Anti-glitch
-                    target.getMemoryWithoutUpdate().set("$hypercube_completed", true);
-                }
+                if (target == null || target.getMemoryWithoutUpdate().getBoolean("$hypercube_completed")) return false; // Anti-glitch
+                if (Global.getSector().getMemoryWithoutUpdate().getBoolean("$global.jp_hypercube_solved_global")) return false;
+                target.getMemoryWithoutUpdate().set("$hypercube_completed", true);
                 
                 Global.getSoundPlayer().playUISound("ui_char_spent_story_point", 1f, 1.2f);
                 CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
@@ -145,21 +144,15 @@ public class JunkPiratesHypercubePuzzle extends BaseCommandPlugin {
                     Global.getSector().getPlayerPerson().getStats().addXP(50000, dialog.getTextPanel());
                 }
 
+                Global.getSector().getMemoryWithoutUpdate().set("$global.jp_hypercube_solved_global", true);
+                data.campaign.intel.misc.HypercubeDiscoveryIntel.markFound(text);
+
                 text.addPara("You strike the central grounding pin. A profound, shuddering shockwave ripples outward through the vacuum.", Misc.getPositiveHighlightColor());
                 text.addPara("The ticking dies. The smoldering luminescence extinguishes into pure void. The gravitational torque vanishes as local space settles into glass-like tranquility.");
                 text.addPara("In total, breathless silence and absolute darkness, the monolithic hexahedron slowly unfolds. Facets slide aside with impossible precision, unveiling an ancient Domain-era containment capsule nestled at the core.");
                 text.addPara("Recovered 1 Alpha Core, 150 Rare Ore, 100 Volatiles, and 50,000 XP.", Misc.getPositiveHighlightColor());
 
-                boolean alreadyKnewYork = data.campaign.intel.misc.YorkDiscoveryIntel.hasIntel();
-                // Award York Discovery Intel
-                data.campaign.intel.misc.YorkDiscoveryIntel.addIntelIfNeeded(dialog.getTextPanel(), "hypercube");
-                
-                if (alreadyKnewYork) {
-                    text.addPara("Nestled alongside the Alpha Core lies an encrypted Early-Domain Astrometric Datacore. You run its navigation telemetry against the spacer's survey charts, confirming the precise coordinates for the 'York' system deep in the southern fringe.", Misc.getHighlightColor());
-                } else {
-                    text.addPara("Nestled alongside the Alpha Core lies an encrypted Early-Domain Astrometric Datacore. Translating its navigation telemetry reveals the precise coordinates of a forgotten frontier system designated 'York' deep in the southern fringe.", Misc.getHighlightColor());
-                }
-                text.addPara("Telemetry archives indicate this Alpha Core was specifically engineered to be slotted into the neural cradle of 'Lincoln Cathedral'—the grand orbital sanctuary station overlooking the garden world of Lincoln. In accordance with Domain sanctuary safety protocols, once slotted into the Cathedral, the core will permanently fuse to the station and cannot be unplugged.", Misc.getTextColor());
+                text.addPara("Nestled alongside the Alpha Core lies an encrypted Early-Domain Astrometric Datacore. The encryption is too advanced to crack here. The spacer at Ear Burns might know what to do with this.", Misc.getHighlightColor());
 
                 dialog.getOptionPanel().clearOptions();
                 dialog.getOptionPanel().addOption("Salvage the contents and withdraw", "hypercube_leave");
