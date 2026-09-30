@@ -13,7 +13,6 @@ import static data.scripts.JunkPiratesModPlugin.enablePACK;
 
 import data.scripts.world.systems.Brehinni;
 import data.scripts.world.systems.Canis;
-import data.scripts.world.systems.York;
 import data.scripts.world.systems.Ursulo;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,7 +40,6 @@ public class JunkGen implements SectorGeneratorPlugin{
     if (enablePACK) {
         new Canis().generate(sector);
     }
-    new York().generate(sector);
     if (enableASP) {
         new Ursulo().generate(sector);
     }

@@ -118,29 +118,6 @@
 		"renderCircleIndicatorSelectionFlash":true
 	},
 
-	"junk_pirates_hypercube":{
-		"defaultName":"Hypercube", 
-		"defaultRadius":80, 
-		"customDescriptionId":"junk_pirates_hypercube",
-		"interactionImage":"graphics/illustrations/dead_gate.jpg",
-		"icon":"graphics/icons/station0.png",
-		"iconWidth":20,
-		"iconHeight":20,
-		"sprite":"graphics/stations/junk_pirates_hypercube.png",
-		"spriteWidth":150,
-		"spriteHeight":159,
-		"renderShadow":true,
-		"useLightColor":true,
-		"showInCampaign":true,
-		"showIconOnMap":true,
-		"showNameOnMap":false,
-		"scaleNameWithZoom":false,
-		"scaleIconWithZoom":true,
-		"tags":["station", "neutrino", "has_interaction_dialog", "non_expiring"],
-		"layers":["STATIONS"], 
-		"renderCircleIndicator":true,
-		"renderCircleIndicatorSelectionFlash":true
-	},
 	
 	"junk_pirates_anarchist_mining":{
 		"defaultName":"Mining Base", 
