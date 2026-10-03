@@ -100,6 +100,7 @@ public class TrilateralAugmentationAlgorithmsStats extends BaseShipSystemScript 
 	
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
+		if (state == State.IDLE || effectLevel <= 0f) return null;
 		if (index == 0) {
 			float mult = 1f + DAMAGE_INCREASE_PERCENT * effectLevel * 0.01f;
 			return new StatusData("fighter guns: " + Misc.getRoundedValueMaxOneAfterDecimal(mult) + "x damage", false);

@@ -30,6 +30,7 @@ public class PackFluxDivertStats extends BaseShipSystemScript {
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
+		if (state == State.IDLE || effectLevel <= 0f) return null;
 		if (index == 0) {
 			return new StatusData("shield damage taken -" + (int) Math.round(SHIELD_DAMAGE_REDUCTION_PERCENT * effectLevel) + "%", false);
 		} else if (index == 1) {

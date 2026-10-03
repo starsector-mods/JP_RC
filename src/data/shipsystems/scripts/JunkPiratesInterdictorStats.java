@@ -315,6 +315,7 @@ public class JunkPiratesInterdictorStats extends BaseShipSystemScript {
 
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
+		if (state == State.IDLE || effectLevel <= 0f) return null;
 		if (index == 0) {
 			return new StatusData("interdiction field active: flux siphoned", false);
 		} else if (index == 1) {

@@ -4,7 +4,7 @@
 	"aiType":"CUSTOM",
 	"aiScript":"data.shipsystems.ai.RidgebackDriveAI",
 	
-	"statsScript":"data.shipsystems.scripts.PackRidgebackDriveStats",
+	"statsScript":"data.shipsystems.scripts.PackTriOverchargeStats",
 	
 	"useSound":"system_ammo_feeder",
 	"loopSound":"maneuvering_jets_loop",

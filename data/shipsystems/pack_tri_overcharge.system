@@ -1,12 +1,13 @@
 {
 	"id":"pack_tri_overcharge",
 	"type":"STAT_MOD",
-	"aiType":"WEAPON_BOOST",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.RidgebackDriveAI",
 	
 	"statsScript":"data.shipsystems.scripts.PackTriOverchargeStats",
 	
 	"useSound":"system_ammo_feeder",
-	"loopSound":"system_ammo_feeder_loop",
+	"loopSound":"maneuvering_jets_loop",
 	"outOfUsesSound":"gun_out_of_ammo",
 	
 	"aiHints":{

@@ -342,6 +342,7 @@ public class PackAlphaCallStats extends BaseShipSystemScript {
 
     @Override
     public StatusData getStatusData(int index, State state, float effectLevel) {
+        if (state == State.IDLE || effectLevel <= 0f) return null;
         if (index == 0) {
             return new StatusData("alpha command: +" + (int) ALLY_ROF_PERCENT + "% fleet fire rate & dissipation", false);
         } else if (index == 1) {

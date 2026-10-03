@@ -25,6 +25,7 @@ public class PackIonDroneStats extends BaseShipSystemScript {
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
+		if (state == State.IDLE || effectLevel <= 0f) return null;
 		float sensorRangePercent = SENSOR_RANGE_PERCENT * effectLevel;
 		float weaponRangePercent = WEAPON_RANGE_PERCENT * effectLevel;
 		if (index == 0) {

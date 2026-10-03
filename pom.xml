@@ -228,6 +228,13 @@
             <scope>system</scope>
             <systemPath>${starsector.dir}/mods/Nexerelin/jars/ExerelinCore.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>local.starsector</groupId>
+            <artifactId>LunaLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${starsector.dir}/mods/LunaLib/jars/LunaLib.jar</systemPath>
+        </dependency>
 
         <!-- Jqwik for property-based testing -->
         <dependency>

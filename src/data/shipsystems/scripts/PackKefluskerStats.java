@@ -36,6 +36,7 @@ public class PackKefluskerStats extends BaseShipSystemScript {
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
+		if (state == State.IDLE || effectLevel <= 0f) return null;
 		if (index == 0) {
 			if (state == State.OUT) return null;
 			return new StatusData("keflusker boost: +" + (int)(SPEED_BONUS * effectLevel) + " top speed", false);

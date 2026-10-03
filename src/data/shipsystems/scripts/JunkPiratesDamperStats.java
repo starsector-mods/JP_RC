@@ -44,6 +44,7 @@ public class JunkPiratesDamperStats extends BaseShipSystemScript {
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
+		if (state == State.IDLE || effectLevel <= 0f) return null;
 		effectLevel = Math.max(0f, effectLevel);
 		float mult = 1f - (1f - DAMAGE_MULT) * effectLevel;
 		float percent = (1f - mult) * 100f;
