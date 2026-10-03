@@ -29,4 +29,6 @@
 				 "particleColor":[100,100,100,200]},
 	"projectileSpecId":"junk_pirates_micro_junkjet_missile",
 	"fireSoundTwo":"sabot_srm_fire"
+,
+	"hints":["SYSTEM"]
 }

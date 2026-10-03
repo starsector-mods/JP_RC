@@ -36,4 +36,6 @@
 				 "particleColor":[125,15,25,105]},	
 	"projectileSpecId":"junk_pirates_bangpod_torp",
 	"fireSoundTwo":"junk_pirates_plan_d_launch"
+,
+	"hints":["SYSTEM"]
 }

@@ -27,4 +27,6 @@
 					   "particleColor":[165,225,185,175]},
 	"projectileSpecId":"pack_ripsaw_shot",  
 	"fireSoundTwo":"pack_ripsaw_fire"
+,
+	"hints":["SYSTEM"]
 }

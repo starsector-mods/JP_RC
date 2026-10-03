@@ -28,4 +28,6 @@
 	"projectileSpecId":"heavymg_shot",  
 	
 	"fireSoundTwo":"heavy_machinegun_fire"
+,
+	"hints":["SYSTEM"]
 }

@@ -25,4 +25,6 @@
 	"projectileSpecId":"syndicate_asp_viper_shot",
 	"fireSoundOne":"junk_pirates_welder_chargeup",
 	"fireSoundTwo":"syndicate_asp_viper_fire"
+,
+	"hints":["SYSTEM"]
 }

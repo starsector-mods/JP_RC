@@ -9,9 +9,9 @@
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[185,255,200,255],  
 	"explosionRadius":50, 
-	"flameoutTime":1, 
+	"flameoutTime":2.5, 
 	"noEngineGlowTime":0.1, 
-	"fadeTime":0.5, 
+	"fadeTime":1.5, 
 	"behaviorSpec":{"behavior":"CUSTOM",
 					"effectRange":300,
 					"effectChance":0.2

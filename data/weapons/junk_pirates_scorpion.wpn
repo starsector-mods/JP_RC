@@ -24,4 +24,6 @@
 	"autocharge":true,  
 	"projectileSpecId":"junk_pirates_scorpion_shot",  
 	"fireSoundTwo":"junk_pirates_scorpion_fire"
+,
+	"hints":["SYSTEM"]
 }

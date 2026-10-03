@@ -8,7 +8,7 @@ Divert to Engines,pack_engine_divert,1,,,,,,,,,2,5,1,6,,,,,,,,,TRUE,,,,graphics/
 Phase Skimmer,pack_skimmer,,,,,,0.25,,,,0.25,,0.75,0.5,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
 Trilateral Augmentation,pack_trilat_algorithms,,,,,,0.5,,,,0.5,8,0.5,14,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
 Keflusker,pack_keflusker,1,,,,,,,,,2,1.5,0.5,4,,,,,,TRUE,TRUE,TRUE,FALSE,TRUE,,,graphics/icons/hullsys/burn_drive.png
-Electrostatic Chaff,junk_pirates_electrochafflauncher,,,,,,,,4,0.05,,,,6,,,,,,,,,,,,,graphics/icons/hullsys/quantum_disruptor.png
+Electrostatic Chaff,junk_pirates_electrochafflauncher,,,,,,,,4,0.1,,,,4,,,,,,,,,,,,,graphics/icons/hullsys/quantum_disruptor.png
 Plug Jets,junk_pirates_burst_jets,,,,,,,,2,0.08,0.25,4,0.75,6,,,,,,TRUE,,,,,,,graphics/icons/hullsys/burn_drive.png
 MERMAN,junk_pirates_kraken_retreat,,,,,,,,1,0.125,3,1.5,0.5,8,,,,,,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
 EMP Emitter,junk_pirates_delay_emp,1,,,,,0.2,,,,0.5,4,0.5,9,,,,,FALSE,,,,,,,,graphics/icons/hullsys/emp_emitter.png

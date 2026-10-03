@@ -25,4 +25,6 @@
 					  "particleColor":[255,195,255,235]},
 	"projectileSpecId":"junk_pirates_pica_shot",  
 	"fireSoundTwo":"junk_pirates_pica_fire"
+,
+	"hints":["SYSTEM"]
 }

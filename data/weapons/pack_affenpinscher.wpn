@@ -25,4 +25,6 @@
 	"pixelsPerTexel":5.0,
 	"pierceSet":[PROJECTILE_FF,PROJECTILE_NO_FF,PROJECTILE_FIGHTER],
 	"fireSoundOne":"pack_affenpinscher_fire"
+,
+	"hints":["SYSTEM"]
 }
