@@ -61,10 +61,11 @@ public class PlugJetsAI implements ShipSystemAIScript {
                 // 1. Close distance when out of weapon range to engage targets
                 // 2. Chaff defensive deployment against incoming missiles
                 // 3. Fast tactical disengage if retreating
-                if (!ship.areAnyEnemiesInRange() || 
+                boolean hasTargetEnemy = target != null && target.isAlive() && !target.isHulk() && target.getOwner() != ship.getOwner();
+                if ((hasTargetEnemy && !ship.areAnyEnemiesInRange()) || 
                     nearbyMissiles.size() > 2 ||
                     ship.isRetreating() ||
-                    (target != null && target.isRetreating())) {
+                    (hasTargetEnemy && target.isRetreating())) {
                     shouldUseSystem = true;
                 }
             } else { 
@@ -77,9 +78,8 @@ public class PlugJetsAI implements ShipSystemAIScript {
                 }
             }
                 
-            // If system is inactive and should be active, enable it
-            // If system is active and shouldn't be, disable it
-            if (ship.getSystem().isActive() ^ shouldUseSystem) {
+            // Non-toggle burst system: only activate if currently idle/inactive
+            if (!ship.getSystem().isActive() && shouldUseSystem) {
                 ship.useSystem();
             }
         }

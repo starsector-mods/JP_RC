@@ -266,8 +266,9 @@ public class JunkPiratesMasonRefractorStats extends BaseShipSystemScript {
                         w.setRemainingCooldownTo(0.8f);
                     }
 
-                    // A. Block Outside Projectiles
-                    for (DamagingProjectileAPI proj : Global.getCombatEngine().getProjectiles()) {
+                    // A. Block Outside Projectiles (iterate over snapshot list to avoid CME on removeEntity)
+                    List<DamagingProjectileAPI> projectiles = new java.util.ArrayList<>(Global.getCombatEngine().getProjectiles());
+                    for (DamagingProjectileAPI proj : projectiles) {
                         if (proj == null) continue;
                         float dist = Misc.getDistance(proj.getLocation(), targetLoc);
 
@@ -315,9 +316,9 @@ public class JunkPiratesMasonRefractorStats extends BaseShipSystemScript {
 
         if (target == null) {
             if (player) {
-                target = Misc.findClosestShipEnemyOf(ship, ship.getMouseTarget(), HullSize.CRUISER, range, true, filter);
+                target = Misc.findClosestShipEnemyOf(ship, ship.getMouseTarget(), HullSize.FRIGATE, range, true, filter);
             } else {
-                target = Misc.findClosestShipEnemyOf(ship, ship.getLocation(), HullSize.CRUISER, range, true, filter);
+                target = Misc.findClosestShipEnemyOf(ship, ship.getLocation(), HullSize.FRIGATE, range, true, filter);
             }
         }
         return target;

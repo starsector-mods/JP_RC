@@ -24,7 +24,8 @@
       "mode": "LINKED",
       "weapons": {
         "WS 004": "junk_pirates_scatterpd",
-        "WS 005": "junk_pirates_scatterpd"
+        "WS 005": "junk_pirates_scatterpd",
+        "WS 008": "vulcan"
       }
     },
     {

@@ -329,8 +329,8 @@
         -11
       ],
       "mount": "HIDDEN",
-      "size": "LARGE",
-      "type": "MISSILE"
+      "size": "MEDIUM",
+      "type": "BUILT_IN"
     },
     {
       "angle": 14.5,
@@ -341,8 +341,8 @@
         11
       ],
       "mount": "HIDDEN",
-      "size": "LARGE",
-      "type": "MISSILE"
+      "size": "MEDIUM",
+      "type": "BUILT_IN"
     }
   ],
   "width": 426

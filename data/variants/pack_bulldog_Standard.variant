@@ -56,6 +56,14 @@
         "WS 005": "heavyblaster",
         "WS 006": "heavyblaster"
       }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "pack_affenpinscher",
+        "WS 010": "pack_affenpinscher"
+      }
     }
   ],
   "wings": [

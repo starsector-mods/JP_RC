@@ -307,7 +307,7 @@
         46.5
       ],
       "mount": "TURRET",
-      "size": "SMALL",
+      "size": "MEDIUM",
       "type": "BUILT_IN"
     },
     {
@@ -319,7 +319,7 @@
         -46.5
       ],
       "mount": "TURRET",
-      "size": "SMALL",
+      "size": "MEDIUM",
       "type": "BUILT_IN"
     },
     {

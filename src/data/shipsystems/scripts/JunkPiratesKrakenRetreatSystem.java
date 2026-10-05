@@ -14,6 +14,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
+import com.fs.starfarer.api.util.Misc;
 import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
@@ -96,7 +97,8 @@ public class JunkPiratesKrakenRetreatSystem extends BaseShipSystemScript {
 			float speed = ship.getVelocity().length();
 			if (speed <= 0.5f) {
 				//point the ships vector behind it
-				ship.getVelocity().set(VectorUtils.getDirectionalVector(ship.getLocation(), dir)).scale(stats.getMaxSpeed().getModifiedValue());
+				Vector2f backwardDir = Misc.getUnitVectorAtDegreeAngle(ship.getFacing() + 180f);
+				ship.getVelocity().set(backwardDir).scale(stats.getMaxSpeed().getModifiedValue());
 			} else {
 				ship.getVelocity().normalise();
 				ship.getVelocity().scale(stats.getMaxSpeed().getModifiedValue());

@@ -50,6 +50,14 @@
                 "WS 022": "lrpdlaser",
                 "WS 023": "lrpdlaser"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "pack_affenpinscher",
+                "WS 010": "pack_affenpinscher"
+            }
         }
     ]
 }

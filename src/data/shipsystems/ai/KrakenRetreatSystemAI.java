@@ -89,9 +89,8 @@ public class KrakenRetreatSystemAI implements ShipSystemAIScript {
                 }
             }
                 
-            // If system is inactive and should be active, enable it
-            // If system is active and shouldn't be, disable it
-            if (ship.getSystem().isActive() ^ shouldUseSystem) {
+            // Non-toggle retreat system: only activate if currently idle/inactive
+            if (!ship.getSystem().isActive() && shouldUseSystem) {
                 ship.useSystem();
             }
         }

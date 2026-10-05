@@ -51,6 +51,11 @@ public class JunkPiratesInterdictorAI implements ShipSystemAIScript {
             return;
         }
 
+        // Guard against draining ship CR below safe operational threshold (each use costs 10% CR)
+        if (ship.getCurrentCR() <= 0.35f) {
+            return;
+        }
+
         float fluxLevel = ship.getFluxTracker().getFluxLevel();
         ShipAPI bestTarget = selectBestInterdictTarget(target);
 
@@ -59,36 +64,31 @@ public class JunkPiratesInterdictorAI implements ShipSystemAIScript {
         }
 
         float dist = Misc.getDistance(ship.getLocation(), bestTarget.getLocation());
-        int charges = system.getAmmo();
         boolean isDefensive = flags != null && (flags.hasFlag(AIFlags.BACKING_OFF) || flags.hasFlag(AIFlags.RUN_QUICKLY) || fluxLevel > 0.65f);
         boolean isOffensive = flags != null && (flags.hasFlag(AIFlags.PURSUING) || flags.hasFlag(AIFlags.HARASS_MOVE_IN));
 
         // 1. Defensive Peel: Stop pursuers dead in their tracks if ship is in danger
-        if (isDefensive && dist < 1000f) {
+        if (isDefensive && dist < MAX_RANGE) {
             useSystemOnTarget(bestTarget);
             return;
         }
 
-        // 2. High-Value Strike: Target is high flux, venting, or isolated
-        if (bestTarget.getFluxTracker().isOverloadedOrVenting() || bestTarget.getFluxTracker().getFluxLevel() > 0.70f) {
+        // 2. High-Value Strike: Target is high flux, venting, or overloaded
+        if (bestTarget.getFluxTracker().isOverloadedOrVenting() || bestTarget.getFluxTracker().getFluxLevel() > 0.65f) {
             useSystemOnTarget(bestTarget);
             return;
         }
 
-        // 3. Offensive Engagement: If we have multiple charges, interdict to facilitate approach/drone kills
-        if (charges > 1) {
-            if (isOffensive || dist < 1000f || bestTarget.getHullSize() == HullSize.FRIGATE || bestTarget.getHullSize() == HullSize.DESTROYER) {
-                useSystemOnTarget(bestTarget);
-                return;
-            }
+        // 3. Offensive Interdiction: Lock down enemy ships in pursuit
+        if (isOffensive && dist < MAX_RANGE) {
+            useSystemOnTarget(bestTarget);
+            return;
         }
 
-        // 4. Single Charge Preservation: Save final charge for major targets or close threats
-        if (charges == 1) {
-            if (dist < 1000f && (bestTarget.getHullSize() == HullSize.CRUISER || bestTarget.getHullSize() == HullSize.CAPITAL_SHIP)) {
-                useSystemOnTarget(bestTarget);
-                return;
-            }
+        // 4. Strategic Flameout: Lock down combatants within effective range
+        if (dist <= 850f && (bestTarget.getHullSize() == HullSize.CRUISER || bestTarget.getHullSize() == HullSize.CAPITAL_SHIP || bestTarget.getHullSize() == HullSize.DESTROYER)) {
+            useSystemOnTarget(bestTarget);
+            return;
         }
     }
 
@@ -162,7 +162,7 @@ public class JunkPiratesInterdictorAI implements ShipSystemAIScript {
     }
 
     private boolean isValidTarget(ShipAPI target) {
-        if (target == null || !target.isAlive() || target.isHulk() || target.isShuttlePod()) {
+        if (target == null || !target.isAlive() || target.isHulk() || target.isShuttlePod() || target.isFighter()) {
             return false;
         }
         if (target.getOwner() == ship.getOwner()) {
