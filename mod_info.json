@@ -8,7 +8,7 @@
 		"patch": 1
 	},
 	"description": "Junk Pirates, PACK and ASP Syndicate come together, at long last (requires GraphicsLib).",
-	"gameVersion": "0.98a-RC8",
+	"gameVersion": "0.98.5a-RC6",
 	"modPlugin": "data.scripts.JunkPiratesModPlugin",
 	"jars": [
 		"jars/JunkPirates.jar"
